@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    @apply h-full
+}
+
+.swiper {
+    @apply w-full h-full;
+}
+
+.swiper-slide {
+    @apply flex items-center justify-center
+}
+
+body.keyboard {
+    height: calc(100% + 1000px); 
+}
+#google_translate_element select {
+    background-color: transparent;
+    border: none;
+    color: #fff; 
+    font-size: 1rem; 
+    padding: 0; 
+    height: 40px;
+
+}
+
+#google_translate_element .goog-te-gadget-simple {
+    border: none;
+    background-color: transparent;
+    padding: 0; 
+    display: flex;
+    align-items: center; 
+    height: 40px;
+}
+#google_translate_element .goog-te-gadget-simple img{
+    display: none;
+}
+#google_translate_element .goog-te-gadget-icon {
+    display: none;
+}
+
+#google_translate_element .goog-te-combo {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem; 
+    padding: 0 0.5rem; 
+}
+body.translate-active > .skiptranslate {
+    display: normal !important;
+}
+
+body > .skiptranslate {
+    display: normal !important;
+}
+
+.goog-te-gadget img {
+    display: none !important;
+}
