@@ -89,7 +89,7 @@ const LoginPage = () => {
                         </Tab.Group>
                         <p
                             onClick={() => navigate('/tieng-viet/forgot-password')}
-                            className="text-right mt-[40px] font-bold cursor-pointer"
+                            className="text-right mt-[20px] font-bold cursor-pointer"
                         >
                             Quên mật khẩu?
                         </p>

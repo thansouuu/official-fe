@@ -9184,8 +9184,8 @@ export default [
                 id: '42',
                 type:2,
                 tour:'0',
-                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                video: '',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-3.jpg',
+                video: 'https://www.youtube.com/embed/f0wOhwUOuoo?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Trà Vinh những ngày đầu Nam Bộ kháng chiến',
                 description: '0 giờ ngày 23 tháng 9 năm 1945 (chưa đầy một tháng sau Cách mạng Tháng Tám giành thắng lợi ở Sài Gòn...',
                 game: '',
@@ -9197,10 +9197,10 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-6.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-8.jpg',
                                 ],
                             },
                             {
@@ -9208,23 +9208,30 @@ export default [
                                 value: `- 0 giờ ngày 23 tháng 9 năm 1945 (chưa đầy một tháng sau Cách mạng Tháng Tám giành thắng lợi ở Sài Gòn và một số tỉnh Nam bộ), thực dân Pháp được sự giúp đỡ tích cực của quân Anh - Ấn gây hấn ở Sài Gòn, bắt đầu cuộc chiến tranh chinh phục lại Đông Dương. Chúng hy vọng nhanh chóng bình định Nam Bộ để làm bàn đạp tiến chiếm miền Trung và miền Bắc Việt Nam như đã từng làm trong cuộc chiến tranh xâm lược lần trước.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'Chúng',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-2.jpg',
                                         }
                                     },
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Nhưng chúng đã lầm, Cuộc khởi nghĩa tháng Tám năm 1945 đã biến thành cuộc chiến cách mạng của hàng triệu con người Nam bộ sẵn sàng hy sinh cho độc lập, tự do của Tổ quốc. Nam Bộ trở thành tiền tuyến của cả nước. Riêng tỉnh Trà Vinh, Uỷ ban kháng chiến tỉnh tổ chức một trung đội Cộng hoà Vệ binh dưới sự chỉ huy của Quảng Nam cấp tốc lên chi viện cho quân dân Sài Gòn - Gia Định. Lực lượng này tham gia vây đánh địch ở mặt trận Tây - Nam Sài Gòn, đọ súng quyết liệt với quân Pháp tại cầu Rạch Ông, Xóm Chiếu, Bình Điền, vv… và bị thương vong nhiều vì lực lượng quân Pháp quá đông, được trang bị nhiều loại vũ khí hiện đại. Sau đó, trung đội Cộng hoà vệ binh do Quảng Nam chỉ huy rút về Trà Vinh, chỉ còn một tiểu đội ở lại tiếp tục chiến đấu.`,
+                                value: `- Nhưng chúng đã lầm, Cuộc khởi nghĩa tháng Tám năm 1945 đã biến thành cuộc chiến cách mạng của hàng triệu con người Nam bộ sẵn sàng hy sinh cho độc lập, tự do của Tổ quốc. Nam Bộ trở thành tiền tuyến của cả nước. Riêng tỉnh Trà Vinh, Uỷ ban kháng chiến tỉnh tổ chức một trung đội Cộng hoà Vệ binh dưới sự chỉ huy của Quảng Nam cấp tốc lên chi viện cho quân dân Sài Gòn - Gia Định. Lực lượng này tham gia vây đánh địch ở mặt trận Tây - Nam Sài Gòn, đọ súng quyết liệt với quân Pháp tại cầu Rạch Ông, Xóm Chiếu, Bình Điền, vv… và bị thương vong nhiều vì lực lượng quân Pháp quá đông, được trang bị nhiều loại vũ khí hiện đại. Sau đó, đội Cộng hoà vệ binh do Quảng Nam chỉ huy rút về Trà Vinh, chỉ còn một tiểu đội ở lại tiếp tục chiến đấu.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'trung đội',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-4.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'đọ súng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-5.jpg',
                                         }
                                     },
                                 ],
@@ -9233,13 +9240,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Một tháng vây hãm quân xâm lược trong nội thành Sài Gòn đã thể hiện khí phách anh hùng của Nhân dân Nam Bộ và Nhân dân cả nước, phá vỡ ý đồ nhanh chóng chiếm lại Nam Bộ của thực dân Pháp và tạo điều kiện cho các tỉnh Nam Bộ và Nam Trung Bộ chuẩn bị kháng chiến.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
@@ -9247,10 +9247,10 @@ export default [
                                 value: `- Tuy nhiên, Thực dân Pháp lần lượt chiếm đóng hầu hết các thành phố, thị xã, các đường giao thông quan trọng ở Nam Bộ, cực Nam Trung Bộ và bắt đầu càn quét “bình định” các vùng nông thôn.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'chiếm đóng',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/I-7.jpg',
                                         }
                                     },
                                 ],
@@ -9259,13 +9259,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Đồng thời với việc chi viện cho Sài Gòn và sẵn sàng phối hợp tác chiến với các địa phương bạn khi cần thiết, các lực lượng vũ trang cách mạng tỉnh Trà Vinh gấp rút triển khai các phương án tác chiến trên địa bàn tỉnh theo kế hoạch của Uỷ ban kháng chiến tỉnh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                         ],
@@ -9276,10 +9269,12 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-5.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-7.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-11.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-13.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-16.jpg',
                                 ],
                             },
                             {
@@ -9287,10 +9282,10 @@ export default [
                                 value: `- Ngày 02 tháng 12 năm 1945, quân Pháp tấn công Trà Vinh bằng đường thủy, từ ngoài biển theo sông Cổ Chiên tiến vào, trên hai con tàu: một tàu chiến La mắc (Lamarek) và một tàu chở đầy lính. Trên đường tiến quân, tàu chiến xả đạn vào bất kỳ nơi nào chúng nghi ngờ. Tới Cồn Bàng, tàu chiến bắn nhiều đợt pháo vào thị xã Trà Vinh và các ụ cản do quân dân ta thiết lập ở Vàm Trà Vinh. Không phá được ụ cản bằng pháo, quân Pháp dùng ca nô chở lính công binh vào phá, nhưng cũng không được, tàu Pháp phải rút lui và chuyển hướng tấn công.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'đường thủy',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-1.jpg',
                                         }
                                     },
                                 ],
@@ -9300,10 +9295,10 @@ export default [
                                 value: `- Đến 14 giờ cùng ngày, quân Pháp tiếp tục tấn công Trà Vinh từ hai hướng. Hướng thứ nhất từ bờ sông Cổ chiên đổ bộ vào Long Đức; hướng thứ hai từ Vĩnh Long theo lộ 7 (nay là Quốc lộ 53) đánh xuống. Về phía ta, các đơn vị Cộng hòa vệ binh và tự vệ tổ chức đánh chặn từ hai hướng: một hướng phía sông Cổ Chiên, một hướng từ phía lộ 7.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'theo lộ',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-3.jpg',
                                         }
                                     },
                                 ],
@@ -9313,10 +9308,17 @@ export default [
                                 value: `- Ở hướng thứ nhất có 2 cánh quân, một cánh do Đội Châu và Cò Bổn chỉ huy, lập trận địa dài 5 km từ Vàm Trà Vinh đến cầu Long Bình; một cánh do Cò Bê (Bùi Cát Vũ) chỉ huy, bố trí trận địa ở cầu tàu Bãi San. Ở hướng này, lực lượng ta có hơn 100 tay súng với vũ khí thô sơ, nhưng đã chiến đấu dũng cảm, kiên cường với hơn 400 lính Pháp đổ bộ, có pháo, trọng liên, đại diện trên tàu chiến yểm trợ. Sau nhiều giờ chiến đấu, lực lượng của ta bị thương vong nhiều, nên phải rút lui, địch vào chiếm thị xã.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'lập trận địa',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-4.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'vũ khí thô sơ',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-6.jpg',
                                         }
                                     },
                                 ],
@@ -9326,10 +9328,10 @@ export default [
                                 value: `- Ở hướng thứ hai, có một phân đội hơn 30 tay súng, bố trí trận địa tại khu vực dưới chân cầu Long Hồ dưới sự chỉ huy của Quảng Nam. Lực lượng này phải đối đầu với 2 đại đội quân Pháp tiến theo lộ 7 bằng xe vận tải quân sự. Lực lượng ta đã nhiều lần chặn đứng mũi tiến công của địch, không cho chúng vượt qua cầu Long Hồ. Sau nhiều giờ chiến đấu với đội quân đông hơn về số lượng, vượt trội về vũ khí, Quảng Nam và phần lớn lực lượng của ta hy sinh, số còn lại bị thương nặng, quân Pháp vượt qua cầu Long Hồ tiến về thị xã Trà Vinh.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'dưới chân cầu',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-8.jpg',
                                         }
                                     },
                                 ],
@@ -9339,10 +9341,17 @@ export default [
                                 value: `- Trong đêm 02 và rạng sáng ngày 03 tháng 12 năm 1945, lực lượng của ta từ Vàm Trà Vinh rút về chùa Hang và Bàng Đa và từ Bãi San rút về Ba Se (Ô Chát). Địch đóng quân ở Trà Vinh trong tình thế “nhà không vườn trống” do Nhân dân thị xã Trà Vinh đã tản cư từ trước, chỉ còn một số ít người Hoa ở lại theo kế hoạch của Ủy ban kháng chiến.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'lực lượng của ta',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-9.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: '“nhà không vườn trống”',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-10.jpg',
                                         }
                                     },
                                 ],
@@ -9352,10 +9361,10 @@ export default [
                                 value: `- Những ngày tiếp theo, quân Pháp tổ chức các đợt tấn công vào lực lượng của ta. Tại Ô Chát, lực lượng Cộng hòa vệ binh, tự vệ chiến đấu và Nhân dân địa phương lập phòng tuyến ở Ba Se. Ngày 09 tháng 12 năm 1945, quân Pháp mới đến được Ô Chát, đụng phải phòng tuyến của ta, cuộc chiến đấu diễn ra quyết liệt, cả lực lượng của ta và Pháp đều chịu nhiều tổn thất, nhưng do chênh lệch về lực lượng và vũ khí, cuối cùng quân Pháp vượt qua được phòng tuyến Ba Se, quân ta rút lui về tuyến sau rồi chuyển về Huyền Hội (Càng Long).`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'lập phòng tuyến',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-12.jpg',
                                         }
                                     },
                                 ],
@@ -9364,24 +9373,17 @@ export default [
                                 type: 'hightlight',
                                 value: `- Tại Đa Lộc và Phước Hảo, Cộng hòa vệ binh, tự vệ chiến đấu và Nhân dân địa phương cũng lập phòng tuyến chặn địch ở chùa Hang và Bàng Đa. Tại hai nơi này, quân ta phối hợp tác chiến có hiệu quả gây cho quân Pháp nhiều thiệt hại, buộc chúng phải rút lui về Trà Vinh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Sau thất bại ở Bàng Đa, quân Pháp từ thị xã Trà Vinh tổ chức các mũi tiến công về hướng Tây và Tây Nam, đánh chiếm Huyền Hội và Tiểu Cần, rồi tiếp tục tổ chức mũi tiến công về hướng Đông và Nam, đánh chiếm Mỹ Hòa, Long Sơn, Hiệp Mỹ, Long Hữu, Long Toàn (Cầu Ngang), Tập Sơn, Phước Hưng (Trà Cú)…`,
+                                value: `- Sau thất bại ở Bàng Đa, quân Pháp từ thị xã Trà Vinh tổ chức tiến công về hướng Tây và Tây Nam, đánh chiếm Huyền Hội và Tiểu Cần, rồi tiếp tục tổ chức mũi tiến công về hướng Đông và Nam, đánh chiếm Mỹ Hòa, Long Sơn, Hiệp Mỹ, Long Hữu, Long Toàn (Cầu Ngang), Tập Sơn, Phước Hưng (Trà Cú)…`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'tổ chức tiến công',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-14.jpg',
                                         }
                                     },
                                 ],
@@ -9391,10 +9393,10 @@ export default [
                                 value: `- Từ thực tế chiến trường, trong thư gởi các chiến sĩ miền Nam ngày 22 tháng 12 năm 1945, Chủ tịch Hồ Chí Minh đã viết: “Chính phủ dân chủ cộng hòa rất khen ngợi các chiến sĩ ở các mặt trận miền Nam, đặc biệt là các chiến sĩ Nha Trang và Trà Vinh; đã làm gương anh dũng cho toàn quốc. Tổ quốc biết ơn các bạn, toàn thể đồng bào nêu gương các bạn”. Đây chính là sự khẳng định lịch sử và là nguồn động viên, khích lệ to lớn, kịp thời đối với cán bộ, chiến sĩ, đồng bào các dân tộc tỉnh Trà Vinh.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'Chủ tịch Hồ Chí Minh',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Nam%20B%E1%BB%99%20kh%C3%A1ng%20chi%E1%BA%BFn/II-15.jpg',
                                         }
                                     },
                                 ],
@@ -9425,8 +9427,8 @@ export default [
                 id: '43',
                 type:3,
                 tour:'0',
-                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                video: '',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-2.jpg',
+                video: 'https://www.youtube.com/embed/ZSD97thSkPk?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Nhân dân Trà Vinh vào những ngày đầu đấu tranh chống chính quyền Mỹ-Diệm',
                 description: 'Từ năm 1954, đất nước ta tạm thời chia làm hai miền với hai chế độ chính trị khác nhau. Ở miền Bắc là chế độ...',
                 game: '',
@@ -9438,10 +9440,8 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/I-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/I-3.jpg',
                                 ],
                             },
                             {
@@ -9449,10 +9449,10 @@ export default [
                                 value: `- Từ năm 1954, đất nước ta tạm thời chia làm hai miền với hai chế độ chính trị khác nhau. Ở miền Bắc là chế độ dân chủ nhân dân, tiến lên con đường xây dựng chủ nghĩa xã hội do Đảng Cộng sản lãnh đạo. Ở miền Nam, đế quốc Mỹ ra sức củng cố ngụy quyền tay sai để xây dựng chế độ thực dân mới, hòng biến miền Nam thành thuộc địa kiểu mới và căn cứ quân sự của chúng.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'hai chế độ',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/I-1.png',
                                         }
                                     },
                                 ],
@@ -9465,21 +9465,39 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-4.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-5.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-8.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-11.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-15.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-16.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-17.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-19.jpg',
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Với lòng khát khao hòa bình, độc lập, tự do và mong đợi thống nhất đất nước, đồng bào các dân tộc Trà Vinh đã hân hoan đón mừng Hiệp định Giơ-ne-vơ. Ngay sau khi Hiệp định được công bố, nhiều cuộc mít tinh với sự tham gia của hàng trăm, hàng ngàn quần chúng đã diễn ra trên khắp các địa bàn trong tỉnh. Một số ngôi chùa Khmer cũng trở thành tụ điểm mít tinh hội họp, cán bộ cách mạng phổ biến tình hình, giải thích cho đồng bào hiểu rõ nội dung Hiệp định Giơ-ne-vơ, hướng dẫn đồng bào nắm vững cơ sở pháp lý của Hiệp định làm căn cứ để sẵn sàng đấu tranh chống địch vi phạm hiệp định. Điển hình là cuộc mít tinh lớn diễn ra tại chùa Ông Mẹt vào cuối tháng 7 năm 1954, đã thu hút hàng ngàn đồng bào Kinh - Khmer - Hoa từ Thị xã và các vùng lân cận tham gia.`,
+                                value: `- Với lòng khát khao hòa bình, độc lập, tự do và mong đợi thống nhất đất nước, đồng bào các dân tộc Trà Vinh đã hân hoan đón mừng Hiệp định Giơ-ne-vơ. Ngay sau khi Hiệp định được công bố, nhiều cuộc mít tinh với sự tham gia của hàng trăm, hàng ngàn quần chúng đã diễn ra trên khắp các địa bàn trong tỉnh. Một số ngôi chùa Khmer cũng trở thành tụ điểm mít tinh hội họp, cán bộ cách mạng phổ biến tình hình, giải thích cho đồng bào hiểu rõ nội dung Hiệp định Giơ-ne-vơ, hướng dẫn đồng bào nắm vững cơ sở pháp lý của Hiệp định làm căn cứ để sẵn sàng đấu tranh chống địch vi phạm hiệp định. Điển hình là mít tinh lớn diễn ra tại chùa Ông Mẹt vào cuối tháng 7 năm 1954, đã thu hút hàng ngàn đồng bào Kinh - Khmer - Hoa từ Thị xã và các vùng lân cận tham gia.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'Giơ-ne-vơ',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-1.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'cuộc mít tinh',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-2.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'chùa Khmer',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-3.jpg',
                                         }
                                     },
                                 ],
@@ -9489,10 +9507,24 @@ export default [
                                 value: `- Từ giữa năm 1955, phong trào đấu tranh chống địch ở Trà Vinh ngày một dâng cao. Tháng 10 năm 1955, Ngô Đình Diệm tổ chức “trưng cầu dân ý”, đưa tay sai đến các địa phương để diễn thuyết. Chúng tung ra những luận điệu điêu ngoa xảo quyệt, giả nhân giả nghĩa nhằm tô vẽ cho Ngô Đình Diệm và bôi nhọ cách mạng. Khắp nơi trong tỉnh, nhân dân kiên quyết đấu tranh, tẩy chay các cuộc diễn thuyết này. Hàng vạn tờ truyền đơn phản đối Mỹ - Diệm in bằng bột trong các gia đình cơ sở cách mạng được tung ra khắp các nẻo đường, công sở, trường học, chợ, đình, chùa, v.v... từ tỉnh lị đến các xã, ấp. Nhiều nơi, nhân dân làm kiến nghị có hàng trăm, hàng ngàn người ký tên vào, cử đại biểu mang kiến nghị trực tiếp trao cho Ủy ban quốc tế, tố cáo ngụy quyền tay sai Ngô Đình Diệm vi phạm Hiệp định Giơ- ne-vơ. Mỹ-Diệm bắt giam những người đi đấu tranh, đi đưa kiến nghị. Đồng bào Trà Vinh không hề khuất phục, người trước bị địch bắt thì người sau tiếp tục đi đấu tranh, bản kiến nghị thứ nhất chưa được trả lời thì tiếp tục đưa bản kiến nghị thứ hai,...`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'tô vẽ',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-6.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'đấu tranh, tẩy chay',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-7.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'bắt giam',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-9.jpg',
                                         }
                                     },
                                 ],
@@ -9502,10 +9534,10 @@ export default [
                                 value: `- Đầu tháng 3 năm 1956, khi Mỹ - Diệm bày trò dân chủ giả hiệu, tổ chức “bầu cử Tổng thống”, đồng bào các dân tộc Trà Vinh đã đấu tranh chống lại bằng nhiều hình thức phong phú, như tìm lý do không đi bỏ phiếu, hoặc khi bị cưỡng bức đi bỏ phiếu thì bấm lủng phiếu trước khi bỏ vào thùng phiếu, gạch tên Ngô Đình Diệm hoặc nhét khẩu hiệu “đả đảo Ngô Đình Diệm’ vào thùng phiếu. Ở một số nơi thuộc huyện Trà Cú, đồng bào còn mang theo rắn thả vào đám đông, làm náo loạn nơi bỏ phiếu ...`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'bày trò',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-10.jpg',
                                         }
                                     },
                                 ],
@@ -9515,10 +9547,17 @@ export default [
                                 value: `- Vào thời gian địch điều quân đi càn quét các vùng dân cư, khủng bố các cuộc đấu tranh của nhân dân, vây bắt những người chúng cho là chống lại ngụy quyền Ngô Đình Diệm, v.v.... Vào thời gian này, bất chấp sự khủng bố của địch, phong trào đấu tranh chính trị của đồng bào các dân tộc trong tỉnh diễn ra ngày càng mạnh mẽ, với các khẩu hiệu đòi dân sinh, dân chủ, đòi thả những người bị bắt, đòi thi hành Hiệp định Giơ-ne-vơ, đòi quan hệ bình thường hai miền Nam Bắc, v.v... Điển hình là ở xã Ngũ Lạc (huyện Cầu Ngang), đồng bào đã liên tục nổi dậy đấu tranh chống địch đưa quân vây bắt dân đi làm đồn bót, đồng thời đấu tranh bằng kiến nghị với hàng trăm chữ ký gởi lên Ủy ban quốc tế ở Sài Gòn, tố cáo những hành động của địch ở đồn Cây Da ức hiếp nhân dân. Ở khắp mọi nơi, đồng bào đã sáng tạo và mưu trí đấu tranh chống địch, bảo vệ và giải thoát cho nhiều cán bộ đảng viên bị địch vây bắt, như vào tháng 3 năm 1956, các tầng lớp đồng bào Kinh và Khmer tham dự cuộc mít tinh ở ấp Cây Xoài (xã Ngũ Lạc) đã mưu trí giải thoát cho đồng chí Mười Tường và Nguyễn Phước Dợt (Hai Trị) thoát khỏi sự vây ráp, bắt bớ của địch,...`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'điều quân',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-12.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'nổi dậy đấu tranh',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-14.jpg',
                                         }
                                     },
                                 ],
@@ -9528,10 +9567,10 @@ export default [
                                 value: `- Cường độ khủng bố của địch ở Trà Vinh ngày một gia tăng thì ý chí đấu tranh của đồng bào các dân tộc trong tỉnh ngày càng mãnh liệt, không chỉ dừng lại ở đấu tranh chính trị mà đã bộc khởi những hành động bạo lực quần chúng diệt ác vào năm 1956, điển hình là: vụ bao vây và đánh lừa địch giải thoát cho đồng chí Ba Chà (Chi ủy viên) của nông dân Huyền Hội (huyện Càng Long), vụ diệt ác ôn bằng cách dùng khăn rằn siết cổ của anh Dương Công Nghiệp ở Long Toàn, vụ nổi dậy chém chết tên quản Hiển tại xã Mỹ Long (huyện Cầu Ngang), vụ đập đầu địa chủ Trương Hoàng Lâu của Ba Minh (Ba Mù U) nông dân xã Ninh Thới (huyện Cầu Kè) v.v... Những hành động bộc khởi diệt ác lúc này thật sự là tín hiệu đòi hỏi của đồng bào Kinh - Khmer - Hoa Trà Vinh đấu tranh với Mỹ - Diệm bằng bạo lực vũ trang cách mạng...`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'bao vây',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-18.jpg',
                                         }
                                     },
                                 ],
@@ -9562,8 +9601,8 @@ export default [
                 id: '44',
                 type:4,
                 tour:'0',
-                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                video: '',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                video: 'https://www.youtube.com/embed/s1BA6sxUW_o?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Khắc phục hậu quả chiến tranh, xây dựng và phát triển Trà Vinh từ năm 1975-1985',
                 description: 'Với chiến thắng lịch sử của Chiến dịch Hồ Chí Minh ngày 30-4-1975, cuộc kháng chiến chống Mỹ, cứu nước...',
                 game: '',
@@ -9575,36 +9614,21 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-3.jpg',
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Với chiến thắng lịch sử của Chiến dịch Hồ Chí Minh ngày 30-4-1975, cuộc kháng chiến chống Mỹ, cứu nước của nhân dân ta đã đi tới thắng lợi hoàn toàn. Dưới sự lãnh đạo của Đảng, cách mạng Việt Nam đã chuyển sang một giai đoạn mới: giai đoạn cả nước hòa bình, thống nhất, độc lập, cùng đi lên chủ nghĩa xã hội.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Sau 30 năm đấu tranh kiên cường bất khuất chống thực dân, đế quốc, cùng với nhân dân cả nước, Đảng bộ và nhân dân các dân tộc Kinh, Khmer, Hoa... của thị xã Trà Vinh đã được sống trong độc lập, tự do. Chuyển sang giai đoạn thực hiện nhiệm vụ cách mạng mới, Đảng bộ, quân và dân thị xã Trà Vinh tuy còn gặp nhiều khó khăn, nhưng có những thuận lợi chưa từng có để xây dựng lại quê hương, làm cho nhân dân có cuộc sống ấm no, tự do, hạnh phúc, đi lên theo con đường xã hội chủ nghĩa.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                         ],
@@ -9615,10 +9639,11 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-3-1.jpg',
                                 ],
                             },
                             {
@@ -9629,13 +9654,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Ngay trong ngày 1-5-1975, chính quyền cách mạng đã chỉ đạo khôi phục lại việc cung cấp điện, nước bảo đảm cho sinh hoạt bình thường của nhân dân và hoạt động của các cơ quan.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
@@ -9643,10 +9661,17 @@ export default [
                                 value: `- Thu gom, dọn dẹp vũ khí, xe cộ do địch bỏ chạy để lại; chôn cất người chết, cứu chữa người bị thương, cấp phát gạo cứu đói cho đồng bào; tập trung cứu đói, ổn định tình hình vùng mới giải phóng.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'Thu gom, dọn dẹp',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-2.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'cấp phát gạo',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-3.jpg',
                                         }
                                     },
                                 ],
@@ -9660,26 +9685,12 @@ export default [
                                 type: 'hightlight',
                                 value: `- Ngày 15-5-1975, dưới sự chỉ đạo trực tiếp của Tỉnh ủy, chính quyền cách mạng lâm thời và Mặt trận dân tộc giải phóng cùng nhân dân và lực lượng vũ trang tổ chức cuộc mít tinh trọng thể tại sân vận động thị xã Trà Vinh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Nhiều nơi người dân tự đóng góp tổ chức ăn mừng chiến thắng tập thể, có những cuộc có tới hàng trăm người tham dự.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -9691,13 +9702,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Chính quyền nhân dân được thành lập, ra sức giữ gìn an ninh trật tự xã hội, tiếp tục truy quét bọn ngụy quân, ngụy quyền, tổ chức học tập, cải tạo cho binh lính và nhân viên chế độ cũ.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
@@ -9705,16 +9709,14 @@ export default [
                                 value: `- Tổ chức tháo gỡ bom mìn, vận động nhân dân phục hóa, khai hoang đất đai để đẩy mạnh sản xuất, từng bước ổn định đời sống.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'tháo gỡ bom mìn',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-3-2.jpg',
                                         }
                                     },
                                 ],
                             },
-
-                           
                         ],
                     },
                     {
@@ -9723,10 +9725,12 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-3.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-1-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-1-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-2-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-3-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-3-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-3-3.jpg',
                                 ],
                             },
                             {
@@ -9737,26 +9741,12 @@ export default [
                                 type: 'hightlight',
                                 value: `- Trong mấy tuần lễ đầu sau giải phóng, nhờ phân công cán bộ đi vận động tuyên truyền, ổn định quần chúng, hàng trăm thanh niên nam, nữ các phường trong thị xã tham gia lực lượng tập trung của thị xã, tham gia du kích, dân quân tự vệ phường, ấp và các tổ chức đoàn thể.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Tháng 10-1975, toàn thị xã tổ chức được 2 đợt tập trung học tập cải tạo, giáo dục hàng nghìn ngụy quân và ngụy quyền trở về theo chính sách khoan hồng của Đảng.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -9769,10 +9759,10 @@ export default [
                                 value: `- Ngày 25-4-1976, gần một năm sau ngày đất nước thống nhất, cử tri toàn thị xã đã vinh dự được cầm lá phiếu tự do bầu chọn người tài đức đại diện cho mình trong cơ quan quyền lực cao nhất của đất nước.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Thị Keo',
+                                        hightlight: 'bầu chọn',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/III-2-1.jpg',
                                         }
                                     },
                                 ],
@@ -9781,13 +9771,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Lần đầu tiên sau ngày giải phóng, nhân dân thị xã Trà Vinh được thực hiện quyền và nghĩa vụ công dân của mình.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -9799,26 +9782,12 @@ export default [
                                 type: 'hightlight',
                                 value: `- Từ 30-4-1975 đến tháng 2-1976, Ban Chấp hành Đảng bộ thị xã Trà Vinh do đồng chí Trần Văn Tư (Tư Tranh) làm Bí thư, các đồng chí Lý Trung Tuấn và Phan Văn Truyền (Út Võ) làm Phó Bí thư.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Đảng bộ thường xuyên kết hợp chặt chẽ ba mặt: chính trị, tư tưởng và tổ chức gắn với nhiệm vụ chính trị chuyên môn thông qua phong trào cách mạng của quần chúng trên cơ sở thực hiện dân chủ nội bộ, tạo được sự đoàn kết nhất trí cao trong Đảng bộ, phát huy sáng kiến tập thể, kịp thời khắc phục khó khăn, phức tạp, từng bước xây dựng Đảng bộ tiên tiến, vững mạnh`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Nguyễn Thị Keo',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-3.jpg',
-                                        }
-                                    },
                                 ],
                             },
 
