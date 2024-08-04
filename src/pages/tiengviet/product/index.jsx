@@ -851,7 +851,7 @@ const Product = memo(() => {
                                     <iframe
                                         className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
                                         src={product?.game}
-                                        title="Thuyết trình về món Bánh canh Bến Có"
+                                        title="game"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                                         allowFullScreen

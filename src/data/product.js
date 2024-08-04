@@ -13,7 +13,7 @@ export default [
                 video: 'https://www.youtube.com/embed/iXwNNGyF4CQ?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
                 title: 'Chị Út Tịch',
                 tour:'6',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 description: 'Tên thật là Nguyễn Thị Út, sinh ngày 19/4/1931 tại xã Tam Ngãi, quận Cầu Kè, tỉnh Cần Thơ. Dưới thời...',
                 contents: [
@@ -543,7 +543,7 @@ export default [
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/D%C6%B0%C6%A1ng%20Quang%20%C4%90%C3%B4ng/1%20-%2024.jpg',
                 video: 'https://www.youtube.com/embed/FS2v2N5_JXU?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
                 title: 'Dương Quang Đông',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/04f0939042fd4160b5209afb7e70dc6a?themeId=21&templateId=69&fontStackId=0',
                 view: 0,
                 description: 'Nhà cách mạng Dương Quang Đông sinh năm 1902, mất năm 2003. Ông còn có tên Dung Văn...',
                 contents: [
@@ -1032,7 +1032,7 @@ export default [
                 video: 'https://www.youtube.com/embed/ZXIHwNXfNsU?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
                 title: 'Phạm Thái Bường',
                 description: 'Nhà cách mạng Phạm Thái Bường sinh năm 1915, mất năm 1974, bí danh Lê Thành Nhân. Ông...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/c264860c68ee4fb9962eecb2e9373baa?themeId=21&templateId=69&fontStackId=0',
                 view: 60,
                 contents: [
                     {
@@ -1332,7 +1332,7 @@ export default [
                 video: 'https://www.youtube.com/embed/Lbp5ClTPPkQ?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
                 title: 'Sơn Thông',
                 description: 'Sơn Thông sinh năm 1910, mất năm 1997. Tên thật là Sơn Thông bí danh là Mười Tăng, sinh ra...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/2cc922203d594454b0aa9019e24a25b8?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -1723,7 +1723,7 @@ export default [
                 video: 'https://www.youtube.com/embed/eezu7le4Js4?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
                 title: 'Thống chế Nguyễn Văn Tồn',
                 description: 'Thống chế Nguyễn Văn Tồn sinh năm 1763, mất năm 1820. Tên thật là Thạch Duyên (hay còn gọi...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/bb43754e7d434993b4274d51cec4236d?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
