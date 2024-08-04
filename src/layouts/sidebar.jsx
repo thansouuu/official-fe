@@ -20,7 +20,7 @@ import Bot from '@/components/utils/Bot';
 import Manual from '@/components/utils/Manual';
 import { useNavigate } from 'react-router-dom';
 import Dropdown from '@/components/dropdown';
-
+import Travel from '@/components/utils/Travel';
 
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -88,6 +88,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     Chatbot
                     </li>
                 </Link>
+                <Link to="/tieng-viet/vt-map"
+                    onClick={() => {navigate(`/tieng-viet/vt-map`),window.location.reload()}}
+                >
+                    <li className={`p-4 hover:bg-gray-700 flex items-center gap-4 ${location.pathname.includes('categories') ? 'bg-gray-900' : ''}`}>
+                    <Travel />
+                    Khám phá du lịch
+                    </li>
+                </Link>
                 <Link to="/tieng-viet/find"
                     onClick={() => {navigate(`/tieng-viet/find`),window.location.reload()}}
                 >
@@ -104,14 +112,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     Hướng dẫn sử dụng
                     </li>
                 </Link>
-                <Link to="/tieng-viet/vt-map"
-                    onClick={() => {navigate(`/tieng-viet/vt-map`),window.location.reload()}}
-                >
-                    <li className={`p-4 hover:bg-gray-700 flex items-center gap-4 ${location.pathname.includes('categories') ? 'bg-gray-900' : ''}`}>
-                    <Category />
-                    Bản đồ chỉ đường
-                    </li>
-                </Link>
+                
                 
                 
                 {/* <li>
