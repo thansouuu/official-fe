@@ -20,6 +20,8 @@ const VtMap = () => {
   const [locationNames, setLocationNames] = useState([]);
   const [toDo, setToDo] = useState([]);
   const [done, setDone] = useState([]);
+  const [draggedItem, setDraggedItem] = useState(null);
+  const [roadDrawerControl, setRoadDrawerControl] = useState(null);
 
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -80,7 +82,7 @@ const VtMap = () => {
     if (locations.length > 0 && coordinates.length > 0) {
       const names = findLocationNames(locations, coordinates);
       setLocationNames(names);
-      setToDo(names.map((name, index) => ({ name, id: index })));
+      setToDo(names.map((name, index) => ({ name, id: index, latitude: coordinates[index].latitude, longitude: coordinates[index].longitude })));
     }
   }, [locations, coordinates]);
 
@@ -105,19 +107,20 @@ const VtMap = () => {
       const navigationControl = new vtmapgl.NavigationControl();
       map.addControl(navigationControl, 'top-left');
 
-      const roadDrawerControl = new vtmapgl.RoadDrawerControl({
-        accessToken: vtmapgl.accessToken,
-        mode: 'driving',
-        activeState: false,
-        addable: false,
-      });
-      map.addControl(roadDrawerControl);
+      // const roadDrawerControl = new vtmapgl.RoadDrawerControl({
+      //   accessToken: vtmapgl.accessToken,
+      //   mode: 'driving',
+      //   activeState: false,
+      //   addable: false,
+      // });
+      // map.addControl(roadDrawerControl);
 
-      const points = await getListLocationUserForDirection();
-      
-      map.on('load', () => {
-        roadDrawerControl.setPoints(points);
-      });
+      // setRoadDrawerControl(roadDrawerControl);
+
+      // const points = await getListLocationUserForDirection();
+      // map.on('load', () => {
+      //   roadDrawerControl.setPoints(points);
+      // });
     };
 
     return () => {
@@ -125,24 +128,77 @@ const VtMap = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (roadDrawerControl && toDo.length > 0) {
+      const points = toDo.map(task => [task.longitude, task.latitude]);
+      roadDrawerControl.setPoints(points);
+    }
+  }, [toDo, roadDrawerControl]);
+
   const handleDragOver = (event) => {
     event.preventDefault();
   };
 
-  const handleDragStart = (task, source) => {
-    return (event) => event.dataTransfer.setData('task', JSON.stringify({ task, source }));
+  const handleDragStart = (task, source, index) => {
+    setDraggedItem({ task, source, index });
   };
 
-  const handleDrop = (event, destination) => {
-    const data = JSON.parse(event.dataTransfer.getData('task'));
-    if (data.source !== destination) {
+  const handleDrop = (event, destination, index) => {
+    event.preventDefault();
+    const data = draggedItem;
+    if (!data) return;
+
+    if (data.source === destination) {
+      if (destination === 'toDo') {
+        const updated = [...toDo];
+        const [removed] = updated.splice(data.index, 1);
+        updated.splice(index, 0, removed);
+        setToDo(updated);
+      } else {
+        const updated = [...done];
+        const [removed] = updated.splice(data.index, 1);
+        updated.splice(index, 0, removed);
+        setDone(updated);
+      }
+    } else {
       if (destination === 'toDo') {
         setDone((prev) => prev.filter((task) => task.name !== data.task.name));
-        setToDo((prev) => [...prev, data.task]);
+        setToDo((prev) => {
+          const updated = [...prev];
+          updated.splice(index, 0, data.task);
+          return updated;
+        });
       } else {
         setToDo((prev) => prev.filter((task) => task.name !== data.task.name));
-        setDone((prev) => [...prev, data.task]);
+        setDone((prev) => {
+          const updated = [...prev];
+          updated.splice(index, 0, data.task);
+          return updated;
+        });
       }
+    }
+    setDraggedItem(null);
+  };
+
+  const getDropIndex = (event, destinationList) => {
+    const rect = event.target.getBoundingClientRect();
+    const offset = event.clientY - rect.top;
+    const height = rect.height;
+    const totalItems = destinationList.length;
+    const ratio = offset / height;
+    const index = Math.floor(ratio * totalItems);
+    return index;
+  };
+
+
+  const handleSave = async () => {
+    const points = toDo.map(task => [task.longitude, task.latitude]);
+    try {
+      const response = await axios.post(`http://localhost:3000/locations/669cd9c2ffe2c00a4bdb1848`);
+      alert('Danh sách hành trình đã được lưu.');
+    } catch (error) {
+      console.error('Error saving the list:', error);
+      alert('Có lỗi xảy ra khi lưu danh sách.');
     }
   };
 
@@ -153,31 +209,49 @@ const VtMap = () => {
           <div
             className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
             onDragOver={handleDragOver}
-            onDrop={(event) => handleDrop(event, 'toDo')}
+            onDrop={(event) => handleDrop(event, 'toDo', getDropIndex(event, toDo))}
           >
             <h1 className="text-lg font-bold text-center">Danh sách hành trình</h1>
             <div className="task-list flex-grow">
               <ul className="list-disc pl-5">
                 {toDo.map((task, index) => (
-                  <li className="task py-1" key={index} draggable onDragStart={handleDragStart(task, 'toDo')}>
+                  <li
+                    className="task py-1"
+                    key={index}
+                    draggable
+                    onDragStart={() => handleDragStart(task, 'toDo', index)}
+                    onDragOver={handleDragOver}
+                  >
                     {index + 1}. {task.name}
                   </li>
                 ))}
               </ul>
             </div>
+            <button
+              className="mt-4 p-2 bg-blue-500 text-white rounded"
+              onClick={handleSave}
+            >
+              Lưu điểm hành trình
+            </button>
           </div>
         </div>
         <div className="list-card w-full md:w-1/2 p-4">
           <div
             className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
             onDragOver={handleDragOver}
-            onDrop={(event) => handleDrop(event, 'done')}
+            onDrop={(event) => handleDrop(event, 'done', getDropIndex(event, done))}
           >
             <h1 className="text-lg font-bold text-center">Danh sách địa điểm</h1>
             <div className="task-list flex-grow">
               <ul className="list-disc pl-5">
                 {done.map((location, index) => (
-                  <li className="task py-1" key={location._id} draggable onDragStart={handleDragStart(location, 'done')}>
+                  <li
+                    className="task py-1"
+                    key={location._id}
+                    draggable
+                    onDragStart={() => handleDragStart(location, 'done', index)}
+                    onDragOver={handleDragOver}
+                  >
                     {index + 1}. {location.name}
                   </li>
                 ))}

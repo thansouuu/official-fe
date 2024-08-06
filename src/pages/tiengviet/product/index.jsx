@@ -605,7 +605,7 @@ const Product = memo(() => {
                                         Bình luận
                                     </label>
                                     <textarea
-                                        className="shadow appearance-none border rounded w-[80%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline box-border"
+                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline box-border"
                                         id="comment"
                                         name="comment"
                                         rows="5"

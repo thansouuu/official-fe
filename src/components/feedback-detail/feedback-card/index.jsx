@@ -74,12 +74,12 @@ const FeedbackCard = ({ item }) => {
                 {/* { isShow && ( */}
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col gap-2 p-2 bg-slate-200 rounded-lg w-fit">
-                            <div className="flex gap-2 items-baseline">
-                                <div className="font-medium">{item.createdBy.fullname}</div>
+                            {/* <div className="flex gap-2 items-baseline"> */}
+                                <div className="font-medium text-left">{item.createdBy.fullname}</div>
                                 <div className="italic text-slate-500 text-[12px]">
                                     {formatDateISOString(item.createdAt)}
                                 </div>
-                            </div>
+                            {/* </div> */}
                             <div className="text-slate-600 text-[14px]">{item.comment}</div>
                         </div>
                         <div className="flex items-center gap-4 flex-wrap">
