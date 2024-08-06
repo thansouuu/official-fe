@@ -1,0 +1,26 @@
+@keyframes slideDown {
+    from {
+      max-height: 0;
+    }
+    to {
+      max-height: var(--scroll-height); /* Điều chỉnh để tương ứng với chiều cao của nội dung */
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      max-height: var(--scroll-height); /* Điều chỉnh để tương ứng với chiều cao của nội dung */
+    }
+    to {
+      max-height: 0;
+    }
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-in forwards;
+  }
+  

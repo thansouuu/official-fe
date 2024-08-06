@@ -4,14 +4,14 @@ import storyData from '@/data/story';
 
 const List = memo(() => {
     const param = useParams()
-    const introduce='rnvnjkdnfvkfkdv'
+    const introduce='Là nơi tập hợp những mẫu truyện ngắn, truyền thuyết và sự tích về nguồn gốc của địa danh, truyền thống hay quá trình hình thành của vùng đất Trà Vinh.'
     const sortedProducts = storyData.sort((a, b) => a.title.localeCompare(b.title));
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
            
             <div className="col-span-full p-4 bg-gray-200 rounded-lg shadow-md">
                 <div className="text-[22px] font-bold text-gray-800 text-center">
-                    câu chuyện
+                    Câu chuyện
                 </div>
                 <div className="mt-1 text-lg text-gray-700 leading-relaxed text-justify">
                     {introduce}

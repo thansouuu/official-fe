@@ -66,16 +66,11 @@ const Story = memo(() => {
     const [commentBonus, setCommentBonus] = useState('');
     const [convertFeedBacks, setConvertFeedBacks] = useState([]);
     const [isLiked, setIsLiked] = useState(false);
-    const [showComments, setShowComments] = useState(false);
     const [showInfos, setShowInfos] = useState(false);
     const [users, setUsers] = useState([]);
-    const [mentionList, setMentionList] = useState([]);
     const params = useParams();
     const [isModal, setIsModal] = useState(false);
-    const [imageModal, setImageModal] = useState('');
-    // const [image, setImage] = useState('')
-    // const [isModal, setIsModal] = useState(false);
-    // const [valueModal, setValueModal] = useState(null);
+
 
     const handleComemt = async (e) => {
         setIsCreateFeedback(true);
@@ -184,6 +179,7 @@ const Story = memo(() => {
         });
         const data = await response.json();
         setFeedbacks(data?.data);
+        console.log(feedbacks)
         handleSort('desc', data?.data);
     };
 
@@ -282,10 +278,7 @@ const Story = memo(() => {
     };
 
     const getFeedBackByIdProduct = (id, data) => {
-        // const productList = productData.find((item) => item.figureId == figureId);
-        // const product = productList?.data.find((item) => item.id == id);
-        // return data?.filter((item) => item.productId == product?.id);
-        const product = storyData?.data.find((item) => item.id == id);
+        const product = storyData?.find((item) => item.id == id);
         return data?.filter((item) => item.productId == product?.id);
     };
 
@@ -344,22 +337,6 @@ const Story = memo(() => {
         }
     };
 
-    const handleShare = async () => {
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: product?.title || 'Review Product',
-                    text: 'Check out this amazing product review!',
-                    url: window.location.href,
-                });
-            } catch (error) {
-                console.error('Error sharing:', error);
-            }
-        } else {
-            toast.error('Web Share API is not supported in your browser.');
-        }
-    };
-
     const handleCopyLink = () => {
         navigator.clipboard
             .writeText(window.location.href)
@@ -372,9 +349,6 @@ const Story = memo(() => {
             });
     };
 
-    const toggleComments = () => {
-        setShowComments(!showComments);
-    };
     const toggleInfos = () => {
         if (!isLoggedIn) {
             toast.error('Bạn phải đăng nhập để chơi trò chơi!');
@@ -382,10 +356,6 @@ const Story = memo(() => {
         }
         setShowInfos(!showInfos);
     };
-
-    const encodedUrl = encodeURIComponent(window.location.href);
-    const encodedTitle = encodeURIComponent(product?.title || 'Review Product');
-
     const imageIconDefault = {
         good: [good_icon1, good_icon2, good_icon3, good_icon4, good_icon5, good_icon6],
         'top-good': [
@@ -444,11 +414,6 @@ const Story = memo(() => {
         }
     }, [role, isLoggedIn]);
 
-    const handleModalImageCarousel = (image) => {
-        setIsModal(true)
-        setImageModal(image)
-    };
-
     const handleDownload = async (url, filename) => {
         const response = await fetch(url, {
             mode: 'cors',
@@ -459,8 +424,6 @@ const Story = memo(() => {
         link.download = filename;
         link.click();
     };
-    // window.location.reload()
-
     const [isVisible, setIsVisible] = useState(false);
     const contentRef = useRef(null);
 
@@ -525,7 +488,7 @@ const Story = memo(() => {
                         <div className="flex justify-center mb-2">
                         <button 
                             onClick={handleShowSource}
-                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                            className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
                         >
                             
                             {!isVisible ? 'Xem diễn biến' : 'Đóng diễn biến'}
@@ -540,45 +503,6 @@ const Story = memo(() => {
                             {content.data?.map((item, key) => (
                                 <div key={key}>
                                     {item.type === 'text' && <CardContentText value={item.value} />}
-                                    {item.type === 'bold' && (
-                                        <>
-                                            <p className="my-2 text-[18px]">
-                                                <i><b>{item.value}</b></i>
-                                            </p>
-                                        </>
-                                    )}
-                                    {item.type === 'hightlight' && (
-                                        <CardContentHightlight value={item.value} hightlightList={item.hightlightList} />
-                                    )}
-                                    {item.type === 'grid-image' &&
-                                        (item.value.length > 0 ? (
-                                            <div className="my-2">
-                                                <Carousel style={{ width: '100%', height: '300px' }}>
-                                                    {item.value.map((image, idx) => (
-                                                        <Carousel.Item key={idx} style={{ height: '300px' }}>
-                                                            <img
-                                                                className="d-block w-full h-full object-contain"
-                                                                onClick={() => handleModalImageCarousel(image)}
-                                                                src={image}
-                                                                alt={`Slide ${idx}`}
-                                                            />
-                                                        </Carousel.Item>
-                                                    ))}
-                                                </Carousel>
-                                            </div>
-                                        ) : (
-                                            <div className="grid grid-cols-2 gap-2">
-                                                {item.value.map((image, idx) => (
-                                                    <div className="border border-gray-200 rounded-md" key={idx}>
-                                                        <img
-                                                            alt="content-item"
-                                                            className="w-full h-[200px] object-contain rounded-md"
-                                                            src={image}
-                                                        />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        ))}
                                 </div>
                             ))}
                         </FoodContent>
@@ -622,24 +546,6 @@ const Story = memo(() => {
                                         value={comment}
                                         onChange={handleMentionInput}
                                     ></textarea>
-                                    {/* {mentionList.length > 0 && (
-                                        <ul className="absolute left-0 right-0 bg-white border border-gray-200 rounded-md mt-1 max-h-40 overflow-y-auto z-10">
-                                            {mentionList.map((user, index) => (
-                                                <li
-                                                    key={index}
-                                                    className="p-2 cursor-pointer hover:bg-gray-200 flex items-center gap-2"
-                                                    onClick={() => selectUser(user)}
-                                                >
-                                                    <img
-                                                        src={user.avatar}
-                                                        alt={user.name}
-                                                        className="w-6 h-6 rounded-full"
-                                                    />
-                                                    {user.name}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )} */}
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <label htmlFor="fileInput"> Hình ảnh đính kèm:</label>
@@ -650,6 +556,7 @@ const Story = memo(() => {
                                         id="fileInput"
                                         value={imageValue}
                                         onChange={handleFileChange}
+                                        className="w-full h-10"
                                     />
                                 </div>
                                 <div className="grid grid-cols-2 gap-2 rounded-md">
@@ -674,7 +581,7 @@ const Story = memo(() => {
                     </div>
                     <div>
                         <button
-                            className={cn(' text-white w-fit m-auto px-4 rounded py-2 mt-2', {
+                            className={cn(' text-white w-fit m-auto px-4 rounded py-2 mt-4', {
                                 'bg-green-400 hover:bg-green-500': !isBonus,
                                 'bg-red-400 hover:bg-red-500': isBonus,
                             })}
@@ -693,28 +600,11 @@ const Story = memo(() => {
                                         id="comment"
                                         name="comment"
                                         rows="5"
-                                        placeholder="Nhập đánh giá..."
+                                        placeholder="Nhập bổ sung..."
                                         required
                                         value={commentBonus}
                                         onChange={handleMentionInputBonus}
                                     ></textarea>
-                                    {/* {mentionList.length > 0 && (
-                                        <ul className="absolute left-0 right-0 bg-white border border-gray-200 rounded-md mt-1 max-h-40 overflow-y-auto z-10">
-                                            {mentionList.map((user, index) => (
-                                                <li
-                                                    key={index}
-                                                    className="p-2 cursor-pointer hover:bg-gray-200 flex items-center gap-2"
-                                                    onClick={() => selectUser(user)}
-                                                >
-                                                    <img
-                                                        src={user.avatar}
-                                                        alt={user.fullname}
-                                                        className="w-6 h-6 rounded-full"
-                                                    />
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )} */}
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <label htmlFor="fileInput"> Hình ảnh đính kèm:</label>
@@ -725,6 +615,7 @@ const Story = memo(() => {
                                         id="fileInput"
                                         value={imageValueBonus}
                                         onChange={handleFileChangeBonus}
+                                        className="w-full h-10"
                                     />
                                 </div>
                                 <div className="grid grid-cols-2 gap-2 rounded-md">
@@ -767,20 +658,11 @@ const Story = memo(() => {
                         </div>
                     </div>
                 </FoodContent>
-                <FoodContent title="Chia sẻ bài viết">
+                <FoodContent title="Chia sẻ mẫu chuyện">
                     <div className="flex gap-4">
                         <FacebookShareButton hashtag={'Phần mềm Lịch sử địa phương Trà Vinh cung cấp cho tôi những thông tin rất hữu ích'} url={window.location.href} quote={product?.title}>
                             <FacebookIcon size={32} round />
                         </FacebookShareButton>
-                        
-                        {/* <WhatsappShareButton url={window.location.href} title={product?.title}>
-                            <WhatsappIcon size={32} round />
-                        </WhatsappShareButton> */}
-                        {/* <EmailShareButton url={window.location.href} subject={product?.title}>
-                            <EmailIcon size={32} round />
-                        </EmailShareButton> */}
-
-
                         <a
                             href={`https://www.messenger.com/t/?body=${encodeURIComponent(window.location.href)}`}
                             target="_blank"
@@ -820,7 +702,7 @@ const Story = memo(() => {
                             <ul>
                                 <li>
                                     Đặt tên trong trò chơi là gmail mà bạn dùng trong tài khoản này :{' '}
-                                    {data?.data?.email}
+                                    <b>{data?.data?.email}</b>
                                 </li>
                                 <li>
                                     Bạn sẽ nhận được bộ ảnh đặc quyền tùy theo mức hạng mà bạn đạt được:
@@ -862,12 +744,6 @@ const Story = memo(() => {
                                 </li>
                                 <li className="mt-4">Cuối cùng, chúc bạn chơi trò chơi vui vẻ và may mắn !</li>
                             </ul>
-
-                            {/* <p>asacdcdds</p>
-
-                            {
-                                data?.data?.fullname
-                            } */}
                         </div>
                     )}
                     {isLoggedIn && product?.game!='' &&  (
@@ -888,78 +764,6 @@ const Story = memo(() => {
                     )}
                 </FoodContent>
             </div>
-            {isModal && (
-                <div className="fixed inset-0 bg-black/40 z-20 flex items-center justify-center overflow-y-auto">
-                    <div className="bg-white p-2 rounded flex flex-col gap-4 absolute top-2 right-2">
-                        <button
-                            className="hover:bg-red-600 bg-red-500 p-2 rounded text-white"
-                            onClick={() => setIsModal(false)}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                            >
-                                <path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path>
-                            </svg>
-                        </button>
-                        <FacebookShareButton hashtag={'Phần mềm Lịch sử địa phương Trà Vinh cung cấp cho tôi những thông tin rất hữu ích'} url={imageModal} quote={''}>
-                            <FacebookIcon size={32} round />
-                        </FacebookShareButton>
-                        {/* <TwitterShareButton url={imageModal} title={""}>
-                            <TwitterIcon size={32} round />
-                        </TwitterShareButton>
-                        <WhatsappShareButton url={imageModal} title={""}>
-                            <WhatsappIcon size={32} round />
-                        </WhatsappShareButton>
-                        <EmailShareButton url={imageModal} subject={""}>
-                            <EmailIcon size={32} round />
-                        </EmailShareButton> */}
-                        <a
-                            href={`https://www.messenger.com/t/?link=${encodeURIComponent(imageModal)}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src="/images/mess.png"
-                                alt="Share on Messenger"
-                                style={{ width: 32, height: 32, borderRadius: '50%' }}
-                            />
-                        </a>
-                        {/* <a href={`https://zalo.me/share/?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(product?.title)}`} target="_blank" rel="noopener noreferrer">
-                            <img src="/public/images/zalo.png" alt="Share on Zalo" style={{ width: 32, height: 32, borderRadius: '50%' }} />
-                        </a> */}
-                        <button
-                            className="hover:bg-blue-500 bg-blue-600 p-2 rounded text-white text-center"
-                            onClick={() => handleDownload(imageModal, 'downloaded-image.jpg')}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                            >
-                                <path
-                                    d="M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012
-                                v-8.861H25.462z"
-                                />
-                                <path
-                                    d="M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723
-                                c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742
-                                c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193
-                                C15.092,18.979,14.62,18.426,14.62,18.426z"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 w-[80%] h-[200px] sm:h-[350px] md:h-[500px]">
-                        <img src={imageModal} alt="image" className="w-full h-full object-contain" />
-                    </div>
-                </div>
-            )}
         </div>
     );
 });

@@ -208,17 +208,13 @@ const LikedPosts = () => {
             <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6">
                 <button 
                     onClick={() => handleButtonClick(1)}
-                    className={`w-40 px-4 py-2 my-2 rounded mx-2 
-                    ${activeButton === 1 ? 'bg-blue-700 text-white' : 'bg-blue-500 text-white hover:bg-blue-600'}
-                    focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    className="w-40 px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                 >
                     Bài viết
                 </button>
                 <button 
                     onClick={() => handleButtonClick(2)}
-                    className={`w-40 px-4 py-2 my-2 rounded mx-2 
-                    ${activeButton === 2 ? 'bg-green-700 text-white' : 'bg-green-500 text-white hover:bg-green-600'}
-                    focus:outline-none focus:ring-2 focus:ring-green-500`}
+                    className="w-40 px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 hover:shadow-lg focus:outline-none focus:ring-focus:ring-green-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                 >
                     Câu chuyện
                 </button>

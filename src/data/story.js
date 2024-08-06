@@ -2,31 +2,15 @@
 export default [
     {
         id: '101',
-        type:0,
-        city:2,
-        link:1,
-        imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
+        imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Ao%20B%C3%A0%20Om.jpg',
         video: 'https://www.thinglink.com/view/scene/1876710852787176292',
         title: 'Sự tích Ao Bà Om',
-        tour:'6',
         game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
-        view: 100,
-        description: 'Tên thật là Nguyễn Thị Út, sinh ngày 19/4/1931 tại xã Tam Ngãi, quận Cầu Kè, tỉnh Cần Thơ. Dưới thời...',
+        description: 'Ngày xưa, vùng đất Trà Vinh là nơi sinh sống chủ yếu của người Khmer, có một hoàng tử tên là Pa-tu-ma-vông nổi tiếng với tính cách độc đoán và chuyên quyền...',
         contents: [
             {
                 title: 'Diễn biến',
                 data: [
-                    {
-                        type: 'grid-image',
-                        value: [
-                            'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
-                            'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-2.jpg',
-                            'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-5.jpg',
-                            'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-6.jpg',
-                            'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-8.jpg',
-                            'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-9.jpg',
-                        ],
-                    },
                     {
                         type: 'text',
                         value:`- Ngày xưa, vùng đất Trà Vinh là nơi sinh sống chủ yếu của người Khmer, có một hoàng tử tên là Pa-tu-ma-vông nổi tiếng với tính cách độc đoán và chuyên quyền. Ông ta khinh thường mọi người, đặc biệt là phụ nữ. Hoàng tử không chấp nhận việc đàn ông phải đem lễ vật đến cưới người phụ nữ và bắt phụ nữ phải cưới đàn ông để chứng tỏ quyền lực của phái nam.`,
@@ -61,24 +45,16 @@ export default [
 
         tags: [
             {
-                id: 1,
-                title: 'Nhân vật',
-                link: '/tieng-viet/figure/1',
+                title: 'Mẫu chuyện',
+                link: '/tieng-viet/story',
             },
             {
-                id: 2,
-                title: 'Huyện Cầu Kè',
-                link: '/tieng-viet/map',
+                title: 'Ao Bà Om',
+                link: '/tieng-viet/figure/2/product/8',
             },
             {
-                id: 3,
                 title: 'Người Khmer',
                 link: '/tieng-viet/figure/8/product/26',
-            },
-            {
-                id: 4,
-                title: 'Cách mạng Tháng Tám',
-                link: '/tieng-viet/figure/10/product/35',
             },
         ],
     },

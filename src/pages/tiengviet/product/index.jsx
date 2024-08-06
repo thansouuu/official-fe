@@ -485,7 +485,7 @@ const Product = memo(() => {
             <iframe
                 className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
                 src={product?.video}
-                title="Thuyết trình về món Bánh canh Bến Có"
+                title="Thuyết minh"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                 allowFullScreen
@@ -588,7 +588,7 @@ const Product = memo(() => {
                     </div>
                 </FoodContent>
                 <FoodContent title="Đánh giá và nhận xét">
-                    <div>
+                    <div >
                         <button
                             className={cn('text-white w-fit m-auto px-4 rounded py-2', {
                                 'bg-green-400 hover:bg-green-500': !isComent,
@@ -605,7 +605,7 @@ const Product = memo(() => {
                                         Bình luận
                                     </label>
                                     <textarea
-                                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        className="shadow appearance-none border rounded w-[80%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline box-border"
                                         id="comment"
                                         name="comment"
                                         rows="5"
@@ -642,6 +642,7 @@ const Product = memo(() => {
                                         id="fileInput"
                                         value={imageValue}
                                         onChange={handleFileChange}
+                                        className="w-full h-10"
                                     />
                                 </div>
                                 <div className="grid grid-cols-2 gap-2 rounded-md">
@@ -649,7 +650,7 @@ const Product = memo(() => {
                                         <div className="border border-gray-200 rounded-md" key={index}>
                                             <img
                                                 alt="image-upload-item"
-                                                className="w-full h-[200px] object-contain rounded-md"
+                                                className="w-[80%] h-[200px] object-contain rounded-md"
                                                 src={image}
                                             />
                                         </div>
@@ -690,28 +691,11 @@ const Product = memo(() => {
                                         id="comment"
                                         name="comment"
                                         rows="5"
-                                        placeholder="Nhập đánh giá..."
+                                        placeholder="Nhập bổ sung..."
                                         required
                                         value={commentBonus}
                                         onChange={handleMentionInputBonus}
                                     ></textarea>
-                                    {/* {mentionList.length > 0 && (
-                                        <ul className="absolute left-0 right-0 bg-white border border-gray-200 rounded-md mt-1 max-h-40 overflow-y-auto z-10">
-                                            {mentionList.map((user, index) => (
-                                                <li
-                                                    key={index}
-                                                    className="p-2 cursor-pointer hover:bg-gray-200 flex items-center gap-2"
-                                                    onClick={() => selectUser(user)}
-                                                >
-                                                    <img
-                                                        src={user.avatar}
-                                                        alt={user.fullname}
-                                                        className="w-6 h-6 rounded-full"
-                                                    />
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )} */}
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <label htmlFor="fileInput"> Hình ảnh đính kèm:</label>
@@ -722,6 +706,7 @@ const Product = memo(() => {
                                         id="fileInput"
                                         value={imageValueBonus}
                                         onChange={handleFileChangeBonus}
+                                        className="w-full h-10"
                                     />
                                 </div>
                                 <div className="grid grid-cols-2 gap-2 rounded-md">
@@ -818,7 +803,7 @@ const Product = memo(() => {
                             <ul>
                                 <li>
                                     Đặt tên trong trò chơi là gmail mà bạn dùng trong tài khoản này :{' '}
-                                    {data?.data?.email}
+                                    <b>{data?.data?.email}</b>
                                 </li>
                                 <li>
                                     Bạn sẽ nhận được bộ ảnh đặc quyền tùy theo mức hạng mà bạn đạt được:

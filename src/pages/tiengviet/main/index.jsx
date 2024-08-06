@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import productData from '@/data/product';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -59,15 +59,19 @@ const Main = () => {
         navigate(paths[index])
     }
 
+    const [isVisible, setIsVisible] = useState(false);
+    const contentRef = useRef(null);
+
+    const handleShowIntro = () => {
+        setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
+      };
     
 
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
             
             <div className="col-span-full flex flex-col items-center">
-            <div className="container mx-auto px-4 py-6">
-                <div className="h-[100px]" />
-
+            <div className="container mx-auto px-4 mt-4">
                 <video
                     className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
                     width="640"
@@ -77,15 +81,31 @@ const Main = () => {
                     muted
                     playsInline
                 >
-                    <source src="/testing-video.mp4" type="video/mp4" />
+                    <source src="/logo-xoay.mp4" type="video/mp4" />
                     Trình duyệt của bạn không hỗ trợ thẻ video.
                 </video>
-                <p className="mt-4 text-justify text-lg ">
+                <div className="flex justify-center my-3 ">
+                    <button 
+                        onClick={handleShowIntro}
+                        className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
+                    >
+                        
+                        {!isVisible ? 'Xem giới thiệu' : 'Đóng giới thiệu'}
+                    </button>
+                </div>
+                <div
+                    ref={contentRef}
+                    className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
+                    style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
+                >
+                    <p className="text-justify text-lg ">
                     <ul className="list-disc pl-5 space-y-4 text-gray-700 italic text-lg">
-                        <li>"Lịch sử TV" là phần mềm bổ ích, giúp khám phá lịch sử phong phú cùng nền văn hóa độc đáo của tỉnh Trà Vinh. Với giao diện thân thiện và dễ sử dụng, ứng dụng cung cấp thông tin chi tiết về các di tích lịch sử, danh lam thắng cảnh, nhân vật và các sự kiện quan trọng trong tỉnh. Dựa trên sự tích hợp kiến thức từ sách Giáo dục Địa Phương tỉnh Trà Vinh theo Chương trình Giáo dục 2018, "Lịch sử TV" mang đến cho học sinh cách tiếp cận mới mẻ và hấp dẫn. </li>   
-                        <li>Hiểu được rằng lịch sử thường khó tiếp cận đến giới trẻ, chúng tôi đã tạo ra những trải nghiệm sinh động cho người dùng qua các tính năng nổi bật như bài học dưới dạng hình ảnh, video, tour 3D, trò chơi tương tác và bản đồ trực quan. "Lịch sử TV" không chỉ là một công cụ học tập mà còn là cầu nối đưa học sinh đến gần hơn với quá khứ của quê hương, khơi dậy lòng tự hào và tình yêu đối với nơi mình sinh sống.</li>
+                        <li>"Lịch sử Tỉnh Trà Vinh" là phần mềm bổ ích, giúp khám phá lịch sử phong phú cùng nền văn hóa độc đáo của tỉnh Trà Vinh. Với giao diện thân thiện và dễ sử dụng, ứng dụng cung cấp thông tin chi tiết về các di tích lịch sử, danh lam thắng cảnh, nhân vật và các sự kiện quan trọng trong tỉnh. Dựa trên sự tích hợp kiến thức từ sách Giáo dục Địa Phương tỉnh Trà Vinh theo Chương trình Giáo dục 2018, "Lịch sử Tỉnh Trà Vinh" mang đến cho học sinh cách tiếp cận mới mẻ và hấp dẫn. </li>   
+                        <li>Hiểu được rằng lịch sử thường khó tiếp cận đến giới trẻ, chúng tôi đã tạo ra những trải nghiệm sinh động cho người dùng qua các tính năng nổi bật như bài học dưới dạng hình ảnh, video, tour 3D, trò chơi tương tác và bản đồ trực quan. "Lịch sử Tỉnh Trà Vinh" không chỉ là một công cụ học tập mà còn là cầu nối đưa học sinh đến gần hơn với quá khứ của quê hương, khơi dậy lòng tự hào và tình yêu đối với nơi mình sinh sống.</li>
                     </ul>
-                </p>
+                    </p>
+                </div>
+                
             {/* </div> */}
 
 

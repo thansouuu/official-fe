@@ -24,17 +24,3 @@
     animation: slideUp 0.5s ease-in forwards;
   }
   
-
-  .container {
-    position: relative; /* Đảm bảo phần tử con không tràn ra ngoài */
-    overflow: hidden; /* Ẩn nội dung tràn */
-    max-width: 100%; /* Đảm bảo chiều rộng không vượt quá phần tử cha */
-  }
-  
-  .overflow-hidden {
-    overflow: hidden;
-  }
-  
-  .transition-max-height {
-    transition: max-height 0.7s ease-in-out;
-  }
