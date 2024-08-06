@@ -18,7 +18,8 @@ import Find from '@/pages/tiengviet/find';
 import Bot from '@/pages/tiengviet/chatbot';
 import City from '@/pages/tiengviet/city';
 import VtMap from '@/pages/tiengviet/vt-map'
-
+import List from '@/pages/tiengviet/list';
+import Story from '@/pages/tiengviet/story';
 
 export const routes = [
     {
@@ -32,6 +33,14 @@ export const routes = [
             {
                 path: 'thinglink/:id',
                 element: <Thinglink />,
+            },
+            {
+                path: 'story/',
+                element: <List />,
+            },
+            {
+                path: 'story/:id',
+                element: <Story />,
             },
             {
                 path: 'account',

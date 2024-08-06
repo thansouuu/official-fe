@@ -6,7 +6,7 @@ import { Link} from 'react-router-dom';
 import productData from '@/data/product';
 import Thinklink from '../thinglink';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-
+import './style-map.css'
 
 const containerStyle = {
   width: '100%',
@@ -24,12 +24,18 @@ function get_toado(e){
   if (e=='tra-cu') return { lat: 9.693124, lng: 106.289475 }; 
 }
 
-
 const VtMap = () => {
-
   const [locations, setLocations] = useState([]);
   const [coordinates, setCoordinates] = useState([]);
   const [locationNames, setLocationNames] = useState([]);
+
+  const [selectedCountry, setSelectedCountry] = useState('tra-vinh');
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [locations123, setLocations123] = useState([]);
+
+  const handleCountryChange = (event) => {
+    setSelectedCountry(event.target.value);
+  };
 
   // Hàm gọi API để lấy danh sách địa điểm
   const getListLocation = async () => {
@@ -56,10 +62,25 @@ const VtMap = () => {
   // useEffect để gọi API khi component được render lần đầu tiên
   useEffect(() => {
     const fetchData = async () => {
-      const locationsData = await getListLocation();
       const coordinatesData = await getListLocationUserForDirection();
+      const locationsData = await getListLocation();
+
+      // Chuyển đổi tọa độ thành mảng các đối tượng với các thuộc tính latitude và longitude
+      const coordinates = coordinatesData.map(coord => {
+        const [longitude, latitude] = coord;
+        return { latitude, longitude };
+      });
+
+      // Lọc các địa điểm không có trong danh sách tọa độ
+      const filteredLocations = locationsData.filter(location => {
+        return !coordinates.some(coord => 
+          coord.latitude === location.latitude && coord.longitude === location.longitude
+        );
+      });
+      
       setLocations(locationsData);
-      setCoordinates(coordinatesData);
+      setLocations123(filteredLocations);
+      setCoordinates(coordinates);
     };
 
     fetchData();
@@ -70,7 +91,7 @@ const VtMap = () => {
     const findLocationNames = (locations, coordinates) => {
       return coordinates.map(coord => {
         const location = locations.find(loc => {
-          return loc.latitude === coord[1] && loc.longitude === coord[0];
+          return loc.latitude === coord.latitude && loc.longitude === coord.longitude;
         });
         return location ? location.name : 'Không tìm thấy';
       });
@@ -80,7 +101,6 @@ const VtMap = () => {
       setLocationNames(findLocationNames(locations, coordinates));
     }
   }, [locations, coordinates]);
-
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -130,23 +150,39 @@ const VtMap = () => {
       document.head.removeChild(script);
     };
   }, []);
+  
 
   return (
-    <div className="relative h-full w-full flex flex-col">
-      <div className="flex justify-center items-center space-x-2 py-4">
-      <div className="App">
-        <h1>Danh sách hành trình</h1>
-        <ul>
-          {locationNames.map((name, index) => (
-            <li key={index}>{index}.{name}</li>
-          ))}
-        </ul>
+    <div className="relative h-full w-full flex flex-col items-center">
+    <div className="flex flex-col md:flex-row justify-center items-center md:space-x-10 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
+      <div className="list-card w-full md:w-1/2 p-4">
+        <div className="card list-card-done bg-white shadow rounded p-4">
+          <h1 className="text-lg font-bold text-center">Danh sách hành trình</h1>
+          <div className="task-list">
+            <ul className="list-disc pl-5">
+              {locationNames.map((name, index) => (
+                <li className="task py-1" key={index}>{index + 1}. {name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
+      <div className="list-card w-full md:w-1/2 p-4">
+        <div className="card list-card-done bg-white shadow rounded p-4">
+          <h1 className="text-lg font-bold text-center">Danh sách địa điểm</h1>
+          <div className="task-list">
+          <ul className="list-disc pl-5">
+              {locations123.map((location, index) => (
+                <li className="task py-1" key={location._id}>{index + 1}. {location.name}</li>
+              ))}
+          </ul>            
+          </div>
+        </div>
       </div>
-      <div id="map" style={{ width: '100%', height: '810px' }}>Loading Map...</div>
-
     </div>
-  );
+    <div id="map" className="w-full h-[810px]">Loading Map...</div>
+  </div>
+);
 };
 
 function convertLocationsToPoints(data) {
@@ -154,13 +190,5 @@ function convertLocationsToPoints(data) {
   return locations.map(location => location.split(',').map(Number));
 }
 
-const findLocationNames = (locations, coordinates) => {
-  return coordinates.map(coord => {
-    const location = locations.find(loc => {
-      return loc.latitude === coord[1] && loc.longitude === coord[0];
-    });
-    return location ? location.name : 'Không tìm thấy';
-  });
-};
 
 export default VtMap;

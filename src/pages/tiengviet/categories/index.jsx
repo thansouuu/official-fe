@@ -36,29 +36,30 @@ const Categories = memo(() => {
                     <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6">
                         <button 
                             onClick={() => handleButtonClick(1)}
-                            className="px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 mr-4"
+                            className="px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                         >
                             Giai đoạn 1
                         </button>
                         <button 
                             onClick={() => handleButtonClick(2)}
-                            className="px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 mr-4"
+                            className="px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                         >
                             Giai đoạn 2
                         </button>
                         <button 
                             onClick={() => handleButtonClick(3)}
-                            className="px-4 py-2 my-2 bg-red-500 text-white rounded hover:bg-red-600 mr-4"
+                            className="px-4 py-2 my-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                         >
                             Giai đoạn 3
                         </button>
                         <button 
                             onClick={() => handleButtonClick(4)}
-                            className="px-4 py-2 my-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 mr-4"
+                            className="px-4 py-2 my-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                         >
                             Giai đoạn 4
                         </button>
                     </div>
+
                 </>
             }
             {types===1 && 1<=tmp && tmp<=4 &&

@@ -1,6 +1,6 @@
 import BorderRank from '@/components/border-rank/border-rank';
 import cn from '@/helper/cn';
-import React, { useState } from 'react';
+import React, { useState ,useRef} from 'react';
 
 const FeedbackCard = ({ item }) => {
     const [isShow, setIsShow] = useState(true);
@@ -31,6 +31,7 @@ const FeedbackCard = ({ item }) => {
 
             <div className="flex flex-col gap-4">
                 {isShow && (
+
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col gap-2 p-2 bg-slate-200 rounded-lg w-fit">
                             <div className="flex gap-2 items-baseline">
@@ -53,7 +54,8 @@ const FeedbackCard = ({ item }) => {
                             ))}
                         </div>
                     </div>
-                )}
+                )} 
+
                 <button
                     className={cn(
                         'p-2 rounded text-white w-fit',

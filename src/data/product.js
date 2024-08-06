@@ -2078,7 +2078,7 @@ export default [
                 video: 'https://www.youtube.com/embed/DXN6x4l9Zgg?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Ao Bà Om',
                 description: 'Ao Bà Om là một danh lam thắng cảnh nổi tiếng của tỉnh Trà Vinh cũng như cả khu vực Đồng...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/c8b06f0bd3774d93a53cb070cb89ad9a?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -2326,7 +2326,7 @@ export default [
                 video: 'https://www.youtube.com/embed/MUbvjYCdtZk?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Cù lao Tân Quy',
                 description: 'Được bao bọc và bồi đắp bởi dòng sông Hậu hiền hòa, cù lao Tân Quy là dải đất màu mỡ thuộc xã...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/f98e7f8adce9418eaa968955d8807fac?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -2547,7 +2547,7 @@ export default [
                 video: 'https://www.youtube.com/embed/7q8KMpMr16A?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Di tích khảo cổ Lưu Cừ II',
                 description: 'Di tích khảo cổ Lưu Cừ II ở ấp Lưu Cừ II, xã Lưu Nghiệp Anh, huyện Trà Cú, tỉnh Trà Vinh...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/1e9c6b2522e94aefa6b5fc5e1f8ac459?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -2781,7 +2781,7 @@ export default [
                 video: 'https://www.youtube.com/embed/Ox16nUDzirc?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Khu Di tích Bến tiếp nhận vũ khí Cồn Tàu',
                 description: 'Khu di tích Bến tiếp nhận vũ khí Cồn Tàu thuộc ấp Cồn Trứng, xã Trường Long Hòa, huyện Duyên Hải, tỉnh Trà Vinh,...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/a9672c64f3e54145acf5901d10b7b6a0?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -3746,7 +3746,7 @@ export default [
                 video: '',
                 title: 'Bánh canh Bến Có',
                 description: 'Bánh canh là món ăn phổ biến của miền Tây Nam Bộ. Tùy theo khẩu vị và nguyên liệu, bạn có thể ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/b590e4cc6962426f89f137d5cfcfbac9?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -3911,7 +3911,7 @@ export default [
                 video: '',
                 title: 'Bánh tét Trà Cuôn',
                 description: 'Bánh tét- là một loại bánh có từ lâu đời của người dân Việt Nam chúng ta. Từ xưa món bánh tét ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/c01b766895724de5b39681acfd161918?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -4349,7 +4349,7 @@ export default [
                 video: '',
                 title: 'Bún nước lèo',
                 description: 'Món bún nước lèo ngon và đặc biệt, luôn là sự lựa chọn hàng đầu của những người yêu thực phẩm...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/7a8c046f57b844608dbbc0981d0ce305?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -4690,7 +4690,7 @@ export default [
                 video: '',
                 title: 'Lễ hội cúng biển Mỹ Long',
                 description: 'Lễ hội cúng biển Mỹ Long (hay còn gọi là lễ hội Nghinh Ông) là một nét văn hoá đặc trưng của ngư dân...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/9e88ec8cd40d4ff89ad5f0f6253047a9?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -4881,7 +4881,7 @@ export default [
                 video: '',
                 title: 'Lễ hội cúng Ông Bổn huyện Cầu Kè',
                 description: 'Lễ hội cúng Ông Bổn huyện Cầu Kè diễn ra từ ngày 25-28/7 âm lịch, tại thị trấn Cầu Kè, địa điểm chính ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/dd4e34df0860410b9fc42fc7cbd7bd05?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -5251,7 +5251,7 @@ export default [
                 video: '',
                 title: 'Làng nghề Dệt chiếu Hàm Tân',
                 description: 'Làng nghề dệt chiếu Cà Hom – Bến Bạ xã Hàm Tân, huyện Trà Cú, tỉnh Trà Vinh hình thành từ những...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/9bd70daf4f5e49959eee940ad95bca83?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -5448,7 +5448,7 @@ export default [
                 video: '',
                 title: 'Làng nghề sản xuất rượu Xuân Thạnh',
                 description: 'Làng nghề sản xuất rượu Xuân Thạnh, xã Hòa Thuận, huyện Châu Thành, được công nhận theo Quyết ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/e3a5c220c2a94fd691b8b59c986e533d?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -5610,7 +5610,7 @@ export default [
                 video: '',
                 title: 'Làng nghề tiểu thủ công nghiệp Hưng Mỹ',
                 description: 'Làng nghề tiểu thủ công nghiệp xã Hưng Mỹ, huyện Châu Thành, được công nhận theo Quyết định số...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/b2af69380ff6468b93be4d9babeadce0?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -5726,7 +5726,7 @@ export default [
                 video: 'https://www.youtube.com/embed/FhdvhrUxWLQ?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'CHÙA ANG KOR RAIG BOREI (CHÙA ÂNG)',
                 description: 'Địa chỉ: Chùa  ng cách trung tâm thành phố Trà Vinh hơn 5km về hướng tây nam, thuộc khóm 4,...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/b54a03ad53ca4060a971267035c1fb7c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -6027,7 +6027,7 @@ export default [
                 video: '',
                 title: 'Chùa Can Snom',
                 description: 'Di tích Chùa Can Snom toạ lạc tại ấp Căn Nom, xã Trường Thọ, huyện Cầu Ngang, tỉnh Trà Vinh...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/86460996711440418400e083bcb814a5?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -6329,7 +6329,7 @@ export default [
                 video: 'https://www.youtube.com/embed/wGJDv9Uy3Vo?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'CHÙA KAMPONYNIXRDLE (CHÙA HANG)',
                 description: ' Địa chỉ: Chùa Hang tọa lạc tại khóm 3, thị trấn Châu Thành, cách trung tâm thành phố Trà Vinh...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/be6cc6fd2ebc4632b420c0a4ec2b63c3?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -6583,7 +6583,7 @@ export default [
                 video: '',
                 title: 'CHÙA KOM PONG (Chùa Ông Mẹt)',
                 description: 'Địa chỉ: tọa lạc ở số 50/1 Lê Lợi, khóm 2, phường 1, thành phố Trà Vinh, tỉnh Trà Vinh ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/9faf4fe0d1664a42831932feac1e648c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -6665,7 +6665,7 @@ export default [
                 video: '',
                 title: 'CHÙA NODOL (CHÙA CÒ)',
                 description: 'Địa chỉ: tọa lạc tại ấp Cây Da, xã Đại An, huyện Trà Cú, tỉnh Trà Vinh, cách thị xã Trà Vinh ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/3d02cffa468345e39dcc802703c846d9?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -6748,7 +6748,7 @@ export default [
                 video: '',
                 title: 'Chùa Ô Mịch',
                 description: 'Chùa tọa lạc tại ấp Ô Mịch, xã Châu Điền, huyện Cầu Kè, tỉnh Trà Vinh. Chùa Ô Mịch được xây...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/8a7e83960d304b7ebc1b53f388734e45?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7075,7 +7075,7 @@ export default [
                 video: '',
                 title: 'CHÙA PY-SEY VA-RA-RAM  (CHÙA BA SY)',
                 description: 'Địa chỉ: cách trung tâm thành phố Trà Vinh khoảng 10km về hướng tây bắc, cách thị trấn...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/4d025c8a08e54487bb9c196613e4b61c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7152,7 +7152,7 @@ export default [
                 video: '',
                 title: 'Tục thờ cá Ông',
                 description: 'Thờ cúng cá Ông (cá Voi) là tín ngưỡng đặc thù của ngư dân miền biển nói chung và ngư dân ở Trà Vinh ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/b2f64f217f384a7f90a4493514b8b688?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7262,7 +7262,7 @@ export default [
                 video: '',
                 title: 'Tục thờ Quan Thánh đế',
                 description: 'Quan Thánh đế chính là Quan Công, tức Quan Vũ hay Quan Vân Trường – viên tướng văn võ song toàn,...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/1e68e8ba93b2474f8cf2f235ae066e5e?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7398,7 +7398,7 @@ export default [
                 video: '',
                 title: 'Tục tu trả hiếu',
                 description: 'Tục đi tu báo hiếu của người Khmer ở Trà Vinh là một truyền thống lâu đời, mang đậm nét văn hóa và giá ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/1d85e81bd1fa48afb83ac5bfaa1b12f2?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7520,7 +7520,7 @@ export default [
                 video: '',
                 title: 'Người Hoa',
                 description: ' Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/14dd1d6b4e8e428f846332b63ce9e526?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7723,7 +7723,7 @@ export default [
                 video: '',
                 title: 'Người Khmer',
                 description: 'Dân cư: Dân tộc Khmer có 318 231 người, chiếm hơn 31,5% dân số toàn tỉnh. Người Khmer sống tập ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/0f83bf07d00445ccb7fdd00d22ceeff2?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -7942,7 +7942,7 @@ export default [
                 video: '',
                 title: 'Người Kinh',
                 description: 'Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/5a9cf02a255e4df684fc4a471508545d?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {

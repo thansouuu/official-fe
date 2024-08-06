@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState,useRef } from 'react';
+import React, { memo, useEffect, useState, useRef} from 'react';
 import { Carousel } from 'react-bootstrap';
 
 import { Link, useParams } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import cn from '@/helper/cn';
 import FoodContent from '@/components/food-content';
 import FeedbackCard from '@/components/feedback-detail/feedback-card';
-import '../story/styles.css'
+import './styles.css'
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -19,6 +19,7 @@ import {
 } from 'react-share';
 import { useAuth } from '@/hooks/use-auth';
 import productData from '@/data/product';
+import storyData from '@/data/story'
 import { uploadToCloudinary } from '@/hooks/use-upload-cloudinary';
 import CardContentHightlight from '@/components/card-content/card-content-hightlight';
 import CardContentText from '@/components/card-content/card-content-text';
@@ -45,7 +46,7 @@ import best_icon5 from '@/assets/best/best5.png'
 import best_icon6 from '@/assets/best/best6.png'
 
 
-const Product = memo(() => {
+const Story = memo(() => {
     const { isLoggedIn, mutate, data } = useAuth();
 
     // const { isLoggedIn } = useAuth();
@@ -203,8 +204,11 @@ const Product = memo(() => {
     };
 
     useEffect(() => {
-        const productList = productData.find((item) => item.figureId == params.figureId);
-        const product = productList?.data.find((item) => item.id == params.id);
+        // const productList = productData.find((item) => item.figureId == params.figureId);
+        // const product = productList?.data.find((item) => item.id == params.id);
+        // setProduct(product);
+        // getListFeedBack();
+        const product = storyData.find((item) => item.id == params.id);
         setProduct(product);
         getListFeedBack();
     }, [params]);
@@ -270,17 +274,6 @@ const Product = memo(() => {
     const handleMentionInput = (e) => {
         const inputValue = e.target.value;
         setComment(inputValue);
-
-        // const lastChar = inputValue.slice(-1);
-        // if (lastChar === '@') {
-        //     setMentionList(users);
-        // } else if (inputValue.includes('@')) {
-        //     const searchTerm = inputValue.split('@').pop();
-        //     const filteredUsers = users.filter((user) => user.name.toLowerCase().includes(searchTerm.toLowerCase()));
-        //     setMentionList(filteredUsers);
-        // } else {
-        //     setMentionList([]);
-        // }
     };
 
     const handleMentionInputBonus = (e) => {
@@ -288,15 +281,11 @@ const Product = memo(() => {
         setCommentBonus(inputValue);
     };
 
-    const selectUser = (user) => {
-        const updatedComment = comment + user.name + ' ';
-        setComment(updatedComment);
-        setMentionList([]);
-    };
-
-    const getFeedBackByIdProduct = (figureId, id, data) => {
-        const productList = productData.find((item) => item.figureId == figureId);
-        const product = productList?.data.find((item) => item.id == id);
+    const getFeedBackByIdProduct = (id, data) => {
+        // const productList = productData.find((item) => item.figureId == figureId);
+        // const product = productList?.data.find((item) => item.id == id);
+        // return data?.filter((item) => item.productId == product?.id);
+        const product = storyData?.data.find((item) => item.id == id);
         return data?.filter((item) => item.productId == product?.id);
     };
 
@@ -310,7 +299,7 @@ const Product = memo(() => {
     };
 
     const handleSort = (type, data) => {
-        setConvertFeedBacks(sortFeedBack(type, getFeedBackByIdProduct(params.figureId, params.id, data)));
+        setConvertFeedBacks(sortFeedBack(type, getFeedBackByIdProduct(params.id, data)));
     };
 
     const handleLike = async () => {
@@ -472,25 +461,26 @@ const Product = memo(() => {
     };
     // window.location.reload()
 
+    const [isVisible, setIsVisible] = useState(false);
     const contentRef = useRef(null);
 
+    // Hàm xử lý khi nút được click
+    const handleShowSource = () => {
+      setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
+    };
 
     return (
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-            {/* <Helmet>
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1" />
-            </Helmet> */}
-            {product?.video!='' && 
-            <iframe
-                className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
-                src={product?.video}
-                title="Thuyết trình về món Bánh canh Bến Có"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                allowFullScreen
-            ></iframe>
-            }
+            <div className="flex flex-col gap-4  w-full ">
+                <iframe
+                    className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
+                    src={product?.video}
+                    allow="fullscreen;webkitallowfullscreen; mozallowfullscreen ;allowfullscreen"
+                    allowFullScreen=""
+                ></iframe>
+                <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+            </div>
             <h2 className="text-3xl text-center pb-4 border-b border-slate-800 flex justify-center items-center gap-2">
                 {product?.title}
                 <button onClick={handleLike}>
@@ -531,52 +521,70 @@ const Product = memo(() => {
 
             <div className="flex flex-col gap-4">
                 {product?.contents?.map((content, index) => (
-                    <FoodContent title={content.title} key={index}>
-                        {content.data?.map((item, key) => (
-                            <div key={key}>
-                                {item.type === 'text' && <CardContentText value={item.value} />}
-                                {item.type === 'bold' && (
-                                    <>
-                                        <p className="my-2 text-[18px]">
-                                            <i><b>{item.value}</b></i>
-                                        </p>
-                                    </>
-                                )}
-                                {item.type === 'hightlight' && (
-                                    <CardContentHightlight value={item.value} hightlightList={item.hightlightList} />
-                                )}
-                                {item.type === 'grid-image' &&
-                                    (item.value.length > 0 ? (
-                                        <div className="my-2">
-                                            <Carousel style={{ width: '100%', height: '300px' }}>
+                    <div key={index}  >
+                        <div className="flex justify-center mb-2">
+                        <button 
+                            onClick={handleShowSource}
+                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                        >
+                            
+                            {!isVisible ? 'Xem diễn biến' : 'Đóng diễn biến'}
+                        </button>
+                        </div>
+                        <div
+                            ref={contentRef}
+                            className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
+                            style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
+                        >
+                            <FoodContent title={content.title}>
+                            {content.data?.map((item, key) => (
+                                <div key={key}>
+                                    {item.type === 'text' && <CardContentText value={item.value} />}
+                                    {item.type === 'bold' && (
+                                        <>
+                                            <p className="my-2 text-[18px]">
+                                                <i><b>{item.value}</b></i>
+                                            </p>
+                                        </>
+                                    )}
+                                    {item.type === 'hightlight' && (
+                                        <CardContentHightlight value={item.value} hightlightList={item.hightlightList} />
+                                    )}
+                                    {item.type === 'grid-image' &&
+                                        (item.value.length > 0 ? (
+                                            <div className="my-2">
+                                                <Carousel style={{ width: '100%', height: '300px' }}>
+                                                    {item.value.map((image, idx) => (
+                                                        <Carousel.Item key={idx} style={{ height: '300px' }}>
+                                                            <img
+                                                                className="d-block w-full h-full object-contain"
+                                                                onClick={() => handleModalImageCarousel(image)}
+                                                                src={image}
+                                                                alt={`Slide ${idx}`}
+                                                            />
+                                                        </Carousel.Item>
+                                                    ))}
+                                                </Carousel>
+                                            </div>
+                                        ) : (
+                                            <div className="grid grid-cols-2 gap-2">
                                                 {item.value.map((image, idx) => (
-                                                    <Carousel.Item key={idx} style={{ height: '300px' }}>
+                                                    <div className="border border-gray-200 rounded-md" key={idx}>
                                                         <img
-                                                            className="d-block w-full h-full object-contain"
-                                                            onClick={() => handleModalImageCarousel(image)}
+                                                            alt="content-item"
+                                                            className="w-full h-[200px] object-contain rounded-md"
                                                             src={image}
-                                                            alt={`Slide ${idx}`}
                                                         />
-                                                    </Carousel.Item>
+                                                    </div>
                                                 ))}
-                                            </Carousel>
-                                        </div>
-                                    ) : (
-                                        <div className="grid grid-cols-2 gap-2">
-                                            {item.value.map((image, idx) => (
-                                                <div className="border border-gray-200 rounded-md" key={idx}>
-                                                    <img
-                                                        alt="content-item"
-                                                        className="w-full h-[200px] object-contain rounded-md"
-                                                        src={image}
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ))}
-                            </div>
-                        ))}
-                    </FoodContent>
+                                            </div>
+                                        ))}
+                                </div>
+                            ))}
+                        </FoodContent>
+                        </div>
+                    </div>
+                    
                 ))}
                 <FoodContent title="Liên quan">
                     <div className="flex items-center gap-2 flex-wrap">
@@ -662,11 +670,11 @@ const Product = memo(() => {
                                     {isCreateFeedback ? 'Đang gửi...' : 'Gửi'}
                                 </button>
                             </form>
-                         )} 
+                        )}
                     </div>
                     <div>
                         <button
-                            className={cn(' text-white w-fit m-auto px-4 rounded py-2 mt-4', {
+                            className={cn(' text-white w-fit m-auto px-4 rounded py-2 mt-2', {
                                 'bg-green-400 hover:bg-green-500': !isBonus,
                                 'bg-red-400 hover:bg-red-500': isBonus,
                             })}
@@ -674,11 +682,6 @@ const Product = memo(() => {
                         >
                             {isBonus ? 'Hủy bổ sung thêm' : 'Viết bổ sung thêm'}
                         </button>
-                        {/* <div
-                            ref={contentRef}
-                            className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
-                            style={{ maxHeight: isBonus ? contentRef.current.scrollHeight + 'px' : '0px' }}
-                        > */}
                         {isBonus && (
                             <form onSubmit={handleBonus} className="flex flex-col gap-4 mt-4">
                                 <div className="flex flex-col gap-1 relative">
@@ -742,8 +745,7 @@ const Product = memo(() => {
                                     {isCreateBonus ? 'Đang gửi...' : 'Gửi'}
                                 </button>
                             </form>
-                            )} 
-                            {/* // </div> */}
+                        )}
                     </div>
                 </FoodContent>
                 <FoodContent title="Danh sách đánh giá">
@@ -962,6 +964,6 @@ const Product = memo(() => {
     );
 });
 
-export default Product;
+export default Story;
 
-Product.displayName = 'Product';
+Story.displayName = 'Story';

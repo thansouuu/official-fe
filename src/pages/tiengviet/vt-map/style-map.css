@@ -1,0 +1,32 @@
+.list-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-content: space-around;
+  }
+  .card {
+    height: 82vh;
+    text-align: center;
+    padding-top: 1em;
+    width: 50vh ;
+  }
+  .card-2 {
+    height: auto;
+    text-align: center;
+    padding-top: 1em;
+    width: 50vh ;
+  }
+  .card.list-card-todo {
+    background-color: aliceblue;
+  }
+  .card.list-card-done {
+    background-color: rgb(202, 248, 202);
+  }
+
+  ul .task {
+    display: block;
+    border: 1px solid red;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+  }

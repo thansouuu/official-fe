@@ -14,6 +14,7 @@ import Home from '@/components/utils/Home';
 import Bot from '@/components/utils/Bot';
 import Manual from '@/components/utils/Manual';
 import Travel from '@/components/utils/Travel';
+import Story from '@/components/utils/Story';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -208,6 +209,17 @@ const HeaderRoot = ({ toggleSidebar }) => {
                             >
                                 <Category />
                                 <div>Danh mục</div>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/tieng-viet/story"
+                                className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
+                                aria-current="page"
+                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                            >
+                                <Story />
+                                <div>Câu chuyện</div>
                             </Link>
                         </li>
                         <li>

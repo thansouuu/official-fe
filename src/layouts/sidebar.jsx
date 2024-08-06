@@ -21,6 +21,7 @@ import Manual from '@/components/utils/Manual';
 import { useNavigate } from 'react-router-dom';
 import Dropdown from '@/components/dropdown';
 import Travel from '@/components/utils/Travel';
+import Story from '@/components/utils/Story';
 
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -62,6 +63,14 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     <li className={`p-4 hover:bg-gray-700 flex items-center gap-4 ${location.pathname.includes('categories') ? 'bg-gray-900' : ''}`}>
                     <Category />
                     Danh mục
+                    </li>
+                </Link>
+                <Link to="/tieng-viet/story"
+                    onClick={() => {navigate(`/tieng-viet/story`),window.location.reload()}}
+                >
+                    <li className={`p-4 hover:bg-gray-700 flex items-center gap-4 ${location.pathname.includes('categories') ? 'bg-gray-900' : ''}`}>
+                    <Story />
+                    Câu chuyện
                     </li>
                 </Link>
                 <Link to="/tieng-viet/like"
