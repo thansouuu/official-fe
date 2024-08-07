@@ -65,7 +65,7 @@ const Main = () => {
     const handleShowIntro = () => {
         setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
       };
-    
+
 
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
@@ -115,7 +115,7 @@ const Main = () => {
             </div>
 
             <div className=" col-span-full"> 
-            <FoodContent className="flex flex-col p-4" title="Top 3 bài viết nổi bật nhất" >
+            <FoodContent className="flex flex-col p-4" title="TOP 3 BÀI VIẾT NỔI BẬT" >
                 <div className="overflow-x-auto">
                     <div className="flex space-x-4">
                         {topViewedProducts.map((product, index) => (
@@ -145,7 +145,7 @@ const Main = () => {
 
             <div className="col-span-full">
                 <FoodContent className="shadow-md flex justify-center items-center flex-wrap mb-6 flex-1 p-4 transition-margin duration-300" 
-                    title="Những mục nổi bật" >
+                    title="NHỮNG MỤC NỔI BẬT" >
                     <div className="w-full">
                         <Carousel style={{ width: '100%', height: '300px' }}>
                             {images.map((image, idx) => (

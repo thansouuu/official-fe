@@ -86,54 +86,83 @@ const VtMap = () => {
     }
   }, [locations, coordinates]);
 
+  const [mapLoaded, setMapLoaded] = useState(false);
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.js';
-    script.onload = async () => {
+    script.onload = () => {
+      console.log('Script loaded successfully');
       initializeMap();
     };
-    document.head.appendChild(script);
-
-    const initializeMap = async () => {
-      vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
-      const map = new vtmapgl.Map({
-        container: 'map',
-        style: vtmapgl.STYLES.VTRANS,
-        center: [106.31371494579435, 9.92895623029051],
-        zoom: 13,
-        preserveDrawingBuffer: true
-      });
-
-      const navigationControl = new vtmapgl.NavigationControl();
-      map.addControl(navigationControl, 'top-left');
-
-      // const roadDrawerControl = new vtmapgl.RoadDrawerControl({
-      //   accessToken: vtmapgl.accessToken,
-      //   mode: 'driving',
-      //   activeState: false,
-      //   addable: false,
-      // });
-      // map.addControl(roadDrawerControl);
-
-      // setRoadDrawerControl(roadDrawerControl);
-
-      // const points = await getListLocationUserForDirection();
-      // map.on('load', () => {
-      //   roadDrawerControl.setPoints(points);
-      // });
+    script.onerror = () => {
+      console.error('Failed to load the script');
     };
+    document.head.appendChild(script);
 
     return () => {
       document.head.removeChild(script);
     };
   }, []);
 
+  const initializeMap = async () => {
+    console.log('Initializing map');
+    vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
+    const map = new vtmapgl.Map({
+      container: 'map',
+      style: vtmapgl.STYLES.VTRANS,
+      center: [106.31371494579435, 9.92895623029051],
+      zoom: 13,
+      preserveDrawingBuffer: true
+    });
+
+    const navigationControl = new vtmapgl.NavigationControl();
+    map.addControl(navigationControl, 'top-left');
+
+    const roadDrawerControlInstance = new vtmapgl.RoadDrawerControl({
+      accessToken: vtmapgl.accessToken,
+      mode: 'driving',
+      activeState: false,
+      addable: false,
+    });
+
+    map.addControl(roadDrawerControlInstance);
+    setRoadDrawerControl(roadDrawerControlInstance);
+
+    const points = await getListLocationUserForDirection();
+    console.log('Points:', points);
+
+    map.on('load', () => {
+      console.log('Map loaded');
+      setMapLoaded(true);
+      if (points && points.length > 0) {
+        try {
+          console.log('Setting points:', points);
+          roadDrawerControlInstance.setPoints(points);
+          console.log('Points set on map');
+        } catch (error) {
+          console.error('Error setting points:', error);
+        }
+      }
+    });
+  };
+
   useEffect(() => {
-    if (roadDrawerControl && toDo.length > 0) {
+    if (roadDrawerControl && mapLoaded && toDo.length > 0) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
-      roadDrawerControl.setPoints(points);
+      console.log('Updating points:', points);
+      try {
+        if (points.length > 0 && points[0].length === 2) {
+          console.log('Setting points from toDo:', points);
+          roadDrawerControl.setPoints(points);
+        } else {
+          console.error('Invalid points format:', points);
+        }
+      } catch (error) {
+        console.error('Error updating points:', error);
+      }
     }
-  }, [toDo, roadDrawerControl]);
+  }, [toDo, roadDrawerControl, mapLoaded]);
 
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -194,7 +223,7 @@ const VtMap = () => {
   const handleSave = async () => {
     const points = toDo.map(task => [task.longitude, task.latitude]);
     try {
-      const response = await axios.post(`http://localhost:3000/locations/669cd9c2ffe2c00a4bdb1848`);
+      const response = await axios.post(`http://localhost:3001/api/locations/669cd9c2ffe2c00a4bdb1848`, {points});
       alert('Danh sách hành trình đã được lưu.');
     } catch (error) {
       console.error('Error saving the list:', error);
@@ -204,64 +233,64 @@ const VtMap = () => {
 
   return (
     <div className="relative h-full w-full flex flex-col items-center">
-      <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
-        <div className="list-card w-full md:w-1/2 p-4">
-          <div
-            className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
-            onDragOver={handleDragOver}
-            onDrop={(event) => handleDrop(event, 'toDo', getDropIndex(event, toDo))}
-          >
-            <h1 className="text-lg font-bold text-center">Danh sách hành trình</h1>
-            <div className="task-list flex-grow">
-              <ul className="list-disc pl-5">
-                {toDo.map((task, index) => (
-                  <li
-                    className="task py-1"
-                    key={index}
-                    draggable
-                    onDragStart={() => handleDragStart(task, 'toDo', index)}
-                    onDragOver={handleDragOver}
-                  >
-                    {index + 1}. {task.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <button
-              className="mt-4 p-2 bg-blue-500 text-white rounded"
-              onClick={handleSave}
-            >
-              Lưu điểm hành trình
-            </button>
+    <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
+      <div className="list-card w-full md:w-1/2 p-4">
+        <div
+          className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
+          onDragOver={handleDragOver}
+          onDrop={(event) => handleDrop(event, 'toDo', getDropIndex(event, toDo))}
+        >
+          <h1 className="text-lg font-bold text-center">Danh sách hành trình</h1>
+          <div className="task-list flex-grow">
+            <ul className="list-disc pl-5">
+              {toDo.map((task, index) => (
+                <li
+                  className="task py-1"
+                  key={index}
+                  draggable
+                  onDragStart={() => handleDragStart(task, 'toDo', index)}
+                  onDragOver={handleDragOver}
+                >
+                  {index + 1}. {task.name}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-        <div className="list-card w-full md:w-1/2 p-4">
-          <div
-            className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
-            onDragOver={handleDragOver}
-            onDrop={(event) => handleDrop(event, 'done', getDropIndex(event, done))}
+          <button
+            className="mt-4 p-2 bg-blue-500 text-white rounded"
+            onClick={handleSave}
           >
-            <h1 className="text-lg font-bold text-center">Danh sách địa điểm</h1>
-            <div className="task-list flex-grow">
-              <ul className="list-disc pl-5">
-                {done.map((location, index) => (
-                  <li
-                    className="task py-1"
-                    key={location._id}
-                    draggable
-                    onDragStart={() => handleDragStart(location, 'done', index)}
-                    onDragOver={handleDragOver}
-                  >
-                    {index + 1}. {location.name}
-                  </li>
-                ))}
-              </ul>            
-            </div>
+            Lưu điểm hành trình
+          </button>
+        </div>
+      </div>
+      <div className="list-card w-full md:w-1/2 p-4">
+        <div
+          className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
+          onDragOver={handleDragOver}
+          onDrop={(event) => handleDrop(event, 'done', getDropIndex(event, done))}
+        >
+          <h1 className="text-lg font-bold text-center">Danh sách địa điểm</h1>
+          <div className="task-list flex-grow">
+            <ul className="list-disc pl-5">
+              {done.map((location, index) => (
+                <li
+                  className="task py-1"
+                  key={location._id}
+                  draggable
+                  onDragStart={() => handleDragStart(location, 'done', index)}
+                  onDragOver={handleDragOver}
+                >
+                  {index + 1}. {location.name}
+                </li>
+              ))}
+            </ul>            
           </div>
         </div>
       </div>
-      <div id="map" className="w-full h-[810px]">Loading Map...</div>
     </div>
+    <div id="map" className="w-full h-[810px]"></div>
+  </div>
   );
 };
 

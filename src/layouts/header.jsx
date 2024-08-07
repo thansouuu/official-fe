@@ -132,9 +132,11 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1" />
                         )}
                     </Helmet>
-                        <button onClick={toggleSidebar} className="focus:outline-none hidden md:block">
-                            <Burger />
-                        </button>
+                    <button onClick={toggleSidebar} className="focus:outline-none hidden md:block">
+                        <div className="border border-black p-2 rounded-lg bg-gray-200">
+                            <Burger/>
+                        </div>
+                    </button>
                         <div className="relative flex items-center justify-end">
                             <button
                                 data-collapse-toggle="navbar-user"
