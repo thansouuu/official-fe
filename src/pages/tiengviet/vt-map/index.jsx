@@ -26,7 +26,7 @@ const VtMap = () => {
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/api/locations/list/tra-vinh`);
+      const response = await axios.get(`https://historic-be.onrender.com/api/locations/list/tra-vinh`);
       return response.data;
     } catch (error) {
       console.error('Error fetching locations:', error);
@@ -37,7 +37,7 @@ const VtMap = () => {
   // Fetching the list of coordinates for the user direction
   const getListLocationUserForDirection = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/api/locations/direction/669cd9c2ffe2c00a4bdb1848`);
+      const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/669cd9c2ffe2c00a4bdb1848`);
       return convertLocationsToPoints(response.data);
     } catch (error) {
       console.error('Error fetching coordinates:', error);
@@ -223,7 +223,7 @@ const VtMap = () => {
   const handleSave = async () => {
     const points = toDo.map(task => [task.longitude, task.latitude]);
     try {
-      const response = await axios.post(`http://localhost:3001/api/locations/669cd9c2ffe2c00a4bdb1848`, {points});
+      const response = await axios.post(`https://historic-be.onrender.com/api/locations/669cd9c2ffe2c00a4bdb1848`, {points});
       alert('Danh sách hành trình đã được lưu.');
     } catch (error) {
       console.error('Error saving the list:', error);
