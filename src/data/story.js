@@ -60,7 +60,7 @@ export default [
     },
     {
         id: '102',
-        imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Ao%20B%C3%A0%20Om.jpg',
+        imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Mi%E1%BB%85u%20C%E1%BB%8Dp%20C%C3%A1i%20Gi%C3%A0.jpg',
         video: 'https://www.thinglink.com/view/scene/1877420709420991332',
         title: 'Sự tích miễu cọp cái già',
         game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
@@ -105,6 +105,108 @@ export default [
             {
                 title: 'Mẫu chuyện',
                 link: '/tieng-viet/story',
+            },
+        ],
+    },
+    {
+        id: '103',
+        imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/S%E1%BB%B1%20t%C3%ADch%20l%E1%BB%85%20Chol%20Thnam%20Thmay.jpg',
+        video: 'https://www.thinglink.com/view/scene/1878119511886922596',
+        title: 'Sự tích lễ Chol Chnam Thmay',
+        game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
+        description: 'Chôl Chnăm Thmây tức là "Vào năm mới" của dân tộc Khmer, lễ được diễn ra vào ngày 13, 14 và 15 tháng tư hàng năm...',
+        contents: [
+            {
+                title: 'Diễn biến',
+                data: [
+                    {
+                        type: 'text',
+                        value:`- Chôl Chnăm Thmây tức là "Vào năm mới" của dân tộc Khmer, lễ được diễn ra vào ngày 13, 14 và 15 tháng tư hàng năm và ngày lễ chính là ngày  13 tháng 04, nếu năm nhuận là ngày 14 tháng 04 theo dương lịch. Lễ Chôl Chnăm Thmây được bắt nguồn từ sự tích:`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Ngày xưa, có cậu bé tên Thom Ma Bal rất thông minh, lúc lên bảy đã biết đem sự hiểu biết của mình truyền bá cho mọi người. Dân chúng thán phục và rất thích nghe chàng thuyết giảng.`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Tiếng đồn về tài trí của Thom Ma Bal ngày càng lan rộng, chẳng mấy chốc đã vang tận thượng giới. Các vị thần cũng xuống trần gian xin nghe Thom Ma Bal thuyết giảng. Do vậy, những buổi thuyết giảng của vị thần KaBưl MaHaPrum (Phạm Thiên) trên thượng giới ngày càng vắng vẻ.`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Thần KaBưl MaHaPrum vốn rất có uy thế trên thượng giới. Nay thần nghe ở dưới trần gian có kẻ hơn mình nên lấy làm ranh tỵ. Thần cho gọi hết tất cả các vị thần trở về, cấm không được xuống trần gian nghe thuyết giảng. Đồng thời thần tìm cách thử tài Thom Ma Bal. Một hôm, lúc Thom Ma Bal đang thuyết giảng cho dân chúng nghe thì Thần KaBưl MaHaPrum xuất hiện và nói :`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Ta đã nghe đồn là nhà ngươi thông minh xuất chúng, nhưng ta chưa tin về điều đó. Nay ta muốn thách thức cùng nhà ngươi; Thần liền đặt ra cho chàng trai ba câu hỏi và nói: nếu ngươi trả lời đúng thì ta sẽ chấp nhận thua nhà ngươi và tự cắt đầu mình trước mặt ngươi. Còn ngươi không trả lời được thì phải dâng mạng sống của ngươi cho ta. Ba câu hỏi đó là:`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Ngươi hãy cho ta biết: Buổi sáng duyên con người ở đâu? Buổi trưa duyên con người ở đâu? Buổi tối duyên con người ở đâu?`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Hỏi xong , thần KaBưl MaHaPrum hẹn bảy ngày sẽ trở lại nghe Thom Mal Bal giải đáp, rồi bay trở về trời. Thom Mal Bal suy nghĩ suốt ngày, đêm vẫn không tìm được câu trả lời. Đến ngày thứ sáu, chàng đi lang thang từ sáng đến trưa. Quá mệt mỏi và thất vọng, chàng ngồi nghỉ dưới gốc cây thốt nốt.`,
+                    },
+                    {
+                        type:'text',
+                        value:`- Lúc ấy, trên ngọn cây thốt nốt, hai con chim đại bàng nói chuyện với nhau. Con chim mái hỏi chim trống: Ngày mai ta sẽ đi ăn ở đâu?`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Chim trống đáp: Ngày mai ta sẽ ăn thịt Thom Mal Bal.`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Chim mái ngạc nhiên hỏi: Tại sao lại ăn thịt Thom Mal Bal ?`,
+                    },
+                    {
+                        type:'text',
+                        value:`- Chim trống thuật lại chuyện thần KaBưl MaHaPrum yêu cầu Thom Mal Bal phải trả lời câu hỏi. Nghe xong, chim mái hỏi: Vậy có ai giải đáp được không?`,
+                    },
+                    {
+                        type:'text',
+                        value:`- Chim trống tự đắc đáp: Thế này, duyên của con người sáng ở trên mặt, nên ngủ dậy người ta phải rửa mặt cho tươi tỉnh. trưa, duyên con người ở trên ngực, nên người ta phải tắm cho mát. Tối duyên con người ở dưới chân, nên người ta rửa chân trước khi đi ngủ.`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Thom Mal Bal ngồi dưới gốc cây, nghe được lời nói chuyện của đôi chim nên rất mừng rỡ và trở về nhà.`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Hôm sau đúng hẹn, Thần KaBưl MaHa Prum tay cầm gươm vàng, đáp xuống gặp Thom Mal Bal. Y lời chim trống hôm qua, Thom Mal Bal trả lời ba câu hỏi đó của KaBưl MaHaPrum.`,
+                    },
+                    {
+                        type:'text',
+                        value:`- Thần KalBưl MaHaPrum thua cuộc, ngửa mặt lên trời, gọi bảy người con gái xuống trần bảo:`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Cha đã thua trí Thom Mal Bal rồi. Theo lời hứa, cha phải chết. Các con hãy cất giữ đầu của cha trong tháp trên đỉnh núi Kaylas, nơi người trần không chạm đến được. Các con hãy cẩn thận, nếu để đầu cha rơi xuống biển, biển sẽ cạn, nếu để đầu cha tung lên không trung thì trời không có mưa và nếu để đầu cha trên mặt đất thì đất sẽ khô cằn, cỏ cây không mọc được. Và hằng năm các con hãy thay phiên nhau xuống trần gian để che chở cho nhân gian thoát khỏi mọi bệnh tật và bảo vệ mùa màng được tươi tốt hơn.`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Dặn các con xong, Thần tự tay cắt cổ, trao đầu mình cho con gái lớn tên Thung-sa và thân của thần biến thành một luồng ánh sáng bay vút lên không. Người con gái lớn đặt đầu của cha lên chiếc mâm vàng, cùng sáu cô em đưa vào ngôi tháp xây trong hang thủy tinh trên đỉnh núi KâyLas, trong khu rừng yên tĩnh nhất của dãy Hy Mã Lạp Sơn.`,
+                    },
+                    {
+                        type:'text',
+                        value:`- Từ đó, hàng năm đúng ngày thần KaBưl Ma Ha Prum tự sát, bảy cô gái đến núi Pras-su-mê luân phiên nhau vào tháp làm lễ rước đầu của cha mình, bay quanh ngọn núi ba vòng.`,
+                    },
+                    {
+                        type:'text',
+                        value:`- Do có sự tín ngưỡng như thế nên người dân Khmer mới chuẩn bị cúng tế và đón các nàng tiên lúc các nàng đưa đầu Ka Bưl MaHa Prưm bay ba vòng ngọn núi Pras-su-mê. Ngày đó chính là ngày vào năm mới (Chôl chnam thmây) của đồng bào Khmer.`,
+                    },
+                ],
+            },
+        ],
+
+        tags: [
+            {
+                title: 'Mẫu chuyện',
+                link: '/tieng-viet/story',
+            },
+            {
+                title: 'Người Khmer',
+                link: '/tieng-viet/figure/8/product/26',
             },
         ],
     },

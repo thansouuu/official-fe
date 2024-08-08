@@ -257,7 +257,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 <div>Chatbot</div>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 to="/tieng-viet/vt-map"
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
@@ -267,7 +267,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 <Travel />
                                 <div>Khám phá du lịch</div>
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link
                                 to="/tieng-viet/find"
