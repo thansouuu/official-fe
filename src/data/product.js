@@ -3005,7 +3005,7 @@ export default [
                 video: 'https://www.youtube.com/embed/4RTHZqVdwdg?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Biển ba động',
                 description: 'Biển Ba Động là danh thắng và khu du lịch nổi tiếng thuộc xã Trường Long Hoà, thị xã Duyên Hải, tỉnh Trà Vinh...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/693988acf7cf4ec39e919ada8c74fd67?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -3311,7 +3311,7 @@ export default [
                 video: 'https://www.youtube.com/embed/jPufJRk5AYI?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Thiền viện Trúc Lâm',
                 description: 'Thiền viện Trúc Lâm Trà Vinh tọa lạc tại ấp Khoán Tiều, xã Trường Long Hòa, thị xã Duyên Hải...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/5240bbd701c84fe98c1947c0dd0fd82c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -3537,7 +3537,7 @@ export default [
                 video: 'https://www.youtube.com/embed/z_SLtiM1wOQ?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 title: 'Đền thờ Bác',
                 description: ' Đền thờ Chủ tịch Hồ Chí Minh, biểu tượng “Công trình của trái tim” của nhân dân các dân tộc Trà Vinh...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/2c8d3096af314dde9fd3fd9c119e236a?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -5051,7 +5051,7 @@ export default [
                 video: '',
                 title: 'Lễ hội Ok Om Bok',
                 description: 'Lễ hội Ok Om Bok còn có tên khác là lễ hội Cúng Trăng, được tiến hành vào ngày 14 và 15 tháng Kadar ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/db6352a0ea24461882bb389fa10e5130?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -8492,7 +8492,7 @@ export default [
                 video: 'https://www.youtube.com/embed/PrSdHSB1Hyk?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Sự hình thành của tỉnh Trà Vinh giai đoạn 1732-1900',
                 description: 'Trong thời kỳ phong kiến, người dân Trà Vinh phải đối mặt với nhiều khó khăn do sự áp bức từ chính quyền...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/fca464faeb8942c38c1720af3b47a533?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -8707,7 +8707,7 @@ export default [
                 video: 'https://www.youtube.com/embed/r46qqu98yo0?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Sự hình thành của tỉnh Trà Vinh giai đoạn 1900-1945',
                 description: 'Đầu thế kỉ XX, Phan Bội Châu khởi xướng phong trào Đông Du, ở Trà Vinh có hàng chục thanh niên tại tỉnh...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/e519688a1799451fbd2189dc8c6e587d?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -8854,7 +8854,7 @@ export default [
                 video: 'https://www.youtube.com/embed/Mcfl9JXON4g?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Cách mạng Tháng Tám năm 1945 ở Trà Vinh',
                 description: 'Tháng 9 năm 1939, Chiến tranh thế giới thứ hai bùng nổ, thực dân Pháp tiến hành khủng bố tàn khốc, thủ tiêu...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/488fabe71a6a4f0aac3efc2131e52045?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -9188,7 +9188,7 @@ export default [
                 video: 'https://www.youtube.com/embed/f0wOhwUOuoo?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Trà Vinh những ngày đầu Nam Bộ kháng chiến',
                 description: '0 giờ ngày 23 tháng 9 năm 1945 (chưa đầy một tháng sau Cách mạng Tháng Tám giành thắng lợi ở Sài Gòn...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/d6a37f7b0752434f89ce5fdd941b70f7?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -9431,7 +9431,7 @@ export default [
                 video: 'https://www.youtube.com/embed/ZSD97thSkPk?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Nhân dân Trà Vinh vào những ngày đầu đấu tranh chống chính quyền Mỹ-Diệm',
                 description: 'Từ năm 1954, đất nước ta tạm thời chia làm hai miền với hai chế độ chính trị khác nhau. Ở miền Bắc là chế độ...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/d342b54fb02a4dbc832b7205d86dfd7c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {
@@ -9605,7 +9605,7 @@ export default [
                 video: 'https://www.youtube.com/embed/s1BA6sxUW_o?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
                 title: 'Khắc phục hậu quả chiến tranh, xây dựng và phát triển Trà Vinh từ năm 1975-1985',
                 description: 'Với chiến thắng lịch sử của Chiến dịch Hồ Chí Minh ngày 30-4-1975, cuộc kháng chiến chống Mỹ, cứu nước...',
-                game: '',
+                game: 'https://wordwall.net/vi/embed/8165279650f647bb855bde327e815456?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
                     {

@@ -58,5 +58,55 @@ export default [
             },
         ],
     },
+    {
+        id: '102',
+        imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Ao%20B%C3%A0%20Om.jpg',
+        video: 'https://www.thinglink.com/view/scene/1877420709420991332',
+        title: 'Sự tích miễu cọp cái già',
+        game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
+        description: 'Ngày xưa, dải đất ven biển Cầu Ngang, Duyên Hải vẫn còn là những cánh rừng hoang ngập mặn bạt ngàn, hiểm trở. Trong rừng, mãnh thú dọc ngang đi lại...',
+        contents: [
+            {
+                title: 'Diễn biến',
+                data: [
+                    {
+                        type: 'text',
+                        value:`- Ngày xưa, dải đất ven biển Cầu Ngang, Duyên Hải vẫn còn là những cánh rừng hoang ngập mặn bạt ngàn, hiểm trở. Trong rừng, mãnh thú dọc ngang đi lại. Trên trời chim muông thoả sức tung bay. Dưới nước kình ngư ung dung bơi lội. Sự sống tự nhiên cứ bình yên sinh sôi, nảy nở. `,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Tại một khu rừng bên vàm Thâu Râu có một gia đình nhà cọp sống vui vẻ hạnh phúc. Ngày nọ, cọp cha trên đường kiếm ăn cho cả nhà không may lâm nạn qua đời, để lại cho cọp mẹ bầy con sáu đứa đang độ ham ăn chóng đói. Vừa tảo tần vất vả kiếm cái ăn qua ngày lại vừa phải chiến đấu bảo vệ tính mạng đàn con thơ khiến cọp mẹ ngày thêm quắt queo, còm cõi. Sáu chú cọp con ngày một lớn lên còn đôi vai cọp mẹ ngày một oằn xuống.`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Giai đoạn này, công cuộc khẩn hoang lập làng trên vùng đất Trà Vinh diễn ra ngày một nhanh hơn. Những cánh rừng hoang vu bên bờ sông Thâu Râu bị thu hẹp dần. Tiếng phảng lấn hoang nghe chát chúa suốt ngày, ánh lửa đốt rừng nhìn hoa mắt thâu đêm. Vẳng đâu đây những tiếng kêu thảm thiết bi thương của cánh chim trúng tên, thú rừng vướng bẫy,... Cuộc sống bình yên giữa rừng già trở nên náo loạn. Từng đàn thú rừng dắt díu nhau vượt dòng sông Thâu Râu mênh mông sóng dữ xuôi về phía biển, mong tìm cho mình vùng đất sống.`,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Cọp mẹ cũng đã mấy lần đưa bầy con dại xuống mé nước, định rời bỏ nơi hiểm nguy đang rình rập. Mấy trăm thước bề ngang của dòng Thâu Râu thực ra cũng chẳng phải là điều gì quá lớn lao nhưng nhìn bầy con bị sóng vỗ vào mặt đã lóp ngóp sặc sụa, cọp mẹ đành quay đầu vào bờ. Gia đình nhà cọp bây giờ chính là những “cư dân” cuối cùng của vạt rừng hiếm hoi còn sót lại bên bờ Bắc sông Thâu Râu. Chuỗi ngày dài sau đó, chính cái ăn và sự bình yên của những đứa con trong hoàn cảnh rừng ngày càng thu hẹp, nguồn thức ăn ngày càng cạn kiệt và sự nguy hiểm ngày càng thể hiện trước mắt cứ bào mòn dần cả thể chất lẫn tinh thần cọp mẹ. Tiếng phảng lấn hoang, ánh lửa đốt rừng đã gần lắm rồi. Muông thú lo sợ, cao chạy xa bay! Nhiều bận, mấy ngày liền, cọp mẹ tất tả ngược xuôi khắp nơi mà vẫn không tìm được chút thức ăn cho bầy con. Túng thế, cọp mẹ tìm nơi kín đáo, dùng nanh sắc xé chính mảnh thịt đùi của mình rồi cắn răng cố sức mang về cho con no bụng.`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Trong tình thương yêu bao la của cọp mẹ, sáu chú cọp con rồi cũng trưởng thành, đủ sức vượt qua vàm sông Thâu Râu mênh mông sóng dữ, xuôi về những cánh rừng già ven biển tìm nơi sinh sống. Đau đớn thay, đó cũng chính là ngày cọp mẹ đã tàn hơi lụn sức. Không để vướng víu đàn con trước chuyến đi sinh tử, cọp mẹ một mình lẳng lặng tìm về bên cội trôm già quạnh quẽ, âm thầm sống nốt những ngày còn lại. `,
+                    },
+                    {
+                        type: 'text',
+                        value:`- Công cuộc khai hoang mở đất cuối cùng cũng hoàn thành, những cánh đồng màu mỡ phù sa, những xóm làng trù phú dần hiện lên bên bắc bờ sông Thâu Râu thay cho cánh rừng già hoang vu trước đó. Ngày vạt rừng cuối cùng ngã xuống, những người “lưu dân” phát hiện thi thể một con cọp cái già nằm rũ xương bên cội trôm cổ thụ. Khi hiểu đầu đuôi câu chuyện, cảm kích trước tình mẫu tử thiêng liêng của loài dã thú, dân làng cùng nhau dựng nên ngôi miễu mang tên Miễu Cọp Cái Già, ngày đêm nhang khói tôn thờ.`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Qua nhiều thế kỉ cùng bao thăng trầm lịch sử, Miễu Cọp Cái Già biến âm thành Miễu Cái Già (cái tên Cái Già đã trở thành địa danh chính thức của hai ấp Cái Già Trên, Cái Già Bên thuộc xã Hiệp Mỹ Đông, huyện Cầu Ngang).`,
+                    },
+                ],
+            },
+        ],
+
+        tags: [
+            {
+                title: 'Mẫu chuyện',
+                link: '/tieng-viet/story',
+            },
+        ],
+    },
 
 ]
