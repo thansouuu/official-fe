@@ -122,6 +122,8 @@ const Detail = ({ onUpdate }) => {
 
     const logoutHandler = () => {
         localStorage.removeItem('accessToken');
+        localStorage.removeItem('userId');
+
         mutate();
     };
 
@@ -316,7 +318,7 @@ const Detail = ({ onUpdate }) => {
             }
 
 
-{
+            {
                 activeModalIcon && (
                     <div className='fixed inset-0 bg-black/50 flex items-center justify-center'>
                         <p className='bg-white rounded p-4 flex flex-col gap-4'>

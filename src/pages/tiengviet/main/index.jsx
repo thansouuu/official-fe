@@ -114,6 +114,34 @@ const Main = () => {
                 
             </div>
 
+            <div className="col-span-full">
+                <FoodContent className="shadow-md flex justify-center items-center flex-wrap mb-6 flex-1 p-4 transition-margin duration-300" 
+                    title="NHỮNG MỤC NỔI BẬT" >
+                    <div className="w-full">
+                        <Carousel style={{ width: '100%', height: '300px' }}>
+                            {images.map((image, idx) => (
+                                <Carousel.Item key={idx} style={{ height: '300px' }}>
+                                    <div className="flex flex-col justify-between items-center w-full h-full p-4">
+                                        <img
+                                            className="d-block w-full h-[95%] object-contain"
+                                            onClick={() => handleClick(idx)}
+                                            src={image}
+                                            alt={`Slide ${idx}`}
+                                            style={{ maxHeight: '300px' }} // Đảm bảo ảnh không vượt quá chiều cao phần tử chứa
+                                        />
+                                        <div className="w-full text-center mt-2 mb-4">
+                                            <p className="text-[24px] leading-tight">
+                                                <b><i>{decrip[idx]}</i></b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </div>
+                </FoodContent>
+            </div>
+
             <div className=" col-span-full"> 
             <FoodContent className="flex flex-col p-4" title="TOP 3 BÀI VIẾT NỔI BẬT" >
                 <div className="overflow-x-auto">
@@ -143,33 +171,7 @@ const Main = () => {
             </FoodContent>
             </div>
 
-            <div className="col-span-full">
-                <FoodContent className="shadow-md flex justify-center items-center flex-wrap mb-6 flex-1 p-4 transition-margin duration-300" 
-                    title="NHỮNG MỤC NỔI BẬT" >
-                    <div className="w-full">
-                        <Carousel style={{ width: '100%', height: '300px' }}>
-                            {images.map((image, idx) => (
-                                <Carousel.Item key={idx} style={{ height: '300px' }}>
-                                    <div className="flex flex-col justify-between items-center w-full h-full p-4">
-                                        <img
-                                            className="d-block w-full h-[95%] object-contain"
-                                            onClick={() => handleClick(idx)}
-                                            src={image}
-                                            alt={`Slide ${idx}`}
-                                            style={{ maxHeight: '300px' }} // Đảm bảo ảnh không vượt quá chiều cao phần tử chứa
-                                        />
-                                        <div className="w-full text-center mt-2 mb-4">
-                                            <p className="text-[24px] leading-tight">
-                                                <b><i>{decrip[idx]}</i></b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </Carousel.Item>
-                            ))}
-                        </Carousel>
-                    </div>
-                </FoodContent>
-            </div>
+            
             
         </div>
     );

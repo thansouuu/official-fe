@@ -72,4 +72,84 @@ ul .task {
   padding: 1em;
   margin: 1em;
   border-radius: 5px;
+  font-size: 14px;
+}
+
+ul .task {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  position: relative;
+  font-size: 14px;
+  background-color: #b9b2b2;
+}
+
+
+ul .task-1 {
+  display: block;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+ul .task-1 {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  position: relative;
+  font-size: 14px;
+}
+
+ul .task::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #e3dfdf;
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  transform: translateY(-35%);
+}
+/* Đảm bảo các mục trong danh sách có chiều cao đồng nhất */
+.task {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style-type: disc; /* Đặt kiểu dấu chấm tròn */
+  list-style-position: inside; /* Giữ các chấm tròn bên trong mục */
+}
+
+/* Vẽ các đường nối chấm chấm */
+.task::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px; /* Điều chỉnh vị trí để không che các chấm tròn */
+  width: 2px;
+  height: 100%;
+
+}
+
+.task::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  width: 2px;
+  height: 22px;
+  border-left: 2px dotted #9b8383;
+}
+
+/* Đường nối cuối cùng không cần có đuôi */
+.task:last-child::after {
+  display: none;
 }

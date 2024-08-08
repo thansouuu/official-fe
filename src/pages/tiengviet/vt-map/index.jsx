@@ -7,14 +7,38 @@ import productData from '@/data/product';
 import Thinklink from '../thinglink';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './style-map.css'
+import { toast } from 'react-toastify';
 
 const containerStyle = {
   width: '100%',
   height: 'calc(100vh - 200px)' 
 };
 
-
 const VtMap = () => {
+  const navigate = useNavigate();
+  const [showAlert, setShowAlert] = useState(false);
+
+    // useEffect(() => {
+    //   const token = localStorage.getItem('accessToken');
+    //   if (!token) {
+    //     setShowAlert(true);
+    //     navigate('/tieng-viet/account');
+    //   }
+    // }, [navigate]);
+  
+    // useEffect(() => {
+    //   if (showAlert) {
+    //     toast.warning('Bạn cần đăng nhập để truy cập trang này');
+    //     setShowAlert(false);
+    //   }
+    // }, [showAlert]);
+  
+    // Nếu không có token thì sẽ không render gì cả
+    // const token = localStorage.getItem('accessToken');
+    // if (!token) {
+    //   return null;
+    // }
+  
   const [locations, setLocations] = useState([]);
   const [coordinates, setCoordinates] = useState([]);
   const [locationNames, setLocationNames] = useState([]);
@@ -22,11 +46,12 @@ const VtMap = () => {
   const [done, setDone] = useState([]);
   const [draggedItem, setDraggedItem] = useState(null);
   const [roadDrawerControl, setRoadDrawerControl] = useState(null);
+  const [userId, setUserId] = useState('');
 
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
-      const response = await axios.get(`https://historic-be.onrender.com/api/locations/list/tra-vinh`);
+      const response = await axios.get(`http://localhost:3001/api/locations/list/tra-vinh`);
       return response.data;
     } catch (error) {
       console.error('Error fetching locations:', error);
@@ -34,10 +59,12 @@ const VtMap = () => {
     }
   };
 
+
   // Fetching the list of coordinates for the user direction
   const getListLocationUserForDirection = async () => {
     try {
-      const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/669cd9c2ffe2c00a4bdb1848`);
+      const userId  = localStorage.getItem('userId');
+      const response = await axios.get(`http://localhost:3001/api/locations/direction/${userId}`);
       return convertLocationsToPoints(response.data);
     } catch (error) {
       console.error('Error fetching coordinates:', error);
@@ -115,19 +142,29 @@ const VtMap = () => {
       zoom: 13,
       preserveDrawingBuffer: true
     });
+    const geolocateControl = new vtmapgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    });
+    // Add geolocate control to the map.
+    map.addControl(geolocateControl);
 
     const navigationControl = new vtmapgl.NavigationControl();
     map.addControl(navigationControl, 'top-left');
 
-    const roadDrawerControlInstance = new vtmapgl.RoadDrawerControl({
+    const roadDrawerControl  = new vtmapgl.RoadDrawerControl({
       accessToken: vtmapgl.accessToken,
       mode: 'driving',
       activeState: false,
       addable: false,
     });
 
-    map.addControl(roadDrawerControlInstance);
-    setRoadDrawerControl(roadDrawerControlInstance);
+    map.addControl(roadDrawerControl);
+    setRoadDrawerControl(roadDrawerControl);
+    roadDrawerControl.deactive();
+
 
     const points = await getListLocationUserForDirection();
     console.log('Points:', points);
@@ -138,7 +175,7 @@ const VtMap = () => {
       if (points && points.length > 0) {
         try {
           console.log('Setting points:', points);
-          roadDrawerControlInstance.setPoints(points);
+          roadDrawerControl.setPoints(points);
           console.log('Points set on map');
         } catch (error) {
           console.error('Error setting points:', error);
@@ -219,15 +256,22 @@ const VtMap = () => {
     return index;
   };
 
+  const token = localStorage.getItem('accessToken');
 
   const handleSave = async () => {
+    const userId  = localStorage.getItem('userId');
     const points = toDo.map(task => [task.longitude, task.latitude]);
+    if (!token) {
+      toast.error('Vui lòng đăng nhập để lưu hành trình!');
+      return;
+    }
     try {
-      const response = await axios.post(`https://historic-be.onrender.com/api/locations/669cd9c2ffe2c00a4bdb1848`, {points});
-      alert('Danh sách hành trình đã được lưu.');
+      const response = await axios.post(`http://localhost:3001/api/locations/${userId}`, {points});
+      toast.success('Danh sách hành trình đã được lưu');
+
     } catch (error) {
       console.error('Error saving the list:', error);
-      alert('Có lỗi xảy ra khi lưu danh sách.');
+      toast.error('Lưu danh sách hành trình thất bại');
     }
   };
 
@@ -275,7 +319,7 @@ const VtMap = () => {
             <ul className="list-disc pl-5">
               {done.map((location, index) => (
                 <li
-                  className="task py-1"
+                  className="task-1 py-1"
                   key={location._id}
                   draggable
                   onDragStart={() => handleDragStart(location, 'done', index)}
