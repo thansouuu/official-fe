@@ -57,10 +57,18 @@ const Hdsd = () => {
                                 <b>Danh mục</b> và
                                 {' '}
                                 <span className="inline-block align-middle">
-                                    <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/like.png" className="w-4 h-4" />
+                                    <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/story.png" className="w-4 h-4" />
                                 </span>
                                 {' '}
-                                <b>yêu thích</b> là nơi lưu trữ những bài viết của phần mềm cũng như những bài viết bạn đã yêu thích.
+                                <b>Câu chuyện</b> là nơi lưu trữ những bài viết, câu chuyện từ sự thật đến hư cấu của phần mềm.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span className="inline-block align-middle">
+                                    <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/like.png" className="w-4 h-4" />
+                                </span>{' '}
+                                <b>Yêu thích</b> là nơi lưu trữ những bài viết bạn đã yêu thích và cho phép chia sẽ qua phần mềm thứ 3: Facebook, Messenger,...
                             </div>
                         </li>
                         <li>
@@ -71,7 +79,7 @@ const Hdsd = () => {
                                     <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/map.png" className="w-5 h-5" />
                                 </span>
                                 {' '}
-                                <b>bản đồ</b> sẽ cung cấp cho bạn vị trí của từng đối tượng cụ thể theo từng huyện, thị, thành phố, bạn có thể xem nội dung khái quát, thuyết minh cũng như 3D - VR Tour.
+                                <b>Bản đồ</b> sẽ cung cấp cho bạn vị trí của từng đối tượng cụ thể theo từng huyện, thị, thành phố, bạn có thể xem nội dung khái quát, thuyết minh cũng như 3D - VR Tour.
                             </div>
                         </li>
                         <li>
