@@ -145,7 +145,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         Chatbot
                     </li>
                 </Link>
-                {/* <Link
+                <Link
                     to="/tieng-viet/vt-map"
                     onClick={() => {
                         navigate(`/tieng-viet/vt-map`);
@@ -160,7 +160,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Travel />
                         Khám phá du lịch
                     </li>
-                </Link> */}
+                </Link>
                 <Link
                     to="/tieng-viet/find"
                     onClick={() => {

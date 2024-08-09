@@ -64,7 +64,7 @@ const Main = () => {
 
     const handleShowIntro = () => {
         setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
-      };
+    };
 
 
     return (

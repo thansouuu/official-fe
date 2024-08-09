@@ -50,6 +50,7 @@
 .list-card {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .card {
@@ -59,11 +60,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }
 
 .card.list-card-done {
   background-color: rgb(202, 248, 202);
-  height: 100vh;
 }
 
 ul .task {
@@ -86,7 +87,6 @@ ul .task {
   font-size: 14px;
   background-color: #b9b2b2;
 }
-
 
 ul .task-1 {
   display: block;
@@ -119,24 +119,22 @@ ul .task::before {
   top: 50%;
   transform: translateY(-35%);
 }
-/* Đảm bảo các mục trong danh sách có chiều cao đồng nhất */
+
 .task {
   position: relative;
   padding-left: 20px;
   margin-bottom: 10px;
-  list-style-type: disc; /* Đặt kiểu dấu chấm tròn */
-  list-style-position: inside; /* Giữ các chấm tròn bên trong mục */
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
-/* Vẽ các đường nối chấm chấm */
 .task::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 10px; /* Điều chỉnh vị trí để không che các chấm tròn */
+  left: 10px;
   width: 2px;
   height: 100%;
-
 }
 
 .task::after {
@@ -149,7 +147,6 @@ ul .task::before {
   border-left: 2px dotted #9b8383;
 }
 
-/* Đường nối cuối cùng không cần có đuôi */
 .task:last-child::after {
   display: none;
 }
