@@ -150,3 +150,11 @@ ul .task::before {
 .task:last-child::after {
   display: none;
 }
+
+/* .indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom {
+  display: none;
+} */
+
+.road-draw-info-panel {
+  display: none;
+}

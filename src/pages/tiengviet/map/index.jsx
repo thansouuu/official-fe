@@ -157,6 +157,7 @@ const Map = () => {
             )}
           </GoogleMap>
         </LoadScript>
+        
         <div
           className={`absolute bottom-0 left-0 w-full bg-black text-white p-4 border-t border-gray-200 transition-opacity duration-500 ease-in-out ${
             selectedLocation ? 'opacity-100' : 'opacity-0'
