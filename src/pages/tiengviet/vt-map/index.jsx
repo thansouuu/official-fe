@@ -142,6 +142,39 @@ const VtMap = () => {
 
   const [mapLoaded, setMapLoaded] = useState(false);
 
+
+  const replaceSvgWithImage = () => {
+    const markers = document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom');
+    markers.forEach(marker => {
+      const spans = marker.querySelectorAll('span');
+      if (spans.length >= 2) {
+        const secondSpan = spans[1];
+        const svgElement = secondSpan.querySelector('svg');
+        if (svgElement && !secondSpan.querySelector('img')) {
+          const imgElement = document.createElement('img');
+          imgElement.src = 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ch%C3%B9a%20Can%20Snom/23.jpg';
+          imgElement.alt = 'Location Image';
+          imgElement.className = 'w-10 h-10'; // Thêm lớp Tailwind CSS để điều chỉnh kích thước ảnh
+          secondSpan.replaceChild(imgElement, svgElement);
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    // Gọi hàm để thay thế SVG và điều chỉnh kích thước ảnh
+    replaceSvgWithImage();
+
+    // Sử dụng MutationObserver để theo dõi các thay đổi động trong DOM
+    const observer = new MutationObserver(() => replaceSvgWithImage());
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Dọn dẹp khi component unmount
+    return () => observer.disconnect();
+  }, []); 
  
 
   useEffect(() => {
@@ -388,6 +421,13 @@ const VtMap = () => {
           if (location) {
             setSelectedLocation(location);
           }
+          
+          if (location === undefined) {
+            setSelectedLocation((prevLocation) => ({
+              ...prevLocation,
+              name: 'Đây là vị trí của bạn',
+            }));
+          }
         }
       };
     
@@ -560,12 +600,25 @@ const VtMap = () => {
                   ))}
                 </ul>
               </div>
-              <button
-                className="mt-4 p-2 bg-blue-500 text-white rounded"
-                onClick={handleSave}
-              >
-                Lưu điểm hành trình
-              </button>
+              <div className="flex items-center space-x-4">
+                <button
+                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300"
+                  onClick={handleSave}
+                >
+                  Lưu điểm hành trình
+                </button>
+                <button
+                  onClick={handleClick}
+                  className={`ml-auto px-4 py-2 rounded text-white transition duration-300 ${
+                    isadd
+                      ? 'bg-green-500 hover:bg-green-600 active:bg-green-700'
+                      : 'bg-red-500 hover:bg-red-600 active:bg-red-700'
+                  }`}
+                >
+                  {isadd ? 'Thêm vị trí' : 'Xóa vị trí'}
+                </button>
+              </div>
+        {/* </div> */}
             </div>
           </div>
           <div className="list-card w-full md:w-1/2 p-4">
@@ -593,15 +646,11 @@ const VtMap = () => {
             </div>
           </div>
         </div>
-        <div>
-          <button onClick={handleClick} className="btn-primary">
-              {isadd ? 'Thêm vị trí' : 'Xóa vị trí'}
-          </button>
-        </div>
+        
       </div>
       {/* <div id="map" className="w-[80%] h-[810px]"></div> */}
       <div className="flex-1 relative">
-        <div id="map" className="w-full h-[810px]"></div>
+        <div id="map" className="w-full h-[610px]"></div>
         <div
         className={`absolute bottom-0 left-0 w-full bg-black text-white p-4 border-t border-gray-200 transition-opacity duration-500 ease-in-out ${
           selectedLocation ? 'opacity-100' : 'opacity-0'
@@ -610,14 +659,15 @@ const VtMap = () => {
         {selectedLocation && (
           <>
             <button
-              className="absolute top-2 right-2 text-white"
-              onClick={handleClose}
-            >
-              X
-            </button>
+            className="absolute top-2 right-2 text-white text-lg px-4 py-2 bg-red-500 rounded-full hover:bg-red-600 active:bg-red-700 transition duration-300"
+            onClick={handleClose}
+          >
+            X
+          </button>
             <h2 className="text-xl font-bold">{selectedLocation.name}</h2>
+            {selectedLocation.name!=='Đây là vị trí của bạn' && (
+            <>
             <p>{selectedLocation.decription}</p>
-            {console.log('select ',selectedLocation)}
             <div className="flex items-center space-x-2 mt-2">
               {/* <button
                 className="bg-white text-black px-4 py-2 rounded"
@@ -638,7 +688,10 @@ const VtMap = () => {
                 3D - VR Tour
               </button>
             </div>
-          </>
+            </>
+            )}
+            <div className='h-[50px]'/>          
+            </>
         )}
       </div>
       </div>
