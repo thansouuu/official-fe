@@ -256,7 +256,11 @@ const LikedPosts = () => {
                                     <img src="/images/mess.png" alt="Share on Messenger" style={{ width: 32, height: 32, borderRadius: '50%' }} />
                                     </a>
                                     <TwitterShareButton url={window.location.href} title={item.title_id}>
-                                        <TwitterIcon size={32} round />
+                                        <img
+                                            src="/images/twitter.jpg"
+                                            alt="Twitter"
+                                            style={{ width: 32, height: 32, borderRadius: '50%' }}
+                                        />
                                     </TwitterShareButton>
                                     <button
                                         onClick={() => copyToClipboard(`https://lichsudiaphuong-travinh.netlify.app/tieng-viet/figure/${item.figure_id}/product/${item.product_id}`)}

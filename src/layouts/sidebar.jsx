@@ -114,9 +114,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </Link>
                 <Link
-                    to="/tieng-viet/map"
+                    to="/tieng-viet/vt-map"
                     onClick={() => {
-                        navigate(`/tieng-viet/map`);
+                        navigate(`/tieng-viet/vt-map`);
                         window.location.reload();
                     }}
                 >
@@ -126,7 +126,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Map />
-                        Bản đồ
+                        Khám phá du lịch
                     </li>
                 </Link>
                 <Link
@@ -145,7 +145,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         Chatbot
                     </li>
                 </Link>
-                <Link
+                {/* <Link
                     to="/tieng-viet/vt-map"
                     onClick={() => {
                         navigate(`/tieng-viet/vt-map`);
@@ -160,7 +160,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Travel />
                         Khám phá du lịch
                     </li>
-                </Link>
+                </Link> */}
                 <Link
                     to="/tieng-viet/find"
                     onClick={() => {

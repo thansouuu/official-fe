@@ -46,6 +46,12 @@ const VtMap = () => {
   const [done, setDone] = useState([]);
   const [draggedItem, setDraggedItem] = useState(null);
   const [roadDrawerControl, setRoadDrawerControl] = useState(null);
+  // const [animatePoints, setAnimatePoints] = useState(null);
+  const [listLngLat, setlistLngLat] = useState([
+    [-74.006, 40.7128],
+    [-73.935242, 40.730610],
+    // Thêm nhiều tọa độ nếu cần
+  ]);
   const [userId, setUserId] = useState('');
   const [td_x, setTdX] = useState(null);
   const [td_y, setTdY] = useState(null);
@@ -53,6 +59,7 @@ const VtMap = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
   const [tmp, setTmp] = useState([]);
+
  
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -113,7 +120,7 @@ const VtMap = () => {
         const location = locations.find(loc => {
           return loc.latitude === coord.latitude && loc.longitude === coord.longitude;
         });
-        return location ? location.name : 'Không tìm thấy';
+        return location ? location.name : 'Vị trí của bạn';
       });
     };
 
@@ -125,20 +132,20 @@ const VtMap = () => {
   }, [locations, coordinates]);
 
 
-  function setDestination(points, locationsData) {
-    const destination = locationsData
-      .filter(location =>
-        points.some(point => point[0] === location.longitude && point[1] === location.latitude)
-      )
-      .map(location => ({
-        ...location,
-        coordinates: [location.longitude, location.latitude],
-        message: 'Meow Meow!',
-        imageUrl: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ch%C3%B9a%20Can%20Snom/23.jpg'
-      }));
+  // function setDestination(points, locationsData) {
+  //   const destination = locationsData
+  //     .filter(location =>
+  //       points.some(point => point[0] === location.longitude && point[1] === location.latitude)
+  //     )
+  //     .map(location => ({
+  //       ...location,
+  //       coordinates: [location.longitude, location.latitude],
+  //       message: 'Meow Meow!',
+  //       imageUrl: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ch%C3%B9a%20Can%20Snom/23.jpg'
+  //     }));
   
-    return destination;
-  }
+  //   return destination;
+  // }
 
   const [mapLoaded, setMapLoaded] = useState(false);
 
@@ -152,9 +159,10 @@ const VtMap = () => {
         const svgElement = secondSpan.querySelector('svg');
         if (svgElement && !secondSpan.querySelector('img')) {
           const imgElement = document.createElement('img');
-          imgElement.src = 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ch%C3%B9a%20Can%20Snom/23.jpg';
+          imgElement.src = '/public/destination.png';
           imgElement.alt = 'Location Image';
-          imgElement.className = 'w-10 h-10'; // Thêm lớp Tailwind CSS để điều chỉnh kích thước ảnh
+          imgElement.style.width = '55px'; // Đặt chiều rộng
+          imgElement.style.height = '55px'; // Đặt chiều cao
           secondSpan.replaceChild(imgElement, svgElement);
         }
       }
@@ -208,41 +216,39 @@ const VtMap = () => {
       zoom: 13,
       preserveDrawingBuffer: true
     });
-
-    
-
       const geolocateControl = new vtmapgl.GeolocateControl({
       positionOptions: {
         enableHighAccuracy: true
       },
-      trackUserLocation: true
+      trackUserLocation: true,
+      showUserLocation:true
     });
+    // new geolocateControl(trackUserLocation?);
+    // new GeolocateControl.options(showUserLocation);
+    
       map.addControl(geolocateControl);
-      // if (td_x!==null && td_y!==null)
-      //   map.removeControl(geolocateControl);
       map.on("load", function () {
-        geolocateControl.trigger(); // add this if you want to fire it by code instead of the button
+        geolocateControl.trigger(1); // add this if you want to fire it by code instead of the button
       });
       geolocateControl.on("geolocate", locateUser);
   
       function locateUser(e) {
-        console.log("A geolocate event has occurred.");
-        console.log("lng:" + e.coords.longitude + ", lat:" + e.coords.latitude);
           const longitude = e.coords.longitude;
           const latitude = e.coords.latitude;
           setTdX(longitude);
           setTdY(latitude);
+          // geolocateControl.trigger(0);
           map.removeControl(geolocateControl);
       }
       
+     
       const scale = new vtmapgl.ScaleControl({
         maxWidth: 80,
         unit: 'metric'
         });
       map.addControl(scale);
-
-    const navigationControl = new vtmapgl.NavigationControl();
-    map.addControl(navigationControl, 'top-left');
+    // const navigationControl = new vtmapgl.NavigationControl();
+    // map.addControl(navigationControl, 'top-left');
 
     const roadDrawerControl  = new vtmapgl.RoadDrawerControl({
       accessToken: vtmapgl.accessToken,
@@ -252,16 +258,19 @@ const VtMap = () => {
     });
 
     map.addControl(roadDrawerControl);
-    setRoadDrawerControl(roadDrawerControl);
+    setRoadDrawerControl(roadDrawerControl);    
     roadDrawerControl.deactive();
+    // setlistLngLat(await getListLocationUserForDirection());
+    
+    // setAnimatePoints(animatePoints);
 
 
     const points = await getListLocationUserForDirection();
     console.log('Points:', points);
 
     const locationsData = await getListLocation();
-    const Destination = setDestination(points, locationsData);
-    console.log('destination ',Destination);
+    // const Destination = setDestination(points, locationsData);
+    // console.log('destination ',Destination);
 
     map.on('load', () => {
       console.log('Map loaded');
@@ -270,6 +279,7 @@ const VtMap = () => {
         try {
           console.log('Setting points:', points);
           roadDrawerControl.setPoints(points);
+          console.log('bay ',listLngLat);
           console.log('Points set on map');
 
         
@@ -278,34 +288,11 @@ const VtMap = () => {
         }
       }
     });
-    
 
-    // Destination.forEach(location => {
-    //   const el = document.createElement('div');
-    //   el.innerHTML = `<div class="custom-marker"><img src="${location.imageUrl}" style="width: 50px; height: 50px;"><span>${location.message}</span></div>`;
-    //   el.addEventListener('click', function() {
-    //     window.alert(location.message);
-    //   });
     
-    //   // Initialize marker
-    //   new vtmapgl.Marker(el)
-    //     .setLngLat(location.coordinates)
-    //     .addTo(map);
-    
-      
-    // });
-
-
-    //xóa cữa sổ vẽ tuyến đường
-  //   document.querySelectorAll('.road-draw-info-panel, .road-draw-body').forEach(element => {
-  //     element.style.display = 'none';
-  //   });
-  //   document.addEventListener('DOMContentLoaded', () => {
-  //     document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom').forEach(element => {
-  //         element.style.display = 'none';
-  //     });
-  // });
   };
+
+
 
 
   const handleDragOver = (event) => {
@@ -366,8 +353,19 @@ const VtMap = () => {
   const token = localStorage.getItem('accessToken');
 
   const handleSave = async () => {
+    // const geolocateControl = new vtmapgl.GeolocateControl({
+    //   positionOptions: {
+    //     enableHighAccuracy: true
+    //   },
+    //   trackUserLocation: true,
+    //   showUserLocation:true,
+    // });
+    // new geolocateControl(trackUserLocation());
     const userId  = localStorage.getItem('userId');
-    const points = toDo.map(task => [task.longitude, task.latitude]);
+    const points = toDo
+      .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
+      .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
+
     if (!token) {
       toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
@@ -383,12 +381,17 @@ const VtMap = () => {
   };
 
   useEffect(() => {
+
+
     if (roadDrawerControl && mapLoaded && toDo.length > 0) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
+      setlistLngLat(points);
+      console.log('update bay ',listLngLat);
+      // animatePoints.addTo(mapp);
       setTmp(toDo);
       // const locationsData = await getListLocation();
-      const Destination = setDestination(points, locationData);
-      console.log('update data ',Destination);
+      // const Destination = setDestination(points, locationData);
+      // console.log('update data ',Destination);
       console.log('Updating toDo:', toDo);
       try {
         if (points.length > 0 && points[0].length === 2) {
@@ -456,10 +459,11 @@ const VtMap = () => {
     }, [toDo]);
 
   const handleClick = () => {
+    if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.warning('Đã xóa vị trí bạn khỏi chuyến đi');
     setIsAdd(prevState => !prevState);
     const lastItem = toDo.slice(-1)[0];
     if (lastItem && isadd) {
-      const updatedLastItem = { ...lastItem, name: 'current', longitude: td_x, latitude: td_y };
+      const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
       setToDo((prevToDo) => [updatedLastItem,...prevToDo ]);
     }
     else {
@@ -471,6 +475,7 @@ const VtMap = () => {
       const points = toDo.map(task => [task.longitude, task.latitude]);
       console.log('pretoDo',toDo);
       console.log('Updating points:', points);
+      setlistLngLat(points);
       try {
         if (points.length > 0 && points[0].length === 2) {
           console.log('Setting points from toDo:', points);
@@ -595,7 +600,7 @@ const VtMap = () => {
                       onDragStart={() => handleDragStart(task, 'toDo', index)}
                       onDragOver={handleDragOver}
                     >
-                      {index + 1}. {task.name}
+                      {index}. {task.name}
                     </li>
                   ))}
                 </ul>
@@ -638,7 +643,7 @@ const VtMap = () => {
                       onDragStart={() => handleDragStart(location, 'done', index)}
                       onDragOver={handleDragOver}
                     >
-                      {index + 1}. {location.name}
+                      {index +1 }. {location.name}
                     </li>
                   ))}
                 </ul>            
@@ -661,37 +666,37 @@ const VtMap = () => {
             <button
             className="absolute top-2 right-2 text-white text-lg px-4 py-2 bg-red-500 rounded-full hover:bg-red-600 active:bg-red-700 transition duration-300"
             onClick={handleClose}
-          >
+            >
             X
-          </button>
-            <h2 className="text-xl font-bold">{selectedLocation.name}</h2>
+            </button>
+            <h2 className="text-2xl font-bold ">{selectedLocation.name}</h2>
             {selectedLocation.name!=='Đây là vị trí của bạn' && (
             <>
-            <p>{selectedLocation.decription}</p>
-            <div className="flex items-center space-x-2 mt-2">
-              {/* <button
-                className="bg-white text-black px-4 py-2 rounded"
-                onClick={handleFindPath}
-              >
-                Tìm đường
-              </button> */}
-              <button
-                className="bg-blue-500 text-white px-4 py-2 rounded"
-                onClick={handleProduct}
-              >
-                Thuyết minh
-              </button>
-              <button
-                className="bg-blue-500 text-white px-4 py-2 rounded"
-                onClick={handleTour}
-              >
-                3D - VR Tour
-              </button>
-            </div>
+              <p>{selectedLocation.decription}</p>
+              <div className="flex items-center space-x-2 mt-2">
+                {/* <button
+                  className="bg-white text-black px-4 py-2 rounded"
+                  onClick={handleFindPath}
+                >
+                  Tìm đường
+                </button> */}
+                <button
+                  className="bg-blue-500 text-white px-4 py-2 rounded"
+                  onClick={handleProduct}
+                >
+                  Thuyết minh
+                </button>
+                <button
+                  className="bg-blue-500 text-white px-4 py-2 rounded"
+                  onClick={handleTour}
+                >
+                  3D - VR Tour
+                </button>
+              </div>
             </>
             )}
             <div className='h-[50px]'/>          
-            </>
+          </>
         )}
       </div>
       </div>

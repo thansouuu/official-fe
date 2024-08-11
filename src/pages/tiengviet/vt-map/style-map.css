@@ -158,3 +158,20 @@ ul .task::before {
 .road-draw-info-panel {
   display: none;
 }
+
+#toggleAnimationBtn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #40babd;
+  border: 1px solid #40babd;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+#toggleAnimationBtn:focus {
+    outline: none;
+    box-shadow: none;
+}

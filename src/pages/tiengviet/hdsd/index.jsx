@@ -142,11 +142,18 @@ const Hdsd = () => {
                         <a href={`https://www.youtube.com/@L%E1%BB%8Bchs%E1%BB%AD%C4%91%E1%BB%8Baph%C6%B0%C6%A1ngTr%C3%A0Vinh`} target="_blank" rel="noopener noreferrer">
                             <img src="/logo.png" alt="Share on Messenger" style={{ width: 32, height: 32, borderRadius: '50%' }} />
                         </a>
-                        <FacebookShareButton hashtag={'Góp ý'} url={window.location.href} >
+                        {/* <FacebookShareButton hashtag={'Góp ý'} url={window.location.href} >
                             <FacebookIcon size={32} round />
-                        </FacebookShareButton>
+                        </FacebookShareButton> */}
+                        <a  href={`https://www.facebook.com/profile.php?id=61563995585970`} target="_blank" rel="noopener noreferrer">
+                            <img src="/public/images/facebook.png" alt="My Page on Facebook" style={{ width: 32, height: 32, borderRadius: '50%' }} />
+                        </a>
                         <TwitterShareButton url={window.location.href} >
-                            <TwitterIcon size={32} round />
+                            <img
+                                src="/images/twitter.jpg"
+                                alt="Twitter"
+                                style={{ width: 32, height: 32, borderRadius: '50%' }}
+                            />
                         </TwitterShareButton>
                     </div>
                 </div>

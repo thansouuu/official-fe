@@ -675,7 +675,11 @@ const Story = memo(() => {
                             />
                         </a>
                         <TwitterShareButton url={window.location.href} title={product?.title}>
-                            <TwitterIcon size={32} round />
+                            <img
+                                src="/images/twitter.jpg"
+                                alt="Twitter"
+                                style={{ width: 32, height: 32, borderRadius: '50%' }}
+                            />
                         </TwitterShareButton>
                         <button onClick={handleCopyLink} className="flex items-center gap-2">
                             <img
