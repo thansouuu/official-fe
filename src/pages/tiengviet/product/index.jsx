@@ -472,27 +472,59 @@ const Product = memo(() => {
     };
     // window.location.reload()
 
-    const contentRef = useRef(null);
+    useEffect(() => {
+        setVideo(product?.video || '');
+    }, [product?.video]);
 
+    const contentRef = useRef(null);
+    const [isvideo,setisVideo]=useState(false);
+    const [video, setVideo] = useState('');
+
+    const handleVideo = () => {
+        setisVideo(prevState => !prevState); 
+        if (!isvideo) toast.success('Đã thêm thủ ngữ vào video'); else toast.warning('Đã bỏ thủ ngữ khỏi video');
+        if (!isvideo && product.video2!=undefined) {setVideo(product?.video2); console.log('chuyen sang thu ngu');}
+        else {setVideo(product?.video); console.log('chuyen sang binh thuong');}
+      };
+
+      const titleRef = useRef(null);
+
+      useEffect(() => {
+        // Focus vào phần tử khi component được mount
+        if (titleRef.current) {
+          titleRef.current.focus();
+        }
+      }, [product]);
 
     return (
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-            {/* <Helmet>
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1" />
-            </Helmet> */}
             {product?.video!='' && 
-            <iframe
-                className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
-                src={product?.video}
-                title="Thuyết minh"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                allowFullScreen
-            ></iframe>
+               <div className="flex flex-col items-center">
+                    <iframe
+                        className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
+                        src={video}
+                        title="Thuyết minh"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                        allowFullScreen
+                    ></iframe>
+                    <button
+                        onClick={handleVideo}
+                        className="mt-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
+                    >
+                        {!isvideo ? 'Thêm thủ ngữ' : 'Bỏ thủ ngữ'}
+                    </button>
+                </div>
             }
             <h2 className="text-3xl text-center pb-4 border-b border-slate-800 flex justify-center items-center gap-2">
-                {product?.title}
+                <div
+                    ref={titleRef}
+                    tabIndex={-1} // tabIndex cần thiết để phần tử không tương tác có thể focus
+                    style={{ outline: 'none' }} // Loại bỏ viền focus mặc định nếu cần
+                >
+                    {product?.title}
+                </div>
                 <button onClick={handleLike}>
                     {isLiked ? (
                         <svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" width="24" height="24">

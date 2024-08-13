@@ -101,10 +101,11 @@ const VtMap = () => {
           coord.latitude === location.latitude && coord.longitude === location.longitude
         );
       });
-
-      
+      const sortedLocations = [...filteredLocations].sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });      
       setLocations(locationsData);
-      setDone(filteredLocations);
+      setDone(sortedLocations);
       setCoordinates(coordinates);
       
       console.log('all des ',locationsData);
@@ -323,6 +324,8 @@ const VtMap = () => {
     } else {
       if (destination === 'toDo') {
         setDone((prev) => prev.filter((task) => task.name !== data.task.name));
+        // const sortedDone = [...done].sort((a, b) => a.name.localeCompare(b.name));
+        // setDone(sortedDone);
         setToDo((prev) => {
           const updated = [...prev];
           updated.splice(index, 0, data.task);
@@ -335,6 +338,8 @@ const VtMap = () => {
           updated.splice(index, 0, data.task);
           return updated;
         });
+        
+        
       }
     }
     setDraggedItem(null);
@@ -557,31 +562,31 @@ const VtMap = () => {
   return (
     <div className="relative h-full w-full flex flex-col">
       <div className="relative h-full w-full flex flex-col items-center">
-      <div className="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
-      <h3 className="text-xl font-semibold mb-4">Chọn nhiều tùy chọn:</h3>
-      <div className="space-y-3">
-        {options.map((option, index) => (
-          <div key={index} className="flex items-center">
-            <label htmlFor={`checkbox-${index}`} className="flex-1">{option.label}</label>
-            <input
-              type="checkbox"
-              id={`checkbox-${index}`}
-              value={option.value}
-              checked={selectedOptions.includes(option.value)}
-              onChange={handleCheckboxChange}
-              className="ml-3"
-            />
-          </div>
-        ))}
-      </div>
-      <button
-        type="button"
-        onClick={handleSubmit}
-        className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-      >
-        Gửi
-      </button>
-    </div>
+      {/* <div className="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
+        <h3 className="text-xl font-semibold mb-4">Chọn nhiều tùy chọn:</h3>
+        <div className="space-y-3">
+          {options.map((option, index) => (
+            <div key={index} className="flex items-center">
+              <label htmlFor={`checkbox-${index}`} className="flex-1">{option.label}</label>
+              <input
+                type="checkbox"
+                id={`checkbox-${index}`}
+                value={option.value}
+                checked={selectedOptions.includes(option.value)}
+                onChange={handleCheckboxChange}
+                className="ml-3"
+              />
+            </div>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={handleSubmit}
+          className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+        >
+          Gửi
+        </button>
+      </div> */}
         <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
           <div className="list-card w-full md:w-1/2 p-4">
             <div

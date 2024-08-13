@@ -44,7 +44,7 @@ export default [
     {
         id: 10,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-2.jpg',
-        name: 'Sự kiện lịch sử',
+        name: 'Giai đoạn lịch sử',
         description:[
             {
                 value: `Từ các cuộc kháng chiến anh dũng đến các sự kiện cách mạng, mỗi câu chuyện lịch sử đều phản ...`,
@@ -55,7 +55,7 @@ export default [
                         valueModal: {
                             type: 'tooltip',
                             ref: false,
-                            value: 'Từ các cuộc kháng chiến anh dũng đến các sự kiện cách mạng, mỗi câu chuyện lịch sử đều phản ánh sức mạnh và lòng kiên cường của cộng đồng địa phương, góp phần hình thành bản sắc văn hóa đặc sắc của tỉnh. Tại đây, giúp người dùng hiểu rõ hơn về lịch sử và quá trình phát triển của Trà Vinh.',
+                            value: 'Từ các cuộc kháng chiến anh dũng đến các sự kiện cách mạng, mỗi câu chuyện lịch sử đều phản ánh sức mạnh và lòng kiên cường của cộng đồng địa phương, góp phần hình thành bản sắc văn hóa đặc sắc của tỉnh. Tại đây, giúp người dùng hiểu rõ hơn về lịch sử và quá trình phát triển của Trà Vinh qua từng giai đoạn.',
                         },
                     },
                 ],

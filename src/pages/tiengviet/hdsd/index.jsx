@@ -54,13 +54,13 @@ const Hdsd = () => {
                                     <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/list.png" className="w-4 h-4" />
                                 </span>
                                 {' '}
-                                <b>Danh mục</b> và
+                                <b>Danh mục</b> là nơi lưu trữ bài viết có đính kèm video thuyết minh (có hổ trợ ngôn ngữ ký hiệu cho người khiếm thính), các bình luận từ người dùng khác và trò chơi học tập liên quan.
                                 {' '}
                                 <span className="inline-block align-middle">
                                     <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/story.png" className="w-4 h-4" />
                                 </span>
                                 {' '}
-                                <b>Câu chuyện</b> là nơi lưu trữ những bài viết, câu chuyện từ sự thật đến hư cấu của phần mềm.
+                                <b>Câu chuyện</b> là nơi lưu trữ những mẫu chuyện từ sự thật đến hư cấu của phần mềm, cho phép tương tác trực tiếp từ người dùng.
                             </div>
                         </li>
                         <li>
@@ -79,7 +79,7 @@ const Hdsd = () => {
                                     <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/map.png" className="w-5 h-5" />
                                 </span>
                                 {' '}
-                                <b>Bản đồ</b> sẽ cung cấp cho bạn vị trí của từng đối tượng cụ thể theo từng huyện, thị, thành phố, bạn có thể xem nội dung khái quát, thuyết minh cũng như 3D - VR Tour.
+                                <b>Khám phá du lịch</b> sẽ cung cấp cho bạn danh sách các địa điểm. Bạn có thể thiết lập một hành trình du lịch với các địa điểm cũng như tương tác trực tiếp với từng đối tượng cụ thể, giúp bạn có thể xem nội dung khái quát, thuyết minh cũng như 3D - VR Tour.
                             </div>
                         </li>
                         <li>

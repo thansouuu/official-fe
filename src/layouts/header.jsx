@@ -243,7 +243,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Map />
-                                <div>Bản đồ</div>
+                                <div>Khám phá du lịch</div>
                             </Link>
                         </li>
                         <li>
