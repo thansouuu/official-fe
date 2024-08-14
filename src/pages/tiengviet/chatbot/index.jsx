@@ -18,12 +18,12 @@ const Bot = () => {
       headerTextColor: '#ffffffff',
       headerLogoEnable: false,
       // headerLogoLink: 'https://chatbot-tools.fpt.ai/livechat-builder/img/Icon-fpt-ai.png',
-      headerLogoLink: '/logo-bot.png',
+      headerLogoLink: '/logo-bot.jpg',
       headerText: 'TRA CỨU LỊCH SỬ TỈNH TRÀ VINH',
-      primaryColor: '#6d9ccbff',//xanh 
-      // primaryColor: '#FAEBD7',
+      // primaryColor: '#6d9ccbff',//xanh 
+      primaryColor: '#FFDAA8',
       secondaryColor: '#ecececff',//xám
-      primaryTextColor: '#ffffffff',//trắng
+      primaryTextColor: '#000000DE',//trắng
       secondaryTextColor: '#000000DE',//đen
       buttonColor: '#b4b4b4ff',
       buttonTextColor: '#ffffffff',
@@ -32,7 +32,7 @@ const Bot = () => {
       // avatarBot: 'https://chatbot-tools.fpt.ai/livechat-builder/img/bot.png',
       avatarBot: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%E1%BA%A3nh%20app/logo.png',
       sendMessagePlaceholder: 'Nhập tin nhắn',
-      floatButtonLogo: '/logo-bot.png',
+      floatButtonLogo: '/logo-bot.jpg',
       floatButtonTooltip: 'FPT.AI xin chào',
       floatButtonTooltipEnable: false,
       // customerLogo: 'https://chatbot-tools.fpt.ai/livechat-builder/img/bot.png',
@@ -106,8 +106,8 @@ const Bot = () => {
       <button id="fpt_ai_livechat_toggle_fullscreen" className="fpt_ai_livechat_container_header_fullscreen_button">
         <img src="https://livechat.fpt.ai/v36/src/img/fullscreen.png" alt="full" />
       </button>
-      <button id="fpt_ai_livechat_button" className="fpt_ai_livechat_button_blink" style={{ background: '#FAEBD7' }}>
-        <img src="/logo-bot.png" alt="logobutton" />
+      <button id="fpt_ai_livechat_button" className="fpt_ai_livechat_button_blink" style={{ background: '#FFDAA8' }}>
+        <img src="/logo-bot.jpg" alt="logobutton" />
       </button>
     </div>
     </div>
