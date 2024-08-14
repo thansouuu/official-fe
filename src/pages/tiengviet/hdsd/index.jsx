@@ -146,7 +146,7 @@ const Hdsd = () => {
                             <FacebookIcon size={32} round />
                         </FacebookShareButton> */}
                         <a  href={`https://www.facebook.com/profile.php?id=61563995585970`} target="_blank" rel="noopener noreferrer">
-                            <img src="/public/images/facebook.png" alt="My Page on Facebook" style={{ width: 32, height: 32, borderRadius: '50%' }} />
+                            <img src="/images/facebook.png" alt="My Page on Facebook" style={{ width: 32, height: 32, borderRadius: '50%' }} />
                         </a>
                         <TwitterShareButton url={window.location.href} >
                             <img

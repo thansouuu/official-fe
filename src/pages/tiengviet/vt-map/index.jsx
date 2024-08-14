@@ -8,6 +8,7 @@ import Thinklink from '../thinglink';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './style-map.css'
 import { toast } from 'react-toastify';
+import { useAuth } from '@/hooks/use-auth';
 
 const containerStyle = {
   width: '100%',
@@ -59,7 +60,7 @@ const VtMap = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
   const [tmp, setTmp] = useState([]);
-
+  const { isLoggedIn, mutate, data } = useAuth();
  
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -77,7 +78,10 @@ const VtMap = () => {
   // Fetching the list of coordinates for the user direction
   const getListLocationUserForDirection = async () => {
     try {
+      // console.log('userlocationdata ',isLoggedIn);
+      if (!isLoggedIn) return [];
       const userId  = localStorage.getItem('userId');
+      console.log('id ',userId);
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
       return convertLocationsToPoints(response.data);
     } catch (error) {
@@ -133,21 +137,6 @@ const VtMap = () => {
   }, [locations, coordinates]);
 
 
-  // function setDestination(points, locationsData) {
-  //   const destination = locationsData
-  //     .filter(location =>
-  //       points.some(point => point[0] === location.longitude && point[1] === location.latitude)
-  //     )
-  //     .map(location => ({
-  //       ...location,
-  //       coordinates: [location.longitude, location.latitude],
-  //       message: 'Meow Meow!',
-  //       imageUrl: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ch%C3%B9a%20Can%20Snom/23.jpg'
-  //     }));
-  
-  //   return destination;
-  // }
-
   const [mapLoaded, setMapLoaded] = useState(false);
 
 
@@ -160,7 +149,7 @@ const VtMap = () => {
         const svgElement = secondSpan.querySelector('svg');
         if (svgElement && !secondSpan.querySelector('img')) {
           const imgElement = document.createElement('img');
-          imgElement.src = '/public/destination.png';
+          imgElement.src = '/destination.png';
           imgElement.alt = 'Location Image';
           imgElement.style.width = '55px'; // Đặt chiều rộng
           imgElement.style.height = '55px'; // Đặt chiều cao
@@ -280,10 +269,6 @@ const VtMap = () => {
         try {
           console.log('Setting points:', points);
           roadDrawerControl.setPoints(points);
-          console.log('bay ',listLngLat);
-          console.log('Points set on map');
-
-        
         } catch (error) {
           console.error('Error setting points:', error);
         }
@@ -371,7 +356,7 @@ const VtMap = () => {
       .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
       .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
 
-    if (!token) {
+    if (!token || !isLoggedIn) {
       toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
     }
