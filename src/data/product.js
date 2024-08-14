@@ -11,6 +11,7 @@ export default [
                 link:1,
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
                 video: 'https://www.youtube.com/embed/iXwNNGyF4CQ?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
+                video2: 'https://www.youtube.com/embed/1hfCJAAkBuw?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
                 title: 'Chị Út Tịch',
                 tour:'6',
                 game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',

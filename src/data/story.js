@@ -4,8 +4,8 @@ export default [
         id: '101',
         imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Ao%20B%C3%A0%20Om.jpg',
         video: 'https://www.thinglink.com/view/scene/1876710852787176292',
+        video2: 'https://www.thinglink.com/view/scene/1880214555875869349',
         title: 'Sự tích Ao Bà Om',
-        game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
         description: 'Ngày xưa, vùng đất Trà Vinh là nơi sinh sống chủ yếu của người Khmer, có một hoàng tử tên là Pa-tu-ma-vông nổi tiếng với tính cách độc đoán và chuyên quyền...',
         contents: [
             {
@@ -63,7 +63,6 @@ export default [
         imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Mi%E1%BB%85u%20C%E1%BB%8Dp%20C%C3%A1i%20Gi%C3%A0.jpg',
         video: 'https://www.thinglink.com/view/scene/1877420709420991332',
         title: 'Sự tích miễu cọp cái già',
-        game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
         description: 'Ngày xưa, dải đất ven biển Cầu Ngang, Duyên Hải vẫn còn là những cánh rừng hoang ngập mặn bạt ngàn, hiểm trở. Trong rừng, mãnh thú dọc ngang đi lại...',
         contents: [
             {
@@ -113,7 +112,6 @@ export default [
         imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/S%E1%BB%B1%20t%C3%ADch%20l%E1%BB%85%20Chol%20Thnam%20Thmay.jpg',
         video: 'https://www.thinglink.com/view/scene/1878119511886922596',
         title: 'Sự tích lễ Chol Chnam Thmay',
-        game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
         description: 'Chôl Chnăm Thmây tức là "Vào năm mới" của dân tộc Khmer, lễ được diễn ra vào ngày 13, 14 và 15 tháng tư hàng năm...',
         contents: [
             {
