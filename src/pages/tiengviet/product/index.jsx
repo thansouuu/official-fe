@@ -476,7 +476,6 @@ const Product = memo(() => {
         setVideo(product?.video || '');
     }, [product?.video]);
 
-    const contentRef = useRef(null);
     const [isvideo,setisVideo]=useState(false);
     const [video, setVideo] = useState('');
 
@@ -485,35 +484,38 @@ const Product = memo(() => {
         if (!isvideo) toast.success('Đã thêm thủ ngữ vào video'); else toast.warning('Đã bỏ thủ ngữ khỏi video');
         if (!isvideo && product.video2!=undefined) {setVideo(product?.video2); console.log('chuyen sang thu ngu');}
         else {setVideo(product?.video); console.log('chuyen sang binh thuong');}
-      };
+    };
 
-      const titleRef = useRef(null);
+    const titleRef = useRef(null);
 
-      useEffect(() => {
+    useEffect(() => {
         // Focus vào phần tử khi component được mount
         if (titleRef.current) {
           titleRef.current.focus();
         }
-      }, [product]);
+    }, [product]);
 
     return (
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
             {product?.video!='' && 
-               <div className="flex flex-col items-center">
+                <div className='flex flex-col items-center'>
                     <iframe
-                        className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
+                        className=" mb-2 w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
                         src={video}
-                        title="Thuyết minh"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                        allowFullScreen
+                        allow="fullscreen;webkitallowfullscreen; mozallowfullscreen ;allowfullscreen"
+                        allowFullScreen=""
                     ></iframe>
+                    <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
                     <button
-                        onClick={handleVideo}
-                        className="mt-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
-                    >
-                        {!isvideo ? 'Thêm thủ ngữ' : 'Bỏ thủ ngữ'}
+                            onClick={handleVideo}
+                            // className="mt-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
+                            className={cn('px-4 py-2 text-white w-fit m-auto  rounded ', {
+                                'bg-green-400 hover:bg-green-500': !isvideo,
+                                'bg-red-400 hover:bg-red-500': isvideo,
+                            })}
+                        >
+                            {!isvideo ? 'Thêm thủ ngữ' : 'Bỏ thủ ngữ'}
                     </button>
                 </div>
             }
