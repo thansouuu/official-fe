@@ -110,7 +110,7 @@ const LikedPosts = () => {
             });
 
             if (removeLikeResponse.ok) {
-                toast.success('Post unliked successfully');
+                toast.success('Đã xóa khỏi mục yêu thích');
                 fetchLikedPosts(); // Refresh the liked posts list
             } else {
                 const removeLikeData = await removeLikeResponse.json();
@@ -126,7 +126,7 @@ const LikedPosts = () => {
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(
           () => {
-            toast.success('Link copied to clipboard');
+            toast.success('Sao chép link trang thành công');
           },
           (err) => {
             toast.error('Failed to copy link');

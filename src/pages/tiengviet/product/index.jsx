@@ -343,7 +343,7 @@ const Product = memo(() => {
             });
 
             if (likeResponse.ok) {
-                toast.success('Product liked successfully');
+                toast.success('Đã thêm bài viết vào mục yêu thích');
                 fetchUser();
             } else {
                 const likeData = await likeResponse.json();
@@ -375,7 +375,7 @@ const Product = memo(() => {
         navigator.clipboard
             .writeText(window.location.href)
             .then(() => {
-                toast.success('Link copied to clipboard');
+                toast.success('Sao chép link trang thành công');
             })
             .catch((err) => {
                 console.error('Failed to copy link:', err);
