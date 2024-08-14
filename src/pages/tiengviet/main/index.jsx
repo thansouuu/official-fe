@@ -14,7 +14,7 @@ const Main = () => {
     const images = [
         'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
         'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%91%E1%BA%A1i%20di%E1%BB%87n.jpg',
-        'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/dai-dien.jpg',
+        'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-2.jpg',
         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/dai-dien.jpg',
     ];
 
