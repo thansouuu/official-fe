@@ -60,7 +60,7 @@ const VtMap = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
   const [tmp, setTmp] = useState([]);
-  const { isLoggedIn, mutate, data } = useAuth();
+  // const { isLoggedIn, mutate, data } = useAuth();
  
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -79,7 +79,8 @@ const VtMap = () => {
   const getListLocationUserForDirection = async () => {
     try {
       // console.log('userlocationdata ',isLoggedIn);
-      if (!isLoggedIn) return [];
+      // if (!isLoggedIn) return [];
+      // console.log('login ',isLoggedIn);
       const userId  = localStorage.getItem('userId');
       console.log('id ',userId);
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
@@ -356,16 +357,19 @@ const VtMap = () => {
       .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
       .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
 
-    if (!token || !isLoggedIn) {
+    // if (!token || !isLoggedIn) {
+    //   toast.error('Vui lòng đăng nhập để lưu hành trình!');
+    //   return;
+    // }
+    if (!token ) {
       toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
     }
     try {
       const response = await axios.post(`https://historic-be.onrender.com/api/locations/${userId}`, {points});
       toast.success('Danh sách hành trình đã được lưu');
-
     } catch (error) {
-      console.error('Error saving the list:', error);
+      console.error('Error saving the list:', userId);
       toast.error('Lưu danh sách hành trình thất bại');
     }
   };
