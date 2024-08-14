@@ -32,7 +32,7 @@ const VtMap = () => {
     // }, [showAlert]);
   
     // Nếu không có token thì sẽ không render gì cả
-    const token = localStorage.getItem('accessToken');
+    
     // if (!token) {
     //   return null;
     // }
@@ -78,6 +78,7 @@ const VtMap = () => {
       // console.log('userlocationdata ',isLoggedIn);
       // if (!isLoggedIn) return [];
       // console.log('login ',isLoggedIn);
+      const token = localStorage.getItem('accessToken');
       const userId  = localStorage.getItem('userId');
       // const userId=data?.data?._id;
       console.log(userId);
