@@ -36,7 +36,7 @@ const VtMap = () => {
     // if (!token) {
     //   return null;
     // }
-  
+    const token = localStorage.getItem('accessToken');
   const [locations, setLocations] = useState([]);
   const [coordinates, setCoordinates] = useState([]);
   const [locationNames, setLocationNames] = useState([]);
