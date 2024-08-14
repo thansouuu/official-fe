@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link} from 'react-router-dom';
 import productData from '@/data/product';
-import Thinklink from '../thinglink';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './style-map.css'
 import { toast } from 'react-toastify';
 import { useAuth } from '@/hooks/use-auth';
@@ -35,7 +32,7 @@ const VtMap = () => {
     // }, [showAlert]);
   
     // Nếu không có token thì sẽ không render gì cả
-    // const token = localStorage.getItem('accessToken');
+    const token = localStorage.getItem('accessToken');
     // if (!token) {
     //   return null;
     // }
@@ -60,7 +57,7 @@ const VtMap = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
   const [tmp, setTmp] = useState([]);
-  // const { isLoggedIn, mutate, data } = useAuth();
+  const { isLoggedIn, mutate, data } = useAuth();
  
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -82,7 +79,9 @@ const VtMap = () => {
       // if (!isLoggedIn) return [];
       // console.log('login ',isLoggedIn);
       const userId  = localStorage.getItem('userId');
-      console.log('id ',userId);
+      // const userId  = data?.data?._id;
+      // console.log('id ',data?.data?._id);
+      // console.log('id2 ',data?.data?._id);
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
       return convertLocationsToPoints(response.data);
     } catch (error) {
@@ -341,7 +340,7 @@ const VtMap = () => {
     return index;
   };
 
-  const token = localStorage.getItem('accessToken');
+  // const token = localStorage.getItem('accessToken');
 
   const handleSave = async () => {
     // const geolocateControl = new vtmapgl.GeolocateControl({
@@ -369,7 +368,7 @@ const VtMap = () => {
       const response = await axios.post(`https://historic-be.onrender.com/api/locations/${userId}`, {points});
       toast.success('Danh sách hành trình đã được lưu');
     } catch (error) {
-      console.error('Error saving the list:', userId);
+      console.error('Error saving the list:', error);
       toast.error('Lưu danh sách hành trình thất bại');
     }
   };
@@ -577,6 +576,7 @@ const VtMap = () => {
         </button>
       </div> */}
         <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
+          {/* {console.log(data?.data?._id)} */}
           <div className="list-card w-full md:w-1/2 p-4">
             <div
               className="card list-card-done bg-white shadow rounded p-4 flex flex-col"

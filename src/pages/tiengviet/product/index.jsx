@@ -498,6 +498,7 @@ const Product = memo(() => {
     return (
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
+            {console.log(data?.data?._id)}
             {product?.video!='' && 
                 <div className='flex flex-col items-center'>
                     <iframe
