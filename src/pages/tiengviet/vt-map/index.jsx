@@ -58,6 +58,10 @@ const VtMap = () => {
   const [locationData,setLocationData]=useState([]);
   const [tmp, setTmp] = useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
+
+  useEffect(() => {
+    mutate();
+  }, []);
  
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -349,7 +353,7 @@ const VtMap = () => {
       .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
       .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
 
-    if (!token || !isLoggedIn) {
+    if (!isLoggedIn) {
       toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
     }
