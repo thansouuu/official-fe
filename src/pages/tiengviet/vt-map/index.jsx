@@ -59,10 +59,6 @@ const VtMap = () => {
   const [tmp, setTmp] = useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
 
-  useEffect(() => {
-    mutate();
-  }, []);
- 
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
@@ -82,10 +78,12 @@ const VtMap = () => {
       // console.log('userlocationdata ',isLoggedIn);
       // if (!isLoggedIn) return [];
       // console.log('login ',isLoggedIn);
-      const token = localStorage.getItem('accessToken');
+      // const token = localStorage.getItem('accessToken');
       const userId  = localStorage.getItem('userId');
+      // mutate();
       // const userId=data?.data?._id;
-      console.log(userId);
+      console.log('id ',userId);
+      
       // const userId=data?.data?._id;
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
       return convertLocationsToPoints(response.data);
@@ -573,7 +571,7 @@ const VtMap = () => {
         </button>
       </div> */}
         <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
-          {/* {console.log(data?.data?._id)} */}
+          {/* {console.log(data?.data?._id)}  */}
           <div className="list-card w-full md:w-1/2 p-4">
             <div
               className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
