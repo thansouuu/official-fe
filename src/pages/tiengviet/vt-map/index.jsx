@@ -508,11 +508,18 @@ const VtMap = () => {
       setToDo(newToDo);
 
   // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
-      setTimeout(() => {
-        setToDo(prevToDo =>
-          prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
-        );
-      }, 200);
+  toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
+
+  // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
+  setTimeout(() => {
+    setToDo(prevToDo =>
+      prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
+    );
+
+    // Thông báo cho người dùng rằng thao tác đã hoàn tất
+    toast.dismiss(); // Ẩn thông báo trước
+    toast.success('Thao tác đã hoàn tất.');
+  }, 200);
     }
     if (roadDrawerControl && mapLoaded && toDo.length > 0) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
