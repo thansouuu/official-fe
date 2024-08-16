@@ -34,7 +34,7 @@ const Hdsd = () => {
                                 <span className="inline-block align-middle">
                                     <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/home.png" className="w-5 h-5" />
                                 </span>
-                                <b>Trang chủ</b>{' '}: bạn có thể tìm hiểu thông tin khái quát về phần mềm, cung cấp cho bạn những bài viết nổi bật nhất và những bài viết vừa được phần mềm cập nhật.
+                                <b>Trang chủ</b>{' '}: bạn có thể tìm hiểu thông tin khái quát về phần mềm, cung cấp cho bạn những bài viết nổi bật nhất và danh mục nổi bật của phần mềm.
                             </div>
                         </li>
                         <li>
@@ -148,13 +148,13 @@ const Hdsd = () => {
                         <a  href={`https://www.facebook.com/profile.php?id=61563995585970`} target="_blank" rel="noopener noreferrer">
                             <img src="/images/facebook.png" alt="My Page on Facebook" style={{ width: 32, height: 32, borderRadius: '50%' }} />
                         </a>
-                        <TwitterShareButton url={window.location.href} >
+                        <a  href={`https://x.com/lich_su_tinh_TV?t=Axw9vYB1l31oijevQRQOBw&s=09`} target="_blank" rel="noopener noreferrer">
                             <img
                                 src="/images/twitter.jpg"
                                 alt="Twitter"
                                 style={{ width: 32, height: 32, borderRadius: '50%' }}
                             />
-                        </TwitterShareButton>
+                        </a>
                     </div>
                 </div>
             </div>

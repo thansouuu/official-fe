@@ -11,7 +11,7 @@ export default [
                 link:1,
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
                 video: 'https://www.youtube.com/embed/iXwNNGyF4CQ?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
-                video2: 'https://www.youtube.com/embed/1hfCJAAkBuw?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
+                video2: 'https://www.youtube.com/embed/y2zp6QFr6Ys?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
                 title: 'Chị Út Tịch',
                 tour:'6',
                 game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
@@ -1722,7 +1722,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/1.jpg',
                 video: 'https://www.youtube.com/embed/eezu7le4Js4?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
-                title: 'Thống chế Nguyễn Văn Tồn',
+                title: 'Nguyễn Văn Tồn',
                 description: 'Thống chế Nguyễn Văn Tồn sinh năm 1763, mất năm 1820. Tên thật là Thạch Duyên (hay còn gọi...',
                 game: 'https://wordwall.net/vi/embed/bb43754e7d434993b4274d51cec4236d?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -2063,6 +2063,290 @@ export default [
                     },
                 ],
             },
+            {
+                id: '45',
+                type:0,
+                city:3,
+                link:1,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/1-1.jpg',
+                video: 'https://www.youtube.com/embed/u0cmjOZcUMo?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
+                title: 'Nguyễn Đáng',
+                description: 'Nguyễn Đáng, tên thường dùng là Năm Trung, sinh ngày 16/11/1925 tại ấp Giồng Bèn, xã Huyền Hội,...',
+                game: 'https://wordwall.net/vi/embed/bb43754e7d434993b4274d51cec4236d?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Tiểu sử',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/1-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/1-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/1-3.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Nguyễn Đáng, tên thường dùng là Năm Trung, sinh ngày 16/11/1925 tại ấp Giồng Bèn, xã Huyền Hội, huyện Càng Long, tỉnh Trà Vinh. Ông sinh ra trong một gia đình nông dân nghèo. `,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'huyện Càng Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/map',
+                                            id:'id1',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Với đồng chí, anh em, bạn bè, ông là một mẫu người đạo đức “nhân nghĩa”, thương yêu gắn bó với nhân dân. Cuộc sống tiêu biểu, giản dị, đoàn kết và trung thực, biết quý trọng mọi người, mọi giới, mọi cấp với tư tưởng cấp tiến, đem lại lợi ích cho xã hội. Đồng chí Nguyễn Đáng là một người nhân hậu, không quan cách, tác phong giản dị, dễ gần gũi với quần chúng. Đức tính lo cho người khác trước khi lo cho mình như bản chất có sẵn trong ông.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'huyện Càng Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/map',
+                                            id:'id1',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Sự nghiệp kháng chiến',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/14 - 22.jpg',
+                                    
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Năm 1944 được ông Năm Tý, một Đảng viên cộng sản xã tuyên truyền giác ngộ , Nguyễn Đáng thấy được sự áp bức, bóc lột của địa chủ đối với nông dân và trách nhiệm của những thanh niên như ông phải đứng lên đánh đổ sự áp bức, bất công đó. Qua sự giác ngộ, Nguyễn Đáng bắt đầu đến với cách mạng. Ông thôi ở đợ cho gia đình địa chủ Lâm Quang So mà chuyển nghề đánh xe thuê. Hàng ngày từ sáng đến tối mịt, Nguyễn Đáng đánh xe từ Huyền Hội khi thì đi Bãi Sang, khi đến Tiểu Cần, Cầu Kè, Mai Phốp…Vừa đi đánh xe, ông vừa làm liên lạc và nắm tình hình địch để báo cáo lại cho cơ sở. Một thời gian, cha ông biết được ông tham gia cách mạng, có phần lo lắng, sợ con nguy hiểm nhưng không nói ra và âm thầm làm giúp những công việc cho Nguyễn Đáng. Còn ông, ban ngày giúp việc cha mẹ không được, ban đêm ông cố làm thêm để phụ giúp gia đình.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'giác ngộ ',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-1.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'đến với cách mạng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-2.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Nguyễn Đáng ',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-3.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'cơ sở',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-4.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'làm thêm',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-5.jpg',
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Đầu năm 1945, phong trào cách mạng ở quê ông phát triển mạnh, Nguyễn Đáng gia nhập đoàn Thanh niên Tiền phong, cùng anh em, bạn bè trong tổ chức hoạt động tích cực, chờ thời cơ. Ngày 25/8/1945, cùng với nhân dân xã Huyền Hội, ông tham gia trong lực lượng thanh niên nổi dậy giành chính quyền. Chính quyền cách mạng được thành lập, ông được giao phụ trách Đội Thanh niên cứu quốc xã Huyền Hội. Ông làm nòng cốt trong việc vận động thanh niên tham gia lực lượng vũ trang và xã Huyền Hội xây dựng được một trung đội du kích, có khả năng đánh địch. Thực dân Pháp gây chiến tranh trở lại, xã Huyền Hội cũng như nhiều địa phương khác ở Càng Long bị tái chiếm, Nguyễn Đáng đã lãnh đạo lực lượng vũ trang xã diệt trừ tề gian, chống lại cuộc càn quét lấn chiếm của địch, bảo vệ thành quả cách mạng tháng Tám. Năm 1947, Nguyễn Đáng được kết nạp vào Đảng Cộng sản và được giao nhiệm vụ Xã đội trưởng, Trưởng Công an xã Huyền Hội, Bí thư Huyện uỷ Càng Long, Bí thư Tỉnh uỷ Trà Vinh, Trưởng ban Binh vận Khu 9, Phó Tư lệnh Mặt trận miền Tây, trực tiếp chỉ đạo chiến trường trọng điểm giải phóng Cần Thơ trong Chiến dịch Hồ Chí Minh (1975).`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'thừa thắng tiến đóng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/8 - 10.jpg',
+                                        }
+                                    },
+                                ]
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Năm 1951, thực dân Pháp mở nhiều cuộc hành quân càn quét vào Huyền Hội với ý đồ chiếm bằng được xã này. Ông đã cùng với lực lượng dân quân du kích đánh trả quyết liệt. Không may trong trận đánh, đồng chí Nguyễn Đáng sa vào tay giặc. Bị địch tra khảo, đánh đập tàn nhẫn, đồng chí Nguyễn Đáng vẫn giữ khí tiết cách mạng. Không khai thác được gì, chúng đem ông xuống giam tại Trà Vinh. Vào tù ông tiếp tục hoạt động trong Chi bộ nhà tù, tìm mọi sơ hở của chúng để đấu tranh chống lại. Sau 8 tháng ở nhà tù, nhân một cuộc nổi dậy phá khám, ông cùng nhiều tù nhân đã trốn thoát.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'thành',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/12.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Trở về Huyền Hội, ông tiếp tục hoạt động bám dân, bám đất, diệt trừ tề gian, củng cố lại phong trào. Năm 1959, Mỹ- Diệm ban hành “luật Phát xít 10/59”, tiến hành “ tố cộng, diệt cộng ’’, lê máy chém đi khắp nơi. Trên cương vị Bí thư Huyện ủy, ông đã thành lập và phát triển lực lượng vũ trang địa phương quân của huyện Càng Long, đẩy mạnh phong trào 3 mũi giáp công, quyết bám đất, bám dân. Phong trào cách mạng ở Càng Long được củng cố và phát triển, đến phong trào Đồng Khởi 1960 khắp nơi trong huyện thành lập lực lượng vũ trang sớm, tạo thế và lực cho địa phương quân của  tỉnh và cũng là huyện dẫn đầu của tỉnh Trà Vinh về xây dựng phong trào nhân dân du kích, giữ vững thực lực cách mạng.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'bị hãm',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/13.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                            {
+                                type: 'text',
+                                value: `- Vào những năm 1961, Mỹ ngụy tăng cường đánh phá ác liệt. Trên cương vị Bí thư Tỉnh uỷ, đồng chí Nguyễn Đáng ra sức hoạt động quyết bám dân, bám đất, lãnh đạo quân dân Trà Vinh đấu tranh chính trị, binh vận, vũ trang, kiên quyết chống lại những cuộc càn quét, lấn chiếm của địch. Ông đặc biệt coi trọng công tác Khmer vận, lấy tình đồng chí, đồng đội để thắt chặt mối đoàn kết quân-dân, đoàn kết Kinh-Khmer đứng lên đấu tranh chính trị, binh vận, vũ trang của quân dân Trà Vinh liên tiếp nổ ra. Có những cuộc đấu tranh chính trị huy động trên 30.000 người kéo vào tỉnh lỵ, huyện lỵ, trong tỉnh đòi Mỹ ngụy bồi thường nhân mạng cho đồng bào, đòi chúng không được bắn phá bừa bãi vào nhân dân; đấu tranh đòi rời bỏ ấp chiến lược trở về quê cũ làm ăn. Phong trào binh vận được đẩy mạnh trong lòng địch, nhiều cuộc binh biến, phản chiến, đào ngũ trong lực lượng ngụy quân xảy ra thường xuyên. Với ba mũi giáp công, quân dân Trà Vinh đã làm chủ được nhiều vùng rộng lớn; giải phóng được 2/3 đất đai trong tỉnh, giải phóng hoàn toàn quận lỵ Long Toàn (nay là huyện Duyên Hải). Quận đầu tiên của khu Tây Nam Bộ được giải phóng.`
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Xuân Mậu Thân 1968, sau khi lực lượng ta tấn công vào thị xã Trà Vinh không dứt điểm được, cùng với Tỉnh uỷ Trà Vinh đồng chí Nguyễn Đáng nhanh chóng chỉ đạo cho lực lượng vũ trang rút ngay khỏi thị xã, chỉ để lại một bộ phận lực lượng của tỉnh bám vùng ven, cùng với lực lượng thị xã Trà Vinh vây ép, kiềm chân địch tại chỗ, đưa phần lớn lực lượng của tỉnh giúp các huyện tranh thủ thời cơ có lợi để mở rộng vùng giải phóng. Sự chuyển hướng chỉ đạo đó đã đạt được kết quả tốt, địch bị kiềm chân ở thị xã, các huyện lỵ. Phong trào giải phóng vùng nông thôn phát triển mạnh, 3/4 dân số trong tỉnh được giải phóng. Trung ương  tặng huân chương Thành đồng hạng I và lá cờ với tám chữ vàng “Toàn dân nổi dậy, đoàn kết lập công” cho quân dân Trà Vinh.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Nguyễn Văn Tồn',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/18.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Từ năm 1974 đến ngày miền Nam hoàn toàn giải phóng, ông được Khu uỷ rút lên Khu, giữ chức vụ Trưởng Ban Binh vận, Trưởng Phân ban hai tỉnh Vĩnh Long- Trà Vinh.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'chiến đấu',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/16.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Trong chiến dịch Hồ Chí Minh lịch sử, ông là Phó Tư lệnh Mặt trận miền Tây, chỉ đạo chiến trường trọng điểm Cần Thơ và là người tình nguyện đem lực lượng chỉ đạo vùng xung yếu tỉnh Long Xuyên trước khi quân ta chiếm lĩnh Cần Thơ. Tiếp quản Long Xuyên, ông được Khu uỷ chỉ định ở lại làm Bí thư tỉnh Long Châu Hà. Đến tháng 2-1976, tỉnh Long Châu Hà đổi tên là tỉnh An Giang, ông là Phó Bí thư trực Tỉnh uỷ An Giang, sau đó, Trung ương phân công trở về công tác tại Cửu Long. Tại Đại hội Tỉnh Đảng bộ lần thứ I (vòng II) năm 1977, ông được bầu làm Bí thư Tỉnh uỷ, Uỷ viên dự khuyết Ban Chấp hành Trung ương Đảng khoá IV, Uỷ viên Ban Chấp hành Trung ương Đảng khoá V và liên tục trong ba nhiệm kì Đại hội Tỉnh Đảng bộ (I, II, III), ông đều được Đại hội bầu giữ chức vụ Bí thư Tỉnh uỷ Cửu Long.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'hạ lệnh',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/17.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Đồng chí Nguyễn Đáng đã vĩnh biệt Đảng bộ và nhân dân Cửu Long vào lúc 1 giờ 2 phút ngày 8 tháng 4 năm 1984 sau một tháng đấu tranh với cái chết trên giường bệnh. Ngày đưa tang ông, bạn bè, đồng chí, nhân dân Cửu Long xếp hàng, lặng lẽ sụt sùi tiễn đưa người con gương mẫu của nhân dân Vĩnh-Trà về nơi yên nghỉ cuối cùng tại nghĩa trang liệt sĩ tỉnh Cửu Long.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'ông',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/18.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'vùng Trà Ôn',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/19-1.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },      
+                        ],
+                    },
+                    {
+                        title: 'Thành tích và tưởng nhớ',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/23.jpg',
+                                    
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Do có nhiều cống hiến trong sự nghiệp cách mạng, ông Nguyễn Đáng đã được tặng thưởng những Huân chương cao quý: Huân chương Quyết thắng hạng Nhất; Huân chương Giải phóng hạng Nhất; Huân chương kháng chiến chống Mỹ hạng Nhất; Huân chương Độc lập hạng Nhất; Huân chương “Lao động quên mình” do Nhà nước Liên Xô trao tặng.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'vua Minh Mạng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/24.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Tên của ông được đặt cho con đường ở thành phố Trà Vinh. Và có một trường Trung học phổ thông Nguyễn Đáng tọa lạc tại huyện Càng Long, tỉnh Trà Vinh`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'vua Minh Mạng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/24.jpg',
+                                        }
+                                    },
+                                ],
+                                
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        id: '1',
+                        title: 'Nhân vật',
+                        link: '/tieng-viet/figure/1',
+                    },
+                    {
+                        id: '2',
+                        title: 'Huyện Càng Long',
+                        link: '/tieng-viet/map',
+                    },
+                    {
+                        id: '3',
+                        title: 'Người Khmer',
+                        link: '/tieng-viet/figure/8/product/26',
+                    },
+                    {
+                        id: '4',
+                        title: 'Người Kinh',
+                        link: '/tieng-viet/figure/8/product/25',
+                    },
+                ],
+            },
         ]
     },
     {
@@ -2077,6 +2361,7 @@ export default [
                 link:2,
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ao%20B%C3%A0%20Om/1.jpg',
                 video: 'https://www.youtube.com/embed/DXN6x4l9Zgg?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
+                video2: 'https://www.youtube.com/embed/17x2VkBSZs0?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
                 title: 'Ao Bà Om',
                 description: 'Ao Bà Om là một danh lam thắng cảnh nổi tiếng của tỉnh Trà Vinh cũng như cả khu vực Đồng...',
                 game: 'https://wordwall.net/vi/embed/c8b06f0bd3774d93a53cb070cb89ad9a?themeId=21&templateId=69&fontStackId=0',
@@ -3004,6 +3289,7 @@ export default [
                 tour:'5',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Bi%E1%BB%83n%20Ba%20%C4%90%E1%BB%99ng/1-1.jpg',
                 video: 'https://www.youtube.com/embed/4RTHZqVdwdg?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
+                video2: 'https://www.youtube.com/embed/pjysq4eBQsg?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
                 title: 'Biển ba động',
                 description: 'Biển Ba Động là danh thắng và khu du lịch nổi tiếng thuộc xã Trường Long Hoà, thị xã Duyên Hải, tỉnh Trà Vinh...',
                 game: 'https://wordwall.net/vi/embed/693988acf7cf4ec39e919ada8c74fd67?themeId=21&templateId=69&fontStackId=0',
@@ -3536,6 +3822,7 @@ export default [
                 link:2,
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-3.jpg',
                 video: 'https://www.youtube.com/embed/z_SLtiM1wOQ?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
+                video2: 'https://www.youtube.com/embed/vwKdsZEay5E?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
                 title: 'Đền thờ Bác',
                 description: ' Đền thờ Chủ tịch Hồ Chí Minh, biểu tượng “Công trình của trái tim” của nhân dân các dân tộc Trà Vinh...',
                 game: 'https://wordwall.net/vi/embed/2c8d3096af314dde9fd3fd9c119e236a?themeId=21&templateId=69&fontStackId=0',
@@ -8853,6 +9140,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20C%C3%A1ch%20m%E1%BA%A1ng%20Th%C3%A1ng%20T%C3%A1m%20n%C4%83m%201945%20%E1%BB%9F%20Tr%C3%A0%20Vinh/I-2-2.jpg',
                 video: 'https://www.youtube.com/embed/Mcfl9JXON4g?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
+                video2: 'https://www.youtube.com/embed/ej7pnur99Sg?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
                 title: 'Cách mạng Tháng Tám năm 1945 ở Trà Vinh',
                 description: 'Tháng 9 năm 1939, Chiến tranh thế giới thứ hai bùng nổ, thực dân Pháp tiến hành khủng bố tàn khốc, thủ tiêu...',
                 game: 'https://wordwall.net/vi/embed/488fabe71a6a4f0aac3efc2131e52045?themeId=21&templateId=69&fontStackId=0',

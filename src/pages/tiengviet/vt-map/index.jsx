@@ -179,6 +179,22 @@ const VtMap = () => {
  
 
   useEffect(() => {
+    // const scripts = {
+    //   script: document.createElement('script'),
+    //   link: document.createElement('link'),
+    // };
+
+    // // Cấu hình thẻ script
+    // scripts.script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.js';
+    // scripts.script.defer = true;
+    // document.body.appendChild(scripts.script);
+
+    // // Cấu hình thẻ link
+    // scripts.link.href = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.css';
+    // scripts.link.rel = 'stylesheet';
+    // document.head.appendChild(scripts.link);
+
+
     const script = document.createElement('script');
     script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.js';
     script.onload = () => {
@@ -240,6 +256,28 @@ const VtMap = () => {
         unit: 'metric'
         });
       map.addControl(scale);
+
+
+      // const direction = new Directions({
+      //   accessToken: vtmapgl.accessToken,
+      //   interactive: false,
+      //   alternatives: false,
+      //   controls: {
+      //     profileSwitcher: false
+      //   },
+      //   profile: 'driving'
+      // });
+      
+      // map.addControl(direction, 'top-left');
+      // // direction.deactive();
+      // map.on('load', () => {
+      //   direction.setOrigin([106.02222,9.894042]);
+      //   direction.addWaypoint(0, [106.30402,9.91769]);
+      //   direction.addWaypoint(1, [105.98233,9.894804]);
+      //   direction.setDestination([106.30402,9.91769]);
+      // })
+
+
     // const navigationControl = new vtmapgl.NavigationControl();
     // map.addControl(navigationControl, 'top-left');
 
@@ -278,7 +316,7 @@ const VtMap = () => {
       }
     });
 
-    
+
   };
 
 
@@ -446,6 +484,9 @@ const VtMap = () => {
       };
     }, [toDo]);
 
+
+    
+
   const handleClick = () => {
     if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.warning('Đã xóa vị trí bạn khỏi chuyến đi');
     setIsAdd(prevState => !prevState);
@@ -455,9 +496,23 @@ const VtMap = () => {
       setToDo((prevToDo) => [updatedLastItem,...prevToDo ]);
     }
     else {
-      setToDo(prevToDo => 
-        prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
-      );
+      const toMove = toDo.filter(item => item.longitude === td_x && item.latitude === td_y);
+  
+      // Tạo mảng mới không bao gồm các phần tử cần di chuyển
+      const remaining = toDo.filter(item => !(item.longitude === td_x && item.latitude === td_y));
+      
+      // Nối các phần tử còn lại với các phần tử cần di chuyển ở cuối
+      const newToDo = remaining.concat(toMove);
+      
+      // Cập nhật state với mảng mới
+      setToDo(newToDo);
+
+  // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
+      setTimeout(() => {
+        setToDo(prevToDo =>
+          prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
+        );
+      }, 200);
     }
     if (roadDrawerControl && mapLoaded && toDo.length > 0) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
@@ -468,6 +523,7 @@ const VtMap = () => {
         if (points.length > 0 && points[0].length === 2) {
           console.log('Setting points from toDo:', points);
           roadDrawerControl.setPoints(points);
+          setTime(!time);
         } else {
           console.error('Invalid points format:', points);
         }
@@ -475,6 +531,7 @@ const VtMap = () => {
         console.error('Error updating points:', error);
       }
     }
+
   };
 
 

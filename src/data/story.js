@@ -4,9 +4,17 @@ export default [
         id: '101',
         imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Ao%20B%C3%A0%20Om.jpg',
         video: 'https://www.thinglink.com/view/scene/1876710852787176292',
-        video2: 'https://www.thinglink.com/view/scene/1880214555875869349',
+        video2: 'https://www.thinglink.com/view/scene/1880953072440574820',
         title: 'Sự tích Ao Bà Om',
         description: 'Ngày xưa, vùng đất Trà Vinh là nơi sinh sống chủ yếu của người Khmer, có một hoàng tử tên là Pa-tu-ma-vông nổi tiếng với tính cách độc đoán và chuyên quyền...',
+        // "1,1;2,2" : [
+        //     {
+        //         "3,3;4,4": [
+        //             "5,5;6,6",
+        //             "7,7;8,8",
+        //         ],
+        //     },
+        // ],
         contents: [
             {
                 title: 'Diễn biến',
