@@ -12,7 +12,7 @@ const containerStyle = {
   height: 'calc(100vh - 200px)' 
 };
 
-const VtMap = () => {
+const Mapphone = () => {
   const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
 
@@ -322,64 +322,6 @@ const VtMap = () => {
   };
 
 
-  const handleDragOver = (event) => {
-    event.preventDefault();
-  };
-
-  const handleDragStart = (task, source, index) => {
-    setDraggedItem({ task, source, index });
-  };
-
-  const handleDrop = (event, destination, index) => {
-    event.preventDefault();
-    const data = draggedItem;
-    if (!data) return;
-
-    if (data.source === destination) {
-      if (destination === 'toDo') {
-        const updated = [...toDo];
-        const [removed] = updated.splice(data.index, 1);
-        updated.splice(index, 0, removed);
-        setToDo(updated);
-      } else {
-        const updated = [...done];
-        const [removed] = updated.splice(data.index, 1);
-        updated.splice(index, 0, removed);
-        setDone(updated);
-      }
-    } else {
-      if (destination === 'toDo') {
-        setDone((prev) => prev.filter((task) => task.name !== data.task.name));
-        // const sortedDone = [...done].sort((a, b) => a.name.localeCompare(b.name));
-        // setDone(sortedDone);
-        setToDo((prev) => {
-          const updated = [...prev];
-          updated.splice(index, 0, data.task);
-          return updated;
-        });
-      } else {
-        setToDo((prev) => prev.filter((task) => task.name !== data.task.name));
-        setDone((prev) => {
-          const updated = [...prev];
-          updated.splice(index, 0, data.task);
-          return updated;
-        });
-        
-        
-      }
-    }
-    setDraggedItem(null);
-  };
-
-  const getDropIndex = (event, destinationList) => {
-    const rect = event.target.getBoundingClientRect();
-    const offset = event.clientY - rect.top;
-    const height = rect.height;
-    const totalItems = destinationList.length;
-    const ratio = offset / height;
-    const index = Math.floor(ratio * totalItems);
-    return index;
-  };
 
   // const token = localStorage.getItem('accessToken');
 
@@ -617,6 +559,37 @@ const VtMap = () => {
       setDone((prevDone) => [...prevDone, option]);
     };
 
+    const handleaddToDo = (option) => {
+      setDone((prevdone) => prevdone.filter(item => item !== option));
+      setToDo((prevtodo) => [...prevtodo, option]);
+    };
+
+    const handleremoveDone = (option) => {
+      setDone((prevdone) => prevdone.filter(item => item !== option));
+      setPrepare((prevprepare) => [option,...prevprepare]);
+    };
+
+    const handleIncrease = (index) => {
+      setToDo(prevTodos => {
+        const todos = [...prevTodos];
+        const length = todos.length;
+    
+        // Xác định chỉ số mục cần hoán đổi
+        const swapIndex = index === 0 ? length - 1 : index - 1;
+    
+        // Hoán đổi các giá trị
+        [todos[index], todos[swapIndex]] = [todos[swapIndex], todos[index]];
+    
+        return todos;
+      });
+    };
+
+    const handleremoveToDo=(option) =>{
+      setToDo((prevtodo) => prevtodo.filter(item => item !== option));
+      setDone((prevdone) => [option,...prevdone]);
+    }
+    
+
     const hometown=(e)=>{
       if (e==='cau-ke') return "Cầu Kè";
       if (e==='duyen-hai') return "Duyên Hải";
@@ -631,61 +604,41 @@ const VtMap = () => {
 
   return (
     <div className="relative h-full w-full flex flex-col">
-      
-
       <div className="relative h-full w-full flex flex-col items-center">
-      
-      {/* <div className="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
-        <h3 className="text-xl font-semibold mb-4">Chọn nhiều tùy chọn:</h3>
-        <div className="space-y-3">
-          {options.map((option, index) => (
-            <div key={index} className="flex items-center">
-              <label htmlFor={`checkbox-${index}`} className="flex-1">{option.label}</label>
-              <input
-                type="checkbox"
-                id={`checkbox-${index}`}
-                value={option.value}
-                checked={selectedOptions.includes(option.value)}
-                onChange={handleCheckboxChange}
-                className="ml-3"
-              />
-            </div>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={handleSubmit}
-          className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-        >
-          Gửi
-        </button>
-      </div> */}
-        
         <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
-          {/* {console.log(data?.data?._id)}  */}
           <div className="list-card w-full md:w-1/2 p-4">
             <div
               className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
-              onDragOver={handleDragOver}
-              onDrop={(event) => handleDrop(event, 'toDo', getDropIndex(event, toDo))}
             >
               <h1 className="text-lg font-bold text-center">Danh sách hành trình</h1>
-              <div className="task-list flex-grow">
-                <ul className="list-disc pl-5">
-                  {toDo.map((task, index) => (
-                    <li
-                      className="task py-1"
-                      key={index}
-                      draggable
-                      onDragStart={() => handleDragStart(task, 'toDo', index)}
-                      onDragOver={handleDragOver}
-                    >
-                      {index}. {task.name}
-                    </li>
-                  ))}
-                </ul>
+              <div className=" task-list flex-grow">
+              <ul className="list-disc pl-5">
+                {toDo.map((location, index) => (
+                  <li
+                    className=" task mt-2 flex items-center px-4 py-2 border border-gray-300 cursor-pointer rounded-lg transition-all duration-300 hover:border-green-500"
+                    key={index}
+                  >
+                    <span className="text-base font-semibold">{index}. {location.name}</span>
+                    <div className="flex space-x-2 ml-auto">
+                      <button
+                        onClick={() => handleIncrease(index)}
+                        className="bg-green-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
+                      >
+                        <svg className='w-5'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path></svg>
+                      </button>
+                      <button
+                        onClick={() => handleremoveToDo(location)}
+                        className="bg-red-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300"
+                      >
+                        <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg>
+                        
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 mt-4">
                 <button
                   className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300"
                   onClick={handleSave}
@@ -703,28 +656,37 @@ const VtMap = () => {
                   {isadd ? 'Thêm vị trí' : 'Xóa vị trí'}
                 </button>
               </div>
-        {/* </div> */}
             </div>
           </div>
-          <div className="list-card w-full md:w-1/2 p-4">
+          <div className="list-card  w-full md:w-1/2 p-4">
             <div
               className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
-              onDragOver={handleDragOver}
-              onDrop={(event) => handleDrop(event, 'done', getDropIndex(event, done))}
             >
               <h1 className="text-lg font-bold text-center">Địa điểm hứng thú</h1>
-              <div className="task-list flex-grow">
-                <ul className="list-disc pl-5">
+              <div className="flex-grow">
+                <ul className="pl-5">
                   {done.map((location, index) => (
-                    <li
-                      className="task-1 py-1"
-                      key={location._id}
-                      draggable
-                      onDragStart={() => handleDragStart(location, 'done', index)}
-                      onDragOver={handleDragOver}
-                    >
-                      {index +1 }. {location.name}
+                    <li 
+                      className="mt-1 flex items-center justify-between px-4 py-2 border border-gray-300 cursor-pointer rounded-lg transition-all duration-300 hover:border-green-500"
+                      key={index}
+                    > 
+                      <span className="text-base font-semibold">{location.name}</span>
+                      <div className="flex space-x-2 ml-auto">  
+                        <button
+                          onClick={() => handleaddToDo(location)}
+                          className="bg-green-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
+                        >
+                          <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg>
+                        </button>
+                        <button
+                          onClick={() => handleremoveDone(location)}
+                          className="bg-red-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300"
+                        >
+                          <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg>
+                        </button>
+                      </div>
                     </li>
+
                   ))}
                 </ul>            
               </div>
@@ -738,6 +700,7 @@ const VtMap = () => {
           className="bg-blue-500 text-white py-2 px-4 rounded mb-1"
         >
           {!isOpen ? 'Mở kho địa điểm' : 'Đóng kho địa điểm'}
+          
         </button>
         {isOpen && (
           <ul className="w-[100%] bg-white border border-gray-200 rounded shadow-lg max-h-60 overflow-y-auto">
@@ -749,7 +712,7 @@ const VtMap = () => {
                 <div>
                   <span className="text-base font-semibold">{location.name}</span>
                   <div className="text-sm text-gray-500 italic ">
-                    Thuộc: {hometown(location.country)}
+                    Thuộc:{hometown(location.country)}
                   </div>
                 </div>
                 <button
@@ -758,7 +721,6 @@ const VtMap = () => {
                 >
                   <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg>
                 </button>
-
               </li>
             ))}
           </ul>
@@ -824,4 +786,4 @@ function convertLocationsToPoints(data) {
   return locations.map(location => location.split(',').map(Number));
 }
 
-export default VtMap;
+export default Mapphone;

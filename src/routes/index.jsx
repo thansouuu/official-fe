@@ -20,6 +20,7 @@ import City from '@/pages/tiengviet/city';
 import VtMap from '@/pages/tiengviet/vt-map'
 import List from '@/pages/tiengviet/list';
 import Story from '@/pages/tiengviet/story';
+import Mapphone from '@/pages/tiengviet/map-phone';
 
 export const routes = [
     {
@@ -81,6 +82,10 @@ export const routes = [
             {
                 path: 'vt-map',
                 element: <VtMap />,
+            },
+            {
+                path: 'map-phone',
+                element: <Mapphone />,
             },
             {
                 path: 'like',
