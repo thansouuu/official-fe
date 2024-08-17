@@ -2127,8 +2127,12 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/14 - 22.jpg',
-                                    
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-5.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-12.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-13.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-15.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-30.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-32.jpg',
                                 ],
                             },
                             {
@@ -2167,7 +2171,7 @@ export default [
                                         hightlight: 'làm thêm',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-5.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-6.jpg',
                                         }
                                     },
                                 ]
@@ -2177,10 +2181,38 @@ export default [
                                 value: `- Đầu năm 1945, phong trào cách mạng ở quê ông phát triển mạnh, Nguyễn Đáng gia nhập đoàn Thanh niên Tiền phong, cùng anh em, bạn bè trong tổ chức hoạt động tích cực, chờ thời cơ. Ngày 25/8/1945, cùng với nhân dân xã Huyền Hội, ông tham gia trong lực lượng thanh niên nổi dậy giành chính quyền. Chính quyền cách mạng được thành lập, ông được giao phụ trách Đội Thanh niên cứu quốc xã Huyền Hội. Ông làm nòng cốt trong việc vận động thanh niên tham gia lực lượng vũ trang và xã Huyền Hội xây dựng được một trung đội du kích, có khả năng đánh địch. Thực dân Pháp gây chiến tranh trở lại, xã Huyền Hội cũng như nhiều địa phương khác ở Càng Long bị tái chiếm, Nguyễn Đáng đã lãnh đạo lực lượng vũ trang xã diệt trừ tề gian, chống lại cuộc càn quét lấn chiếm của địch, bảo vệ thành quả cách mạng tháng Tám. Năm 1947, Nguyễn Đáng được kết nạp vào Đảng Cộng sản và được giao nhiệm vụ Xã đội trưởng, Trưởng Công an xã Huyền Hội, Bí thư Huyện uỷ Càng Long, Bí thư Tỉnh uỷ Trà Vinh, Trưởng ban Binh vận Khu 9, Phó Tư lệnh Mặt trận miền Tây, trực tiếp chỉ đạo chiến trường trọng điểm giải phóng Cần Thơ trong Chiến dịch Hồ Chí Minh (1975).`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'thừa thắng tiến đóng',
+                                        hightlight: 'phong trào cách mạng',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/8 - 10.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-7.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'phụ trách',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-8.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'nòng cốt',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-9.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Thực dân Pháp',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-10.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'lãnh đạo',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-11.jpg',
                                         }
                                     },
                                 ]
@@ -2190,12 +2222,20 @@ export default [
                                 value: `- Năm 1951, thực dân Pháp mở nhiều cuộc hành quân càn quét vào Huyền Hội với ý đồ chiếm bằng được xã này. Ông đã cùng với lực lượng dân quân du kích đánh trả quyết liệt. Không may trong trận đánh, đồng chí Nguyễn Đáng sa vào tay giặc. Bị địch tra khảo, đánh đập tàn nhẫn, đồng chí Nguyễn Đáng vẫn giữ khí tiết cách mạng. Không khai thác được gì, chúng đem ông xuống giam tại Trà Vinh. Vào tù ông tiếp tục hoạt động trong Chi bộ nhà tù, tìm mọi sơ hở của chúng để đấu tranh chống lại. Sau 8 tháng ở nhà tù, nhân một cuộc nổi dậy phá khám, ông cùng nhiều tù nhân đã trốn thoát.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'thành',
+                                        hightlight: 'đánh trả quyết liệt',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/12.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-14.jpg',
                                         }
                                     },
+                                    {
+                                        hightlight: 'giam',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-16.jpg',
+                                        }
+                                    },
+                                    
                                 ],
                                 
                             },
@@ -2204,28 +2244,115 @@ export default [
                                 value: `- Trở về Huyền Hội, ông tiếp tục hoạt động bám dân, bám đất, diệt trừ tề gian, củng cố lại phong trào. Năm 1959, Mỹ- Diệm ban hành “luật Phát xít 10/59”, tiến hành “ tố cộng, diệt cộng ’’, lê máy chém đi khắp nơi. Trên cương vị Bí thư Huyện ủy, ông đã thành lập và phát triển lực lượng vũ trang địa phương quân của huyện Càng Long, đẩy mạnh phong trào 3 mũi giáp công, quyết bám đất, bám dân. Phong trào cách mạng ở Càng Long được củng cố và phát triển, đến phong trào Đồng Khởi 1960 khắp nơi trong huyện thành lập lực lượng vũ trang sớm, tạo thế và lực cho địa phương quân của  tỉnh và cũng là huyện dẫn đầu của tỉnh Trà Vinh về xây dựng phong trào nhân dân du kích, giữ vững thực lực cách mạng.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'bị hãm',
+                                        hightlight: 'tiếp tục hoạt động',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/13.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-17.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'luật Phát xít',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-18.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'đẩy mạnh',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-19.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Phong trào cách mạng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-20.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'phong trào nhân dân',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-21.jpg',
                                         }
                                     },
                                 ],
                                 
                             },
                             {
-                                type: 'text',
-                                value: `- Vào những năm 1961, Mỹ ngụy tăng cường đánh phá ác liệt. Trên cương vị Bí thư Tỉnh uỷ, đồng chí Nguyễn Đáng ra sức hoạt động quyết bám dân, bám đất, lãnh đạo quân dân Trà Vinh đấu tranh chính trị, binh vận, vũ trang, kiên quyết chống lại những cuộc càn quét, lấn chiếm của địch. Ông đặc biệt coi trọng công tác Khmer vận, lấy tình đồng chí, đồng đội để thắt chặt mối đoàn kết quân-dân, đoàn kết Kinh-Khmer đứng lên đấu tranh chính trị, binh vận, vũ trang của quân dân Trà Vinh liên tiếp nổ ra. Có những cuộc đấu tranh chính trị huy động trên 30.000 người kéo vào tỉnh lỵ, huyện lỵ, trong tỉnh đòi Mỹ ngụy bồi thường nhân mạng cho đồng bào, đòi chúng không được bắn phá bừa bãi vào nhân dân; đấu tranh đòi rời bỏ ấp chiến lược trở về quê cũ làm ăn. Phong trào binh vận được đẩy mạnh trong lòng địch, nhiều cuộc binh biến, phản chiến, đào ngũ trong lực lượng ngụy quân xảy ra thường xuyên. Với ba mũi giáp công, quân dân Trà Vinh đã làm chủ được nhiều vùng rộng lớn; giải phóng được 2/3 đất đai trong tỉnh, giải phóng hoàn toàn quận lỵ Long Toàn (nay là huyện Duyên Hải). Quận đầu tiên của khu Tây Nam Bộ được giải phóng.`
+                                type: 'hightlight',
+                                value: `- Vào những năm 1961, Mỹ ngụy tăng cường đánh phá ác liệt. Trên cương vị Bí thư Tỉnh uỷ, đồng chí Nguyễn Đáng ra sức hoạt động quyết bám dân, bám đất, lãnh đạo quân dân Trà Vinh đấu tranh chính trị, binh vận, vũ trang, kiên quyết chống lại những cuộc càn quét, lấn chiếm của địch. Ông đặc biệt coi trọng công tác Khmer vận, lấy tình đồng chí, đồng đội để thắt chặt mối đoàn kết quân-dân, đoàn kết Kinh-Khmer đứng lên đấu tranh chính trị, binh vận, vũ trang của quân dân Trà Vinh liên tiếp nổ ra. Có những cuộc đấu tranh chính trị huy động trên 30.000 người kéo vào tỉnh lỵ, huyện lỵ, trong tỉnh đòi Mỹ ngụy bồi thường nhân mạng cho đồng bào, đòi chúng không được bắn phá bừa bãi vào nhân dân; đấu tranh đòi rời bỏ ấp chiến lược trở về quê cũ làm ăn. Phong trào binh vận được đẩy mạnh trong lòng địch, nhiều cuộc binh biến, phản chiến, đào ngũ trong lực lượng ngụy quân xảy ra thường xuyên. Với ba mũi giáp công, quân dân Trà Vinh đã làm chủ được nhiều vùng rộng lớn; giải phóng được 2/3 đất đai trong tỉnh, giải phóng hoàn toàn quận lỵ Long Toàn (nay là huyện Duyên Hải). Quận đầu tiên của khu Tây Nam Bộ được giải phóng.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'đánh phá',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-22.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'bám dân, bám đất',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-23.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'đồng chí, đồng đội',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-24.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Phong trào binh vận',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-26.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'cuộc đấu tranh chính trị',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-25.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'làm chủ',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-27.jpg',
+                                        }
+                                    },
+                                    
+                                ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Xuân Mậu Thân 1968, sau khi lực lượng ta tấn công vào thị xã Trà Vinh không dứt điểm được, cùng với Tỉnh uỷ Trà Vinh đồng chí Nguyễn Đáng nhanh chóng chỉ đạo cho lực lượng vũ trang rút ngay khỏi thị xã, chỉ để lại một bộ phận lực lượng của tỉnh bám vùng ven, cùng với lực lượng thị xã Trà Vinh vây ép, kiềm chân địch tại chỗ, đưa phần lớn lực lượng của tỉnh giúp các huyện tranh thủ thời cơ có lợi để mở rộng vùng giải phóng. Sự chuyển hướng chỉ đạo đó đã đạt được kết quả tốt, địch bị kiềm chân ở thị xã, các huyện lỵ. Phong trào giải phóng vùng nông thôn phát triển mạnh, 3/4 dân số trong tỉnh được giải phóng. Trung ương  tặng huân chương Thành đồng hạng I và lá cờ với tám chữ vàng “Toàn dân nổi dậy, đoàn kết lập công” cho quân dân Trà Vinh.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Nguyễn Văn Tồn',
+                                        hightlight: 'Nguyễn Đáng',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/18.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-28.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'mở rộng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-29.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'tám chữ vàng',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-31.jpg',
                                         }
                                     },
                                 ],
@@ -2235,13 +2362,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Từ năm 1974 đến ngày miền Nam hoàn toàn giải phóng, ông được Khu uỷ rút lên Khu, giữ chức vụ Trưởng Ban Binh vận, Trưởng Phân ban hai tỉnh Vĩnh Long- Trà Vinh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'chiến đấu',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/16.jpg',
-                                        }
-                                    },
                                 ],
                                 
                             },
@@ -2250,10 +2370,17 @@ export default [
                                 value: `- Trong chiến dịch Hồ Chí Minh lịch sử, ông là Phó Tư lệnh Mặt trận miền Tây, chỉ đạo chiến trường trọng điểm Cần Thơ và là người tình nguyện đem lực lượng chỉ đạo vùng xung yếu tỉnh Long Xuyên trước khi quân ta chiếm lĩnh Cần Thơ. Tiếp quản Long Xuyên, ông được Khu uỷ chỉ định ở lại làm Bí thư tỉnh Long Châu Hà. Đến tháng 2-1976, tỉnh Long Châu Hà đổi tên là tỉnh An Giang, ông là Phó Bí thư trực Tỉnh uỷ An Giang, sau đó, Trung ương phân công trở về công tác tại Cửu Long. Tại Đại hội Tỉnh Đảng bộ lần thứ I (vòng II) năm 1977, ông được bầu làm Bí thư Tỉnh uỷ, Uỷ viên dự khuyết Ban Chấp hành Trung ương Đảng khoá IV, Uỷ viên Ban Chấp hành Trung ương Đảng khoá V và liên tục trong ba nhiệm kì Đại hội Tỉnh Đảng bộ (I, II, III), ông đều được Đại hội bầu giữ chức vụ Bí thư Tỉnh uỷ Cửu Long.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'hạ lệnh',
+                                        hightlight: 'chỉ đạo chiến trường',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/17.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-33.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'được bầu',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-34.jpg',
                                         }
                                     },
                                 ],
@@ -2264,17 +2391,10 @@ export default [
                                 value: `- Đồng chí Nguyễn Đáng đã vĩnh biệt Đảng bộ và nhân dân Cửu Long vào lúc 1 giờ 2 phút ngày 8 tháng 4 năm 1984 sau một tháng đấu tranh với cái chết trên giường bệnh. Ngày đưa tang ông, bạn bè, đồng chí, nhân dân Cửu Long xếp hàng, lặng lẽ sụt sùi tiễn đưa người con gương mẫu của nhân dân Vĩnh-Trà về nơi yên nghỉ cuối cùng tại nghĩa trang liệt sĩ tỉnh Cửu Long.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'ông',
+                                        hightlight: 'đưa tang',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/18.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'vùng Trà Ôn',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/19-1.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/2-35.jpg',
                                         }
                                     },
                                 ],
@@ -2288,7 +2408,9 @@ export default [
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20V%C4%83n%20T%E1%BB%93n/23.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/3-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/3-2.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Nguy%E1%BB%85n%20%C4%90%C3%A1ng/3-3.jpg',
                                     
                                 ],
                             },
@@ -10081,6 +10203,326 @@ export default [
                             },
 
                            
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                ],
+            },
+            {
+                id: '46',
+                type:2,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                video: 'https://www.youtube.com/embed/MVgzue6RNUQ?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
+                title: 'Trà Vinh xây dựng thế trận chiến tranh nhân dân cùng toàn quốc kháng chiến từ tháng 12/1946 đến tháng 12/1948',
+                description: 'Đến tháng 12 năm 1946, đồng bào các dân tộc tỉnh Trà Vinh cùng nhân dân Nam Bộ đã trải qua 15 tháng ...',
+                game: 'https://wordwall.net/vi/embed/8165279650f647bb855bde327e815456?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Tình hình kháng chiến ở Trà Vinh và Nam Bộ',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-3.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Đến tháng 12 năm 1946, đồng bào các dân tộc tỉnh Trà Vinh cùng nhân dân Nam Bộ đã trải qua 15 tháng kháng chiến chống thực dân Pháp xâm lược. Trong khi đó, ở Trung Bộ và Bắc Bộ, ta tranh thủ điều kiện hòa hoãn để xây dựng và phát triển lực lượng. Nhưng thực dân Pháp vẫn nuôi mưu đồ thôn tính toàn bộ đất nước ta một lần nữa. `,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Sáng 20 tháng 12 năm 1946 Chủ tịch Hồ Chí Minh ra lời kêu gọi toàn quốc kháng chiến. Tiếp đó, Xứ ủy Nam Kỳ chỉ thị cho các khu : mở rộng phát triển du kích lên một bước mới, đẩy mạnh đánh địch ở khắp các mặt trận...`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Hòa nhịp với toàn quốc kháng chiến, Trà Vinh thể hiện rõ khí thế mới. Tỉnh ủy và Ủy ban kháng chiến hành chính tỉnh Trà Vinh phát động phong trào "Tổng phá tề, triệt để phá hoại đường giao thông, ngăn chặn và chia cắt địch" trên phạm vi toàn tỉnh.`,
+                                hightlightList: [
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Những chiến thắng lớn tại các quận trong tỉnh Trà Vinh',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-3-1.jpg',
+                                ],
+                            },
+                            {
+                                type: 'bold',
+                                value:`* Trên địa bàn các quận Càng Long, Châu Thành :`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Cuối tháng 12 năm 1946, quân ta phả sập cầu Mây Tức bắc ngang sông Càng Long trên lộ 7, cắt đứt đường vận chuyển chính của địch. Ngày 24 tháng 2 năm 1947, quân ta tập kích tiêu diệt một trung đội lê dương của địch tại lẫm lúa Cò Tộ (Lâm Quang Tộ), thu 24 súng (trong đó có một khẩu súng cối 60 li), giải thoát cho 200 dẫn thường đang bị địch giam giữ tại Huyền Hội (Càng Long) .`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'bold',
+                                value: `* Trên địa bàn quận Cầu Ngang: `,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Trong cuối tháng 12 năm 1946, quân và dân ta đã ra sức đào hầm hào, đắp ụ cản, phá các tuyến giao thông liên lạc của địch từ Sóc Hoang (Mỹ Hòa) đến ấp Tư (Mỹ Long), từ Hiệp Mỹ đến Long Hữu, từ Long Toàn đến Láng Chim, Ba Động (Trường Long Hòa).`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Giữa tháng 1 năm 1947, quân ta bao vây dinh quận trưởng Cầu Ngang tại Ba Động (Trường Long Hòa), quận Be tháo chạy và dời dinh quận về Ô Lắc (Hiệp Mỹ). Quân ta lại bao vây uy hiếp dinh quận ở Ô Lắc, buộc quận Be lại phải tháo chạy và dời về khu vực chợ Cầu Ngang .`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Ngày 15 tháng 01 năm 1947, lực lượng tự vệ chiến đấu quận Cầu Ngang kết hợp với bộ đội chi đội 20 phục kích tại khu vực chợ Bình Tân (Hiệp Hòa) chặn đánh địch từ quận lị Cầu Ngang tiến ra, loại khỏi vòng chiến đấu 300 tên địch (trong đó có 2 tên Pháp), thu 25 khẩu súng .`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Đầu tháng 2 năm 1947, quân ta lại phục kích tại khu vực Ba Hình, Mai Hương (vinh Kim) chặn đánh quân địch từ thị xã Trà Vinh xuống, tiêu diệt một số địch (trong đó có 1 tên Pháp). Chiến sự diễn ra liên tục và sự tổn thất về người và vũ khí của địch khiến cho tề, ngụy ở Cầu Ngang càng hoang mang, dao động. Hàng loạt đồn bót địch ở Long Toàn, Long Hữu, Mỹ Long, v.v... tiếp tục rút chạy. Thực dân Pháp đã phải huy động máy bay đến quần đảo trên bầu trời Cầu Ngang và trút bom xuống địa bàn đóng quân của bộ đội ta tại khu vực Chùa Dơi (Mỹ Long), nhưng không gây tổn thất cho quân ta và cũng không vực dậy được tinh thần của quân ngụy. Vùng giải phóng ở quận Cầu Ngang tiếp tục được mở rộng`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'bold',
+                                text:`* Trên địa bàn quận Tiểu Cần:`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Ô Đùng là một địa danh thuộc xã Hiếu Tử, huyện Tiểu Cần, nằm cạnh lộ 34, có một cánh đồng trống trải. Ngày 25 tháng 4 năm 1947 có đoàn xe địch chở phái đoàn tỉnh trưởng Trà Vinh qua lộ 34 sang Cần Thơ họp, Chi đội trưởng chi đội 20 Ngô Quang Xung trực tiếp chỉ huy lực lượng của chi đội, phối hợp với lực lượng tự vệ chiến đấu địa phương có sự hỗ trợ tích cự của quần chúng, đã bí mật bổ trí lực lượng phục kích trên tuyến Lò Ngà- Ô Đùng, sẵn sàng chờ địch tới để tiêu diệt chúng. Trận địa chính được bố trí trên đồng trống từ sáng sớm, đội trinh sát được phải đi nắm tình hình địch, nhân dân qua lại nhiều mà vẫn giữ được bí mật.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Lúc 15 giờ, trinh sát cho biết có đoàn xe 6 chiếc từ thị xã Trà Vinh chạy xuống. Đúng như phương án tác chiến, chiếc xe xích hầu đi đầu nhưng không phát hiện được quân ta cả đoàn xe đầy lính địch lọt vào trận địa phục kích của ta. Chi đội trưởng Lê Quang Xung ra lệnh nỗ súng. `,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Trận chiến đấu rất quyết liệt kéo dài hơn một tiếng đồng hồ. Địch có quân số đông và vũ khí tốt, nhưng bị đánh bất ngờ, rơi vào tình trạng bị động đối phó và rất hoang mang. Quân ta thắng lớn, tiêu diệt gọn một trung đội lính lê dương, gần một đại đội quân ngụy và hầu hết quan chức thực dân Pháp và ngụy quyền đi trong đoàn xe. Quân thù tan tác, chạy nháo nhác vào các điểm dân cư lân cận, bị đồng bào phát hiện và tóm gọn (ấp Trà Uông bắt sống 3 tên, ấp Láng Khoét bắt sống hơn chục tên,, thiếu nữ Khmer Thạch Thị Hoan cũng phát hiện được một lính Pháp chạy trốn, kịp thời báo cho quân ta tới bắt, v.v...). Quân ta thu được phần lớn vũ khí địch mang theo và đốt cháy cả đoàn xe 6 chiếc.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Với chiến thắng Ô Đùng, lần đầu tiên trong cuộc kháng chiến chống Pháp trên chiếc trường Nam Bộ, ta diệt gọn một đoàn xe quân sự pháp, tiêu diệt cả quan chức thực dân và ngụy quyền chóp bu cấp ở tỉnh cùng bọn tùy tùng. Chiến thắng này đã giáng cho quân thù một đòn cân não, gây tiếng vang lớn trên toàn chiến trường.`,
+                                hightlightList: [
+                                ],
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                ],
+            },
+            {
+                id: '47',
+                type:3,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                video: 'https://www.youtube.com/embed/9Dp83seL5uU?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
+                title: 'Trà Vinh nỗ lực chuẩn bị cho phong trào Đồng Khởi',
+                description: 'Tháng 1 năm 1960, phong trào Đồng Khởi ở Bến Tre thắng lợi đã cổ vũ mạnh mẽ tinh thần đấu tranh chống Mỹ - Diệm...',
+                game: 'https://wordwall.net/vi/embed/8165279650f647bb855bde327e815456?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Diễn biến',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-3.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Tháng 1 năm 1960, phong trào Đồng Khởi ở Bến Tre thắng lợi đã cổ vũ mạnh mẽ tinh thần đấu tranh chống Mỹ - Diệm của đồng bào các dân tộc Trà Vinh, đặc biệt là trên các địa bàn ven sông Tiền, giáp với các huyện Mỏ Cày, Thạnh Phú của tỉnh Bến Tre, như huyện Càng Long, huyện Cầu Ngang, v.v... Các địa phương này đã có ý định tiến hành đồng loạt khởi nghĩa vũ trang vào dịp kỷ niệm ngày thành lập Đảng Cộng sản Việt Nam (đầu tháng 2 năm 1960), nhưng ý định này không phù hợp với chỉ đạo của trên nên phải tạm dừng lại, vì trên một địa bàn rộng cần phải có một phương án thống nhất và có sự chuẩn bị kỹ hơn.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Vào thời gian này, tuy những cuộc khởi nghĩa đồng loạt chưa được diễn ra, nhưng có nhiều trận đánh của các đơn vị lực lượng vũ trang nhân dân Trà Vinh đã giành được thắng lợi có ý nghĩa to lớn cho quá trình xây dựng và phát triển lực lượng, chuẩn bị tích cực cho Đồng Khởi. Điển hình là trận đánh địch theo chiến thuật “kỳ tập” vào đầu tháng 6 năm 1960 do một trung đội của Tiểu đoàn Cửu Long thực hiện tại đồn Kênh Đào (xã Long Vĩnh, huyện Duyên Hải), nơi có một trung đội địch đóng giữ. Ban đêm, bộ đội ta hóa trang thành người dân đi soi cá rồi bất ngờ nổ súng tiêu diệt tên lính gác, đồng thời hô xung phong, khiến lính địch trong đồn hoang mang bỏ chạy, quân ta truy kích tiêu diệt thêm 3 tên, bắt sống 6 tên khác, thu toàn bộ số vũ khí trong đồn gồm 48 khẩu. Tiếp đó, quân ta tiến hành nhiều cách nghi binh, đánh địch theo chiến thuật phục kích “đội mồ”, tấn công đồn Thị Ròn (xã Ngũ Lạc, huyện Cầu Ngang), loại khỏi vòng chiến đấu một trung đội dân vệ, trong đó có tên hương quản Hờ, ác ôn. Trong trận này, đồng chí Đỗ Văn Tự đã anh dũng hy sinh. Tại Trường Long Hoà, quân ta cũng phục kích đánh địch, thu được hàng chục súng các loại cùng nhiều đạn dược. Các công tác chuẩn bị cho Đồng Khởi tiếp tục được tiến hành, thực sự là cuộc diễn tập có quy mô lớn (bao gồm cả các hoạt động bảo vệ, cứu thương) cho các lực lượng đấu tranh (cả nam lẫn nữ) trên khắp các địa bàn trong tỉnh. Tháng 8 năm 1960, để hỗ trợ cho quần chúng đấu tranh phá khu trù mật Long Vĩnh, ta tổ chức xây dựng nhà ém quân trong khu trù mật. Nhiệm vụ này được giao cho đồng chí Dương Thị Ngà (Thanh Bình) lúc đó là đoàn viên thanh niên Lao động phụ trách. Tại đây, quân ta diệt gần 1 trung đội của tổng đoàn dân vệ giữa ban ngày, trong đó có tên Đội Ban ác ôn, v.v…`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Khí thế đấu tranh chính trị của quần chúng tiếp tục dâng cao; các hoạt động vũ trang và binh vận không ngừng phát triển; mạng lưới thông tin liên lạc được bố trí đến các cấp, thế và lực của cách mạng ở trong tỉnh được nâng lên rõ rệt làm chuyển biến tương quan ngày càng có lợi cho phong trào cách mạng, v.v...Từ giữa tháng 2 năm 1960, Tỉnh ủy Trà Vinh phát động một đợt sinh hoạt chính trị trong toàn Đảng, toàn quân và quần chúng cốt cán trong tỉnh. Nội dung sinh hoạt theo các chủ đề: đường lối cách mạng miền Nam; chủ nghĩa anh hùng cách mạng; quan điểm công tác chính trị, quân sự, binh vận, hậu cần; công tác phòng gian bảo mật; công tác vận động quần chúng; công tác xây dựng căn cứ cách mạng, v.v... Đồng thời, mở các lớp tập huấn quân sự theo các chủ đề về võ nghệ dân tộc cổ truyền, võ thuật đặc công, kỹ năng sử dụng binh khí, kỹ thuật tác chiến cá nhân, v.v... Nhiều sân đình, vườn chùa cũng trở thành nơi luyện tập.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Như vậy, Đảng bộ, quân và dân Trà Vinh đã tích cực chuẩn bị mọi mặt, mọi lực lượng sẵn sàng đợi lệnh để đồng loạt nổi dậy khởi nghĩa. Giữa năm 1960, Xứ ủy Nam Bộ họp Hội nghị lần thứ V. Hội nghị đã đánh giá tình hình phong trào cách mạng Nam Bộ và phân tích kinh nghiệm Đồng Khởi ở Bến Tre. Hội nghị quyết định phát động một cao trào Đồng Khởi toàn Nam Bộ, thống nhất hành động vào ngày 14 tháng 9 năm 1960. Thực hiện quyết định này, Liên tỉnh ủy miền Tây Nam Bộ chỉ thị cho các Tỉnh ủy lãnh đạo toàn dân trong các tỉnh nổi dậy Đồng Khởi đúng theo thời gian mà Xứ ủy Nam Bộ đã vạch ra. Liên tỉnh ủy miền Tây Nam Bộ phân công cán bộ trực tiếp chỉ đạo Đồng Khởi ở các tỉnh, đồng chí Lâm Văn Thê (Ba Hương) phụ trách hai tỉnh Vĩnh Long và Trà Vinh.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Sau khi nhận được Chỉ thị của Liên tỉnh ủy miền Tây Nam Bộ, Tỉnh ủy Trà Vinh họp tại Trường Long Hòa (huyện Cầu Ngang nay là huyện Duyên Hải). Đồng chí Trần Văn Long (Mười Dài), Bí thư Tỉnh ủy chủ trì phiên họp. Tỉnh ủy thảo luận Nghị quyết của Xứ ủy Nam Bộ và những ý kiến chỉ đạo, hướng dẫn của Liên tỉnh ủy miền Tây Nam Bộ; đánh giá công tác chuẩn bị của Đảng bộ và quân, dân trong tỉnh; rà soát sự bố trí lực lượng trên các địa bàn; thành lập Ban chỉ đạo Đồng Khởi tỉnh Trà Vinh (thành phần gồm toàn thể Ban chấp hành Đảng bộ Tỉnh, đồng chí Bí thư Tỉnh ủy làm Trưởng Ban). Tỉnh ủy chỉ đạo cho các huyện thành lập Ban chỉ đạo Đồng Khởi (nòng cốt là các Huyện ủy viên) và phân công từng đồng chí Tỉnh ủy viên trực tiếp theo dõi chỉ đạo Đồng Khởi ở từng huyện. Ban Tuyên huấn Tỉnh ủy tổ chức in ấn, phát hành tờ tin của Tỉnh đảng bộ Trà Vinh; thống nhất quan điểm chỉ đạo và thông qua kế hoạch phát động phong trào Đồng Khởi trên toàn tỉnh.`,
+                                hightlightList: [
+                                ],
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                    {
+                        id: '1',
+                        title: 'Mua ngay',
+                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                    },
+                ],
+            },
+            {
+                id: '48',
+                type:4,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                video: 'https://www.youtube.com/embed/Za-KaXOaKd8?list=PL7JhOAXjuOP1-pgRM2dlQR6JW4awgq07R',
+                title: 'Đảng bộ lãnh đạo nhân dân thị xã Trà Vinh bắt tay vào thực hiện công cuộc đổi mới (1986-1988)',
+                description: 'Sau đại thắng mùa Xuân năm 1975, đất nước thống nhất và cùng bước vào thời kỳ quá độ đi lên chủ nghĩa xã hội...',
+                game: 'https://wordwall.net/vi/embed/8165279650f647bb855bde327e815456?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Tiền đề của công cuộc đổi mới ở thị xã Trà Vinh',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-1b.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/I-3.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Sau đại thắng mùa Xuân năm 1975, đất nước thống nhất và cùng bước vào thời kỳ quá độ đi lên chủ nghĩa xã hội. Sau khoảng 10 năm xây dựng xã hội chủ nghĩa trên phạm vi cả nước, đất nước ta tuy đã đạt được những thành tựu quan trọng trên các lĩnh vực kinh tế, văn hóa, xã hội, an ninh, quốc phòng,... song cũng gặp nhiều khó khăn nảy sinh do không lường hết được những diễn biến trong nước và ngoài nước, làm ảnh hưởng không nhỏ đến sự phát triển của cách mạng Việt Nam.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Riêng ở thị xã Trà Vinh, tình hình kinh tế, xã hội cũng gặp nhiều khó khăn. Cơ cấu kinh tế chưa được xác định rõ nét. Công nghiệp và tiểu thủ công nghiệp tuy đã có bước phát triển song còn chưa tương xứng với yêu cầu, chưa phát huy được vai trò, thế mạnh kinh tế của thị xã. Sản xuất nông nghiệp tăng nhưng nhìn chung năng suất lúa không tăng và ngành chăn nuôi bị giảm sút nghiêm trọng..., chưa tạo được điều kiện để giải quyết việc làm cho lao động và khai thác hết tiềm năng. Quá trình phân công lao động chưa đi vào chiều sâu, chưa khai thác hết tiềm năng và thế mạnh của địa phương. Cơ sở vật chất còn nhiều hạn chế, chưa đủ sức tạo ra bước phát triển nhảy vọt. Kinh tế gia đình chưa được phát triển mạnh. Giá cả thường xuyên biến động, đời sống của một bộ phận cán bộ và quần chúng lao động gặp nhiều khó khăn.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Có thể thấy, đến giữa những năm 1986, yêu cầu đổi mới để thoát khỏi khủng hoảng và phát triển là xu hướng tất yếu ở các địa phương, trong đó có thị xã Trà Vinh. Đây là yêu cầu khách quan, bức xúc, có ý nghĩa sống còn đối với sự nghiệp cách mạng nước ta, góp phần vào việc hình thành đường lối đổi mới do Đảng ta khởi xướng, lãnh đạo và được thực hiện trên phạm vi cả nước.`,
+                                hightlightList: [
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Xây dựng phương hướng và nhiệm vụ chiến lược',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-2-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-3-1.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Với tinh thần đổi mới “tôn trọng sự thật, nhìn thẳng vào sự thật, nói rõ sự thật” của Trung ương, được sự chỉ đạo sát sao của Tỉnh ủy Cửu Long và xuất phát từ thực tế địa phương, với quyết tâm đưa tình hình kinh tế - xã hội địa phương vượt qua khó khăn, ổn định và từng bước cải thiện đời sống nhân dân, từ trước Đại hội Đảng bộ thị xã lần thứ IV, Đảng bộ và nhân dân thị xã Trà Vinh đã thực hiện nhiều đợt sinh hoạt chính trị rộng lớn mà nổi bật là tiến hành Đại hội Đảng ở cơ sở. Ngày 11-9-1986, Đại hội Đảng bộ thị xã Trà Vinh lần thứ IV(1986–1988) đã được khai mạc. Dự Đại hội có 186 đại biểu chính thức, đại diện cho toàn thể đảng viên từ 37 đảng ủy và chi bộ cơ sở của toàn Đảng bộ. Tham dự Đại hội còn có đồng chí Lê Tất Thắng, Ủy viên Thường vụ Tỉnh ủy Cửu Long chỉ đạo Đại hội, cùng các đại biểu từ các ban, ngành của tỉnh, trung ương. Đại hội còn có sự tham dự của các đồng chí cán bộ chủ chốt của thị xã Trà Vinh trong các thời kỳ từ kháng chiến chống thực dân Pháp, chống đế quốc Mỹ.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Đại hội đã đi sâu phân tích nguyên nhân của những hạn chế, khuyết điểm, mà chủ yếu do tư tưởng chủ quan, nóng vội, thiếu nhạy bén, bảo thủ, trì trệ, xa rời thực tiễn, sơ hở, yếu kém trong quản lý chỉ đạo, do công tác giáo dục chính trị, tư tưởng và vấn đề xây dựng đội ngũ cán bộ có mặt còn bất cập so với yêu cầu. Đại hội cũng quyết nghị, trong giai đoạn 1986–1990, thị xã Trà Vinh cần đạt được 12 chỉ tiêu quan trọng trong nhiệm vụ phát triển kinh tế - xã hội và công tác xây dựng Đảng; đề ra các biện pháp quan trọng để thực hiện thắng lợi các mục tiêu cơ bản về phát triển kinh tế - xã hội giai đoạn 1986-1990.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Thu gom, dọn dẹp',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-2.jpg',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'cấp phát gạo',
+                                        valueModal: {
+                                            type: 'image',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/Kh%E1%BA%AFc%20ph%E1%BB%A5c%20h%E1%BA%ADu%20qu%E1%BA%A3%20chi%E1%BA%BFn%20tranh%2C%20x%C3%A2y%20d%E1%BB%B1ng%20v%C3%A0%20ph%C3%A1t%20tri%E1%BB%83n%20Tr%C3%A0%20Vinh%20t%E1%BB%AB%20n%C4%83m%201975-1985/II-1-3.jpg',
+                                        }
+                                    },
+                                ],
+                            },
                         ],
                     },
                 ],
