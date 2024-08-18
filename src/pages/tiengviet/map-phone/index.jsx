@@ -57,7 +57,6 @@ const Mapphone = () => {
   const [isadd, setIsAdd] = useState(true);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
-  const [tmp, setTmp] = useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
 
   // Fetching the list of locations
@@ -351,14 +350,11 @@ const Mapphone = () => {
   };
 
   useEffect(() => {
-
-
-    if (roadDrawerControl && mapLoaded && toDo.length > 0) {
+    if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
       setlistLngLat(points);
       console.log('update bay ',listLngLat);
       // animatePoints.addTo(mapp);
-      setTmp(toDo);
       // const locationsData = await getListLocation();
       // const Destination = setDestination(points, locationData);
       // console.log('update data ',Destination);
@@ -367,7 +363,8 @@ const Mapphone = () => {
         if (points.length > 0 && points[0].length === 2) {
           console.log('Setting points from toDo:', points);
           roadDrawerControl.setPoints(points);
-        } else {
+        } else if (points.length===0){
+          roadDrawerControl.setPoints([]);
           console.error('Invalid points format:', points);
         }
       } catch (error) {
@@ -432,41 +429,37 @@ const Mapphone = () => {
     
 
   const handleClick = () => {
-    if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.warning('Đã xóa vị trí bạn khỏi chuyến đi');
     setIsAdd(prevState => !prevState);
-    const lastItem = toDo.slice(-1)[0];
-    if (lastItem && isadd) {
-      const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
-      setToDo((prevToDo) => [updatedLastItem,...prevToDo ]);
+    if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.info('Đã xóa vị trí bạn khỏi chuyến đi');
+    if (isadd) {
+      setToDo((prevToDo) => {
+        if (prevToDo.length > 0) {
+          const lastItem = prevToDo.slice(-1)[0];
+          const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
+          return [...prevToDo, updatedLastItem];
+        } else {
+          return [{ name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
+        }
+      });
     }
     else {
       const toMove = toDo.filter(item => item.longitude === td_x && item.latitude === td_y);
-  
-      // Tạo mảng mới không bao gồm các phần tử cần di chuyển
       const remaining = toDo.filter(item => !(item.longitude === td_x && item.latitude === td_y));
-      
-      // Nối các phần tử còn lại với các phần tử cần di chuyển ở cuối
       const newToDo = remaining.concat(toMove);
-      
-      // Cập nhật state với mảng mới
       setToDo(newToDo);
-
-  // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
-  toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
-
-  // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
-  setTimeout(() => {
-    setToDo(prevToDo =>
-      prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
-    );
-
-    // Thông báo cho người dùng rằng thao tác đã hoàn tất
-    toast.dismiss(); // Ẩn thông báo trước
-    toast.success('Thao tác đã hoàn tất.');
-  }, 200);
+      toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
+      setTimeout(() => {
+        setToDo(prevToDo =>
+          prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
+        );
+      toast.dismiss(); // Ẩn thông báo trước
+      toast.success('Thao tác đã hoàn tất.');
+      }, 200);
     }
-    if (roadDrawerControl && mapLoaded && toDo.length > 0) {
+    console.log('data from todo to update point when click add postition ', toDo);
+    if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
+      
       console.log('pretoDo',toDo);
       console.log('Updating points:', points);
       setlistLngLat(points);
@@ -474,13 +467,14 @@ const Mapphone = () => {
         if (points.length > 0 && points[0].length === 2) {
           console.log('Setting points from toDo:', points);
           roadDrawerControl.setPoints(points);
-        } else {
+        } else if (points.length===0) {
+          roadDrawerControl.setPoints([]);
           console.error('Invalid points format:', points);
         }
       } catch (error) {
         console.error('Error updating points:', error);
       }
-    }
+    } 
 
   };
 
@@ -556,7 +550,11 @@ const Mapphone = () => {
 
     const handleOptionClick = (option) => {
       setPrepare((prevPrepare) => prevPrepare.filter(item => item !== option));
-      setDone((prevDone) => [...prevDone, option]);
+      setDone((prevDone) => {
+        const updatedDone = [...prevDone, option];
+        const sortedDone = updatedDone.sort((a, b) => a.name.localeCompare(b.name));
+        return sortedDone;
+      });
     };
 
     const handleaddToDo = (option) => {
@@ -566,7 +564,12 @@ const Mapphone = () => {
 
     const handleremoveDone = (option) => {
       setDone((prevdone) => prevdone.filter(item => item !== option));
-      setPrepare((prevprepare) => [option,...prevprepare]);
+      // setPrepare((prevprepare) => [option,...prevprepare]);
+      setPrepare((prevprepare) => {
+        const updatedPrepare = [...prevprepare, option];
+        const sortedPrepare = updatedPrepare.sort((a, b) => a.name.localeCompare(b.name));
+        return sortedPrepare;
+      });
     };
 
     const handleIncrease = (index) => {
@@ -602,6 +605,12 @@ const Mapphone = () => {
       return "undefined";
     }
 
+    const [typeMap,setTypeMap]=useState(1);
+
+    const handleTypeMap=(e)=>{
+      setTypeMap(e);
+    }
+
   return (
     <div className="relative h-full w-full flex flex-col">
       <div className="relative h-full w-full flex flex-col items-center">
@@ -631,7 +640,6 @@ const Mapphone = () => {
                         className="bg-red-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300"
                       >
                         <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg>
-                        
                       </button>
                     </div>
                   </li>
@@ -694,38 +702,55 @@ const Mapphone = () => {
           </div>
         </div>
         <div className="relative flex flex-col items-center mb-4">
-        <button
-          type="button"
-          onClick={toggleDropdown}
-          className="bg-blue-500 text-white py-2 px-4 rounded mb-1"
-        >
-          {!isOpen ? 'Mở kho địa điểm' : 'Đóng kho địa điểm'}
-          
-        </button>
-        {isOpen && (
-          <ul className="w-[100%] bg-white border border-gray-200 rounded shadow-lg max-h-60 overflow-y-auto">
-            {prepare.map((location, index) => (
-              <li 
-                className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                key={index}
-              > 
-                <div>
-                  <span className="text-base font-semibold">{location.name}</span>
-                  <div className="text-sm text-gray-500 italic ">
-                    Thuộc:{hometown(location.country)}
+          <button
+            type="button"
+            onClick={toggleDropdown}
+            className="bg-blue-500 text-white py-2 px-4 rounded mb-1"
+          >
+            {!isOpen ? 'Mở kho địa điểm' : 'Đóng kho địa điểm'}
+            
+          </button>
+          {isOpen && (
+            <ul className="w-[100%] bg-white border border-gray-200 rounded shadow-lg max-h-60 overflow-y-auto">
+              {prepare.map((location, index) => (
+                <li 
+                  className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  key={index}
+                > 
+                  <div>
+                    <span className="text-base font-semibold">{location.name}</span>
+                    <div className="text-sm text-gray-500 italic ">
+                      Thuộc:{' '}{hometown(location.country)}
+                    </div>
                   </div>
-                </div>
-                <button
-                  onClick={() => handleOptionClick(location)}
-                  className="bg-green-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
-                >
-                  <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg>
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+                  <button
+                    onClick={() => handleOptionClick(location)}
+                    className="bg-green-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
+                  >
+                    <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="button-container mb-4 w-full md:w-[30%]"> 
+          <button 
+            onClick={() => handleTypeMap(1)}
+            className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
+          >
+            Hành trình
+          </button>
+          <button 
+            onClick={() => handleTypeMap(2)}
+            className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 2 ? 'bg-green-600 text-black hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-105 active:scale-95' : 'bg-green-400 text-gray-800 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300'}`}
+          >
+            Địa điểm
+          </button>
+        </div>
+
+
+
       </div>
       
       {/* <div id="map" className="w-[80%] h-[810px]"></div> */}

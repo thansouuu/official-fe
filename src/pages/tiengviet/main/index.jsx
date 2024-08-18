@@ -66,6 +66,15 @@ const Main = () => {
         setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
     };
 
+    const backgroundStyle = {
+        backgroundImage: 'url(/public/trongsuot.jpg)', // Thay thế bằng đường dẫn đúng đến hình ảnh
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        padding: '1rem', // Padding để hình ảnh không bị che khuất
+        borderRadius: '0.5rem' // Tùy chọn: Bo tròn góc
+      };
+
 
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
@@ -98,12 +107,18 @@ const Main = () => {
                     className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
                     style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
                 >
-                    <p className="text-justify text-lg ">
-                    <ul className="list-disc pl-5 space-y-4 text-gray-700 italic text-lg">
-                        <li>Trà Vinh là tỉnh nằm trong khu vực Đồng bằng sông Cửu Long, phía bắc tiếp giáp tỉnh Bến Tre, phía nam giáp tỉnh Sóc Trăng, phía tây giáp tỉnh Vĩnh Long, phía đông giáp biển với chiều dài bờ biển 65 km, mặt giáp biển thông qua 03 cửa sông chính là Cổ Chiên, Cung Hầu và Định An. Khí hậu nhiệt đới gió mùa, ít bị ảnh hưởng bởi bão, lũ.</li>   
-                        <li>Chúng em chính là thế hệ tương lai sẽ xây dựng và phát triển quê hương mình ngày càng giàu mạnh. Để làm điều đó, là học sinh trong thời đại công thông tin 4.0 chúng em mong muốn góp phần nhỏ vào việc truyền thụ những kiến thức về văn hoá, lịch sử, địa lí, kinh tế, chính trị xã hội và môi trường của Trà Vinh thông qua ứng dụng mà chúng em thiết kế. Website Lịch sử tỉnh Trà Vinh gắn với môn học Giáo dục địa phương sẽ là cầu nối tri thức giúp người dùng hiểu biết về nơi mình sinh ra và lớn lên, bồi dưỡng tình yêu quê hương, ý thức tìm hiểu và vận dụng những điều đã học từ đó bước đầu nuôi dưỡng những ước mơ, đự định trong tương lai.</li>
-                        <li>"Lịch sử Tỉnh Trà Vinh" là ứng bổ ích, giúp khám phá lịch sử phong phú cùng nền văn hóa độc đáo của tỉnh Trà Vinh. Với giao diện thân thiện và dễ sử dụng, ứng dụng cung cấp thông tin chi tiết về các di tích lịch sử, danh lam thắng cảnh, nhân vật và các sự kiện quan trọng trong tỉnh. Dựa trên sự tích hợp kiến thức từ sách Giáo dục Địa Phương tỉnh Trà Vinh theo Chương trình Giáo dục 2018, "Lịch sử Tỉnh Trà Vinh" mang đến cho người dùng cách tiếp cận mới mẻ và hấp dẫn.</li>
-                    </ul>
+                    <p style={backgroundStyle} className="text-justify text-lg">
+                        <ul className="list-disc pl-5 space-y-4 text-[#f0f8ff] italic text-lg">
+                            <li>
+                            Trà Vinh là tỉnh nằm trong khu vực Đồng bằng sông Cửu Long, phía bắc tiếp giáp tỉnh Bến Tre, phía nam giáp tỉnh Sóc Trăng, phía tây giáp tỉnh Vĩnh Long, phía đông giáp biển với chiều dài bờ biển 65 km, mặt giáp biển thông qua 03 cửa sông chính là Cổ Chiên, Cung Hầu và Định An. Khí hậu nhiệt đới gió mùa, ít bị ảnh hưởng bởi bão, lũ.
+                            </li>
+                            <li>
+                            Chúng em chính là thế hệ tương lai sẽ xây dựng và phát triển quê hương mình ngày càng giàu mạnh. Để làm điều đó, là học sinh trong thời đại công thông tin 4.0 chúng em mong muốn góp phần nhỏ vào việc truyền thụ những kiến thức về văn hoá, lịch sử, địa lí, kinh tế, chính trị xã hội và môi trường của Trà Vinh thông qua ứng dụng mà chúng em thiết kế. Website Lịch sử tỉnh Trà Vinh gắn với môn học Giáo dục địa phương sẽ là cầu nối tri thức giúp người dùng hiểu biết về nơi mình sinh ra và lớn lên, bồi dưỡng tình yêu quê hương, ý thức tìm hiểu và vận dụng những điều đã học từ đó bước đầu nuôi dưỡng những ước mơ, đự định trong tương lai.
+                            </li>
+                            <li>
+                            "Lịch sử Tỉnh Trà Vinh" là ứng bổ ích, giúp khám phá lịch sử phong phú cùng nền văn hóa độc đáo của tỉnh Trà Vinh. Với giao diện thân thiện và dễ sử dụng, ứng dụng cung cấp thông tin chi tiết về các di tích lịch sử, danh lam thắng cảnh, nhân vật và các sự kiện quan trọng trong tỉnh. Dựa trên sự tích hợp kiến thức từ sách Giáo dục Địa Phương tỉnh Trà Vinh theo Chương trình Giáo dục 2018, "Lịch sử Tỉnh Trà Vinh" mang đến cho người dùng cách tiếp cận mới mẻ và hấp dẫn.
+                            </li>
+                        </ul>
                     </p>
                 </div>
                 
