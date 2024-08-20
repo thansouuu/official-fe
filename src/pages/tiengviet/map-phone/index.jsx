@@ -328,12 +328,12 @@ const Mapphone = () => {
     // const userId  = localStorage.getItem('userId');
     const userId=data?.data?._id;
     console.log(userId);
-    const points = toDo
-      .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
-      .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
-
+    // const points = toDo
+    //   .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
+    //   .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
+    const points = toDo.map(task => [task.longitude, task.latitude]);
     if (!isLoggedIn) {
-      toast.error('Vui lòng đăng nhập để lưu hành trình!');
+      toast.info('Vui lòng đăng nhập để lưu hành trình!');
       return;
     }
     // if (!token ) {
@@ -433,13 +433,13 @@ const Mapphone = () => {
     if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.info('Đã xóa vị trí bạn khỏi chuyến đi');
     if (isadd) {
       setToDo((prevToDo) => {
-        if (prevToDo.length > 0) {
-          const lastItem = prevToDo.slice(-1)[0];
+        const filteredToDo = prevToDo.filter(item => item.name !== 'Vị trí của bạn');
+        if (filteredToDo.length > 0) {
+          const lastItem = filteredToDo.slice(-1)[0];
           const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
-          return [...prevToDo, updatedLastItem];
-        } else {
-          return [{ name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
+          return [...filteredToDo, updatedLastItem];
         }
+        return [...filteredToDo, { name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
       });
     }
     else {

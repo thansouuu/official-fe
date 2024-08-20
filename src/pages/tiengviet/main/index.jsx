@@ -67,7 +67,7 @@ const Main = () => {
     };
 
     const backgroundStyle = {
-        backgroundImage: 'url(/public/trongsuot.jpg)', // Thay thế bằng đường dẫn đúng đến hình ảnh
+        backgroundImage: 'url(/trongsuot.jpg)', // Thay thế bằng đường dẫn đúng đến hình ảnh
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -175,3 +175,14 @@ ul .task::before {
     outline: none;
     box-shadow: none;
 }
+
+/* Container chứa các nút */
+.button-container {
+  background-color: #f9fafb; /* Màu nền cho div */
+  border-radius: 0.5rem; /* Bo tròn góc của div */
+  padding: 1rem; /* Padding cho div */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng cho div */
+  display: flex; /* Hiển thị các nút theo hàng ngang */
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+

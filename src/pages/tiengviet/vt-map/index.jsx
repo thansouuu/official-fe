@@ -45,7 +45,6 @@ const VtMap = () => {
   const [prepare,setPrepare]= useState([]);
   const [draggedItem, setDraggedItem] = useState(null);
   const [roadDrawerControl, setRoadDrawerControl] = useState(null);
-  // const [animatePoints, setAnimatePoints] = useState(null);
   const [listLngLat, setlistLngLat] = useState([
     [-74.006, 40.7128],
     [-73.935242, 40.730610],
@@ -57,8 +56,8 @@ const VtMap = () => {
   const [isadd, setIsAdd] = useState(true);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
-  const [tmp, setTmp] = useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   // Fetching the list of locations
   const getListLocation = async () => {
@@ -76,16 +75,7 @@ const VtMap = () => {
   // Fetching the list of coordinates for the user direction
   const getListLocationUserForDirection = async () => {
     try {
-      // console.log('userlocationdata ',isLoggedIn);
-      // if (!isLoggedIn) return [];
-      // console.log('login ',isLoggedIn);
-      // const token = localStorage.getItem('accessToken');
       const userId  = localStorage.getItem('userId');
-      // mutate();
-      // const userId=data?.data?._id;
-      console.log('id ',userId);
-      
-      // const userId=data?.data?._id;
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
       return convertLocationsToPoints(response.data);
     } catch (error) {
@@ -116,11 +106,7 @@ const VtMap = () => {
       // setDone(sortedLocations);
       setPrepare(sortedLocations)
       setCoordinates(coordinates);
-      console.log('type data od done ',done);
-      console.log('all des ',locationsData);
-
     };
-
     fetchData();
   }, []);
 
@@ -142,7 +128,7 @@ const VtMap = () => {
   }, [locations, coordinates]);
 
 
-  const [mapLoaded, setMapLoaded] = useState(false);
+  
 
 
   const replaceSvgWithImage = () => {
@@ -213,10 +199,6 @@ const VtMap = () => {
     };
   }, []);
 
-
-
-
-
   const initializeMap = async () => {
     console.log('Initializing map');
     vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
@@ -227,6 +209,11 @@ const VtMap = () => {
       zoom: 13,
       preserveDrawingBuffer: true
     });
+
+    const mapStyleControl = new vtmapgl.MapStyleControl();
+    map.addControl(mapStyleControl);
+
+
       const geolocateControl = new vtmapgl.GeolocateControl({
       positionOptions: {
         enableHighAccuracy: true
@@ -234,12 +221,10 @@ const VtMap = () => {
       trackUserLocation: true,
       showUserLocation:true
     });
-    // new geolocateControl(trackUserLocation?);
-    // new GeolocateControl.options(showUserLocation);
     
       map.addControl(geolocateControl);
       map.on("load", function () {
-        geolocateControl.trigger(1); // add this if you want to fire it by code instead of the button
+        geolocateControl.trigger(); // add this if you want to fire it by code instead of the button
       });
       geolocateControl.on("geolocate", locateUser);
   
@@ -251,12 +236,11 @@ const VtMap = () => {
           // geolocateControl.trigger(0);
           map.removeControl(geolocateControl);
       }
-      
-     
+    
       const scale = new vtmapgl.ScaleControl({
         maxWidth: 80,
         unit: 'metric'
-        });
+      });
       map.addControl(scale);
 
 
@@ -275,13 +259,9 @@ const VtMap = () => {
       // map.on('load', () => {
       //   direction.setOrigin([106.02222,9.894042]);
       //   direction.addWaypoint(0, [106.30402,9.91769]);
-      //   direction.addWaypoint(1, [105.98233,9.894804]);
+      //   // direction.addWaypoint(1, [105.98233,9.894804]);
       //   direction.setDestination([106.30402,9.91769]);
       // })
-
-
-    // const navigationControl = new vtmapgl.NavigationControl();
-    // map.addControl(navigationControl, 'top-left');
 
     const roadDrawerControl  = new vtmapgl.RoadDrawerControl({
       accessToken: vtmapgl.accessToken,
@@ -293,17 +273,10 @@ const VtMap = () => {
     map.addControl(roadDrawerControl);
     setRoadDrawerControl(roadDrawerControl);    
     roadDrawerControl.deactive();
-    // setlistLngLat(await getListLocationUserForDirection());
-    
-    // setAnimatePoints(animatePoints);
-
-
     const points = await getListLocationUserForDirection();
     console.log('Points:', points);
 
     const locationsData = await getListLocation();
-    // const Destination = setDestination(points, locationsData);
-    // console.log('destination ',Destination);
 
     map.on('load', () => {
       console.log('Map loaded');
@@ -350,8 +323,6 @@ const VtMap = () => {
     } else {
       if (destination === 'toDo') {
         setDone((prev) => prev.filter((task) => task.name !== data.task.name));
-        // const sortedDone = [...done].sort((a, b) => a.name.localeCompare(b.name));
-        // setDone(sortedDone);
         setToDo((prev) => {
           const updated = [...prev];
           updated.splice(index, 0, data.task);
@@ -364,8 +335,6 @@ const VtMap = () => {
           updated.splice(index, 0, data.task);
           return updated;
         });
-        
-        
       }
     }
     setDraggedItem(null);
@@ -381,24 +350,17 @@ const VtMap = () => {
     return index;
   };
 
-  // const token = localStorage.getItem('accessToken');
-
   const handleSave = async () => {
-    // const userId  = localStorage.getItem('userId');
     const userId=data?.data?._id;
     console.log(userId);
-    const points = toDo
-      .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
-      .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
-
+    // const points = toDo
+    //   .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
+    //   .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
+      const points = toDo.map(task => [task.longitude, task.latitude]);
     if (!isLoggedIn) {
       toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
     }
-    // if (!token ) {
-    //   toast.error('Vui lòng đăng nhập để lưu hành trình!');
-    //   return;
-    // }
     try {
       const response = await axios.post(`https://historic-be.onrender.com/api/locations/${userId}`, {points});
       toast.success('Danh sách hành trình đã được lưu');
@@ -409,18 +371,9 @@ const VtMap = () => {
   };
 
   useEffect(() => {
-
-
     if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
       setlistLngLat(points);
-      console.log('update bay ',listLngLat);
-      // animatePoints.addTo(mapp);
-      setTmp(toDo);
-      // const locationsData = await getListLocation();
-      // const Destination = setDestination(points, locationData);
-      // console.log('update data ',Destination);
-      console.log('Updating toDo:', toDo);
       try {
         if (points.length > 0 && points[0].length === 2) {
           console.log('Setting points from toDo:', points);
@@ -438,22 +391,13 @@ const VtMap = () => {
 
 
     useEffect(() => {
-      console.log('Giá trị toDo trong useEffect:', toDo);
-    
       const handleClick = (event) => {
         const clickedDiv = event.currentTarget;
         const firstSpan = clickedDiv.querySelector('span');
         if (firstSpan) {
-          console.log('Nội dung của span đầu tiên:', firstSpan.textContent);
-          console.log('Giá trị toDo con cặc:', toDo);
-          console.log('compare with ',locationData);
           const a=toDo[firstSpan.textContent];
           const location = locationData.find(loc => loc.name === a.name);
-          // Cập nhật selectedLocation nếu tìm thấy
-          if (location) {
-            setSelectedLocation(location);
-          }
-          
+          if (location) setSelectedLocation(location);
           if (location === undefined) {
             setSelectedLocation((prevLocation) => ({
               ...prevLocation,
@@ -472,7 +416,7 @@ const VtMap = () => {
           }
         });
       };
-    
+      
       const observer = new MutationObserver(() => {
         addClickListener();
       });
@@ -496,40 +440,34 @@ const VtMap = () => {
     
     if (isadd) {
       setToDo((prevToDo) => {
-        if (prevToDo.length > 0) {
-          const lastItem = prevToDo.slice(-1)[0];
+        const filteredToDo = prevToDo.filter(item => item.name !== 'Vị trí của bạn');
+        if (filteredToDo.length > 0) {
+          const lastItem = filteredToDo.slice(-1)[0];
           const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
-          return [...prevToDo, updatedLastItem];
-        } else {
-          return [{ name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
+          return [...filteredToDo, updatedLastItem];
         }
+        return [...filteredToDo, { name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
       });
     }
     else {
       const toMove = toDo.filter(item => item.longitude === td_x && item.latitude === td_y);
-  
-      // Tạo mảng mới không bao gồm các phần tử cần di chuyển
       const remaining = toDo.filter(item => !(item.longitude === td_x && item.latitude === td_y));
-      
-      // Nối các phần tử còn lại với các phần tử cần di chuyển ở cuối
       const newToDo = remaining.concat(toMove);
-      
-      // Cập nhật state với mảng mới
       setToDo(newToDo);
 
   // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
-  toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
+      toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
 
   // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
-  setTimeout(() => {
-    setToDo(prevToDo =>
-      prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
-    );
+      setTimeout(() => {
+        setToDo(prevToDo =>
+          prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
+        );
 
-    // Thông báo cho người dùng rằng thao tác đã hoàn tất
-    toast.dismiss(); // Ẩn thông báo trước
-    toast.success('Thao tác đã hoàn tất.');
-  }, 200);
+        // Thông báo cho người dùng rằng thao tác đã hoàn tất
+        toast.dismiss(); // Ẩn thông báo trước
+        toast.success('Thao tác đã hoàn tất.');
+      }, 200);
     }
     if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
@@ -550,36 +488,6 @@ const VtMap = () => {
     }
 
   };
-
-
-  const [selectedOptions, setSelectedOptions] = useState([]);
-
-  // Danh sách các tùy chọn với giá trị thực và văn bản hiển thị
-  const options = [
-    { value: 'lua-chon-1', label: 'Lựa chọn 1' },
-    { value: 'lua-chon-2', label: 'Lựa chọn 2' },
-    { value: 'lua-chon-3', label: 'Lựa chọn 3' },
-    { value: 'lua-chon-4', label: 'Lựa chọn 4' },
-    { value: 'lua-chon-5', label: 'Lựa chọn 5' }
-  ];
-
-  // Hàm xử lý khi người dùng chọn hoặc bỏ chọn một checkbox
-  const handleCheckboxChange = (event) => {
-    const value = event.target.value;
-    setSelectedOptions(prevOptions =>
-      prevOptions.includes(value)
-        ? prevOptions.filter(option => option !== value)
-        : [...prevOptions, value]
-    );
-  };
-
-  // Hàm xử lý khi người dùng bấm nút gửi
-  const handleSubmit = () => {
-    // Hiển thị giá trị thực đã chọn
-    alert(`Các giá trị đã chọn: ${selectedOptions.join(', ')}`);
-    // Bạn có thể thực hiện hành động gửi dữ liệu ở đây
-  };
-  
 
   const getIdAddress = (title) => {
     for (let index = 0; index < productData.length; index++) {
@@ -657,38 +565,14 @@ const VtMap = () => {
       setTypeMap(e);
     }
 
+    const handleadvanced=()=>{
+      if (isLoggedIn) navigate(`/tieng-viet/map-advanced`);
+      else toast.info('Bạn phải đăng nhập để tiếp tục');
+    }
+
   return (
     <div className="relative h-full w-full flex flex-col">
-      
-
       <div className="relative h-full w-full flex flex-col items-center">
-      
-      {/* <div className="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
-        <h3 className="text-xl font-semibold mb-4">Chọn nhiều tùy chọn:</h3>
-        <div className="space-y-3">
-          {options.map((option, index) => (
-            <div key={index} className="flex items-center">
-              <label htmlFor={`checkbox-${index}`} className="flex-1">{option.label}</label>
-              <input
-                type="checkbox"
-                id={`checkbox-${index}`}
-                value={option.value}
-                checked={selectedOptions.includes(option.value)}
-                onChange={handleCheckboxChange}
-                className="ml-3"
-              />
-            </div>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={handleSubmit}
-          className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-        >
-          Gửi
-        </button>
-      </div> */}
-        
         <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
           {/* {console.log(data?.data?._id)}  */}
           <div className="list-card w-full md:w-1/2 p-4">
@@ -772,7 +656,11 @@ const VtMap = () => {
           <button
             type="button"
             onClick={toggleDropdown}
-            className="bg-blue-500 text-white py-2 px-4 rounded mb-1"
+            className={`${
+              !isOpen
+                ? 'bg-green-500 hover:bg-green-600 active:bg-green-700'
+                : 'bg-red-500 hover:bg-red-600 active:bg-red-700'
+            } px-4 py-2 rounded text-white transition duration-300 mb-1`}
           >
             {!isOpen ? 'Mở kho địa điểm' : 'Đóng kho địa điểm'}
           </button>
@@ -801,20 +689,32 @@ const VtMap = () => {
             </ul>
           )}
         </div>
-        <div className="button-container mb-4 w-full md:w-[30%]"> 
-          <button 
-            onClick={() => handleTypeMap(1)}
-            className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
-          >
-            Hành trình
-          </button>
-          <button 
-            onClick={() => handleTypeMap(2)}
-            className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 2 ? 'bg-green-600 text-black hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-105 active:scale-95' : 'bg-green-400 text-gray-800 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300'}`}
-          >
-            Địa điểm
-          </button>
-        </div>
+        <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
+          {/* <div className="mb-4">
+            <button 
+              onClick={() => handleadvanced()}
+              className="w-auto px-4 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mx-auto block"
+            >
+              Trải nghiệm
+            </button>
+          </div> */}
+          <div className="flex gap-4">
+            <button 
+              onClick={() => handleTypeMap(1)} 
+              className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 font-bold text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
+            >
+              Hành trình
+            </button>
+            <button 
+              onClick={() => handleTypeMap(2)} 
+              className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 2 ? 'bg-green-600 font-bold text-black hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-105 active:scale-95' : 'bg-green-400 text-gray-800 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300'}`}
+            >
+              Địa điểm
+            </button>
+          </div>
+        </div> 
+
+
       </div>
       
       {/* <div id="map" className="w-[80%] h-[810px]"></div> */}
@@ -838,12 +738,6 @@ const VtMap = () => {
             <>
               <p>{selectedLocation.decription}</p>
               <div className="flex items-center space-x-2 mt-2">
-                {/* <button
-                  className="bg-white text-black px-4 py-2 rounded"
-                  onClick={handleFindPath}
-                >
-                  Tìm đường
-                </button> */}
                 <button
                   className="bg-blue-500 text-white px-4 py-2 rounded"
                   onClick={handleProduct}
