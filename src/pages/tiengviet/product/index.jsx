@@ -785,9 +785,10 @@ const Product = memo(() => {
                                 onChange={(e) => { setTimeType(e.target.value); handleSort(); }}
                                 className="min-w-[150px]"
                             >
-                                <option value=""> </option>
+                                
                                 <option value="desc">Mới nhất</option>
                                 <option value="asc">Cũ nhất</option>
+                                <option value=""> </option>
                             </select>
                             <select
                                 name="sortLikes"
@@ -795,9 +796,9 @@ const Product = memo(() => {
                                 onChange={(e) => { setLikesType(e.target.value); handleSort(); }}
                                 className="min-w-[150px]" 
                             >
-                                <option value=""> </option>
                                 <option value="most">Nhiều lượt thích nhất</option>
                                 <option value="least">Ít lượt thích nhất</option>
+                                <option value=""> </option>
                             </select>
                         </div>
 

@@ -46,7 +46,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
     const handleZoomToggle = () => {
         setZoomEnabled(!zoomEnabled);
         if (zoomEnabled) window.location.reload();
-        document.body.style.touchAction = zoomEnabled ? 'auto' : 'none';
+        // document.body.style.touchAction = zoomEnabled ? 'auto' : 'none';
     };
    
 

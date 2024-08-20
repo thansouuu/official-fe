@@ -18,8 +18,6 @@ import storyData from '@/data/story'
 import { Link} from 'react-router-dom';
 
 
-
-
 const LikedPosts = () => {
     const { isLoggedIn } = useAuth();
     const [likedPosts, setLikedPosts] = useState([]);
@@ -30,22 +28,6 @@ const LikedPosts = () => {
     const [story, setStory] = useState([]);
     const [activeButton, setActiveButton] = useState(null);
 
-    const getIdAddress = (title) => {
-        for (let index = 0; index < productData.length; index++) {
-            const element = productData[index];
-            for (let j = 0; j < element.data.length; j++) {
-                const child = element.data[j];
-                if (child.title === title) {
-                    return {
-                        figue_id: element.figureId,
-                        product_id: child.id,
-                        image_id: child.imageCover,
-                        decrip_id: child.description,
-                    }
-                }
-            }
-        }
-    }
 
     const fetchLikedPosts = async () => {
         try {
@@ -273,7 +255,8 @@ const LikedPosts = () => {
                                         />
                                         {/* Copy Link */}
                                         </button>
-                                    <button onClick={() => handleRemoveLike(item.title_id)} 
+                                    <button 
+                                    onClick={() => handleRemoveLike(item.title_id)} 
                                         // className="text-red-600"
                                         className="hover:bg-red-600 bg-red-500 p-2 rounded text-white"
                                     >
@@ -333,7 +316,8 @@ const LikedPosts = () => {
                                         />
                                         {/* Copy Link */}
                                         </button>
-                                    <button onClick={() => handleRemoveLike(item.title_id)} 
+                                    <button 
+                                    onClick={() => handleRemoveLike(item.title_id)} 
                                         // className="text-red-600"
                                         className="hover:bg-red-600 bg-red-500 p-2 rounded text-white"
                                     >

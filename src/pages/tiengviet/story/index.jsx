@@ -70,7 +70,8 @@ const Story = memo(() => {
     const [users, setUsers] = useState([]);
     const params = useParams();
     const [isModal, setIsModal] = useState(false);
-
+    const [timeType, setTimeType] = useState('desc');
+    const [likesType, setLikesType] = useState('most');
 
     const handleComemt = async (e) => {
         setIsCreateFeedback(true);
@@ -180,7 +181,7 @@ const Story = memo(() => {
         const data = await response.json();
         setFeedbacks(data?.data);
         console.log(feedbacks)
-        handleSort('desc', data?.data);
+        handleSort();
     };
 
     const handleFileChange = (event) => {
@@ -282,17 +283,24 @@ const Story = memo(() => {
         return data?.filter((item) => item.productId == product?.id);
     };
 
-    const sortFeedBack = (type, data) => {
-        if ('desc' == type) {
-            return data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const handleSort = () => {
+        
+        let data = getFeedBackByIdProduct(params.figureId, params.id, feedbacks);
+        console.log('sort ',data);
+        // Sắp xếp theo thời gian nếu `timeType` không phải là rỗng
+        if (timeType==='desc') {
+            data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         }
-        if ('asc' == type) {
-            return data.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        if (timeType==='asc'){
+            data.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
         }
-    };
-
-    const handleSort = (type, data) => {
-        setConvertFeedBacks(sortFeedBack(type, getFeedBackByIdProduct(params.id, data)));
+        if (likesType==='most'){
+            data.sort((a, b) => a.likes.length - b.likes.length);
+        }
+        if (likesType==='least'){
+            data.sort((a, b) => b.likes.length - a.likes.length);
+        }
+        setConvertFeedBacks(data);
     };
 
     const handleLike = async () => {
@@ -698,10 +706,27 @@ const Story = memo(() => {
                 </FoodContent>
                 <FoodContent title="Danh sách đánh giá">
                     <div className="mt-4">
-                        <div className="flex justify-center mb-4">
-                            <select name="sort" id="sort" onChange={(e) => handleSort(e.target.value, feedbacks)}>
+                        <div className="flex flex-wrap justify-center mb-4 gap-4">
+                            <select
+                                name="sortTime"
+                                id="sortTime"
+                                onChange={(e) => { setTimeType(e.target.value); handleSort(); }}
+                                className="min-w-[150px]"
+                            >
+                                
                                 <option value="desc">Mới nhất</option>
-                                <option value={'asc'}>Cũ nhất</option>
+                                <option value="asc">Cũ nhất</option>
+                                <option value=""> </option>
+                            </select>
+                            <select
+                                name="sortLikes"
+                                id="sortLikes"
+                                onChange={(e) => { setLikesType(e.target.value); handleSort(); }}
+                                className="min-w-[150px]" 
+                            >
+                                <option value="most">Nhiều lượt thích nhất</option>
+                                <option value="least">Ít lượt thích nhất</option>
+                                <option value=""> </option>
                             </select>
                         </div>
                         <div className="flex flex-col gap-4">
