@@ -231,7 +231,15 @@ export default [
                                 type: 'hightlight',
                                 value:`- Sau Hiệp định Giơ-ne-vơ năm 1954, lực lượng vũ trang cách mạng miền Nam tập kết ra miền Bắc, quân Mỹ tổ chức các chiến dịch "Tố cộng", "Diệt cộng" nhằm khủng bố, đàn áp cán bộ đảng viên được phân công ở lại miền Nam và cả những người có liên quan đến cuộc kháng chiến chống Pháp. Gia đình chị Út Tịch phải tạm lánh sang Kế Sách (Sóc Trăng).`,
                                 hightlightList: [
-                                    
+                                    {
+                                        hightlight: 'các chiến dịch "Tố cộng", "Diệt cộng"',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Với Luật 10-59, chế độ Ngô Đình Diệm đã tổ chức các chiến dịch “Tố Cộng, diệt Cộng”, tiến hành càn quét khắp miền Nam, giết hại hàng loạt những cán bộ, chiến sỹ từng tham gia chiến tranh Đông Dương của Việt Minh.',
+                                        },
+                                    },
+                
                                     {
                                         hightlight: 'Hiệp định Giơ-ne-vơ',
                                         valueModal: {
@@ -365,6 +373,15 @@ export default [
                                 value:`- Năm 1965, chị được cử đi dự Đại hội anh hùng Chiến sĩ thi đua lực lượng vũ trang toàn miền Nam và được bầu là nữ Anh hùng Lực lượng vũ trang giải phóng miền Nam, được Ủy ban Trung ương Mặt trận Dân tộc Giải phóng miền Nam Việt Nam tặng thưởng Huân chương giải phóng hạng Nhì với thành tích: “Đã tham gia 23 trận lớn nhỏ góp phần quan trọng cùng đơn vị diệt và làm tan rã trên 200 giặc, thu 70 súng. Đồng chí là một chiến sĩ trinh sát dũng cảm và mưu trí, một chiến đấu viên ngoan cường, một chiến sĩ binh vận tài tình đã vận động phá vỡ nhiều binh sĩ địch, nhiều lần đưa bộ đội vào diệt bót lấy súng không tốn một viên đạn”.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Mặt trận Dân tộc Giải phóng miền Nam Việt Nam',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đây là tổ chức kế thừa Mặt trận Tổ quốc Việt Nam ở miền Nam nhằm chống lại Hoa Kỳ và chế độ Việt Nam Cộng hoà ở miền Nam Việt Nam, ra đời trong phong trào Đồng khởi của người dân ở miền Nam',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'được bầu',
                                         valueModal: {
                                             type: 'image',
@@ -397,6 +414,15 @@ export default [
                                 type: 'hightlight',
                                 value:`- Ngày 27/11/1968, trong một trận công kích bằng máy bay B52 của Mỹ xuống vùng Vĩnh Thuận, tỉnh Kiên Giang nơi chị Nguyễn Thị Út đi công tác cùng với người con là Lâm Thị Thoa và chị đã hy sinh cùng người con.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'máy bay B52',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Máy bay B52  là máy bay ném bom hạng nặng phản lực được Không quân Hoa Kỳ sử dụng. B-52 là chiếc máy bay ném bom có tầm bay xa không cần tiếp nhiên liệu dài nhất, và mang được đến 27 tới 33 tấn (60.000 - 73.000lb) vũ khí.',
+                                        },
+                                    },
+
                                 ],
                             },
                         ],
@@ -723,8 +749,19 @@ export default [
                                 value:`- Năm 1938, hoạt động tại Sài Gòn do Xứ ủy phân công. Năm 1939, bị Pháp bắt, đến đầu năm 1940 được thả ra.`
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value:`- Đầu năm 1940, Xứ ủy được củng cố lại do đồng chí Tạ Uyên làm Bí thư. Đồng chí Dương Quang Đông nhận nhiệm vụ Thường vụ Xứ ủy.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Đồng chí Tạ Uyên',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đồng chí Tạ Uyên - Người viết nên trang sử hào hùng của Nam Kỳ khởi nghĩa, sinh ngày 5/8/1898 tại làng Côi Trì, huyện Yên Mô, tỉnh Ninh Bình (nay là xã Yên Mỹ, huyện Yên Mô, tỉnh Ninh Bình)',
+                                        },
+                                    },
+
+                                ],
                             },
                             {
                                 type: 'text',
@@ -734,6 +771,15 @@ export default [
                                 type: 'hightlight',
                                 value:`- Đêm 27/3/1941, ông cùng 7 đồng chí tổ chức vượt ngục Tà Lài. Cuộc vượt ngục thành công nhưng chỉ có 3 đồng chí trong số 8 đồng chí về được Sài Gòn hoạt động, trong đó có Dương Quang Đông. Ba đồng chí cùng nhau thành lập Ban Vận động Cách mạng Nam kỳ mà mục đích là tìm cơ sở, bắt liên lạc với các đồng chí cũ, khôi phục hoạt động của Xứ ủy và liên lạc để nhận sự chỉ đạo từ Trung ương Đảng. Trong thời gian này, Tỉnh ủy Trà Vinh cũng được khôi phục, do chính đồng chí Dương Quang Đông trực tiếp làm Bí thư.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'ngục Tà Lài',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nhà tù Tà Lài là một công trình được xây dựng vào tháng 11 năm 1940 để giam giữ các đảng viên cộng sản và những chí sĩ yêu nước của Việt Nam trong thời kỳ cách mạng.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: ' ông ',
                                         valueModal: {
@@ -775,6 +821,15 @@ export default [
                                 value:`- Ngày 23/9/1945, với tư cách là Thường vụ Xứ ủy, đồng chí Dương Quang Đông được cử chỉ huy chiến đấu ở trụ sở Ủy ban Nhân dân Nam Bộ đang đóng ở Dinh Xã Tây, nay là trụ sở UBND TP.HCM. Cuộc chiến đấu ở đây kéo dài suốt đêm 22 rạng ngày 23/9. Sau đó, ông lui quân về miền Tây, dần xuống đến vùng U Minh.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'vùng U Minh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Trong hơn một trăm năm qua, U Minh Thượng luôn là căn cứ địa cách mạng vững chắc, anh dũng kiên cường chống thực dân Pháp và đế quốc Mỹ, là biểu tượng của sự có mặt, sự tồn tại của lực lượng kháng chiến chống xâm lược.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'UBND TP.HCM',
                                         valueModal: {
                                             type: 'image',
@@ -802,6 +857,15 @@ export default [
                                 type: 'hightlight',
                                 value: '- Năm 1947, sang Lào phối hợp với bạn thành lập chiến khu tại rừng Thà Khẹt vẫn tiếp tục công tác mua sắm vận chuyển vũ khí đưa về Nam Bộ. Năm 1948, sau khi Phòng Hàng hải Nam Bộ ra đời, được bổ nhiệm Phó phòng và chịu trách nhiệm: Trưởng Phân Phòng Hàng hải tại Thái Lan.',
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Thái Lan',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Thái Lan hiện là một trong những Quốc gia phát triển về kinh tế tại khu vực Đông Nam Á, với nền văn hóa lâu đời và sở hữu hàng loạt các công trình, cảnh quan thiên nhiên trù phú.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'chiến khu',
                                         valueModal: {
@@ -1101,6 +1165,22 @@ export default [
                                 value:`- Đến khi cuộc khởi nghĩa Nam Kỳ nổ ra (vào năm 1940), Đảng bộ tỉnh Bến Tre đã lãnh đạo quần chúng nổi dậy hưởng ứng tích cực lệnh của Xứ Úy Nam Kỳ ban ra. Cuộc khởi nghĩa thất bại, Phạm Thái Bường và hầu hết các thành viên trong Tỉnh ủy Bến Tre lần lượt bị bắt. Tòa án của chính quyền thực dân kết án ông tù 10 năm và đày ra Côn Đảo.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'tỉnh Bến Tre',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Bến Tre là một tỉnh thuộc vùng Đồng bằng sông Cửu Long, Việt Nam.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Côn Đảo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Côn Đảo là một quần đảo nằm ở ngoài khơi bờ biển Nam Bộ và cũng là đơn vị hành chính cấp huyện trực thuộc tỉnh Bà Rịa – Vũng Tàu, Việt Nam.',
+                                        },
+                                    },
+                                    {
                                         hightlight: 'nổ ra',
                                         valueModal: {
                                             type: 'image',
@@ -1171,6 +1251,15 @@ export default [
                                 type: 'hightlight',
                                 value:`- Trong Đại hội toàn quốc lần thứ 3 của Đảng Lao động Việt Nam, đồng chí được bầu là Ủy viên dự khuyết Ban chấp hành Trung ương Đảng Cộng sản, có chân trong Trung ương Cục miền Nam.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Đảng Lao động Việt Nam',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ngày 3-3-1951, tại Hội nghị thống nhất Việt Minh - Liên Việt, Đảng Lao động Việt Nam chính thức ra mắt quốc dân, công khai lãnh đạo cuộc kháng chiến, kiến quốc.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'Đại hội toàn quốc',
                                         valueModal: {
@@ -1315,8 +1404,17 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Sơn Thông sinh năm 1910, mất năm 1997. Tên thật là Sơn Thông bí danh là Mười Tăng, sinh ra trong một gia đình trung nông, tại ấp Giồng Tranh, xã Tập Ngãi, huyện Tiểu Cần, tỉnh Trà Vinh. Ông là người dân tộc Khmer, nên từ nhỏ đã hướng theo tu hành giáo lý nhà Phật. 14 tuổi ông đã bắt đầu đi tu. Vào chùa ông gặp thầy Mai Tấn Nhơn. Thấy ông có tư chất thông minh, ham học nên năm 1926 thầy Mai Tấn Nhơn đưa ông sang Thái Lan để học chữ Pa-Li. Ngót 10 năm theo học chữ Pa-Li và kinh sách Phật, khi tốt nghiệp, Sơn Thông được phong học vị Ma-Ha. Năm 1939, ông trở về Trà Vinh tiếp tục tu hành, dạy chữ Pa-li và Phật học tại chùa Kan-Snone (xã Nhị Trường, huyện Cầu Ngang). Ông là một trong những vị Ma-Ha yêu nước.Năm 1943, ông hoàn tục về lấy vợ, sống ở ấp Giồng Tranh, xã Tập Ngãi, huyện Tiểu Cần, tỉnh Trà Vinh.`,
+                                value: `- Sơn Thông sinh năm 1910, mất năm 1997. Tên thật là Sơn Thông bí danh là Mười Tăng, sinh ra trong một gia đình trung nông, tại ấp Giồng Tranh, xã Tập Ngãi, huyện Tiểu Cần, tỉnh Trà Vinh. Ông là người dân tộc Khmer, nên từ nhỏ đã hướng theo tu hành giáo lý nhà Phật. 14 tuổi ông đã bắt đầu đi tu. Vào chùa ông gặp thầy Mai Tấn Nhơn. Thấy ông có tư chất thông minh, ham học nên năm 1926 thầy Mai Tấn Nhơn đưa ông sang Thái Lan để học chữ Pa-Li. Ngót 10 năm theo học chữ và kinh sách Phật, khi tốt nghiệp, Sơn Thông được phong học vị Ma-Ha. Năm 1939, ông trở về Trà Vinh tiếp tục tu hành, dạy chữ và Phật học tại chùa Kan-Snone (xã Nhị Trường, huyện Cầu Ngang). Ông là một trong những vị Ma-Ha yêu nước.Năm 1943, ông hoàn tục về lấy vợ, sống ở ấp Giồng Tranh, xã Tập Ngãi, huyện Tiểu Cần, tỉnh Trà Vinh.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'chữ Pa-Li',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Pāli còn gọi là Nam Phạn, là ngôn ngữ kinh điển của Phật giáo Nam Tông, dùng trong việc chép kinh cùng tụng niệm',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'dân tộc Khmer',
                                         valueModal: {
@@ -1446,6 +1544,15 @@ export default [
                                 type: 'hightlight',
                                 value:`- Năm 1951, Ma Ha Thông lại được cử đi Campuchia trong phái đoàn Việt Nam, sang thăm bộ đội Issarak đang làm nghĩa vụ quốc tế. Qua chuyến công tác này , Ma Ha Thông đã công tác ở đây suốt hai năm liền. Với sự am hiểu sâu rộng đất nước, lịch sử, truyền thống, tín ngưỡng của nhân dân Campuchia, đi tới đâu Ma Ha Thông đều góp phần củng cố khối đoàn kết Việt Nam – Campuchia.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Issarak',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Khmer Issarak - một cựu phong trào chính trị dân tộc chủ nghĩa Khmer chống Pháp xuất hiện vào năm.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'công tác',
                                         valueModal: {
@@ -1692,6 +1799,15 @@ export default [
                                 value: `- Thống chế Nguyễn Văn Tồn sinh năm 1763, mất năm 1820. Tên thật là Thạch Duyên (hay còn gọi là Thạch Duồn), tục danh Tà Duồn, gốc người Khmer, vì có công nên được Nhà Nguyễn ban cho tên họ là Nguyễn Văn Tồn.  Ông là người thôn Nguyệt Lãng, huyện Vĩnh Trị (nay thuộc xã Bình Phú, huyện Càng Long, tỉnh Trà Vinh). Theo Đại Nam liệt truyện, Thống chế Nguyễn Văn Tồn có một người con tên Yên Vy.  Sách ghi chép lại rằng ông có tướng mạo khôi ngô, võ nghệ cao cường, tính tình cương trực.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Đại Nam liệt truyện',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đại Nam liệt truyện là một bộ sách lịch sử ghi chép về gia phả nhà Nguyễn, các sự tích, công trạng của các công thần, liệt nữ và danh tăng,... viết bằng chữ Hán do Quốc sử quán triều Nguyễn biên soạn.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'người Khmer',
                                         valueModal: {
                                             type: 'tooltip',
@@ -1752,8 +1868,19 @@ export default [
                                 ]
                             },
                             {
-                                type: 'text',
-                                value: `- Tháng 2/1784, chúa Nguyễn Ánh buộc phải sang Xiêm La cầu viện. Nguyễn Văn Tồn là người Khmer duy nhất theo chúa sang Vọng Các (nước Xiêm La) với chức Cai đội.`,
+                                type: 'hightlight',
+                                value: `- Tháng 2/1784, chúa Nguyễn Ánh buộc phải sang Xiêm La cầu viện. Nguyễn Văn Tồn là người Khmer duy nhất theo chúa sang Vọng Các với chức Cai đội.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Xiêm La',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Xiêm La: Siam, tên chính thức của nước này cho đến khi đổi thành Thái Lan năm 1939.',
+                                        },
+                                    },
+
+                                ]
                             },
                             {
                                 type: 'hightlight',
@@ -1830,6 +1957,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Năm 1810, ông cùng Thoại Ngọc Hầu dẫn đại binh sang chiến đấu với quân Xiêm ở thành Longvek (Cao Mên). Thắng trận, ông được cử ở lại Nam Vang để giúp vua Cao Miên Ang Chan II (Nặc Chân).`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'thành Longvek',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Longvek hay Lavek là một thành phố ở Campuchia . Thành phố từng là trung tâm quân sự của đất nước.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'chiến đấu',
                                         valueModal: {
@@ -2103,6 +2239,33 @@ export default [
                                 type: 'hightlight',
                                 value: `- Đầu năm 1945, phong trào cách mạng ở quê ông phát triển mạnh, Nguyễn Đáng gia nhập đoàn Thanh niên Tiền phong, cùng anh em, bạn bè trong tổ chức hoạt động tích cực, chờ thời cơ. Ngày 25/8/1945, cùng với nhân dân xã Huyền Hội, ông tham gia trong lực lượng thanh niên nổi dậy giành chính quyền. Chính quyền cách mạng được thành lập, ông được giao phụ trách Đội Thanh niên cứu quốc xã Huyền Hội. Ông làm nòng cốt trong việc vận động thanh niên tham gia lực lượng vũ trang và xã Huyền Hội xây dựng được một trung đội du kích, có khả năng đánh địch. Thực dân Pháp gây chiến tranh trở lại, xã Huyền Hội cũng như nhiều địa phương khác ở Càng Long bị tái chiếm, Nguyễn Đáng đã lãnh đạo lực lượng vũ trang xã diệt trừ tề gian, chống lại cuộc càn quét lấn chiếm của địch, bảo vệ thành quả cách mạng tháng Tám. Năm 1947, Nguyễn Đáng được kết nạp vào Đảng Cộng sản và được giao nhiệm vụ Xã đội trưởng, Trưởng Công an xã Huyền Hội, Bí thư Huyện uỷ Càng Long, Bí thư Tỉnh uỷ Trà Vinh, Trưởng ban Binh vận Khu 9, Phó Tư lệnh Mặt trận miền Tây, trực tiếp chỉ đạo chiến trường trọng điểm giải phóng Cần Thơ trong Chiến dịch Hồ Chí Minh (1975).`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Cần Thơ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Cần Thơ là một trong năm thành phố trực thuộc trung ương của Việt Nam. Đây là thành phố sầm uất và phát triển nhất ở vùng Đồng bằng sông Cửu Long.',
+                                        },
+                                    },
+
+                                    {
+                                        hightlight: 'Chiến dịch Hồ Chí Minh (1975)',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Chiến dịch Hồ Chí Minh, tên ban đầu là Chiến dịch Giải phóng Sài Gòn – Gia Định là chiến dịch cuối cùng của Quân Giải phóng miền Nam Việt Nam trong Cuộc Tổng tấn công và nổi dậy mùa Xuân năm 1975 và Chiến tranh Việt Nam.',
+                                        },
+                                    },
+
+                                    {
+                                        hightlight: 'đoàn Thanh niên Tiền phong',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Thanh niên Tiền phong là một tổ chức chính trị - xã hội hoạt động chủ yếu tại Nam Kỳ trong năm 1945.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'phong trào cách mạng',
                                         valueModal: {
@@ -2766,8 +2929,18 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: ` - Ao Bà Om là một danh lam thắng cảnh nổi tiếng của tỉnh Trà Vinh cũng như cả khu vực Đồng bằng sông Cửu Long. Danh thắng này tọa lạc tại Phường 8, thành phố Trà Vinh, cách trung tâm tỉnh lỵ hơn 5 km về hướng tây nam và cách quốc lộ 53 hơn 500 m về hướng đông.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Khu vực Đồng bằng sông Cửu Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: ' Khu vực này có 1 thành phố trực thuộc trung ương là Cần Thơ và 12 tỉnh: Long An, Tiền Giang, Bến Tre, Vĩnh Long, Trà Vinh, Hậu Giang, Sóc Trăng, Đồng Tháp, An Giang, Kiên Giang, Bạc Liêu và Cà Mau.',
+                                        }
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -2802,7 +2975,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/main',
+                                            link: '/tieng-viet/figure/2/product/38',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -2818,7 +2991,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value: ` Dừng chân cho biết chốn này thần tiên.”…`,
+                                value: `Dừng chân cho biết chốn này thần tiên.”`,
                             },
                         ],
                     },
@@ -2863,14 +3036,14 @@ export default [
                                 value: `- Cũng có truyền thuyết cho rằng trên những chân rộc thấp, đất cát pha đất thịt vùng phía tây nam thuộc địa phận thị xã Trà Vinh, cứ mỗi mùa sa mưa thì rau ngò om mọc đầy. Người dân địa phương cùng nhau thu hoạch mang ra chợ đổi gạo, như một nguồn lợi trời cho. Một thời, thịt bò vùng Lương Hòa – Nguyệt Hóa (huyện Châu Thành) ngon nổi tiếng gần xa vì bò vùng này chỉ ăn toàn rau ngò om. Thời Pháp thuộc, thịt bò Ba Se được xếp vào hàng “tam bửu Trà Vinh” (cùng với dưa hấu Ba Động và gạo Đầu Bờ) và được chính quyền thực dân đưa sang “đấu xảo” (tương tự như dự hội chợ giới thiệu sản phẩm ngày nay) tại Marseille (Pháp). Ao Ngò Om dần biến âm thành Ao Bà Om…`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'thị xã Trà Vinh',
+                                        hightlight: 'Marseille (Pháp)',
                                         valueModal: {
                                             type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
+                                            ref: false,
+                                            value: 'Marseille – thành phố cảng 2600 tuổi, đẹp nhất nước Pháp',
+                                        },
                                     },
+
                                 ],
                             },
                         ],
@@ -2891,6 +3064,24 @@ export default [
                                 type: 'hightlight',
                                 value: `- Vào những ngày lễ, tết hàng năm của người Khmer, Ao Bà Om trở thành nơi sinh hoạt cộng đồng náo nhiệt của cả vùng. Đặc biệt vào dịp lễ hội Ok Om Bok được tổ chức vào rằm tháng 10 âm lịch, nơi đây thu hút hàng ngàn người dân khắp nơi về tham dự. Họ cùng nhau nhảy múa, xem hát Dù kê,… Khi màn đêm buông xuống, khu vực Ao Bà Om lung linh, huyền ảo, náo nhiệt trong hội thả hoa đăng với lời cầu mong trời đất giao hoà, mùa màng tốt tươi, con người và vạn vật bình yên.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Ok Om Bok',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/4/product/39',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'hát Dù kê',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Hát dù kê là kịch hát truyền thống của nghệ thuật sân khấu hát và múa của dân tộc Khmer "Lakhon Dù kê" kết hợp ca hát và nhảy múa và là "một ban hòa tấu của cả nhạc cụ truyền thống và hiện đại".',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'chín rộ',
                                         valueModal: {
@@ -2973,17 +3164,12 @@ export default [
                     {
                         id: 2,
                         title: 'Biển Ba Động',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        link: '/tieng-viet/figure/2/product/38',
                     },
                     {
                         id: 3,
                         title: 'Người Khmer',
                         link: '/tieng-viet/figure/8/product/26',
-                    },
-                    {
-                        id: 4,
-                        title: 'Thị xã Trà Vinh',
-                        link: '/tieng-viet/map',
                     },
                 ],
             },
@@ -3018,13 +3204,12 @@ export default [
                                 value: ` - Được bao bọc và bồi đắp bởi dòng sông Hậu hiền hòa, cù lao Tân Quy là dải đất màu mỡ thuộc xã An Phú Tân, huyện Cầu Kè, cách thành phố Trà Vinh khoảng hơn 45 km về phía Tây Bắc – nơi đây được mệnh danh là cù lao xanh chuyên canh vườn cây ăn trái lớn nhất tỉnh. Có thể nói, cù lao Tân Quy chính là nơi hội ngộ của hàng loạt các loại trái cây nức tiếng miền Tây.  Để đến với cù lao Tân Quy, chúng ta chỉ mất khoảng 15 phút để đi đò ngang từ vàm Bến Đình.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Cầu Kè',
+                                        hightlight: 'sông Hậu',
                                         valueModal: {
                                             type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
+                                            ref: false,
+                                            value: 'Sông Hậu hay Hậu Giang, phía Campuchia gọi là Tonlé Bassac, là một phân lưu của sông Mê Kông, chảy qua Campuchia và Việt Nam.',
+                                        },
                                     },
                                 ],
                             },
@@ -3041,8 +3226,18 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Cù lao Tân Quy được hình từ nửa đầu thế kỷ 19. Khi những cư dân đầu tiên vượt sông đến đây để dựng làng, lập ấp. Sau đó, đã đặt tên cho nơi này là làng Tân Vinh. Đến đầu thế kỷ 20, khoảng sau năm 1920 thì nơi đây lại được đổi tên mới là cù lao Tân Quy cho đến tận ngày nay. Hiện cù lao có 2 ấp: Tân Quy 1 – Tân Quy 2 (thuộc xã An Phú Tân – huyện Cầu Kè – tỉnh Trà Vinh). Và 1 ấp thuộc xã Tích Thiện – huyện Trà Ôn – tỉnh Vĩnh Long.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'tỉnh Vĩnh Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tỉnh Vĩnh Long nằm giữa hai nhánh sông chính của sông Cửu Long là sông Tiền và sông Hậu.',
+                                        },
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -3115,6 +3310,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Tham quan bằng xuồng được nhiều du khách lựa chọn nhất. Với địa thế xung quanh cù lao sông nước, dùng xuồng di chuyển rất thuận tiện. Các hoạt động này thường có hướng dẫn viên và người chèo thuyền đi cùng. Họ sẽ đưa bạn vào các góc vườn cây ăn quả. Đừng quên thử cảm giác len lỏi qua những con rạch nhỏ. Những con rạch ăn thông nhau, tạo thành một hệ thống sông rạch chi chít, sông liền sông, vườn nối vườn, không gian đậm chất Miền Tây.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'hệ thống sông rạch',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Kênh rạch là từ chỉ chung môi trường sông nước nằm trong hệ thống thủy triều. Hiểu như thế thì khái niệm kênh rạch bao gồm cả sông.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'Tham quan bằng xuồng',
                                         valueModal: {
@@ -3197,11 +3401,6 @@ export default [
                         link: '/tieng-viet/figure/2',
                     },
                     {
-                        id: 2,
-                        title: 'Cầu Kè',
-                        link: '/tieng-viet/map',
-                    },
-                    {
                         id: 3,
                         title: 'Ẩm thực',
                         link: '/tieng-viet/figure/3',
@@ -3238,24 +3437,45 @@ export default [
                                 type: 'hightlight',
                                 value: ` - Di tích khảo cổ Lưu Cừ II ở ấp Lưu Cừ II, xã Lưu Nghiệp Anh, thuộc huyện Trà Cú, tỉnh Trà Vinh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Trà Cú',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: ` - Có niên đại gần 2.000 năm, là chứng tích tiêu biểu của văn hóa - lịch sử của vùng trong buổi đầu khai phá, mở mang. Di tích cũng phản ánh sự kiện lớn trong quá trình biến đổi, giao lưu kinh tế, văn hóa, là sự kiện hòa nhập của văn hóa cổ xưa Ấn Độ với văn hóa bản địa truyền thống để hình thành nền văn hóa Óc Eo nổi tiếng thế giới.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'nền văn hóa Óc Eo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Văn hóa Óc Eo là một nền văn hóa cổ hình thành và phát triển ở Nam Bộ Việt Nam từ thế kỷ 1 đến thế kỷ 7 sau Công Nguyên...',
+                                        },
+                                    },
+
+                                ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: ` - Di tích Lưu Cừ II là một phế tích kiến trúc tôn giáo Bà La Môn, thuộc văn hóa Óc Eo được xây dựng vào những thế kỷ đầu sau công nguyên và tồn tại trong một thời gian dài của Vương quốc Phù Nam.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'tôn giáo Bà La Môn',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Bà-la-môn hay Brahmin là danh từ chỉ một đẳng cấp. Đạo Bà-la-môn là một tôn giáo rất cổ của Ấn Độ, xuất hiện trước thời Đức Phật Thích-ca.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Vương quốc Phù Nam',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Vương quốc Phù Nam là một quốc gia cổ nổi tiếng ở khu vực châu Á, được hình thành trong khoảng thế kỷ thứ 1 - 2 trước Công nguyên và kéo dài cho đến khoảng thế kỷ 7 sau Công nguyên.',
+                                        },
+                                    },
+
+                                ],
                             },
                             {
                                 type: 'text',
@@ -3361,8 +3581,18 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Từ chất liệu kiến trúc, phong cách nghệ thuật, di vật, chỉ số niên đại C.14 cho chúng ta biết được hai thời điểm tồn tại của di tích Lưu Cừ II, trong đó, giai đoạn thứ I - Giai đoạn thiết lập kiến trúc khoảng thế kỷ thứ I sau công nguyên ; Giai đoạn thứ hai - Giai đoạn mở rộng kiến trúc vào khoảng thế kỷ thứ V sau công nguyên. Cùng thời gian này trên vùng hạ lưu sông Mê Kông, theo phát hiện khảo cổ học là thời kỳ hình thành và phát triển một nền văn hóa cổ nổi tiếng - Văn hóa Óc Eo`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'chỉ số niên đại C.14',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Định tuổi bằng carbon-14 là phương pháp lợi dụng các thuộc tính của đồng vị carbon-14 – một đồng vị carbon có tính phóng xạ – nhằm xác định niên đại của các cổ vật có chất liệu hữu cơ.',
+                                        },
+                                    },
+                                ],
                             },
                             {
                                 type: 'hightlight',
@@ -3408,7 +3638,7 @@ export default [
                         ],
                     },
                     {
-                        title: 'ý nghĩa',
+                        title: 'Ý nghĩa',
                         data: [
                             {
                                 type: 'grid-image',
@@ -3419,7 +3649,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value:  `- Những hiện vật được khai quật từ di tích khảo cổ Lưu Cừ II là căn cứ lịch sử về cuộc sống vật chất, tinh thần của một địa điểm quần cư khá đông đúc trên những con giồng lớn thuộc địa bàn huyện Trà Cú ngày nay`,
+                                value:  `- Những hiện vật được khai quật từ di tích khảo cổ Lưu Cừ II là căn cứ lịch sử về cuộc sống vật chất, tinh thần của một địa điểm quần cư khá đông đúc trên những con giồng lớn thuộc địa bàn huyện Trà Cú ngày nay.`,
                             },
                             {
                                 type: 'text',
@@ -3434,11 +3664,6 @@ export default [
                         id:1,
                         title: 'Địa điểm',
                         link: '/tieng-viet/figure/2',
-                    },
-                    {
-                        id:2,
-                        title: 'Trà Cú',
-                        link: '/tieng-viet/map',
                     },
                 ],
             },
@@ -3470,20 +3695,11 @@ export default [
                                 value: ` - Khu di tích Bến tiếp nhận vũ khí Cồn Tàu ở ấp Cồn Trứng, xã Trường Long Hòa, huyện Duyên Hải, tỉnh Trà Vinh, cách trung tâm thành phố Trà Vinh 60km về hướng Đông Nam. Đây không chỉ là địa chỉ giáo dục truyền thống cho thế hệ trẻ mà còn là điểm tham quan du lịch tiềm năng cho thị xã Duyên Hải, cùng với Khu du lịch Ba Động, điện gió làm nên cụm văn hóa – du lịch liên hoàn của vùng biển Duyên Hải – Trà Vinh.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'huyện Duyên Hải',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
-                                    {
                                         hightlight: 'Ba Động',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/map',
+                                            link: '/tieng-viet/figure/2/product/38',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -3509,6 +3725,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Tháng 7/1959, để chi viện nguồn lực cho cách mạng miền Nam trong chiến tranh chống Mỹ cứu nước, Bộ Chính trị ra quyết định thành lập đơn vị vận tải quân sự trên biển – Đoàn 759 (sau đổi thành Đoàn 125). Đến đầu năm 1961, Trung ương ra chỉ thị cho các tỉnh gồm Bà Rịa, Bến Tre, Trà Vinh, Cà Mau chuẩn bị bến bãi và tổ chức tàu thuyền ra Bắc để thăm dò đường vận chuyển vũ khí vào Nam. Tại tỉnh Trà Vinh, đồng chí Trần Văn Long – Bí thư Tỉnh ủy Trà Vinh đã chỉ đạo tuyển chọn những cán bộ dũng cảm, gan dạ, có kinh nghiệm đi biển, chuẩn bị thuyền cho chuyến vượt biển ra Bắc.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'đồng chí Trần Văn Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đồng chí Trần Văn Long (Bí danh Mười Dài), sinh năm 1925, tại xã Lưu Nghiệp Anh, huyện Trà Cú.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'vận tải quân sự',
                                         valueModal: {
@@ -3550,6 +3775,22 @@ export default [
                                 value: `- Thuyền đi được hai ngày, đến Nha Trang thì gặp bão và tám ngày sau bị lạc sang Ma Cao, Trung Quốc (lúc bấy giờ là thuộc địa của Bồ Đào Nha). Đến 22 giờ ngày 15 tháng 8 năm 1961, thuyền được tàu biên phòng Trung Quốc đưa về huyện Du Hải – Quảng Châu, sau đó được lãnh sự quán của ta tổ chức đưa về Hà Nội bằng tàu hỏa để gặp Bác Hồ báo cáo lại quá trình vượt biển và được Bác Hồ tặng cho mỗi người 01 khẩu súng P38.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Nha Trang',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nha Trang là tuyệt phẩm của tạo hóa, nơi có một trong 29 vịnh đẹp nhất thế giới và được thiên nhiên ưu ái ban tặng nhiều thắng cảnh, đặc sản độc đáo.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Ma Cao, Trung Quốc',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ma Cao, cũng có thể viết là Macao, là một trong hai đặc khu hành chính của Cộng hòa Nhân dân Trung Hoa cùng với Hồng Kông.',
+                                        },
+                                    },
+                                    {
                                         hightlight: 'tàu hỏa',
                                         valueModal: {
                                             type: 'image',
@@ -3559,8 +3800,20 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Tháng 9 năm 1962, đồng chí Phạm Thái Bường, Ủy viên Trung ương Đảng, Ủy viên Trung ương Cục miền Nam ra quyết định thành lập Đoàn 962 quản lý các bến tiếp nhận vũ khí các tỉnh. Bến Trà Vinh do đồng chí Lê Văn Sến (Năm Sến) – Phó chính ủy Đoàn 162 trực tiếp phụ trách.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Phạm Thái Bường',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/1/product/3',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+
+                                ],
                             },
                             {
                                 type: 'hightlight',
@@ -3613,6 +3866,15 @@ export default [
                                 value: `- Tuy hoạt động chỉ trong thời gian ngắn, nhưng Bến Trà Vinh là một mắc xích quan trọng của tuyến đường Hồ Chí Minh trên biển và Bến Cồn Tàu là trọng tâm của mắc xích quan trọng ấy. Năm 2004, Bến tiếp nhận vũ khí Cồn Tàu được Bộ Văn hóa Thể thao (nay là Bộ Văn hóa, Thể thao và Du lịch) công nhận là di tích lịch sử – văn hóa cấp quốc gia. Đến năm 2010, Khu di tích Bến tiếp nhận vũ khí Cồn Tàu được đầu tư xây dựng, đưa vào hoạt động với diện tích 1,2 ha gồm Bia tưởng niệm và Nhà trưng bày hình ảnh, hiện vật gắn liền với chiến công của quân dân Trà Vinh đối với tuyến Đường Hồ Chí Minh trên biển.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'của tuyến đường Hồ Chí Minh trên biển',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Trong cuộc kháng chiến chống Mỹ, cứu nước, tuyến chi viện quân sự chiến lược trên biển mang tên Chủ tịch Hồ Chí Minh là một con đường huyền thoại của dân tộc, con đường của khát vọng độc lập, tự do và thống nhất Tổ quốc.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'bia tưởng niệm',
                                         valueModal: {
                                             type: 'image',
@@ -3656,13 +3918,13 @@ export default [
                     },
                     {
                         id:2,
-                        title: 'Duyên hải',
-                        link: '/tieng-viet/map',
+                        title: 'Phạm Thái Bường',
+                        link: '/tieng-viet/figure/1/product/3',
                     },
                     {
                         id:3,
                         title:'Ba Động',
-                        link: '/tieng-viet/figure/3',
+                        link: ' /tieng-viet/figure/2/product/38',
                     },
                 ],
             }, 
@@ -3694,15 +3956,6 @@ export default [
                                 type: 'hightlight',
                                 value: ` - Biển Ba Động là danh thắng và khu du lịch nổi tiếng thuộc xã Trường Long Hoà, thị xã Duyên Hải, tỉnh Trà Vinh. Cách thành phố Trà Vinh hơn 60km về hướng đông nam.  Đây là một trong những bãi biển đẹp của Đồng bằng sông Cửu Long với vẻ đẹp hoang sơ và triền cát dài.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Duyên Hải',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                         ],
@@ -3721,6 +3974,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Bãi biển có độ dốc thoai thoải, nước biển trong và sóng yên biển lặng. Là một trong những khu vực hiếm hoi ở miền Tây Nam Bộ có bãi cát dài hơn 10km từ ấp Nhà Mát tới ấp Cồn Trứng. Khi thủy triều xuống, bãi cát phơi ra hàng trăm mét từ bờ xuống mép nước.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Miền Tây Nam Bộ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Miền Tây là tên gọi ngắn gọn của khu vực đồng bằng sông Cửu Long, đồng bằng sông Mê Kông hay miền Tây Nam Bộ. Khu vực này gồm 1 thành phố trực thuộc Trung ương là Cần Thơ và 12 tỉnh.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'sóng yên biển lặng',
                                         valueModal: {
@@ -3828,6 +4090,15 @@ export default [
                                 value: `- Vào cuối thế kỷ XVIII, trong những năm tháng quân tướng chúa Nguyễn Ánh trốn chạy sự truy đuổi của nghĩa quân Tây Sơn,  các tên làng có từ tố “Long” như Trường Long Hòa, Long Vĩnh, Long Hữu, Long Toàn xuất hiện.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'sự truy đuổi của nghĩa quân Tây Sơn',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Chiến tranh Tây Sơn – Chúa Nguyễn (1787–1802) là giai đoạn thứ hai của cuộc chiến tranh Tây Sơn – Chúa Nguyễn.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'quân tướng',
                                         valueModal: {
                                             type: 'image',
@@ -3890,6 +4161,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Du khách nên nghỉ lại qua đêm để ngắm ánh bình minh hoặc hoàng hôn trên biển. Các hoạt động như tắm biển, cưỡi mô tô nước, thư giãn tại nhà hàng hoặc ghế bố dọc theo bờ kè.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'mô tô nước',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Mô tô nước là thiết bị là một phương tiện tiêu khiển trên mặt nước mà người lái ngồi hoặc đứng trên, chứ không phải bên trong như trên một chiếc thuyền, và di chuyển trên mặt nước ở tốc độ cao.',
+                                        },
+                                    },
+
                                 ],
                             },
                             {
@@ -3964,10 +4244,6 @@ export default [
                         link: '/tieng-viet/figure/2',
                     },
                     {
-                        title: 'Duyên hải',
-                        link: '/tieng-viet/map',
-                    },
-                    {
                         title:'Cồn Tàu',
                         link: '/tieng-viet/figure/2/product/33',
                     },
@@ -4006,14 +4282,14 @@ export default [
                                 value: `- Thiền viện Trúc Lâm Trà Vinh tọa lạc tại ấp Khoán Tiều, xã Trường Long Hòa, thị xã Duyên Hải. Cách trung tâm thành phố Trà Vinh 50 km, về hướng đông nam và cách Duyên Hải 12 km về hướng đông. Đây là ngôi thiền viện thuộc Thiền phái Trúc Lâm duy nhất trên địa bàn tỉnh Trà Vinh.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'thị xã Duyên Hải',
+                                        hightlight: 'Thiền phái Trúc Lâm',
                                         valueModal: {
                                             type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
+                                            ref: false,
+                                            value: 'Thiền phái Trúc Lâm là một tông phái của Thiền tông Việt Nam, hình thành từ thời nhà Trần, do Vua Trần Nhân Tông sáng lập.',
+                                        },
                                     },
+
                                 ],
                             },
                             {
@@ -4051,6 +4327,16 @@ export default [
                                 type: 'hightlight',
                                 value: `- Thiền phái Trúc Lâm là một dòng thiền Việt Nam hình thành từ thời nhà Trần, do Vua Trần Nhân Tông sáng lập. Thiền phái Trúc Lâm có ba Thiền sư kiệt xuất là Nhân Tông (Trúc Lâm Đầu Đà), Pháp Loa và Huyền Quang, gọi chung là Trúc Lâm Tam tổ. Thiền phái này được xem là tiếp nối nhưng là sự hợp nhất của ba dòng thiền Việt Nam của thế kỉ thứ 12. Với việc lập ra phái Trúc Lâm, Trần Nhân Tông đã thống nhất các Thiền phái tồn tại trước đó và toàn bộ Giáo hội Phật giáo đời Trần về một mối.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Vua Trần Nhân Tông',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Trần Nhân Tông được sử Việt đánh giá là một vị Hoàng đế anh minh, đã có nhiều đóng góp cho sự phát triển bền vững của Đại Việt cuối thế kỷ XIII, cũng như việc bảo vệ nền độc lập và mở rộng lãnh thổ đất nước. Ông là 1 trong 14 vị anh hùng dân tộc tiêu biểu của Việt Nam.',
+                                        },
+                                    },
+
+
                                     {
                                         hightlight: 'một mối',
                                         valueModal: {
@@ -4134,8 +4420,26 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Ngôi Chánh điện Thiền viện Trúc Lâm có diện tích 27 x 45 m, cao 11 m, trên nền đá cao 1,4 m, là ngôi Chánh điện lớn nhất trong tất cả các tự viện Phật giáo trên địa bàn tỉnh Trà Vinh hiện nay. Toàn bộ khung sườn ngôi Chánh điện làm bằng gỗ lim nhập từ nước ngoài, được chạm khắc công phu bởi những nghệ nhân lành nghề đến từ Bắc Ninh.`,
+                                value: `- "Ngôi Chánh điện" Thiền viện Trúc Lâm có diện tích 27 x 45 m, cao 11 m, trên nền đá cao 1,4 m, là ngôi Chánh điện lớn nhất trong tất cả các tự viện Phật giáo trên địa bàn tỉnh Trà Vinh hiện nay. Toàn bộ khung sườn ngôi Chánh điện làm bằng gỗ lim nhập từ nước ngoài, được chạm khắc công phu bởi những nghệ nhân lành nghề đến từ Bắc Ninh.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Bắc Ninh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: ' Bắc Ninh là một tỉnh ở Việt Nam. Đây là tỉnh có diện tích nhỏ nhất cả nước, với vị trí nằm trong Vùng thủ đô Hà Nội, vùng kinh tế trọng điểm Bắc Bộ, thuộc vùng Đồng bằng sông Hồng.',
+                                        },
+                                    },
+
+                                    {
+                                        hightlight: '"Ngôi chánh điện"',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'hình tôm xào tỏi.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'Ngôi Chánh điện',
                                         valueModal: {
@@ -4149,6 +4453,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Tượng Phật Tổ ở Chánh điện Thiền viện Trúc Lâm Trà Vinh ở tư thế “Niêm hoa vi tiếu”, theo điển tích Phật Tổ cầm đóa sen đưa lên và Anan Hành giả mỉm cười. Đây là tượng Phật bằng đồng lớn nhất Trà Vinh, cao 3,5 m, nặng hơn 3 tấn được cung thỉnh từ làng nghề đúc đồng nổi tiếng cố đô Huế.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'cố đô Huế',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Cố đô Huế, là thủ phủ Đàng Trong dưới thời các chúa Nguyễn từ năm 1687 đến 1774, sau đó là thủ đô của triều đại Tây Sơn từ năm 1788 khi Hoàng đế Quang Trung tức Nguyễn Huệ lên ngôi.',
+                                        },
+                                    },
+
                                 ],
                             },
                             {
@@ -4159,7 +4472,7 @@ export default [
                                         hightlight: 'hiền từ mà uy nghiêm',
                                         valueModal: {
                                             type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Bi%E1%BB%83n%20Ba%20%C4%90%E1%BB%99ng/3-8.jpg',
+                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Thi%E1%BB%81n%20vi%E1%BB%87n%20Tr%C3%BAc%20L%C3%A2m/3-8.jpg',
                                         },
                                     },
                                 ],
@@ -4193,10 +4506,6 @@ export default [
                         title: 'Địa điểm',
                         link: '/tieng-viet/figure/2',
                     },
-                    {
-                        title: 'Duyên hải',
-                        link: '/tieng-viet/map',
-                    },
                 ],
             },
             {
@@ -4221,7 +4530,7 @@ export default [
                                 value: [
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-1.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-7.jpg',
-                                    'https://raw.githubusercontent.com/thansouuudata-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-8.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-8.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-9.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-11.jpg',
                                 ],
@@ -4234,15 +4543,6 @@ export default [
                                 type: 'hightlight',
                                 value: ` - Đền thờ Chủ tịch Hồ Chí Minh, biểu tượng “Công trình của trái tim” của nhân dân các dân tộc Trà Vinh đối với Người. Ngôi đền toạ lạc tại ấp Vĩnh Hội, xã Long Đức, thành phố Trà Vinh. `,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'thành phố Trà Vinh',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -4302,6 +4602,15 @@ export default [
                                 value: ` -  Công viên với hồ sen lớn hài hòa cùng hệ thống cây xanh, hoa kiểng quanh năm khoe sắc tạo ra khu vui chơi, giải trí đa dạng, hấp dẫn. Trong đó, những tán còng cổ thụ và lũy tre bao quanh cùng hệ thống hầm hào, công sự là chứng nhân của quá trình xây dựng, chiến đấu bảo vệ ngôi Đền được phục hồi và bảo quản một cách nghiêm túc, chu đáo.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'hệ thống hầm hào',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Hầm, hào được xây dựng để phòng máy bay hoặc pháo địch dội tới, được bố trí thành một hệ thống liên hoàn, bao bọc trước sau, bảo đảm bí mật, an toàn tuyệt đối.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'tán còng',
                                         valueModal: {
                                             type: 'image',
@@ -4313,7 +4622,7 @@ export default [
                         ],
                     },
                     {
-                        title: 'Quá trình xây dựng và bảo vệ đền th',
+                        title: 'Quá trình xây dựng và bảo vệ đền thờ',
                         data: [
                             {
                                 type: 'grid-image',
@@ -4343,17 +4652,35 @@ export default [
                                 type: 'hightlight',
                                 value: `- Ngày khởi công là 10/3/1970 và dự kiến khánh thành vào dịp sinh nhật Bác lần thứ 80. Địa điểm được chọn là vuông giồng cao ráo thuộc ấp Vĩnh Hội – trung tâm của cả xã, nơi trước đây từng là ngôi đình thờ Thần Thành hoàng bổn cảnh của địa phương. Địa điểm này cách tiểu khu quân sự địch hơn 4 km, cách căn cứ quân sự Mỹ ở Vàm Trà Vinh hơn 2 km, cách sông Cổ Chiên mà tàu chiến địch tuần tra bắn phá không quá 1.500 m, cách đồn địch gần nhất chỉ 400 m… Nghĩa là, khi xây dựng ngôi Đền, Đảng bộ và quân dân Long Đức chấp nhận mọi sự thách thức từ phía kẻ thù.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'sông Cổ Chiên',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Sông Cổ Chiên là một phân lưu của sông Tiền, dài khoảng 82 km, làm thành ranh giới tự nhiên giữa các tỉnh Vĩnh Long và Trà Vinh với Bến Tre.',
+                                        },
+                                    },
+
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Khi Đảng bộ, quân dân Long Đức triển khai việc xây dựng ngôi Đền cũng là lúc cao điểm lấn chiếm, bình định của Mỹ ngụy, mà các xã vùng ven tỉnh lỵ như Long Đức là trọng điểm. Địch tăng cường đánh phá bằng bộ binh, biệt kích, máy bay, tàu chiến, pháo binh…vào các ấp thuộc xã Long Đức. Tuy có đội bảo vệ sẵn sàng chiến đấu nhưng để đảm bảo an toàn, việc thi công chủ yếu vào ban đêm. Khi bộ khung hoàn thành chuẩn bị dựng lên thì bị trận pháo địch gây hư hại, phải làm lại từ đầu…`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Mỹ ngụy',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Trong chính trị, từ này được dùng để chỉ một triều đại hoặc chính quyền do soán đoạt mà có, hoặc do quân xâm lược nước ngoài dựng lên để hợp thức hóa sự xâm lược, đô hộ một nước khác.',
+                                        },
+                                    },
+
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Đến ngày 26–01–1971 (Ba mươi Tết năm Canh Tuất), ngôi đền được khánh thành. Người dân Trà Vinh đến thắp hương, kính viếng Người. Sau khi phát hiện sự tồn tại của ngôi Đền, đế quốc Mỹ tìm cách phá huỷ ngôi đền. Các lực lượng vũ trang và nhân dân Long Đức, thành phố Trà Vinh đã phối hợp bảo vệ ngôi đền.`,
+                                value: `- Đến ngày 26/01/1971 (Ba mươi Tết năm Canh Tuất), ngôi đền được khánh thành. Người dân Trà Vinh đến thắp hương, kính viếng Người. Sau khi phát hiện sự tồn tại của ngôi Đền, đế quốc Mỹ tìm cách phá huỷ ngôi đền. Các lực lượng vũ trang và nhân dân Long Đức, thành phố Trà Vinh đã phối hợp bảo vệ ngôi đền.`,
                                 hightlightList: [
                                 ],
                             },
@@ -4397,10 +4724,6 @@ export default [
                         title: 'Địa điểm',
                         link: '/tieng-viet/figure/2',
                     },
-                    {
-                        title: 'Trà Vinh',
-                        link: '/tieng-viet/map',
-                    },
                 ],
             },
         ],
@@ -4436,6 +4759,17 @@ export default [
                             {
                                 type: 'text',
                                 value: ` - Bánh canh là món ăn phổ biến của miền Tây Nam Bộ. Tùy theo khẩu vị và nguyên liệu, bạn có thể thấy có nhiều loại bánh canh khác nhau. Tuy nhiên, khi nhắc đến Trà Vinh, không thể không nói đến món bánh canh Bến Có gia truyền. Bánh canh Bến Có trở thành biểu tượng ẩm thực ở nơi đây suốt hơn 20 năm. Được nằm trong danh sách thực đơn của người dân Trà Vinh từ lâu, món bánh canh này đã thu hút du khách từ khắp nơi. Hương vị đặc trưng của món ăn này sẽ khiến bất kỳ ai thử qua đều ấn tượng sâu sắc và muốn quay lại thêm lần nữa.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'miền Tây Nam Bộ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Vùng Đồng bằng sông Cửu Long (còn được gọi là Tây Nam Bộ, Cửu Long hay miền Tây) là vùng cực nam của Việt Nam, một trong hai phần của Nam Bộ. Khu vực này có 1 thành phố trực thuộc trung ương là Cần Thơ và 12 tỉnh.',
+                                        },
+                                    },
+                                ],
+
                             },
                             {
                                 type: 'hightlight',
@@ -4568,10 +4902,6 @@ export default [
                         title: 'Ẩm thực',
                         link: '/tieng-viet/figure/3',
                     },
-                    {
-                        title: 'Châu Thành',
-                        link: '/tieng-viet/map',
-                    },
                 ],
             },
             {
@@ -4604,15 +4934,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Bánh tét- là một loại bánh có từ lâu đời của người dân Việt Nam chúng ta. Từ xưa món bánh tét thường có mặt trong các ngày lễ tết ở Việt Nam. Mỗi địa phương ở đồng bằng sông Cửu Long thường sẽ tạo ra loại bánh tét phù hợp với từng khu vực của mình. Bánh tét hiện nay đã trở thành đặc sản của nhiều địa phương ở miền Nam, mỗi nơi đều mang trong mình một câu chuyện về hương vị riêng biệt. Bình Dương và Tây Ninh nổi tiếng với bánh tét hấp dẫn từ nếp trộn đậu phộng, Đồng Nai gây ấn tượng với bánh tét hạt điều, Cần Thơ thì là món bánh tét lá cẩm độc đáo, và Sóc Trăng có bánh tét cốm dẹp thì ở Trà Vinh có bánh tét Trà Cuôn. Theo lưu truyền của người dân Trà Vinh, món bánh tét này do một người Khmer là bà Thạch Thị Lết ở huyện Cầu Ngang, gói bán để mưu sinh. Đến nay, món bánh này đã có lịch sử đến 80 năm, trở thành đặc sản miền Tây được cư dân địa phương và du khách khắp nơi yêu thích. Món bánh này mang trong nó một hương vị đặc biệt, cuốn hút và độc đáo, đủ để khiến    bất kỳ ai nếm thử đều phải mê mẩn. Bánh tét Trà Cuôn không chỉ là một món ngon, mà nó còn đại diện cho sự tự hào và truyền thống ẩm thực của Trà Vinh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Cầu Ngang',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                     {
                                         hightlight: 'nếp trộn đậu phộng',
                                         valueModal: {
@@ -5006,10 +5327,6 @@ export default [
                         title: 'Ẩm thực',
                         link: '/tieng-viet/figure/3',
                     },
-                    {
-                        title: 'Cầu Ngang',
-                        link: '/tieng-viet/map',
-                    },
                 ],
             },
             {
@@ -5039,8 +5356,17 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Món bún nước lèo ngon và đặc biệt, luôn là sự lựa chọn hàng đầu của những người yêu thực phẩm tinh túy. Đây là một món đặc sản của người Khmer, món bún nước lèo đã thăng hoa thành một tác phẩm nghệ thuật đỉnh cao, được ưa chuộng rộng rãi tại nhiều địa phương. Tuy nhiên, bún nước lèo Trà Vinh với sự đậm đà và độc đáo, khiến người thưởng thức không thể quên. Bí quyết thành công của món ăn này bắt đầu từ việc chọn lựa mắm bò hóc, một loại mắm tinh tế được tạo ra có thể bằng nhiều loại cá khác nhau. Mắm bò hóc là linh hồn của bún nước lèo, mang hương vị đặc trưng và tan chảy ngay khi tiếp xúc với nước sôi. Thợ làm mắm phải tuân theo các tiêu chuẩn khắt khe, và thường sử dụng nồi đất để nấu mắm, giữ nguyên hương vị đặc biệt. Nhiều người còn thêm vào nước lèo dừa tươi và sả đập dập để tạo ra một lớp hương thơm tinh tế.`,
+                                value: `- Món bún nước lèo ngon và đặc biệt, luôn là sự lựa chọn hàng đầu của những người yêu thực phẩm tinh túy. Đây là một món đặc sản của người Khmer, món bún nước lèo đã thăng hoa thành một tác phẩm nghệ thuật đỉnh cao, được ưa chuộng rộng rãi tại nhiều địa phương. Tuy nhiên, bún nước lèo Trà Vinh với sự đậm đà và độc đáo, khiến người thưởng thức không thể quên. Bí quyết thành công của món ăn này bắt đầu từ việc chọn lựa mắm bò hóc, một loại mắm tinh tế được tạo ra có thể bằng nhiều loại cá khác nhau. Mắm là linh hồn của bún nước lèo, mang hương vị đặc trưng và tan chảy ngay khi tiếp xúc với nước sôi. Thợ làm mắm phải tuân theo các tiêu chuẩn khắt khe, và thường sử dụng nồi đất để nấu mắm, giữ nguyên hương vị đặc biệt. Nhiều người còn thêm vào nước lèo dừa tươi và sả đập dập để tạo ra một lớp hương thơm tinh tế.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'mắm bò hóc',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Mắm bò hóc (prahok hay pro hoc) là một trong những món ăn dân dã, đặc trưng của người dân Khmer ở Campuchia..',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'người Khmer',
                                         valueModal: {
@@ -5209,8 +5535,18 @@ export default [
                                 value: `Bước 2: Luộc huyết`,
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `Ta bắc nồi nước sôi và đem luộc sơ phần huyết qua để không bị tanh.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'tanh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'có mùi hoặc vị khó chịu, dễ gây lợm giọng.',
+                                        },
+                                    },
+                                ],
                             },
                             {
                                 type: 'text',
@@ -5339,11 +5675,7 @@ export default [
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/8/product/26m',
-                    },
-                    {
-                        title: 'Trà Vinh',
-                        link: '/tieng-viet/map',
+                        link: '/tieng-viet/figure/8/product/26',
                     },
                 ],
             },
@@ -5945,20 +6277,21 @@ export default [
                                 type: 'hightlight',
                                 value: ` - Làng nghề dệt chiếu Cà Hom – Bến Bạ xã Hàm Tân, huyện Trà Cú, tỉnh Trà Vinh hình thành từ những thập niên cuối thế kỉ XIX. Từ chỗ tự sản xuất, tự tiêu thụ hoặc làm quà biếu và sản phẩm đạt chất lượng vượt hẳn các sản phẩm cùng loại nên chiếu Cà Hom – Bến Bạ dần dần nổi tiếng và trở thành hàng hóa từ những năm 1940 và được nhiều người biết đến trong những năm 1960 cho đến nay.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Trà Cú',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: ` - Đây là một trong những làng nghề truyền thống của tỉnh Trà Vinh, được các thế hệ người dân truyền nghề nhau gần 100 năm nay. Mỗi năm làng chiếu cung cấp cho thị trường vùng Đồng bằng Sông Cửu Long hàng trăm nghìn đôi chiếu có độ bền, đẹp, hoa văn độc đáo.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'vùng Đồng bằng Sông Cửu Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Vùng Đồng bằng sông Cửu Long (còn được gọi là Tây Nam Bộ, Cửu Long hay miền Tây) là vùng cực nam của Việt Nam, một trong hai phần của Nam Bộ. Khu vực này có 1 thành phố trực thuộc trung ương là Cần Thơ và 12 tỉnh.',
+                                        },
+                                    },
+                                ],
                             },
                             {
                                 type: 'text',
@@ -5981,8 +6314,18 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Sự ra đời của nghề dệt chiếu ở Cà Hom – Bến Bạ xã Hàm Tân được các chị em phụ nữ học lỏm được trong dịp đi thăm họ hàng ở Cà Mau, khi về họ bắt đầu làm khung căng sợi, cắt lát chẻ nhỏ phơi khô dệt thử những chiếc chiếu đầu tiên hơi khô ráp, rồi dần dần trở nên vừa mắt hơn, sờ mịn tay hơn nhờ vậy, từ những chiếc chiếu thô ráp ban đầu trải qua nhiều thế hệ chiếu Cà Hom – Bến Bạ tạo được uy tín trên thương trường các tỉnh Nam Bộ với các chủng loại đa dạng hơn như chiếu trắng, chiếu màu, chiếu in hoa, in chữ… Nhiều nghệ nhân trong nghề được gần xa biết đến như bà Ngô Thị Pho, Mã Thị Dứt… Sản phẩm chiếu của làng Cà Hom- Bến Bạ chủ yếu là chiếu hoa với 5 màu chủ đạo là trắng, đỏ, xanh, vàng và tím. Hình ảnh hay hoa văn thường được các nghệ nhân chọn lựa rất công phu cho từng sản phẩm của mình, phù hợp với thị hiếu của người tiêu dùng, hoặc theo yêu cầu của các thương lái .Đặc biệt là chiếu hoa dệt 2 mặt, đòi hỏi sự khéo léo và thể hiện sự tinh tế, tính thẩm mỹ trong từng đường dệt của nghệ nhân.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Cà Mau',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Cà Mau là một tỉnh ven biển ở cực nam của Việt Nam, nằm trong khu vực Đồng bằng sông Cửu Long.',
+                                        },
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -6019,8 +6362,18 @@ export default [
                                 value: `1. Trồng nguyên liệu: Toàn xã có trên 35 ha đất trồng lác, cứ 1000 m2 đất trồng lác cho ra khoảng 120 đôi chiếu lớn và 120-130 đôi chiếu khổ nhỏ.`,
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `2. Tìm nguyên liệu: cây lác cho thật già, sau đó chọn lựa chiều dài của lác cho phù hợp với khổ chiếu cần dệt.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'cây lác',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Cây cói hay còn gọi là cây lác thuộc loài cỏ dại nên rất dễ trồng, dễ sống và không kén đất.',
+                                        },
+                                    },
+                                ],
                             },
                             {
                                 type: 'text',
@@ -6055,10 +6408,39 @@ export default [
                             {
                                 type: 'text',
                                 value: `- Thế nhưng vào những năm 1990, làng nghề dệt chiếu Cà Hom-Bến Bạ có thể nói gần như đi đến bên bờ vực mai một. Nguyên nhân, do người dân làng nghề không chủ động được nguồn nguyên liệu, sản phẩm chiếu không được cách tân về mẫu mã nên không đủ sức cạnh tranh trên thị trường. Không sống được với nghề, hàng trăm người thợ đã bỏ khung dệt, đi xa xứ mưu sinh bằng những nghề khác. Người có công đưa làng nghề dệt chiếu Cà Hom-Bến Bạ từ chỗ sắp mai một đi đến ăn nên làm ra là bà Ngô Thị Pho, một thợ dệt dân tộc Khmer lão luyện trong nghề. Trong lúc bao người thợ đã bỏ nghề, thì bà Ngô Thị Pho vẫn gắn bó bên khung dệt. Chiếu thô, chiếu trắng thường không được thị trường chấp nhận thì dệt hoa, màu sắc đẹp để đáp ứng theo yêu cầu, sở thích người tiêu dùng. Với suy nghĩ đó, bà tự thiết kế hoa văn, phối màu, rồi dệt thử sản phẩm chiếu hoa hai mặt.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'dân tộc Khmer',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/26',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
                             },
                             {
                                 type: 'text',
                                 value: `- Sau nhiều lần thất bại, nhưng rồi cuối cùng bà cũng thành công. Năm 2000, chiếu hoa hai mặt của bà Pho khi được chào bán ra chợ xã đã chiếm được ngay thị hiếu của người tiêu dùng. Cũng từ đó, ngày càng có nhiều người tìm đến đặt hàng cho bà dệt những chiếc chiếu hoa, có chữ Hán, chữ Khmer… Độc đáo nhất là bà đã thiết kế, phối màu dệt nên chiếu hai mặt có hình những ngôi chùa tháp vàng ở đất nước Campuchia, được rất nhiều bà con Khmer ở Nam Bộ và Campuchia ưa chuộng.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Nam Bộ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nam Bộ hoặc là miền Nam là một trong 3 miền địa lý của Việt Nam (gồm Nam Bộ, Trung Bộ, và Bắc Bộ).',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Campuchia',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Campuchia, tên chính thức là Vương quốc Campuchia, là 1 quốc gia độc lập có chủ quyền nằm trên bán đảo Đông Dương ở vùng Đông Nam Á.',
+                                        },
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -6090,7 +6472,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value: `- Hiện tại, làng nghề có 37 ha đất trồng lác với 450 hộ dệt chiếu.Trong số gần 400 hộ sinh sống với nghề dệt chiếu truyền thống thì có 80% hộ dân làm nghề là người dân tộc Khmer. Làng chiếu Cà Hom – Bến Bạ ngoài giải quyết việc làm cho những hộ trực tiếp làm nghề, còn gián tiếp giải quyết cho hơn 1.500 lao động ở các khâu: trồng lác, sơ chế nguyên liệu, dệt gia công và tiêu thụ sản phẩm. Mỗi năm làng chiếu Cà Hom – Bến Bạ cung cấp ra thị trường trên dưới 150.000 đôi chiếu.`,
+                                value: `- Hiện tại, làng nghề có 37 ha đất trồng lác với 450 hộ dệt chiếu. Trong số gần 400 hộ sinh sống với nghề dệt chiếu truyền thống thì có 80% hộ dân làm nghề là người dân tộc Khmer. Làng chiếu Cà Hom – Bến Bạ ngoài giải quyết việc làm cho những hộ trực tiếp làm nghề, còn gián tiếp giải quyết cho hơn 1.500 lao động ở các khâu: trồng lác, sơ chế nguyên liệu, dệt gia công và tiêu thụ sản phẩm. Mỗi năm làng chiếu Cà Hom – Bến Bạ cung cấp ra thị trường trên dưới 150.000 đôi chiếu.`,
                             },
                             {
                                 type: 'text',
@@ -6106,8 +6488,8 @@ export default [
                         link: '/tieng-viet/figure/5',
                     },
                     {
-                        title: 'Trà Cú',
-                        link: '/tieng-viet/map',
+                        title: 'Người Khmer',
+                        link: '/tieng-viet/figure/8/product/26',
                     },
                 ],
             },
@@ -7455,14 +7837,6 @@ export default [
                                         }
                                     },
                                     {
-                                        hightlight: 'khi đến đây.',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            value: 'tooltip',
-                                            id: 'sdfsdf'
-                                        }
-                                    },
-                                    {
                                         hightlight: 'Câu chuyện bắt đầu từ những năm 1980',
                                         valueModal: {
                                             type: 'image',
@@ -7839,8 +8213,19 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Thờ cúng cá Ông (cá Voi) là tín ngưỡng đặc thù của ngư dân miền biển nói chung và ngư dân ở Trà Vinh nói riêng. Cá Ông đóng một vai trò hết sức quan trọng trong đời sống tâm linh của cư dân vùng biển Nam bộ.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Nam bộ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nam Bộ hoặc là miền Nam là một trong 3 miền địa lý của Việt Nam (gồm Nam Bộ, Trung Bộ, và Bắc Bộ). Nam Bộ được chia làm hai vùng là Đông Nam Bộ và Đồng bằng sông Cửu Long (hay còn gọi là Tây Nam Bộ, miền Tây).',
+                                        },
+                                    },
+
+                                ],
                             },
                         ],
                     },
@@ -7863,8 +8248,26 @@ export default [
                                 value: `- Có rất nhiều truyền thuyết, giai thoại, truyện kể trong dân gian liên quan đến tục lệ thờ cá Voi. “Tục  truyền rằng cá Voi là hóa thân từ chiếc áo cà sa của Phật Bà Quan Âm. Một hôm, trên tòa sen nhìn lướt qua sóng gió đại dương Nam Hải, ngài không khỏi đau lòng khi thấy những ngư dân gặp cơn phong ba bão táp, phải bỏ mình vì giông tố. Trước cảnh tượng đó, Bồ Tát liền cởi chiếc cà sa, xé tan thành từng mảnh nhỏ ném xuống mặt biển. Mỗi mảnh vụn theo nguyện ý của Bồ Tát đã biến thành một con cá Voi với nhiệm vụ cứu nguy các ngư dân lâm nạn trước bão tố trên đại dương. Kể từ đó, cá voi là ân nhân của dân thuyền chài sống trên biển cả. Tuy nhiên, hình vóc cá voi lúc đó tương đối nhỏ, không đủ sức chống chọi với sóng to gió lớn, do vậy đức Quan Thế  Âm liền mượn bộ xương của ông Tượng (voi) trên rừng cho đàn cá, nhờ thế đàn cá mới đủ sức mạnh chống lại sức mạnh của đại dương. Cũng vì thế, đàn cá mang tên là cá voi (vì mượn xương voi và cũng to lớn như voi). Với cơ thể to lớn, cá voi mặc sức vẫy vùng giữa biển cả và đương đầu với sóng gió, kèm giữ cho tàu thuyền thăng bằng, không bị tan vỡ trong bão tố, sau đó còn dìu tàu thuyền vào tận bờ biển. Do to lớn nên chậm chạp, nhiều trường hợp biết có thuyền chài lâm nạn ở quá xa, cá voi cố sức bơi tới mà không cứu nổi nạn nhân. Để giúp cho cá voi làm tròn nhiệm vụ cứu nạn của mình, Bồ Tát liền ban cho chúng phép thâu đường (tức là rút ngắn con đường lại), dù ở bất cứ nơi nào cần đến đều có thể cứu kịp thời”.`,
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Một câu chuyện khác kể lại rằng: “Trong một lần bị quân tướng nhà Tây Sơn truy đuổi ráo riết, chúa Nguyễn Ánh lâm vào thế đường cùng, phía trước là cửa biển mênh mông, phía sau là tiếng vó ngựa mỗi lúc một gần thêm. Tính mệnh nhà Chúa chỉ còn như chỉ mành treo chuông thì bỗng đâu cá voi nổi lên, phun ba vòi nước lên trời tỏ lòng quy phục. Chúa mừng rỡ cùng đám binh lính yên vị trên lưng cá voi, rẽ sóng vượt cửa biển sang cù lao Cổ Chiên (nay là xã Long Hòa, huyện Châu Thành) trước khi quân Tây Sơn đuổi kịp”.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'nhà Tây Sơn',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nhà Tây Sơn là một triều đại quân chủ trong lịch sử Việt Nam tồn tại từ năm 1778 đến năm 1802, được thành lập trong bối cảnh tranh chấp quyền lực cuối thời Lê Trung hưng (1533–1789).',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Nguyễn Ánh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Gia Long (8/2/1762 – 3/2/1820), thường được gọi là Nguyễn Ánh, là một nhà chính trị, nhà quân sự người Việt Nam, vị vua sáng lập nhà Nguyễn, triều đại quân chủ cuối cùng trong lịch sử Việt Nam. Ông trị vì từ năm 1802 đến khi qua đời năm 1820.',
+                                        },
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -7884,15 +8287,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Hàng năm Trà Vinh tổ chức lễ hội Cúng biển ở Mỹ Long - huyện Cầu Ngang (diễn ra 3 ngày 10, 11 và 12 tháng 5 âm lịch) và ở Động Cao – xã Đông Hải - huyện Duyên Hải (diễn ra 2 ngày 20 và 21 tháng 2 âm lịch). Lễ hội Cúng Biển Trà Vinh có nhiều nghi lễ liên tiếp diễn ra trình tự. Đó là trình tự: Lễ Túc Yết, Lễ nghinh Nam Hải, Lễ cúng giỗ Tiền vãng, Lễ cúng Thần Nông và Chiến sĩ, Lễ cúng Chánh tế Bà Chúa Xứ, Thầy cúng tế lễ, Lễ nghinh Ngũ phương, Lễ Tống quái (Tống tàu).`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Cầu Ngang',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                         ],
@@ -7919,11 +8313,6 @@ export default [
                         id:1,
                         title: 'Phong tục tập quán',
                         link: '/tieng-viet/figure/7',
-                    },
-                    {
-                        id:2,
-                        title: 'Cầu Ngang',
-                        link: '/tieng-viet/map',
                     },
                 ],
             },
@@ -7987,13 +8376,12 @@ export default [
                                 value: `- Quan Thánh đế được thờ tại Phước Minh Cung ở số 44 đường Điện Biên Phủ, Phường 2, thành phố Trà Vinh. Chùa Phước Minh Cung còn gọi là chùa Ông. Chân dung Quan Thánh đế là hình ảnh một người mặt đỏ, râu dài 5 chòm, mặc triều phục màu xanh lá cây. Quan Thánh đế có nhiều hình tượng khác nhau như ngồi đọc binh pháp, ngồi cầm Thanh long đao, lưng ngồi thẳng mặt hướng nhìn ra cửa giống một ông quan đang giải quyết việc quân cơ.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Trà Vinh',
+                                        hightlight: 'Chùa Phước Minh Cung',
                                         valueModal: {
                                             type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
+                                            ref: false,
+                                            value: 'Phước Minh cung còn có các tên gọi khác là Chùa Quan Thánh đế hay Chùa Ông là cơ sở tín ngưỡng tiêu biểu của cộng đồng người Hoa trên địa bàn tỉnh Trà Vinh.',
+                                        },
                                     },
                                 ],
                             },
@@ -8052,10 +8440,6 @@ export default [
                     {
                         title: 'Người Hoa',
                         link: '/tieng-viet/figure/8/product/27',
-                    },
-                    {
-                        title: 'Trà Vinh',
-                        link: '/tieng-viet/map',
                     },
                     {
                         title: 'Bún nước lèo',
@@ -8122,12 +8506,33 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Tục đi tu thường được tổ chức vào ngày đầu Tết Chôl Chnam Thmây. Người đi tu phải được cha mẹ đồng ý thì chùa mới nhận và tổ chức lễ nhập tu. Sau khi Sư cả đã thống nhất với gia đình ngày nhập tu, gia đình phải chuẩn bị áo cà sa, bình bát và một số vật dụng khác cho con mình. Gia đình sẽ rước Sư ở chùa về xuống tóc cho con và tụng kinh cầu phúc tại gia đình. Ngày hôm sau, nam thanh niên nhập tu sẽ bưng mâm áo cà sa đi trình khắp bà con dòng họ để thông báo. Sáng ngày thứ ba, gia đình chuẩn bị một số món ăn đem vào chùa cúng.  Trưa cùng ngày, tại chánh điện, các sư ở chùa sẽ tiến hành lễ mặc áo cà sa cho các tăng mới vừa nhập tu. Từ đây các tăng sẽ ở lại chùa để tu.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Tết Chôl Chnam Thmây',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tết cổ truyền Chôl Chnăm Thmây của đồng bào dân tộc Khmer được tổ chức vào các ngày 13, 14, 15 tháng 4 (Dương lịch) hằng năm.',
+                                        },
+                                    },
+                                ],
+
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Các tăng mới nhập tu gọi là các Sa Di. Trong thời gian tu, các Sa Di chủ yếu là học kinh, giáo lí nhà Phật bằng tiếng Pali, đồng thời học chữ Khmer. Trong thời gian các Sa Di tu trong chùa, gia đình được tới thăm bình thường, nhưng các Sa Di và người thân trong gia đình khi gặp nhau phải giữ một khoảng cách để thể hiện sự kính trọng đối với người tu hành. Ngoài ra, mỗi tháng các Sa Di được về thăm nhà một lần trong ngày.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'tiếng Pali',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Pāli (𑀧𑀸𑀮𑀺) còn gọi là Nam Phạn, là một ngôn ngữ thuộc nhóm Ấn-Arya Trung cổ hay prakrit. Nam Phạn là ngôn ngữ kinh điển của Phật giáo Nam Tông, dùng trong việc chép kinh cùng tụng niệm.',
+                                        },
+                                    },
+                                ],
                             },
                         ],
                     },
@@ -8213,15 +8618,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Dân tộc Hoa có 6 632 người, chiếm 0,66% dân số toàn tỉnh. Người Hoa sống tập trung nhiều nhất ở thành phố Trà Vinh và một số thị trấn. Hoạt động kinh tế chủ yếu của người Hoa là thương mại, dịch vụ và tiểu thủ công nghiệp.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Trà Vinh',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -8249,8 +8645,18 @@ export default [
                                 ],
                             },
                             {
-                                type : 'text',
+                                type : 'hightlight',
                                 value: `- Chữ Hán vẫn còn được dạy và học trong các trường .`,
+                                    hightlightList: [
+                                        {
+                                            hightlight: 'Chữ Hán',
+                                            valueModal: {
+                                                type: 'tooltip',
+                                                ref: false,
+                                                value: 'Chữ Hán, còn gọi là Hán tự, Hán văn, chữ nho, là loại văn tự ngữ tố - âm tiết ra đời ở Trung Quốc vào thiên niên kỷ thứ hai trước Công nguyên. Ngôn ngữ đầu tiên được viết bằng chữ Hán là tiếng Hán thượng cổ, một ngôn ngữ cổ đã tuyệt diệt.',
+                                            },
+                                        },
+                                    ],
                             },
 
                             {
@@ -8346,8 +8752,50 @@ export default [
                                 ],
                             },
                             {
-                                type : 'text',
+                                type : 'hightlight',
                                 value: `- Người Hoa ở Trà Vinh cũng giống như người Kinh và người Khmer. Trong năm có rất nhiều lễ hội và Tết. Bao gồm Tết Nguyên Đán, Tết Nguyên tiêu, Thanh minh, Tết Đoan Ngọ, lễ Vu Lan, tết Trùng Cửu, tết Đông chí.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Tết Nguyên Đán',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Hàng năm, Tết được tổ chức vào ngày mồng 1 (hay mùng 1) tháng Giêng âm lịch trên toàn nước Việt Nam và ở một vài nước khác có cộng đồng người Việt sinh sống.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Tết Nguyên tiêu',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ngày Tết Nguyên Tiêu diễn ra từ giữa đêm 14 (đêm trước trăng rằm) đến hết ngày 15 (ngày rằm) tháng giêng âm lịch.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Thanh minh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Thời gian diễn ra Tết Thanh Minh không cố định ngày nào. Dịp lễ này bắt đầu kể từ 4-5/4 (sau khi tiết Xuân Phân kết thúc) và kéo dài tới khoảng ngày 20-21/4 Dương lịch (khi tới tiết Cốc Vũ).',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Tết Đoan Ngọ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5  m lịch hằng năm.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'lễ Vu Lan',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Lễ Vu Lan, hay còn gọi là lễ Báo hiếu, là một ngày lễ quan trọng trong Phật giáo và văn hóa Việt Nam. Ngày lễ này diễn ra vào rằm tháng 7 âm lịch hàng năm, nhằm tưởng nhớ công ơn sinh thành, dưỡng dục của cha mẹ.',
+                                        },
+                                    },
+                                ],
                             },
                             {
                                 type : 'text',
@@ -8362,7 +8810,7 @@ export default [
                                 type: 'grid-image',
                                 value: [
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-2.',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-2.jpg',
                                 ],
                             },
                             {
@@ -8419,15 +8867,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Dân tộc Khmer có 318 231 người, chiếm hơn 31,5% dân số toàn tỉnh. Người Khmer sống tập trung tại các phum, sóc trên các giồng cao, ven các sông rạch hoặc ven các đường giao thông, xen kẽ với các làng xóm của người Kinh. Địa bàn tập trung nhiều người Khmer nhất là ở các huyện Trà Cú, Châu Thành, Cầu Kè, Tiểu Cần, Cầu Ngang.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Trà Cú',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -8443,8 +8882,19 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Tiếng Khmer được dạy ở nhiều trường cho học sinh.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Tiếng Khmer',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tiếng Khmer cũng gọi là tiếng Campuchia là ngôn ngữ của người Khmer và là ngôn ngữ chính thức của Campuchia.',
+                                        },
+                                    },
+                                ],
+
                             },
 
                             {
@@ -8516,12 +8966,32 @@ export default [
                                 value: `* Tôn giáo, tín ngưỡng:`,
                             },
                             {
-                                type : 'text',
+                                type : 'hightlight',
                                 value: `- Hầu hết người Khơ-me ở Việt Nam là tín đồ Phật giáo Nam Tông. Đạo Phật có vai trò đặc biệt quan trọng trong đời sống tinh thần của người Khơ-me. Các giáo lý và những điều răn của đạo Phật đã trở thành chuẩn mực trong quan hệ giữa những người Khơ-me trong sóc.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Phật giáo Nam Tông',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phật giáo Nam truyền hay Phật giáo Nam tông, Truyền thống Phật giáo Nguyên thủy, là một thuật ngữ học thuật được dùng để chỉ một trong ba trường phái truyền thống Phật giáo lớn trên thế giới phân loại theo địa lý.',
+                                        },
+                                    },
+                                ],
                             },
                             {
-                                type : 'text',
+                                type : 'hightlight',
                                 value: `- Ngoài ra, người Khơ-me còn có tín ngưỡng và lễ hội dân gian chứa đựng nhiều yếu tố Ấn Độ giáo nhưng được lồng ghép vào Phật giáo.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Ấn Độ giáo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ấn Độ giáo là tôn giáo lớn thứ ba thế giới.',
+                                        },
+                                    },
+                                ],
                             },
 
                             {
@@ -8544,8 +9014,20 @@ export default [
                                 value: `- Người Khmer có nhiều loại hình lễ hội được tổ chức hằng năm như: lễ hội gắn với sản xuất và tôn giáo, lễ nghi nông nghiệp, nghi lễ vòng đời.`,
                             },
                             {
-                                type : 'text',
+                                type : 'hightlight',
                                 value: `- Lễ hội gắn với sản xuất và tôn giáo của người Khmer gồm có các lễ hội chủ yếu như Tết Chôl-Chnăm-Thmây (lễ mừng năm mới), lễ Sêne Đôlta (lễ cúng ông bà, tổ tiên), lễ Kathina (lễ dâng y), lễ Ok-Om-Bok (lễ cúng Trăng).`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Ok-Om-Bok',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: ' /tieng-viet/figure/4/product/39',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+
                             },
                             {
                                 type : 'text',
@@ -8582,7 +9064,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value: `- Người Khơ-me là chủ yếu sống bằng trồng lúa nước. Ngoài ra, họ có nghề đánh cá, dệt, chiếu, đan lát, dệt vải, làm đường thốt nốt và làm gốm. Kĩ thuật gốm đơn giản, sản phẩm gốm chủ yếu là đồ gia cụ, tiêu biểu nhất là bếp (Cà ràng) và nồi (Cà om) `,
+                                value: `- Người Khơ-me là chủ yếu sống bằng trồng lúa nước. Ngoài ra, họ có nghề đánh cá, dệt, chiếu, đan lát, dệt vải, làm đường thốt nốt và làm gốm. Kĩ thuật gốm đơn giản, sản phẩm gốm chủ yếu là đồ gia cụ, tiêu biểu nhất là bếp (Cà ràng) và nồi (Cà om).`,
                             },
                         ],
                     },
@@ -8594,16 +9076,16 @@ export default [
                         link: '/tieng-viet/figure/8',
                     },
                     {
-                        title: 'Huyện Trà Cú',
-                        link: '/tieng-viet/map',
-                    },
-                    {
                         title: 'Bún nước lèo',
                         link: '/tieng-viet/figure/3/product/9',
                     },
                     {
                         title: 'Tục đi tu',
                         link: '/tieng-viet/figure/7/product/24',
+                    },
+                    {
+                        title: 'Ok-Om-Bok',
+                        link: '/tieng-viet/figure/4/product/39',
                     },
                 ],
             },
@@ -8635,15 +9117,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung nhiều nhất tại thành phố Trà Vinh, các thị trấn và vùng đất ven các sông rạch.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'Trà Vinh',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
 
@@ -8738,8 +9211,26 @@ export default [
                                 ],
                             },
                             {
-                                type : 'text',
+                                type : 'hightlight',
                                 value: `- Thờ cúng tổ tiên là tín ngưỡng quan trọng nhất. Tục thờ thổ công, táo quân, ông địa phổ biến ở nhiều nơi; nhiều gia đình thờ Thành hoàng, chùa thờ Phật,… Một bộ phận cư dân ở nông thôn hay thành thị còn theo đạo Thiên chúa, Tin lành và các tôn giáo khác như Cao Đài, Hòa Hảo....`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Cao Đài',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đạo Cao Đài hay Cao Đài Giáo là một tôn giáo thờ Thượng đế dưới dạng một biểu tượng "Tả Nhãn" tức là con mắt bên trái được thành lập ở miền Nam Việt Nam vào năm 1926.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Hòa Hảo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phật giáo Hòa Hảo là một tông phái Phật giáo do Huỳnh Phú Sổ khai lập năm Kỷ Mão 1939, lấy pháp môn "Học Phật – Tu Nhân" làm căn bản và chủ trương tu hành tại gia (Tại gia cư sĩ).',
+                                        },
+                                    },
+                                ],
                             },
 
                             {
@@ -8759,6 +9250,38 @@ export default [
                                 type: 'hightlight',
                                 value: `- Trong một năm, người Kinh ở Trà Vinh có nhiều lễ, Tết như: Tết Nguyên đán, Tết Đoan ngọ, lễ Vu lan, Tết Trung thu,… trong đó, tết Nguyên đán có quy mô lớn và thời gian kéo dài nhất. Ngoài ra, cộng đồng người Kinh ở Trà Vinh hàng năm còn tổ chức nhiều lễ hội liên quan đến tín ngưỡng của nhân dân như lễ hội Nghinh Ông, lễ Hạ Điền, lễ Thượng Điền, lễ giỗ Bác Hồ,… để tưởng nhớ công ơn của các bậc tiền nhân và cầu mong cho mọi người một năm mưa thuận, gió hoà, mùa màng bội thu, gia đình hoà thuận, yên ấm, hạnh phúc,…`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Tết Nguyên đán',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Hàng năm, Tết được tổ chức vào ngày mồng 1 (hay mùng 1) tháng Giêng âm lịch trên toàn nước Việt Nam và ở một vài nước khác có cộng đồng người Việt sinh sống.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Tết Đoan Ngọ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5  m lịch hằng năm.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'lễ Vu Lan',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: ' Lễ Vu Lan, hay còn gọi là lễ Báo hiếu, là một ngày lễ quan trọng trong Phật giáo và văn hóa Việt Nam. Ngày lễ này diễn ra vào rằm tháng 7 âm lịch hàng năm, nhằm tưởng nhớ công ơn sinh thành, dưỡng dục của cha mẹ.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'lễ Thượng Điền',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Lễ Thượng điền là một trong những lễ hội nông nghiệp truyền thống một số nước nông nghiệp Châu Á, được tổ chức vào thời điểm mà người dân đã hoàn thành vụ mùa và chuẩn bị cho vụ mùa mới.',
+                                        },
+                                    },
                                     {
                                         hightlight: 'Nghinh Ông',
                                         valueModal: {
@@ -8816,10 +9339,6 @@ export default [
                     {
                         title: 'Dân tộc',
                         link: '/tieng-viet/figure/8',
-                    },
-                    {
-                        title: 'Trà Vinh',
-                        link: '/tieng-viet/map',
                     },
                     {
                         title: 'Bánh tét',
@@ -9220,6 +9739,15 @@ export default [
                                 value: `- Năm 1825, Vua Minh Mạng lập Phủ Lạc Hóa, trực thuộc Gia Định Thành, gồm hai huyện Trà Vinh và Tuân Mỹ. Đến năm 1832, Trấn Vĩnh Thanh được đổi tên thành Trấn Vĩnh Long. Sau đó, Vua Minh Mạng chia các trấn thành tỉnh, và vùng đất Nam Bộ được chia thành sáu tỉnh gọi là “Nam Kỳ lục tỉnh”. Trà Vinh là một huyện thuộc Phủ Lạc Hóa, tỉnh Vĩnh Long.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Vua Minh Mạng',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Minh Mạng hay Minh Mệnh (25/5/1791 – 20/1/1841) là vị hoàng đế thứ hai của triều Nguyễn. Ông là vị vua có nhiều thành tích nhất của nhà Nguyễn, nhưng đến cuối thời ông thì nhà Nguyễn đã dần suy yếu cả về kinh tế và quân sự.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: '“Nam Kỳ lục tỉnh”',
                                         valueModal: {
                                             type: 'image',
@@ -9267,6 +9795,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Khi thực dân Pháp chiếm Vĩnh Long vào năm 1867, người dân Trà Vinh đã tích cực giúp đỡ và tham gia các cuộc khởi nghĩa chống Pháp. Trong những năm 1868 – 1869, nhiều cuộc khởi nghĩa ở Trà Vinh có liên hệ với cuộc khởi nghĩa do Nguyễn Trung Trực lãnh đạo ở vùng Rạch Giá.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Nguyễn Trung Trực',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nguyễn Trung Trực tên thật là Nguyễn Văn Lịch, sinh năm 1838 tại xóm nghề thôn Bình Nhựt, tổng Cửu Cư Hạ, huyện Cửu An, phủ Tân An, tỉnh Gia Định (nay thuộc ấp 1, Thạnh Đức, Bến Lức, Long An).',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'chiếm',
                                         valueModal: {
@@ -9356,7 +9893,7 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        link: '/tieng-viet/figure/10',
                     },
                     {
                         title: 'Kinh',
@@ -9399,6 +9936,22 @@ export default [
                                 type: 'hightlight',
                                 value: `- Đầu thế kỉ XX, Phan Bội Châu khởi xướng phong trào Đông Du, ở Trà Vinh có hàng chục thanh niên tại tỉnh lị và các huyện Càng Long, Cầu Ngang đã hăng hái tham gia sang Nhật Bản để học quân sự, đi đầu là Nguyễn Thành Phương, Nguyễn Viên Kiều, Trương Gia Mô, Lương Khắc Minh... `,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Phan Bội Châu',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phan Bội Châu (1867 – 1940) là một danh sĩ và là nhà cách mạng Việt Nam, hoạt động trong thời kỳ Pháp thuộc.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'phong trào Đông Du',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phong trào Đông Du là một phong trào cách mạng ở Việt Nam đầu thế kỷ 20.',
+                                        },
+                                    },
                                 ],
                             },
                             {
@@ -9419,6 +9972,33 @@ export default [
                                 value: `- Nhiều đình, chùa là nơi Thiên Địa Hội họp bàn và tổ chức nhiều hoạt động yêu nước chống Pháp. Phong trào thu hút đông đảo nông dân địa phương, dân lưu tán, dân nghèo, thành thị, tiểu thương, thợ thủ công chuyên nghiệp và bán chuyên nghiệp như cắt tóc, sửa xe, phu khuân vác, người chạy hàng, công nhân trong các xí nghiệp, cả những người làm nghề bói toán, cúng bái... là người Kinh, người Khmer, người Hoa. Tuy nhiên, do nhiều nguyên nhân khách quan và chủ quan, phong trào đấu tranh của nhân dân Trà Vinh chưa giành được thắng lợi.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'người Kinh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/25',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'người Khmer',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/26',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: '/tieng-viet/figure/8/product/27',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/26',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
                                         hightlight: 'chưa giành',
                                         valueModal: {
                                             type: 'image',
@@ -9431,6 +10011,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Vào những năm 1925 - 1926, cả nước dấy lên phong trào đòi thả nhà yêu nước Phan Bội Châu, phong trào để tang Phan Chu Trinh, nhân dân trà vinh cũng tích cực tham gia hưởng ứng. Từ sau năm 1926, các phong trào yêu nước chống Pháp mang tính chất nông dân và tiểu tư sản ngày càng giảm dần.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Phan Chu Trinh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phan Châu Trinh hay Phan Chu Trinh (1872 – 1926). Ông là nhà thơ, nhà văn, và là nhà hoạt động chính trị thời cận đại trong lịch sử Việt Nam.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'dấy lên',
                                         valueModal: {
@@ -9517,6 +10106,18 @@ export default [
                         title: 'Dương Quang Đông',
                         link: '/tieng-viet/figure/1/product/2',
                     },
+                    {
+                        title: 'Người Kinh',
+                        link: '/tieng-viet/figure/8/product/25',
+                    },
+                    {
+                        title: 'Người Khmer',
+                        link: '/tieng-viet/figure/8/product/26',
+                    },
+                    {
+                        title: 'Người Hoa',
+                        link: '/tieng-viet/figure/8/product/27',
+                    },
                 ],
             },
             {
@@ -9558,6 +10159,25 @@ export default [
                                 type: 'hightlight',
                                 value: `- Năm 1940, Nhật vào Đông Dương, nhân dân ta chịu cảnh “một cổ hai tròng”.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: '“một cổ hai tròng”"',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ví cảnh bị hai tầng thống trị, áp bức nặng nề hoặc phải gánh hai nhiệm vụ nặng nề cùng một lúc.',
+                                        },
+                                    },
+
+
+                                    {
+                                        hightlight: 'các chiến dịch "Tố cộng", "Diệt cộng"',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Với Luật 10-59, chế độ Ngô Đình Diệm đã tổ chức các chiến dịch “Tố Cộng, diệt Cộng”, tiến hành càn quét khắp miền Nam, giết hại hàng loạt những cán bộ, chiến sỹ từng tham gia chiến tranh Đông Dương của Việt Minh.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'Nhật',
                                         valueModal: {
@@ -9763,8 +10383,6 @@ export default [
                                 hightlightList: [
                                 ],
                             },
-
-
                             {
                                 type: 'bold',
                                 value:`* Kết Quả Khởi Nghĩa Tại Trà Vinh:`,
@@ -9882,6 +10500,15 @@ export default [
                                 value: `- 0 giờ ngày 23 tháng 9 năm 1945 (chưa đầy một tháng sau Cách mạng Tháng Tám giành thắng lợi ở Sài Gòn và một số tỉnh Nam bộ), thực dân Pháp được sự giúp đỡ tích cực của quân Anh - Ấn gây hấn ở Sài Gòn, bắt đầu cuộc chiến tranh chinh phục lại Đông Dương. Chúng hy vọng nhanh chóng bình định Nam Bộ để làm bàn đạp tiến chiếm miền Trung và miền Bắc Việt Nam như đã từng làm trong cuộc chiến tranh xâm lược lần trước.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Đông Dương',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Lúc bấy giờ, Đông Dương gồm 3 nước đó là Việt Nam, Lào và Campuchia',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'Chúng',
                                         valueModal: {
                                             type: 'image',
@@ -9956,6 +10583,15 @@ export default [
                                 value: `- Ngày 02 tháng 12 năm 1945, quân Pháp tấn công Trà Vinh bằng đường thủy, từ ngoài biển theo sông Cổ Chiên tiến vào, trên hai con tàu: một tàu chiến La mắc (Lamarek) và một tàu chở đầy lính. Trên đường tiến quân, tàu chiến xả đạn vào bất kỳ nơi nào chúng nghi ngờ. Tới Cồn Bàng, tàu chiến bắn nhiều đợt pháo vào thị xã Trà Vinh và các ụ cản do quân dân ta thiết lập ở Vàm Trà Vinh. Không phá được ụ cản bằng pháo, quân Pháp dùng ca nô chở lính công binh vào phá, nhưng cũng không được, tàu Pháp phải rút lui và chuyển hướng tấn công.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'sông Cổ Chiên',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Sông Cổ Chiên là một phân lưu của sông Tiền, dài khoảng 82 km, làm thành ranh giới tự nhiên giữa các tỉnh Vĩnh Long và Trà Vinh với Bến Tre.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'đường thủy',
                                         valueModal: {
                                             type: 'image',
@@ -10014,6 +10650,16 @@ export default [
                                 type: 'hightlight',
                                 value: `- Trong đêm 02 và rạng sáng ngày 03 tháng 12 năm 1945, lực lượng của ta từ Vàm Trà Vinh rút về chùa Hang và Bàng Đa và từ Bãi San rút về Ba Se (Ô Chát). Địch đóng quân ở Trà Vinh trong tình thế “nhà không vườn trống” do Nhân dân thị xã Trà Vinh đã tản cư từ trước, chỉ còn một số ít người Hoa ở lại theo kế hoạch của Ủy ban kháng chiến.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'chùa Hang',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/6/product/20',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+
                                     {
                                         hightlight: 'lực lượng của ta',
                                         valueModal: {
@@ -10081,19 +10727,12 @@ export default [
         
                 tags: [
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/10',
                     },
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Chùa Hang',
+                        link: ' /tieng-viet/figure/6/product/20',
                     },
                 ],
             },
@@ -10122,6 +10761,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Từ năm 1954, đất nước ta tạm thời chia làm hai miền với hai chế độ chính trị khác nhau. Ở miền Bắc là chế độ dân chủ nhân dân, tiến lên con đường xây dựng chủ nghĩa xã hội do Đảng Cộng sản lãnh đạo. Ở miền Nam, đế quốc Mỹ ra sức củng cố ngụy quyền tay sai để xây dựng chế độ thực dân mới, hòng biến miền Nam thành thuộc địa kiểu mới và căn cứ quân sự của chúng.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Đảng Cộng sản',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'hai chế độ',
                                         valueModal: {
@@ -10154,6 +10802,33 @@ export default [
                                 value: `- Với lòng khát khao hòa bình, độc lập, tự do và mong đợi thống nhất đất nước, đồng bào các dân tộc Trà Vinh đã hân hoan đón mừng Hiệp định Giơ-ne-vơ. Ngay sau khi Hiệp định được công bố, nhiều cuộc mít tinh với sự tham gia của hàng trăm, hàng ngàn quần chúng đã diễn ra trên khắp các địa bàn trong tỉnh. Một số ngôi chùa Khmer cũng trở thành tụ điểm mít tinh hội họp, cán bộ cách mạng phổ biến tình hình, giải thích cho đồng bào hiểu rõ nội dung Hiệp định Giơ-ne-vơ, hướng dẫn đồng bào nắm vững cơ sở pháp lý của Hiệp định làm căn cứ để sẵn sàng đấu tranh chống địch vi phạm hiệp định. Điển hình là mít tinh lớn diễn ra tại chùa Ông Mẹt vào cuối tháng 7 năm 1954, đã thu hút hàng ngàn đồng bào Kinh - Khmer - Hoa từ Thị xã và các vùng lân cận tham gia.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Kinh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/25',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Khmer',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/26',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Hoa',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/27',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
                                         hightlight: 'Giơ-ne-vơ',
                                         valueModal: {
                                             type: 'image',
@@ -10178,8 +10853,17 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Từ giữa năm 1955, phong trào đấu tranh chống địch ở Trà Vinh ngày một dâng cao. Tháng 10 năm 1955, Ngô Đình Diệm tổ chức “trưng cầu dân ý”, đưa tay sai đến các địa phương để diễn thuyết. Chúng tung ra những luận điệu điêu ngoa xảo quyệt, giả nhân giả nghĩa nhằm tô vẽ cho Ngô Đình Diệm và bôi nhọ cách mạng. Khắp nơi trong tỉnh, nhân dân kiên quyết đấu tranh, tẩy chay các cuộc diễn thuyết này. Hàng vạn tờ truyền đơn phản đối Mỹ - Diệm in bằng bột trong các gia đình cơ sở cách mạng được tung ra khắp các nẻo đường, công sở, trường học, chợ, đình, chùa, v.v... từ tỉnh lị đến các xã, ấp. Nhiều nơi, nhân dân làm kiến nghị có hàng trăm, hàng ngàn người ký tên vào, cử đại biểu mang kiến nghị trực tiếp trao cho Ủy ban quốc tế, tố cáo ngụy quyền tay sai Ngô Đình Diệm vi phạm Hiệp định Giơ- ne-vơ. Mỹ-Diệm bắt giam những người đi đấu tranh, đi đưa kiến nghị. Đồng bào Trà Vinh không hề khuất phục, người trước bị địch bắt thì người sau tiếp tục đi đấu tranh, bản kiến nghị thứ nhất chưa được trả lời thì tiếp tục đưa bản kiến nghị thứ hai,...`,
+                                value: `- Từ giữa năm 1955, phong trào đấu tranh chống địch ở Trà Vinh ngày một dâng cao. Tháng 10 năm 1955, Ngô Đình Diệm tổ chức “trưng cầu dân ý”, đưa tay sai đến các địa phương để diễn thuyết. Chúng tung ra những luận điệu điêu ngoa xảo quyệt, giả nhân giả nghĩa nhằm tô vẽ và bôi nhọ cách mạng. Khắp nơi trong tỉnh, nhân dân kiên quyết đấu tranh, tẩy chay các cuộc diễn thuyết này. Hàng vạn tờ truyền đơn phản đối Mỹ - Diệm in bằng bột trong các gia đình cơ sở cách mạng được tung ra khắp các nẻo đường, công sở, trường học, chợ, đình, chùa, v.v... từ tỉnh lị đến các xã, ấp. Nhiều nơi, nhân dân làm kiến nghị có hàng trăm, hàng ngàn người ký tên vào, cử đại biểu mang kiến nghị trực tiếp trao cho Ủy ban quốc tế, tố cáo ngụy quyền tay sai vi phạm Hiệp định Giơ- ne-vơ. Mỹ-Diệm bắt giam những người đi đấu tranh, đi đưa kiến nghị. Đồng bào Trà Vinh không hề khuất phục, người trước bị địch bắt thì người sau tiếp tục đi đấu tranh, bản kiến nghị thứ nhất chưa được trả lời thì tiếp tục đưa bản kiến nghị thứ hai,...`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Ngô Đình Diệm',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ngô Đình Diệm (3/1/1901 – 2/11/1963) là một chính khách người Việt Nam.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'tô vẽ',
                                         valueModal: {
@@ -10255,19 +10939,20 @@ export default [
         
                 tags: [
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/10',
                     },
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Người Kinh',
+                        link: '/tieng-viet/figure/8/product/25',
                     },
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Người Khmer',
+                        link: '/tieng-viet/figure/8/product/26',
+                    },
+                    {
+                        title: 'Người Hoa',
+                        link: '/tieng-viet/figure/8/product/27',
                     },
                 ],
             },
@@ -10297,12 +10982,56 @@ export default [
                                 type: 'hightlight',
                                 value: `- Với chiến thắng lịch sử của Chiến dịch Hồ Chí Minh ngày 30-4-1975, cuộc kháng chiến chống Mỹ, cứu nước của nhân dân ta đã đi tới thắng lợi hoàn toàn. Dưới sự lãnh đạo của Đảng, cách mạng Việt Nam đã chuyển sang một giai đoạn mới: giai đoạn cả nước hòa bình, thống nhất, độc lập, cùng đi lên chủ nghĩa xã hội.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Chiến dịch Hồ Chí Minh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Chiến dịch Hồ Chí Minh, tên ban đầu là Chiến dịch Giải phóng Sài Gòn – Gia Định là chiến dịch cuối cùng của Quân Giải phóng miền Nam Việt Nam trong Cuộc Tổng tấn công và nổi dậy mùa Xuân năm 1975 và Chiến tranh Việt Nam.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Đảng',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp.',
+                                        },
+                                    },
                                 ],
                             },
                             {
                                 type: 'hightlight',
                                 value: `- Sau 30 năm đấu tranh kiên cường bất khuất chống thực dân, đế quốc, cùng với nhân dân cả nước, Đảng bộ và nhân dân các dân tộc Kinh, Khmer, Hoa... của thị xã Trà Vinh đã được sống trong độc lập, tự do. Chuyển sang giai đoạn thực hiện nhiệm vụ cách mạng mới, Đảng bộ, quân và dân thị xã Trà Vinh tuy còn gặp nhiều khó khăn, nhưng có những thuận lợi chưa từng có để xây dựng lại quê hương, làm cho nhân dân có cuộc sống ấm no, tự do, hạnh phúc, đi lên theo con đường xã hội chủ nghĩa.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Kinh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/25',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Khmer',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/26',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                    {
+                                        hightlight: 'Hoa',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/8/product/27',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+
                                 ],
                             },
                         ],
@@ -10421,6 +11150,16 @@ export default [
                                 type: 'hightlight',
                                 value: `- Tháng 10-1975, toàn thị xã tổ chức được 2 đợt tập trung học tập cải tạo, giáo dục hàng nghìn ngụy quân và ngụy quyền trở về theo chính sách khoan hồng của Đảng.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'ngụy quân và ngụy quyền',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Từ ngụy quyền và ngụy quân có nghĩa là chính quyền/quân đội bất hợp pháp.',
+                                        },
+                                    },
+
+
                                 ],
                             },
 
@@ -10472,19 +11211,20 @@ export default [
         
                 tags: [
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/10',
                     },
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Người Kinh',
+                        link: '/tieng-viet/figure/8/product/25',
                     },
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Người Khmer',
+                        link: '/tieng-viet/figure/8/product/26',
+                    },
+                    {
+                        title: 'Người Hoa',
+                        link: '/tieng-viet/figure/8/product/27',
                     },
                 ],
             },
@@ -10629,7 +11369,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Đầu tháng 2 năm 1947, quân ta lại phục kích tại khu vực Ba Hình, Mai Hương (vinh Kim) chặn đánh quân địch từ thị xã Trà Vinh xuống, tiêu diệt một số địch (trong đó có 1 tên Pháp). Chiến sự diễn ra liên tục và sự tổn thất về người và vũ khí của địch khiến cho tề, ngụy ở Cầu Ngang càng hoang mang, dao động. Hàng loạt đồn bót địch ở Long Toàn, Long Hữu, Mỹ Long, v.v... tiếp tục rút chạy. Thực dân Pháp đã phải huy động máy bay đến quần đảo trên bầu trời Cầu Ngang và trút bom xuống địa bàn đóng quân của bộ đội ta tại khu vực Chùa Dơi (Mỹ Long), nhưng không gây tổn thất cho quân ta và cũng không vực dậy được tinh thần của quân ngụy. Vùng giải phóng ở quận Cầu Ngang tiếp tục được mở rộng`,
+                                value: `- Đầu tháng 2 năm 1947, quân ta lại phục kích tại khu vực Ba Hình, Mai Hương (vinh Kim) chặn đánh quân địch từ thị xã Trà Vinh xuống, tiêu diệt một số địch (trong đó có 1 tên Pháp). Chiến sự diễn ra liên tục và sự tổn thất về người và vũ khí của địch khiến cho tề, ngụy ở Cầu Ngang càng hoang mang, dao động. Hàng loạt đồn bót địch ở Long Toàn, Long Hữu, Mỹ Long, v.v... tiếp tục rút chạy. Thực dân Pháp đã phải huy động máy bay đến quần đảo trên bầu trời Cầu Ngang và trút bom xuống địa bàn đóng quân của bộ đội ta tại khu vực Chùa Dơi (Mỹ Long), nhưng không gây tổn thất cho quân ta và cũng không vực dậy được tinh thần của quân ngụy. Vùng giải phóng ở quận Cầu Ngang tiếp tục được mở rộng.`,
                                 hightlightList: [
                                 ],
                             },
@@ -10639,8 +11379,17 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Ô Đùng là một địa danh thuộc xã Hiếu Tử, huyện Tiểu Cần, nằm cạnh lộ 34, có một cánh đồng trống trải. Ngày 25 tháng 4 năm 1947 có đoàn xe địch chở phái đoàn tỉnh trưởng Trà Vinh qua lộ 34 sang Cần Thơ họp, Chi đội trưởng chi đội 20 Ngô Quang Xung trực tiếp chỉ huy lực lượng của chi đội, phối hợp với lực lượng tự vệ chiến đấu địa phương có sự hỗ trợ tích cự của quần chúng, đã bí mật bổ trí lực lượng phục kích trên tuyến Lò Ngà- Ô Đùng, sẵn sàng chờ địch tới để tiêu diệt chúng. Trận địa chính được bố trí trên đồng trống từ sáng sớm, đội trinh sát được phải đi nắm tình hình địch, nhân dân qua lại nhiều mà vẫn giữ được bí mật.`,
+                                value: `- Ô Đùng là một địa danh thuộc xã Hiếu Tử, huyện Tiểu Cần, nằm cạnh lộ 34, có một cánh đồng trống trải. Ngày 25 tháng 4 năm 1947 có đoàn xe địch chở phái đoàn tỉnh trưởng Trà Vinh qua lộ 34 sang Cần Thơ họp, Chi đội trưởng chi đội 20 Ngô Quang Xung trực tiếp chỉ huy lực lượng của chi đội, phối hợp với lực lượng tự vệ chiến đấu địa phương có sự hỗ trợ tích cự của quần chúng, đã bí mật bổ trí lực lượng phục kích  trên tuyến Lò Ngà-Ô Đùng, sẵn sàng chờ địch tới để tiêu diệt chúng. Trận địa chính được bố trí trên đồng trống từ sáng sớm, đội trinh sát được phải đi nắm tình hình địch, nhân dân qua lại nhiều mà vẫn giữ được bí mật.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'Cần Thơ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Cần Thơ là một trong năm thành phố trực thuộc trung ương của Việt Nam. Đây là thành phố sầm uất và phát triển nhất ở vùng Đồng bằng sông Cửu Long, có vai trò là trung tâm kinh tế, văn hóa, xã hội, y tế, giáo dục và thương mại của cả vùng.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'cánh đồng trống trải',
                                         valueModal: {
@@ -10709,19 +11458,8 @@ export default [
         
                 tags: [
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/10',
                     },
                 ],
             },
@@ -10757,6 +11495,23 @@ export default [
                                 type: 'hightlight',
                                 value: `- Tháng 1 năm 1960, phong trào Đồng Khởi ở Bến Tre thắng lợi đã cổ vũ mạnh mẽ tinh thần đấu tranh chống Mỹ - Diệm của đồng bào các dân tộc Trà Vinh, đặc biệt là trên các địa bàn ven sông Tiền, giáp với các huyện Mỏ Cày, Thạnh Phú của tỉnh Bến Tre, như huyện Càng Long, huyện Cầu Ngang, v.v... Các địa phương này đã có ý định tiến hành đồng loạt khởi nghĩa vũ trang vào dịp kỷ niệm ngày thành lập Đảng Cộng sản Việt Nam (đầu tháng 2 năm 1960), nhưng ý định này không phù hợp với chỉ đạo của trên nên phải tạm dừng lại, vì trên một địa bàn rộng cần phải có một phương án thống nhất và có sự chuẩn bị kỹ hơn.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'phong trào Đồng Khởi',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đồng Khởi là phong trào do những thành viên Việt Minh ở lại miền Nam Việt Nam kêu gọi nhân dân nổi dậy đồng loạt chống lại Hoa Kỳ và chính phủ Việt Nam Cộng hòa.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Đảng Cộng sản',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'khởi nghĩa',
                                         valueModal: {
@@ -10867,6 +11622,15 @@ export default [
                                 value: `- Sau khi nhận được Chỉ thị của Liên tỉnh ủy miền Tây Nam Bộ, Tỉnh ủy Trà Vinh họp tại Trường Long Hòa (huyện Cầu Ngang nay là huyện Duyên Hải). Đồng chí Trần Văn Long (Mười Dài), Bí thư Tỉnh ủy chủ trì phiên họp. Tỉnh ủy thảo luận Nghị quyết của Xứ ủy Nam Bộ và những ý kiến chỉ đạo, hướng dẫn của Liên tỉnh ủy miền Tây Nam Bộ; đánh giá công tác chuẩn bị của Đảng bộ và quân, dân trong tỉnh; rà soát sự bố trí lực lượng trên các địa bàn; thành lập Ban chỉ đạo Đồng Khởi tỉnh Trà Vinh (thành phần gồm toàn thể Ban chấp hành Đảng bộ Tỉnh, đồng chí Bí thư Tỉnh ủy làm Trưởng Ban). Tỉnh ủy chỉ đạo cho các huyện thành lập Ban chỉ đạo Đồng Khởi (nòng cốt là các Huyện ủy viên) và phân công từng đồng chí Tỉnh ủy viên trực tiếp theo dõi chỉ đạo Đồng Khởi ở từng huyện. Ban Tuyên huấn Tỉnh ủy tổ chức in ấn, phát hành tờ tin của Tỉnh đảng bộ Trà Vinh; thống nhất quan điểm chỉ đạo và thông qua kế hoạch phát động phong trào Đồng Khởi trên toàn tỉnh.`,
                                 hightlightList: [
                                     {
+                                        hightlight: 'Đồng chí Trần Văn Long',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đồng chí Trần Văn Long (Bí danh Mười Dài), sinh năm 1925, tại xã Lưu Nghiệp Anh, huyện Trà Cú.',
+                                        },
+                                    },
+
+                                    {
                                         hightlight: 'thảo luận',
                                         valueModal: {
                                             type: 'image',
@@ -10888,19 +11652,8 @@ export default [
         
                 tags: [
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/10',
                     },
                 ],
             },
@@ -10931,6 +11684,15 @@ export default [
                                 type: 'hightlight',
                                 value: `- Sau đại thắng mùa Xuân năm 1975, đất nước thống nhất và cùng bước vào thời kỳ quá độ đi lên chủ nghĩa xã hội. Sau khoảng 10 năm xây dựng xã hội chủ nghĩa trên phạm vi cả nước, đất nước ta tuy đã đạt được những thành tựu quan trọng trên các lĩnh vực kinh tế, văn hóa, xã hội, an ninh, quốc phòng,... song cũng gặp nhiều khó khăn nảy sinh do không lường hết được những diễn biến trong nước và ngoài nước, làm ảnh hưởng không nhỏ đến sự phát triển của cách mạng Việt Nam.`,
                                 hightlightList: [
+                                    {
+                                        hightlight: 'đại thắng mùa Xuân năm 1975',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Cuộc Tổng tiến công và nổi dậy mùa Xuân 1975 mà đỉnh cao là Chiến dịch Hồ Chí Minh đã thắng lợi hoàn toàn vào trưa ngày 30/4/1975, dân tộc Việt Nam đã kết thúc thắng lợi cuộc kháng chiến trường kỳ chống đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất Tổ quốc.',
+                                        },
+                                    },
+
                                     {
                                         hightlight: 'thống nhất',
                                         valueModal: {
@@ -11033,19 +11795,8 @@ export default [
         
                 tags: [
                     {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
-                    },
-                    {
-                        id: '1',
-                        title: 'Mua ngay',
-                        link: 'https://www.facebook.com/Chinhhocvietnam',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/10',
                     },
                 ],
             },

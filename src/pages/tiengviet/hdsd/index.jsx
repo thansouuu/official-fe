@@ -109,8 +109,9 @@ const Hdsd = () => {
                         </li>
                         <li>
                             <div>
-                                <p>Những chữ in đậm <b><span className={'text-amber-700'}>màu</span></b> : sẽ cung cấp cho bạn hình ảnh, nội dung liên quan.</p>
-                                <p>Những chữ in đậm <b><span className={'text-green-400'}>màu</span></b> : sẽ liên kết tới những bài viết liên quan.</p>
+                                <p>Những chữ in đậm <b><span className={'text-amber-700'}>màu</span></b> : sẽ cung cấp cho bạn hình ảnh liên quan.</p>
+                                <p>Những chữ in đậm <b><span className={'text-purple-700'}>màu</span></b> : sẽ cung cấp cho bạn chú thích liên quan.</p>
+                                <p>Những chữ in đậm <b><span className={'text-green-400'}>màu</span></b> : sẽ liên kết tới bài viết liên quan.</p>
                             </div>
                         </li>
                     </ul>
