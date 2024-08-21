@@ -37,15 +37,6 @@ export default [
                                 value: `- Tên thật là Nguyễn Thị Út, sinh ngày 19/4/1931 tại xã Tam Ngãi, quận Cầu Kè, tỉnh Cần Thơ. Dưới thời Mỹ ngụy là xã Tam Ngãi, quận Cầu Kè, tỉnh Vĩnh Bình. Hiện nay là xã Tam Ngãi, huyện Cầu Kè, tỉnh Trà Vinh. Cha là Nguyễn Văn Lương, người làng Tích Thiện, quận Trà Ôn, tỉnh Cần Thơ. Mẹ là bà Lê Thị Mười quê xã Tam Ngãi, quận Cầu Kè. Chị em của Nguyễn Thị Út lần lượt là Nguyễn Thị Keo, tức chị Hai Keo và Nguyễn Thị Cao, tức chị Ba Cao. Cha và mẹ của chị út ở đợ cho địa chủ Hàm Giỏi. Vì thế, 3 chị em của chị được sinh ra và lớn lên trong nhà địa chủ Hàm Giỏi. Phận tôi tớ cứ gắn liền với gia đình của chị . Trong ba chị em, Út là đứa “rắn mắt”, cứng cỏi và gan dạ nhất. Năm 12 tuổi, Nguyễn Thị Út đã dám đánh trả lại địa chủ. Cụ thể là ném dao cau vào tay vợ Hàm Giỏi, ném ớt bột vào mắt vợ Hội đồng Thanh. Hành động ấy, khí chất ấy tuy rất hồn nhiên và tự phát của tuổi thơ ngây nhưng cũng dự báo một tính cách anh hùng quả cảm của chị Nguyễn Thị Út sau này.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'huyện Cầu Kè',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
-                                    {
                                         hightlight: 'Nguyễn Thị Keo',
                                         valueModal: {
                                             type: 'image',
@@ -82,7 +73,7 @@ export default [
                                         }
                                     },
                                     {
-                                        hightlight: 'xây dựng gia đình',
+                                        hightlight: 'Lâm Văn Tịch',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-10.jpg',
@@ -168,7 +159,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/10/product/35',
+                                            link: '/tieng-viet/figure/10/product/37',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -240,6 +231,7 @@ export default [
                                 type: 'hightlight',
                                 value:`- Sau Hiệp định Giơ-ne-vơ năm 1954, lực lượng vũ trang cách mạng miền Nam tập kết ra miền Bắc, quân Mỹ tổ chức các chiến dịch "Tố cộng", "Diệt cộng" nhằm khủng bố, đàn áp cán bộ đảng viên được phân công ở lại miền Nam và cả những người có liên quan đến cuộc kháng chiến chống Pháp. Gia đình chị Út Tịch phải tạm lánh sang Kế Sách (Sóc Trăng).`,
                                 hightlightList: [
+                                    
                                     {
                                         hightlight: 'Hiệp định Giơ-ne-vơ',
                                         valueModal: {
@@ -423,8 +415,18 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `- Cuộc đời vừa nuôi con vừa đánh giặc của nữ anh hùng Nguyễn Thị Út được nhà văn Nguyễn Đình Thi tái hiện trung thực và sáng tạo. Chị là nguyên mẫu cho nhân vật chính trong tác phẩm “Người mẹ cầm súng”.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'nhà văn Nguyễn Đình Thi',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Nguyễn Đình Thi (1924–2003) là một nhà văn, nhà thơ, nhà phê bình văn học và nhạc sĩ Việt Nam thời hiện đại, được tặng Giải thưởng Hồ Chí Minh về Văn học Nghệ thuật đợt I năm 1996.',
+                                        },
+                                    },
+                                ]
                             },
                             {
                                 type: 'text',
@@ -449,7 +451,7 @@ export default [
                             },
                             {
                                 type: 'bold',
-                                value: `Chị Út Tịch qua lời kể anh Thanh Hiển - người con thứ 5 của chị:`,
+                                value: `* Chị Út Tịch qua lời kể anh Thanh Hiển - người con thứ 5 của chị:`,
                             },
                             {
                                 type: 'text',
@@ -466,7 +468,7 @@ export default [
 
                             {
                                 type: 'bold',
-                                value: `Những câu nói nổi tiếng của chị:`,
+                                value: `* Những câu nói nổi tiếng của chị:`,
                             },
                             {
                                 type: 'text',
@@ -505,8 +507,18 @@ export default [
                                 ],
                             },
                             {
-                                type: 'text',
+                                type: 'hightlight',
                                 value: `-  Khu tưởng niệm nữ Anh hùng liệt sĩ Nguyễn Thị Út hay còn gọi là Út Tịch được xây dựng tại xã Tam Ngãi, huyện Cầu Kè, tỉnh Trà Vinh. Biểu tượng “Người mẹ cầm súng” được đặt ở vị trí trung tâm của Khu tưởng niệm, tái hiện lại hình ảnh chị Út căn dặn hai người con ở nhà chăm sóc đàn em để chị yên tâm lên đường chiến đấu.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Biểu tượng “Người mẹ cầm súng',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tượng Người mẹ cầm súng cao 6m (chất liệu bằng đồng), đặt trên bệ đá granit cao 1,5m được phác thảo qua “Bức chân dung Người mẹ cầm súng”',
+                                        },
+                                    },
+                                ]
                             },
                         ],
                     },
@@ -514,22 +526,14 @@ export default [
         
                 tags: [
                     {
-                        id: 1,
                         title: 'Nhân vật',
                         link: '/tieng-viet/figure/1',
                     },
                     {
-                        id: 2,
-                        title: 'Huyện Cầu Kè',
-                        link: '/tieng-viet/map',
-                    },
-                    {
-                        id: 3,
                         title: 'Người Khmer',
                         link: '/tieng-viet/figure/8/product/26',
                     },
                     {
-                        id: 4,
                         title: 'Cách mạng Tháng Tám',
                         link: '/tieng-viet/figure/10/product/35',
                     },
@@ -549,7 +553,7 @@ export default [
                 description: 'Nhà cách mạng Dương Quang Đông sinh năm 1902, mất năm 2003. Ông còn có tên Dung Văn...',
                 contents: [
                     {
-                        title: 'Sơ lượt tiểu sử',
+                        title: 'Sơ lược tiểu sử',
                         data: [
                             {
                                 type: 'grid-image',
@@ -560,23 +564,14 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: ` - Nhà cách mạng Dương Quang Đông sinh năm 1902, mất năm 2003. Ông còn có tên Dung Văn Phúc, và là người ấp Mỹ Cầm, xã Mỹ Hoà, huyện Cầu Ngang, tỉnh Trà Vinh. Năm 1916, ông học xong sơ học, sau đó lên bậc thành chung tại trường Huỳnh Khương Ninh (thuộc khu vực Đa Kao, Sài Gòn). Năm 1919, khi ông học lớp đệ tam thì bị đuổi học vì có biểu hiện chống đối chính quyền thống trị của thực dân Pháp trên đất nước ta. Ông kiếm sống bằng nhiều nghề như làm thợ máy, lái xe, kéo xe,..`,
+                                value: ` - Nhà cách mạng Dương Quang Đông sinh năm 1902, mất năm 2003. Ông còn có tên Dung Văn Phúc, và là người ấp Mỹ Cầm, xã Mỹ Hoà, huyện Cầu Ngang, tỉnh Trà Vinh. Năm 1916, ông học xong sơ học, sau đó lên bậc thành chung tại trường Huỳnh Khương Ninh (thuộc khu vực Đa Kao, Sài Gòn). Năm 1919, khi ông học lớp đệ tam thì bị đuổi học vì có biểu hiện chống đối chính quyền thống trị của thực dân Pháp trên đất nước ta. Ông kiếm sống bằng nhiều nghề như làm thợ máy, lái xe, kéo xe,...`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Cầu Ngang',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                         ],
                     },
                     {
-                        title: 'Sơ lượt kháng chiến',
+                        title: 'Sơ lược kháng chiến',
                         data: [
                             {
                                 type: 'grid-image',
@@ -733,7 +728,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value:`- Giai đoạn này, Dương Quang Đông cùng các đồng chí trong Xứ ủy ngày đêm tích cực chuẩn bị phát động cuộc khởi nghĩa trên toàn Nam kỳ. Nhưng cơ mưu bị lộ. khi Dương Quang Đông trên đường truyền đạt lệnh khởi nghĩa cho các tỉnh miền Tây trở về Sài Gòn thì bị mật thám đón lỏng. Đến ngày 20/5/1940, chúng bắt ông và gần như toàn bộ Xứ ủy Nam kỳ, đày lên Tà Lài (nay thuộc tỉnh Đồng Nai).`,
+                                value:`- Giai đoạn này, Dương Quang Đông cùng các đồng chí trong Xứ ủy ngày đêm tích cực chuẩn bị phát động cuộc khởi nghĩa trên toàn Nam kỳ. Nhưng cơ mưu bị lộ. Khi Dương Quang Đông trên đường truyền đạt lệnh khởi nghĩa cho các tỉnh miền Tây trở về Sài Gòn thì bị mật thám đón lỏng. Đến ngày 20/5/1940, chúng bắt ông và gần như toàn bộ Xứ ủy Nam kỳ, đày lên Tà Lài (nay thuộc tỉnh Đồng Nai).`,
                             },
                             {
                                 type: 'hightlight',
@@ -761,7 +756,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/10/product/35',
+                                            link: '/tieng-viet/figure/10/product/37',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -860,7 +855,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: '- Thời gian này, tuyến giao liên giữa Trung ương, Chính phủ với Nam bộ thường bị gián đoạn,  ông được điều động sang mở lại tuyến giao liên huyết mạch này với phiên hiệu là Đoàn A53. Một hệ thống cơ sở trên suốt tuyến đường bộ từ Nam bộ qua Campuchia, Lào, Thái Lan, Hà Nội hoặc tuyến đường thủy Thái Lan – Hồng Kông, Hà Nội hoạt động liên tục, bảo đảm tuyến giao thông liên lạc thông suốt phục vụ nhu cầu lãnh đạo cuộc kháng chiến. Đặt biệt đoàn A53 đã tổ chức và bảo an toàn nhiều chuyến vào Nam ra Bắc an toàn cho các đồng chí lãnh đạo cao cấp của Trung ương Đảng, Trung ương Cục miền Nam trong những năm khó khăn nhất của cuộc chiến tranh.',
+                                value: '- Thời gian này, tuyến giao liên giữa Trung ương, Chính phủ với Nam bộ thường bị gián đoạn, ông được điều động sang mở lại giao liên huyết mạch này với phiên hiệu là Đoàn A53. Một hệ thống cơ sở trên suốt tuyến đường bộ từ Nam bộ qua Campuchia, Lào, Thái Lan, Hà Nội hoặc tuyến đường thủy Thái Lan – Hồng Kông, Hà Nội hoạt động liên tục, bảo đảm tuyến giao thông liên lạc thông suốt phục vụ nhu cầu lãnh đạo cuộc kháng chiến. Đặt biệt đoàn A53 đã tổ chức và bảo an toàn nhiều chuyến vào Nam ra Bắc an toàn cho các đồng chí lãnh đạo cao cấp của Trung ương Đảng, Trung ương Cục miền Nam trong những năm khó khăn nhất của cuộc chiến tranh.',
                                 hightlightList: [
                                     {
                                         hightlight: 'giao liên',
@@ -874,7 +869,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value:`- Sau Đồng khởi 1960, Trung ương Cục quyết định điều ông  sang nhận nhiệm vụ Chỉ huy Phó kiêm Chính ủy Đoàn tàu không số mở tuyến đường Hồ Chí Minh trên biển vận chuyển vũ khí từ Bắc vào Nam phục vụ nhu cầu của cuộc đấu tranh vũ trang đang ngày phát triển mạnh của nhân dân miền Nam. `,
+                                value:`- Sau Đồng khởi 1960, Trung ương Cục quyết định điều ông sang nhận nhiệm vụ Chỉ huy Phó kiêm Chính ủy Đoàn tàu không số mở tuyến đường Hồ Chí Minh trên biển vận chuyển vũ khí từ Bắc vào Nam phục vụ nhu cầu của cuộc đấu tranh vũ trang đang ngày phát triển mạnh của nhân dân miền Nam. `,
                             },
                             {
                                 type: 'text',
@@ -994,7 +989,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value: `- Hiện nay, có một ngôi trường mang tên ông đó là Trường Trung học phổ thông Dương Quang Đông, tọa lạc tại Cầu Ngang, Trà Vinh. Có một cuốn sách viết về cuộc đời người cộng sản Dương Quang Đông luôn kiên trung tận tụy suốt đời vì dân, vì Đảng  Đồng thời, tồn tại nhiều con đường mang tên ông, và một trong số đó là Đường Dương Quang Đông nằm ở quận 8, TPHCM.`,
+                                value: `- Hiện nay, có một ngôi trường mang tên ông đó là Trường Trung học phổ thông Dương Quang Đông, tọa lạc tại Cầu Ngang, Trà Vinh. Có một cuốn sách viết về cuộc đời người cộng sản Dương Quang Đông luôn kiên trung tận tụy suốt đời vì dân, vì Đảng Đồng thời, tồn tại nhiều con đường mang tên ông, và một trong số đó là Đường Dương Quang Đông nằm ở quận 8, TPHCM.`,
                             },
                         ],
                     },
@@ -1002,22 +997,14 @@ export default [
         
                 tags: [
                     {
-                        id: 4,
                         title: 'Nhân vật',
                         link: '/tieng-viet/figure/1',
                     },
                     {
-                        id: 1,
-                        title: 'Huyện Cầu Ngang',
-                        link: '/tieng-viet/map',
-                    },
-                    {
-                        id: 2,
                         title: 'Cách mạng tháng Tám',
                         link: '/tieng-viet/figure/10/product/35',
                     },
                     {
-                        id: 3,
                         title: 'Phạm Thái Bường',
                         link: '/tieng-viet/figure/1/product/3',
                     },
@@ -1037,7 +1024,7 @@ export default [
                 view: 60,
                 contents: [
                     {
-                        title: 'Sơ lượt tiểu sử',
+                        title: 'Sơ lược tiểu sử',
                         data: [
                             {
                                 type: 'grid-image',
@@ -1049,21 +1036,12 @@ export default [
                                 type: 'hightlight',
                                 value: `- Nhà cách mạng Phạm Thái Bường sinh năm 1915, mất năm 1974,  bí danh Lê Thành Nhân. Ông sinh ra tại xã Mỹ Cẩm, huyện Càng Long, tỉnh Trà Vinh. Do hoàn cảnh kinh tế gia đình, nên năm 15 tuổi, chú bé Bường đã phải đi làm nghề phụ hồ để nuôi thân.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Càng Long',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                         ],
                     },
                     {
-                        title: 'Sơ lượt kháng chiến',
+                        title: 'Sơ lược kháng chiến',
                         data: [
                             {
                                 type: 'grid-image',
@@ -1090,7 +1068,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Năm 1938, anh tham gia vào đội Hội Ái hữu và hoạt động tích cực trong giới thợ thủ công ở địa phương. Tháng 6-1938, Phạm Thái Bường được kết nạp vào Đảng Cộng sản Đông Dương.`,
+                                value:`- Năm 1938, anh tham gia vào đội Hội Ái hữu và hoạt động tích cực trong giới thợ thủ công ở địa phương. Tháng 6/1938, Phạm Thái Bường được kết nạp vào Đảng Cộng sản Đông Dương.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'Đảng Cộng sản',
@@ -1107,7 +1085,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Đầu năm 1940, được cử làm Bí thư Tỉnh ủy Trà Vinh.  Trong khi đó, Bến Tre - tỉnh có cùng ranh giới chung với Trà Vinh là con sông Cổ Chiên – qua những đợt khủng bố của thực dân, phần lớn cơ sở Đảng ở đây bị đánh phá tan rã, Bí thư Tỉnh ủy cùng nhiều cấp Ủy viên tỉnh và huyện bị sa vào lưới mật thám Pháp. Trước tình hình đó, XUNK đã điều Phạm Thái Bường sang làm Bí thư Tỉnh ủy Bến Tre. Cùng với những đồng chí còn lại sau đợt khủng bố, ông đã bắt tay củng cố phong trào, gây dựng lại cơ sở Đảng ở các huyện Mỏ Cày, Giồng Trôm, Ba Tri…`,
+                                value:`- Đầu năm 1940, được cử làm Bí thư Tỉnh ủy Trà Vinh. Trong khi đó, Bến Tre - tỉnh có cùng ranh giới chung với Trà Vinh là con sông Cổ Chiên – qua những đợt khủng bố của thực dân, phần lớn cơ sở Đảng ở đây bị đánh phá tan rã, Bí thư Tỉnh ủy cùng nhiều cấp Ủy viên tỉnh và huyện bị sa vào lưới mật thám Pháp. Trước tình hình đó, XUNK đã điều Phạm Thái Bường sang làm Bí thư Tỉnh ủy Bến Tre. Cùng với những đồng chí còn lại sau đợt khủng bố, ông đã bắt tay củng cố phong trào, gây dựng lại cơ sở Đảng ở các huyện Mỏ Cày, Giồng Trôm, Ba Tri…`,
                                 hightlightList: [
                                     {
                                         hightlight: 'sông Cổ Chiên',
@@ -1120,7 +1098,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Đến khi cuộc khởi nghĩa Nam Kỳ nổ ra (vào năm 1940), Đảng bộ tỉnh Bến Tre đã lãnh đạo quần chúng nổi dậy hưởng ứng tích cực lệnh của XUNK ban ra. Cuộc khởi nghĩa thất bại, Phạm Thái Bường và hầu hết các thành viên trong Tỉnh ủy Bến Tre lần lượt bị bắt. Tòa án của chính quyền thực dân kết án ông tù 10 năm và đày ra Côn Đảo.`,
+                                value:`- Đến khi cuộc khởi nghĩa Nam Kỳ nổ ra (vào năm 1940), Đảng bộ tỉnh Bến Tre đã lãnh đạo quần chúng nổi dậy hưởng ứng tích cực lệnh của Xứ Úy Nam Kỳ ban ra. Cuộc khởi nghĩa thất bại, Phạm Thái Bường và hầu hết các thành viên trong Tỉnh ủy Bến Tre lần lượt bị bắt. Tòa án của chính quyền thực dân kết án ông tù 10 năm và đày ra Côn Đảo.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'nổ ra',
@@ -1136,15 +1114,6 @@ export default [
                                 value:`- Khi Tổng khởi nghĩa tháng Tám 1945 thắng lợi, chính quyền cách mạng cử ngay một phái đoàn đưa phương tiện ra Côn Đảo rước các đồng chí bị giam giữ về đất liền. Phạm Thái Bường về trong chuyến tàu đầu tiên.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'rước các',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
-                                    {
                                         hightlight: 'thắng lợi',
                                         valueModal: {
                                             type: 'image',
@@ -1159,7 +1128,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Ngày 23/9/1945, giặc Pháp nổ súng đánh chiếm Sài Gòn, sau đó mở rộng chiến tranh ra toàn Nam Bộ. Trong thời kỳ làm Bí thư Tỉnh ủy Trà Vinh (1946 – 1948), Phạm Thái Bường đã có những chủ trương và đối sách đúng đắn như củng cố khối đoàn kết dân tộc, thực hiện chính sách ruộng đất của cách mạng, xây dựng lực lượng vũ trang địa phương… do đó đã đưa phong trào kháng chiến ở Trà Vinh sớm đi vào thế ổn định.`,
+                                value:`- Ngày 23/9/1945, giặc Pháp nổ súng đánh chiếm Sài Gòn, sau đó mở rộng chiến tranh ra toàn Nam Bộ. Trong thời kỳ làm Bí thư Tỉnh ủy Trà Vinh (1946 – 1948), Phạm Thái Bường đã có những chủ trương và đối sách đúng đắn như củng cố khối đoàn kết dân tộc, thực hiện chính sách ruộng đất của cách mạng, xây dựng lực lượng vũ trang địa phương… Do đó đã đưa phong trào kháng chiến ở Trà Vinh sớm đi vào thế ổn định.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'nổ súng',
@@ -1183,7 +1152,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tháng 10 – 1949, Phạm Thái Bường được cử bổ sung vào Ban Thường vụ Khu ủy Khu 8, phụ trách công tác tổ chức cán bộ. Đầu năm 1953, được cử đi dự lớp chỉnh huấn của Trung ương mở tại Liên khu 5. Sau hiệp định Giơ-ne-vơ (tháng 7 – 1954), đồng chí dẫn đầu phái đoàn của Trung ương đi truyền đạt hiệp định đình chiến ở các tỉnh Vĩnh Long, Trà Vinh, Bến Tre.`,
+                                value:`- Tháng 10/1949, Phạm Thái Bường được cử bổ sung vào Ban Thường vụ Khu ủy Khu 8, phụ trách công tác tổ chức cán bộ. Đầu năm 1953, được cử đi dự lớp chỉnh huấn của Trung ương mở tại Liên khu 5. Sau hiệp định Giơ-ne-vơ (tháng 7/1954), đồng chí dẫn đầu phái đoàn của Trung ương đi truyền đạt hiệp định đình chiến ở các tỉnh Vĩnh Long, Trà Vinh, Bến Tre.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'Giơ-ne-vơ',
@@ -1226,7 +1195,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tháng 3 – 1972, Phạm Thái Bường là Ủy viên chính thức Ban chấp hành Trung ương Đảng Cộng sản Việt Nam. Trong một cơn bệnh hiểm nghèo, đồng chí đã từ trần ngày 29-1-1974 tại một vùng căn cứ kháng chiến ở khu 9.`,
+                                value:`- Tháng 3/1972, Phạm Thái Bường là Ủy viên chính thức Ban chấp hành Trung ương Đảng Cộng sản Việt Nam. Trong một cơn bệnh hiểm nghèo, đồng chí đã từ trần ngày 29/1/1974 tại một vùng căn cứ kháng chiến ở khu 9.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'Phạm Thái Bường',
@@ -1290,7 +1259,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Đảng bộ và quân dân Trà Vinh đã đặt tên ông cho con đường trung tâm tỉnh lỵ và trường Trung học phổ thông tại thành phố Trà Vinh. Ở thành phố Vĩnh Long cũng có một đại lộ mang tên Phạm Thái Bường`,
+                                value: `- Đảng bộ và quân dân Trà Vinh đã đặt tên ông cho con đường trung tâm tỉnh lỵ và trường Trung học phổ thông tại thành phố Trà Vinh. Ở thành phố Vĩnh Long cũng có một đại lộ mang tên Phạm Thái Bường.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'con đường trung tâm',
@@ -1310,11 +1279,6 @@ export default [
                         id: 1,
                         title: 'Nhân vật',
                         link: '/tieng-viet/figure/1',
-                    },
-                    {
-                        id: 2,
-                        title: 'Huyện Càng Long',
-                        link: '/tieng-viet/map',
                     },
                     {
                         id: 1,
@@ -1337,7 +1301,7 @@ export default [
                 view: 100,
                 contents: [
                     {
-                        title: 'Sơ lượt tiểu sử',
+                        title: 'Sơ lược tiểu sử',
                         data: [
                             {
                                 type: 'grid-image',
@@ -1353,15 +1317,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Sơn Thông sinh năm 1910, mất năm 1997. Tên thật là Sơn Thông bí danh là Mười Tăng, sinh ra trong một gia đình trung nông, tại ấp Giồng Tranh, xã Tập Ngãi, huyện Tiểu Cần, tỉnh Trà Vinh. Ông là người dân tộc Khmer, nên từ nhỏ đã hướng theo tu hành giáo lý nhà Phật. 14 tuổi ông đã bắt đầu đi tu. Vào chùa ông gặp thầy Mai Tấn Nhơn. Thấy ông có tư chất thông minh, ham học nên năm 1926 thầy Mai Tấn Nhơn đưa ông sang Thái Lan để học chữ Pa-Li. Ngót 10 năm theo học chữ Pa-Li và kinh sách Phật, khi tốt nghiệp, Sơn Thông được phong học vị Ma-Ha. Năm 1939, ông trở về Trà Vinh tiếp tục tu hành, dạy chữ Pa-li và Phật học tại chùa Kan-Snone (xã Nhị Trường, huyện Cầu Ngang). Ông là một trong những vị Ma-Ha yêu nước.Năm 1943, ông hoàn tục về lấy vợ, sống ở ấp Giồng Tranh, xã Tập Ngãi, huyện Tiểu Cần, tỉnh Trà Vinh.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Tiểu Cần',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                     {
                                         hightlight: 'dân tộc Khmer',
                                         valueModal: {
@@ -1404,7 +1359,7 @@ export default [
                         ],
                     },
                     {
-                        title: 'Sơ lượt kháng chiến',
+                        title: 'Sơ lược kháng chiến',
                         data: [
                             {
                                 type: 'grid-image',
@@ -1449,7 +1404,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Cuối năm 1948, Hội ủng hộ bộ đội  Issarak  tỉnh Trà Vinh được thành lập do ông À cha Thạch Sóc thường gọi là Cha-sóc làm Hội trưởng, Ma Ha Thông được giữ chức hội phó. Năm 1949, Ma Ha Thông thay ông Cha-sóc giữ chức hội trưởng Hội  Issarak.`,
+                                value:`- Cuối năm 1948, Hội ủng hộ bộ đội  Issarak  tỉnh Trà Vinh được thành lập do ông là cha Thạch Sóc thường gọi là Cha-sóc làm Hội trưởng, Ma Ha Thông được giữ chức hội phó. Năm 1949, Ma Ha Thông thay ông Cha-sóc giữ chức hội trưởng Hội  Issarak.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'hội ủng hộ',
@@ -1489,7 +1444,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Năm 1951, Ma Ha Thông lại được cử đi Campuchia trong phái đoàn Việt Nam, sang thăm bộ đội Issarak đang làm nghĩa vụ quốc tế. Qua chuyến Công tác này , Ma Ha Thông đã công tác ở đây suốt hai năm liền. Với sự am hiểu sâu rộng đất nước, lịch sử, truyền thống, tín ngưỡng của nhân dân Campuchia, đi tới đâu Ma Ha Thông đều góp phần củng cố khối đoàn kết Việt Nam – Campuchia.`,
+                                value:`- Năm 1951, Ma Ha Thông lại được cử đi Campuchia trong phái đoàn Việt Nam, sang thăm bộ đội Issarak đang làm nghĩa vụ quốc tế. Qua chuyến công tác này , Ma Ha Thông đã công tác ở đây suốt hai năm liền. Với sự am hiểu sâu rộng đất nước, lịch sử, truyền thống, tín ngưỡng của nhân dân Campuchia, đi tới đâu Ma Ha Thông đều góp phần củng cố khối đoàn kết Việt Nam – Campuchia.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'công tác',
@@ -1509,7 +1464,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value:`- Năm 1954, Ma Ha Thông được đề bạt vào Ban chấp hành Tỉnh Đảng bộ Trà Vinh. Ông được phân công phụ trách công tác Khmer vận và là một trong những cán bộ của Đảng hoạt động công khai có uy tín lớn trong đồng bào Khmer..`
+                                value:`- Năm 1954, Ma Ha Thông được đề bạt vào Ban chấp hành Tỉnh Đảng bộ Trà Vinh. Ông được phân công phụ trách công tác Khmer vận và là một trong những cán bộ của Đảng hoạt động công khai có uy tín lớn trong đồng bào Khmer.`
                             },
                             {
                                 type: 'hightlight',
@@ -1523,7 +1478,7 @@ export default [
                                         }
                                     },
                                     {
-                                        hightlight: 'lễ Phật',
+                                        hightlight: 'lễ Phật Đản',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/S%C6%A1n%20Th%C3%B4ng/21.jpg',
@@ -1703,11 +1658,6 @@ export default [
                         link: '/tieng-viet/figure/1',
                     },
                     {
-                        id: 2,
-                        title: 'Huyện Tiểu Cần',
-                        link: '/tieng-viet/map',
-                    },
-                    {
                         id: 3,
                         title: 'Dân tộc Khmer',
                         link: '/tieng-viet/figure/8/product/26',
@@ -1728,7 +1678,7 @@ export default [
                 view: 100,
                 contents: [
                     {
-                        title: 'Sơ lượt tiểu sử',
+                        title: 'Sơ lược tiểu sử',
                         data: [
                             {
                                 type: 'grid-image',
@@ -1741,16 +1691,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Thống chế Nguyễn Văn Tồn sinh năm 1763, mất năm 1820. Tên thật là Thạch Duyên (hay còn gọi là Thạch Duồn), tục danh Tà Duồn, gốc người Khmer, vì có công nên được Nhà Nguyễn ban cho tên họ là Nguyễn Văn Tồn.  Ông là người thôn Nguyệt Lãng, huyện Vĩnh Trị (nay thuộc xã Bình Phú, huyện Càng Long, tỉnh Trà Vinh). Theo Đại Nam liệt truyện, Thống chế Nguyễn Văn Tồn có một người con tên Yên Vy.  Sách ghi chép lại rằng ông có tướng mạo khôi ngô, võ nghệ cao cường, tính tình cương trực.`,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Càng Long',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            id:'id1',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                     {
                                         hightlight: 'người Khmer',
                                         valueModal: {
@@ -1773,7 +1713,7 @@ export default [
                         ],
                     },
                     {
-                        title: 'Sơ lượt kháng chiến',
+                        title: 'Sơ lược kháng chiến',
                         data: [
                             {
                                 type: 'grid-image',
@@ -1827,12 +1767,10 @@ export default [
                                         }
                                     },
                                 ]
-                                
-                                
                             },
                             {
                                 type: 'text',
-                                value: `- Tháng 9-1787, chúa Nguyễn Ánh cho Nguyễn Văn Tồn làm Thuộc nội Cai đội để cai quản đồn Xiêm binh.Trong thời gian làm Thống quản nơi đây, ông đã huy động nhân dân Khmer khai khẩn đất hoang theo phương thức đào ao, lên liếp, chọn giồng, lập nhiều phum sóc mới, phát triển sản xuất và bảo vệ cuộc sống yên bình cho nhân dân. `
+                                value: `- Tháng 9/1787, chúa Nguyễn Ánh cho Nguyễn Văn Tồn làm Thuộc nội Cai đội để cai quản đồn Xiêm binh. Trong thời gian làm Thống quản nơi đây, ông đã huy động nhân dân Khmer khai khẩn đất hoang theo phương thức đào ao, lên liếp, chọn giồng, lập nhiều phum sóc mới, phát triển sản xuất và bảo vệ cuộc sống yên bình cho nhân dân. `
                             },
                             {
                                 type: 'text',
@@ -1840,7 +1778,7 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value: `- Tháng 11/1796, Nguyễn Văn Tồn đem bộ thuộc của mình phối hợp với các cánh quân của dinh Bình Thuận bao vây và tiến đánh bọn phản loạn của Toàn Phù, tù trưởng Ba Phủ thuộc Thuận Thành. Hai bên chiến giữ giằng co, mãi tới tháng 2-1797, quân của chúa Nguyễn Ánh giành được thắng lợi.`
+                                value: `- Tháng 11/1796, Nguyễn Văn Tồn đem bộ thuộc của mình phối hợp với các cánh quân của dinh Bình Thuận bao vây và tiến đánh bọn phản loạn của Toàn Phù, tù trưởng Ba Phủ thuộc Thuận Thành. Hai bên chiến giữ giằng co, mãi tới tháng 2/1797, quân của chúa Nguyễn Ánh giành được thắng lợi.`
                             },
                             {
                                 type: 'hightlight',
@@ -1904,7 +1842,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Tháng 5-1812, vua Gia Long đã “hạ lệnh cho Mạc Văn Tô đem quân tiến đóng ở Quang Hóa, và Thống quản đồn Uy Viễn là Nguyễn Văn Tồn giữ Thông Bình (thuộc đất Tây Ninh ngày nay)”, cùng nhau đắp lũy, tiếp ứng cho nhau, khiến quân địch sợ không dám phạm, buộc phải rút lui. `,
+                                value: `- Tháng 5/1812, vua Gia Long đã “hạ lệnh cho Mạc Văn Tô đem quân tiến đóng ở Quang Hóa, và Thống quản đồn Uy Viễn là Nguyễn Văn Tồn giữ Thông Bình (thuộc đất Tây Ninh ngày nay)”, cùng nhau đắp lũy, tiếp ứng cho nhau, khiến quân địch sợ không dám phạm, buộc phải rút lui. `,
                                 hightlightList: [
                                     {
                                         hightlight: 'hạ lệnh',
@@ -2047,11 +1985,6 @@ export default [
                         link: '/tieng-viet/figure/1',
                     },
                     {
-                        id: '2',
-                        title: 'Huyện Càng Long',
-                        link: '/tieng-viet/map',
-                    },
-                    {
                         id: '3',
                         title: 'Người Khmer',
                         link: '/tieng-viet/figure/8/product/26',
@@ -2091,16 +2024,6 @@ export default [
                                 type: 'hightlight',
                                 value: `- Nguyễn Đáng, tên thường dùng là Năm Trung, sinh ngày 16/11/1925 tại ấp Giồng Bèn, xã Huyền Hội, huyện Càng Long, tỉnh Trà Vinh. Ông sinh ra trong một gia đình nông dân nghèo. `,
                                 hightlightList: [
-                                    {
-                                        hightlight: 'huyện Càng Long',
-                                        valueModal: {
-                                            type: 'tooltip',
-                                            ref: true,
-                                            link: '/tieng-viet/map',
-                                            id:'id1',
-                                            value: 'Tìm hiểu thêm',
-                                        }
-                                    },
                                 ],
                             },
                             {
@@ -2451,11 +2374,6 @@ export default [
                         id: '1',
                         title: 'Nhân vật',
                         link: '/tieng-viet/figure/1',
-                    },
-                    {
-                        id: '2',
-                        title: 'Huyện Càng Long',
-                        link: '/tieng-viet/map',
                     },
                     {
                         id: '3',

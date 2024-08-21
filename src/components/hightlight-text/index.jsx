@@ -61,9 +61,6 @@ const HighlightText = ({ text, highlights }) => {
                                             <Link to={highlight?.valueModal?.link}>
                                                 {highlight?.valueModal?.value}
                                             </Link>
-                                            {/* <a href={highlight?.valueModal?.link} target="_blank" rel="noreferrer">
-                                                {highlight?.valueModal?.value}
-                                            </a> */}
                                         </div>
                                     }
                                 >

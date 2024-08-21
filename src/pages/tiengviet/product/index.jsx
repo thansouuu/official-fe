@@ -827,8 +827,6 @@ const Product = memo(() => {
                         {/* <EmailShareButton url={window.location.href} subject={product?.title}>
                             <EmailIcon size={32} round />
                         </EmailShareButton> */}
-
-
                         <a
                             href={`https://www.messenger.com/t/?body=${encodeURIComponent(window.location.href)}`}
                             target="_blank"
