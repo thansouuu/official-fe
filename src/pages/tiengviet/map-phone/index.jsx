@@ -734,7 +734,7 @@ const Mapphone = () => {
             </ul>
           )}
         </div>
-        <div className="button-container mb-4 w-full md:w-[30%]"> 
+        {/* <div className="button-container mb-4 w-full md:w-[30%]"> 
           <button 
             onClick={() => handleTypeMap(1)}
             className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
@@ -747,7 +747,7 @@ const Mapphone = () => {
           >
             Địa điểm
           </button>
-        </div>
+        </div> */}
 
 
 

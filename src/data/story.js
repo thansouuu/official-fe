@@ -7,14 +7,6 @@ export default [
         video2: 'https://www.thinglink.com/view/scene/1880953072440574820',
         title: 'Sự tích Ao Bà Om',
         description: 'Ngày xưa, vùng đất Trà Vinh là nơi sinh sống chủ yếu của người Khmer, có một hoàng tử tên là Pa-tu-ma-vông nổi tiếng với tính cách độc đoán và chuyên quyền...',
-        // "1,1;2,2" : [
-        //     {
-        //         "3,3;4,4": [
-        //             "5,5;6,6",
-        //             "7,7;8,8",
-        //         ],
-        //     },
-        // ],
         contents: [
             {
                 title: 'Diễn biến',
@@ -139,11 +131,19 @@ export default [
                     },
                     {
                         type: 'text',
-                        value:`- Thần KaBưl MaHaPrum vốn rất có uy thế trên thượng giới. Nay thần nghe ở dưới trần gian có kẻ hơn mình nên lấy làm ranh tỵ. Thần cho gọi hết tất cả các vị thần trở về, cấm không được xuống trần gian nghe thuyết giảng. Đồng thời thần tìm cách thử tài Thom Ma Bal. Một hôm, lúc Thom Ma Bal đang thuyết giảng cho dân chúng nghe thì Thần KaBưl MaHaPrum xuất hiện và nói :`,
+                        value:`- Thần KaBưl MaHaPrum vốn rất có uy thế trên thượng giới. Nay thần nghe ở dưới trần gian có kẻ hơn mình nên lấy làm ganh tị. Thần cho gọi hết tất cả các vị thần trở về, cấm không được xuống trần gian nghe thuyết giảng. Đồng thời thần tìm cách thử tài Thom Ma Bal. Một hôm, lúc Thom Ma Bal đang thuyết giảng cho dân chúng nghe thì Thần KaBưl MaHaPrum xuất hiện và nói :`,
                     },
                     {
                         type:'text',
-                        value: `- Ta đã nghe đồn là nhà ngươi thông minh xuất chúng, nhưng ta chưa tin về điều đó. Nay ta muốn thách thức cùng nhà ngươi; Thần liền đặt ra cho chàng trai ba câu hỏi và nói: nếu ngươi trả lời đúng thì ta sẽ chấp nhận thua nhà ngươi và tự cắt đầu mình trước mặt ngươi. Còn ngươi không trả lời được thì phải dâng mạng sống của ngươi cho ta. Ba câu hỏi đó là:`,
+                        value: `+ Ta đã nghe đồn là nhà ngươi thông minh xuất chúng, nhưng ta chưa tin về điều đó. Nay ta muốn thách thức cùng nhà ngươi.`,
+                    },
+                    {
+                        type:'text',
+                        value: `- Thần liền đặt ra cho chàng trai ba câu hỏi và nói:`,
+                    },
+                    {
+                        type:'text',
+                        value: `+ Nếu ngươi trả lời đúng thì ta sẽ chấp nhận thua nhà ngươi và tự cắt đầu mình trước mặt ngươi. Còn ngươi không trả lời được thì phải dâng mạng sống của ngươi cho ta. Ba câu hỏi đó là:`,
                     },
                     {
                         type: 'text',
@@ -151,7 +151,7 @@ export default [
                     },
                     {
                         type:'text',
-                        value: `- Hỏi xong , thần KaBưl MaHaPrum hẹn bảy ngày sẽ trở lại nghe Thom Mal Bal giải đáp, rồi bay trở về trời. Thom Mal Bal suy nghĩ suốt ngày, đêm vẫn không tìm được câu trả lời. Đến ngày thứ sáu, chàng đi lang thang từ sáng đến trưa. Quá mệt mỏi và thất vọng, chàng ngồi nghỉ dưới gốc cây thốt nốt.`,
+                        value: `- Hỏi xong, thần KaBưl MaHaPrum hẹn bảy ngày sẽ trở lại nghe Thom Mal Bal giải đáp, rồi bay trở về trời. Thom Mal Bal suy nghĩ suốt ngày, đêm vẫn không tìm được câu trả lời. Đến ngày thứ sáu, chàng đi lang thang từ sáng đến trưa. Quá mệt mỏi và thất vọng, chàng ngồi nghỉ dưới gốc cây thốt nốt.`,
                     },
                     {
                         type:'text',
@@ -187,7 +187,7 @@ export default [
                     },
                     {
                         type: 'text',
-                        value:`- Cha đã thua trí Thom Mal Bal rồi. Theo lời hứa, cha phải chết. Các con hãy cất giữ đầu của cha trong tháp trên đỉnh núi Kaylas, nơi người trần không chạm đến được. Các con hãy cẩn thận, nếu để đầu cha rơi xuống biển, biển sẽ cạn, nếu để đầu cha tung lên không trung thì trời không có mưa và nếu để đầu cha trên mặt đất thì đất sẽ khô cằn, cỏ cây không mọc được. Và hằng năm các con hãy thay phiên nhau xuống trần gian để che chở cho nhân gian thoát khỏi mọi bệnh tật và bảo vệ mùa màng được tươi tốt hơn.`,
+                        value:`+ Cha đã thua trí Thom Mal Bal rồi. Theo lời hứa, cha phải chết. Các con hãy cất giữ đầu của cha trong tháp trên đỉnh núi Kaylas, nơi người trần không chạm đến được. Các con hãy cẩn thận, nếu để đầu cha rơi xuống biển, biển sẽ cạn, nếu để đầu cha tung lên không trung thì trời không có mưa và nếu để đầu cha trên mặt đất thì đất sẽ khô cằn, cỏ cây không mọc được. Và hằng năm các con hãy thay phiên nhau xuống trần gian để che chở cho nhân gian thoát khỏi mọi bệnh tật và bảo vệ mùa màng được tươi tốt hơn.`,
                     },
                     {
                         type:'text',

@@ -689,15 +689,15 @@ const VtMap = () => {
             </ul>
           )}
         </div>
-        <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
-          {/* <div className="mb-4">
+        {/* <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
+          <div className="mb-4">
             <button 
               onClick={() => handleadvanced()}
               className="w-auto px-4 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mx-auto block"
             >
               Trải nghiệm
             </button>
-          </div> */}
+          </div>
           <div className="flex gap-4">
             <button 
               onClick={() => handleTypeMap(1)} 
@@ -712,7 +712,7 @@ const VtMap = () => {
               Địa điểm
             </button>
           </div>
-        </div> 
+        </div>  */}
 
 
       </div>

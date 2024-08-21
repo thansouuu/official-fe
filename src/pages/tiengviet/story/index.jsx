@@ -466,24 +466,6 @@ const Story = memo(() => {
     return (
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-            {/* <div className="flex flex-col gap-4 w-full "> */}
-            {/* {params.id == 101 && (
-                <div>
-                    {(() => {
-                        const values = product["1,1;2,2"];
-                        if (values && values.length > 0) {
-                            const nestedValues = values[0]["3,3;4,4"];
-                            return nestedValues.map((value, index) => (
-                                <p key={index}>{value}</p>
-                               
-                            ));
-                        }
-                        return null; 
-                    })()}
-                    <div className='h-[40px]'/>
-                </div>
-                
-            )} */}
             <div className='flex flex-col items-center'>
                 <iframe
                     className="mb-2 w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
