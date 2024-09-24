@@ -3482,7 +3482,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
-                                            value: 'Văn hóa Óc Eo là một nền văn hóa cổ hình thành và phát triển ở Nam Bộ Việt Nam từ thế kỷ 1 đến thế kỷ 7 sau Công Nguyên...',
+                                            value: 'Văn hóa Óc Eo là một nền văn hóa cổ hình thành và phát triển ở Nam Bộ Việt Nam từ thế kỷ 1 đến thế kỷ 7 sau Công Nguyên.',
                                         },
                                     },
 
@@ -3958,7 +3958,7 @@ export default [
                     {
                         id:3,
                         title:'Ba Động',
-                        link: ' /tieng-viet/figure/2/product/38',
+                        link: '/tieng-viet/figure/2/product/38',
                     },
                 ],
             }, 
@@ -8965,7 +8965,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
-                                            value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5  m lịch hằng năm.',
+                                            value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5 âm lịch hằng năm.',
                                         },
                                     },
                                     {
@@ -9006,10 +9006,6 @@ export default [
                     {
                         title: 'Dân tộc',
                         link: '/tieng-viet/figure/8',
-                    },
-                    {
-                        title: 'Trà Vinh',
-                        link: '/tieng-viet/map',
                     },
                     {
                         title: 'Quan Công',
@@ -9203,7 +9199,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: ' /tieng-viet/figure/4/product/39',
+                                            link: '/tieng-viet/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10204,7 +10200,7 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Nhiều đình, chùa là nơi Thiên Địa Hội họp bàn và tổ chức nhiều hoạt động yêu nước chống Pháp. Phong trào thu hút đông đảo nông dân địa phương, dân lưu tán, dân nghèo, thành thị, tiểu thương, thợ thủ công chuyên nghiệp và bán chuyên nghiệp như cắt tóc, sửa xe, phu khuân vác, người chạy hàng, công nhân trong các xí nghiệp, cả những người làm nghề bói toán, cúng bái... là người Kinh, người Khmer, người Hoa. Tuy nhiên, do nhiều nguyên nhân khách quan và chủ quan, phong trào đấu tranh của nhân dân Trà Vinh chưa giành được thắng lợi.`,
+                                value: `- Nhiều đình, chùa là nơi Thiên Địa Hội họp bàn và tổ chức nhiều hoạt động yêu nước chống Pháp. Phong trào thu hút đông đảo nông dân địa phương, dân lưu tán, dân nghèo, thành thị, tiểu thương, thợ thủ công chuyên nghiệp và bán chuyên nghiệp như cắt tóc, sửa xe, phu khuân vác, người chạy hàng, công nhân trong các xí nghiệp, cả những người làm nghề bói toán, cúng bái ... là người Kinh,  người Khmer, người Hoa. Tuy nhiên, do nhiều nguyên nhân khách quan và chủ quan, phong trào đấu tranh của nhân dân Trà Vinh chưa giành được thắng lợi.`,
                                 hightlightList: [
                                     {
                                         hightlight: 'người Kinh',
@@ -10963,7 +10959,7 @@ export default [
                     },
                     {
                         title: 'Chùa Hang',
-                        link: ' /tieng-viet/figure/6/product/20',
+                        link: '/tieng-viet/figure/6/product/20',
                     },
                 ],
             },

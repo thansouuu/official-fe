@@ -58,7 +58,9 @@ const Mapphone = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
-
+  const [typeMap,setTypeMap]=useState(1);
+  const [marker,setMarker]=useState([]);
+  const [map, setMap] = useState(null);
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
@@ -69,22 +71,10 @@ const Mapphone = () => {
       return [];
     }
   };
-
-  
-
-  // Fetching the list of coordinates for the user direction
   const getListLocationUserForDirection = async () => {
     try {
-      // console.log('userlocationdata ',isLoggedIn);
-      // if (!isLoggedIn) return [];
-      // console.log('login ',isLoggedIn);
-      // const token = localStorage.getItem('accessToken');
       const userId  = localStorage.getItem('userId');
-      // mutate();
-      // const userId=data?.data?._id;
       console.log('id ',userId);
-      
-      // const userId=data?.data?._id;
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
       return convertLocationsToPoints(response.data);
     } catch (error) {
@@ -180,22 +170,6 @@ const Mapphone = () => {
  
 
   useEffect(() => {
-    // const scripts = {
-    //   script: document.createElement('script'),
-    //   link: document.createElement('link'),
-    // };
-
-    // // Cấu hình thẻ script
-    // scripts.script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.js';
-    // scripts.script.defer = true;
-    // document.body.appendChild(scripts.script);
-
-    // // Cấu hình thẻ link
-    // scripts.link.href = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.css';
-    // scripts.link.rel = 'stylesheet';
-    // document.head.appendChild(scripts.link);
-
-
     const script = document.createElement('script');
     script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.js';
     script.onload = () => {
@@ -211,100 +185,71 @@ const Mapphone = () => {
       document.head.removeChild(script);
     };
   }, []);
-
-
-
-
-
+  
   const initializeMap = async () => {
     console.log('Initializing map');
     vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
-    const map = new vtmapgl.Map({
+    var mapInstance = new vtmapgl.Map({
       container: 'map',
       style: vtmapgl.STYLES.VTRANS,
       center: [106.31371494579435, 9.92895623029051],
       zoom: 13,
       preserveDrawingBuffer: true
     });
-      const geolocateControl = new vtmapgl.GeolocateControl({
+
+    setMap(mapInstance); // Lưu map vào state
+
+    const mapStyleControl = new vtmapgl.MapStyleControl();
+    mapInstance.addControl(mapStyleControl);
+
+    const geolocateControl = new vtmapgl.GeolocateControl({
       positionOptions: {
         enableHighAccuracy: true
       },
       trackUserLocation: true,
-      showUserLocation:true
+      showUserLocation: true,
+      showAccuracyCircle: false
     });
-    // new geolocateControl(trackUserLocation?);
-    // new GeolocateControl.options(showUserLocation);
-    
-      map.addControl(geolocateControl);
-      map.on("load", function () {
-        geolocateControl.trigger(1); // add this if you want to fire it by code instead of the button
-      });
-      geolocateControl.on("geolocate", locateUser);
-  
-      function locateUser(e) {
-          const longitude = e.coords.longitude;
-          const latitude = e.coords.latitude;
-          setTdX(longitude);
-          setTdY(latitude);
-          // geolocateControl.trigger(0);
-          map.removeControl(geolocateControl);
-      }
-      
-     
-      const scale = new vtmapgl.ScaleControl({
-        maxWidth: 80,
-        unit: 'metric'
+
+    mapInstance.addControl(geolocateControl);
+
+    geolocateControl.on("geolocate", locateUser);
+
+    function locateUser(e) {
+        const longitude = e.coords.longitude;
+        const latitude = e.coords.latitude;
+        setTdX(longitude);
+        setTdY(latitude);
+        // Di chuyển bản đồ đến vị trí người dùng
+        mapInstance.flyTo({
+            center: [longitude, latitude],
+            zoom: 15
         });
-      map.addControl(scale);
+    }
 
+    const scale = new vtmapgl.ScaleControl({
+      maxWidth: 80,
+      unit: 'metric'
+    });
+    mapInstance.addControl(scale);
 
-      // const direction = new Directions({
-      //   accessToken: vtmapgl.accessToken,
-      //   interactive: false,
-      //   alternatives: false,
-      //   controls: {
-      //     profileSwitcher: false
-      //   },
-      //   profile: 'driving'
-      // });
-      
-      // map.addControl(direction, 'top-left');
-      // // direction.deactive();
-      // map.on('load', () => {
-      //   direction.setOrigin([106.02222,9.894042]);
-      //   direction.addWaypoint(0, [106.30402,9.91769]);
-      //   direction.addWaypoint(1, [105.98233,9.894804]);
-      //   direction.setDestination([106.30402,9.91769]);
-      // })
-
-
-    // const navigationControl = new vtmapgl.NavigationControl();
-    // map.addControl(navigationControl, 'top-left');
-
-    const roadDrawerControl  = new vtmapgl.RoadDrawerControl({
+    const roadDrawerControl = new vtmapgl.RoadDrawerControl({
       accessToken: vtmapgl.accessToken,
       mode: 'driving',
       activeState: false,
       addable: false,
     });
 
-    map.addControl(roadDrawerControl);
-    setRoadDrawerControl(roadDrawerControl);    
+    mapInstance.addControl(roadDrawerControl);
+    setRoadDrawerControl(roadDrawerControl);
     roadDrawerControl.deactive();
-    // setlistLngLat(await getListLocationUserForDirection());
     
-    // setAnimatePoints(animatePoints);
-
-
     const points = await getListLocationUserForDirection();
     console.log('Points:', points);
 
     const locationsData = await getListLocation();
-    // const Destination = setDestination(points, locationsData);
-    // console.log('destination ',Destination);
 
-    map.on('load', () => {
+    mapInstance.on('load', () => {
       console.log('Map loaded');
       setMapLoaded(true);
       if (points && points.length > 0) {
@@ -316,30 +261,19 @@ const Mapphone = () => {
         }
       }
     });
-
-
   };
 
-
-
-  // const token = localStorage.getItem('accessToken');
-
   const handleSave = async () => {
-    // const userId  = localStorage.getItem('userId');
     const userId=data?.data?._id;
     console.log(userId);
     // const points = toDo
     //   .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
     //   .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
-    const points = toDo.map(task => [task.longitude, task.latitude]);
+      const points = toDo.map(task => [task.longitude, task.latitude]);
     if (!isLoggedIn) {
-      toast.info('Vui lòng đăng nhập để lưu hành trình!');
+      toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
     }
-    // if (!token ) {
-    //   toast.error('Vui lòng đăng nhập để lưu hành trình!');
-    //   return;
-    // }
     try {
       const response = await axios.post(`https://historic-be.onrender.com/api/locations/${userId}`, {points});
       toast.success('Danh sách hành trình đã được lưu');
@@ -349,29 +283,72 @@ const Mapphone = () => {
     }
   };
 
+  const removeMarkers = () => {
+    marker.forEach(marker => marker.remove());
+    setMarker([]); // Xóa mảng `testing` sau khi đã remove tất cả các marker
+  };
+
+  const addMarker = () => {
+    if (!map) {
+      console.error('Map is not initialized');
+      return;
+    }
+    removeMarkers();
+    const points = toDo.map(task => [task.longitude, task.latitude]);
+
+    const newMarkers = points.map((lngLat, index) => {
+      const el = document.createElement('div');
+      // el.innerHTML = `<div class="custom-marker"><img src="/destination.png"><span>Marker ${index + 1}</span></div>`;
+      el.innerHTML = `<div class="custom-marker" style="position: relative; width: 55px; height: 55px;">
+        <span style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); z-index: 1; padding: 2px 5px; border-radius: 3px; background-color: white;">${index}</span>
+        <img src="/destination.png" style="width: 55px; height: 55px; border-radius: 50%;">
+      </div>`;
+
+      el.addEventListener('click', () => {
+        const spanContent = el.querySelector('span').innerText; // Lấy nội dung của thẻ span
+        const markerIndex = parseInt(spanContent, 10);
+        const matchedLocation = locationData.find(location => location.name === toDo[markerIndex].name);
+        if (matchedLocation) setSelectedLocation(matchedLocation);
+          if (matchedLocation === undefined) {
+            setSelectedLocation((prevLocation) => ({
+              ...prevLocation,
+              name: 'Đây là vị trí của bạn',
+            }));
+          }
+
+      });
+
+      return new vtmapgl.Marker(el)
+        .setLngLat(lngLat)
+        .addTo(map); 
+    });
+    setMarker(newMarkers);
+  };
+
   useEffect(() => {
     if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
       setlistLngLat(points);
-      console.log('update bay ',listLngLat);
-      // animatePoints.addTo(mapp);
-      // const locationsData = await getListLocation();
-      // const Destination = setDestination(points, locationData);
-      // console.log('update data ',Destination);
-      console.log('Updating toDo:', toDo);
       try {
-        if (points.length > 0 && points[0].length === 2) {
-          console.log('Setting points from toDo:', points);
-          roadDrawerControl.setPoints(points);
-        } else if (points.length===0){
+        if (typeMap===1) {
+          removeMarkers();
+          if (points.length > 0 && points[0].length === 2) {
+            console.log('Setting points from toDo:', points);
+            roadDrawerControl.setPoints(points);
+          } else if (points.length===0){
+            roadDrawerControl.setPoints([]);
+            console.error('Invalid points format:', points);
+          }
+        }
+        else {
           roadDrawerControl.setPoints([]);
-          console.error('Invalid points format:', points);
+          addMarker();
         }
       } catch (error) {
         console.error('Error updating points:', error);
       }
     }
-  }, [toDo, roadDrawerControl, mapLoaded]);
+  }, [toDo, roadDrawerControl, mapLoaded,typeMap]);
 
 
 
@@ -428,55 +405,71 @@ const Mapphone = () => {
 
     
 
-  const handleClick = () => {
-    setIsAdd(prevState => !prevState);
-    if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.info('Đã xóa vị trí bạn khỏi chuyến đi');
-    if (isadd) {
-      setToDo((prevToDo) => {
-        const filteredToDo = prevToDo.filter(item => item.name !== 'Vị trí của bạn');
-        if (filteredToDo.length > 0) {
-          const lastItem = filteredToDo.slice(-1)[0];
-          const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
-          return [...filteredToDo, updatedLastItem];
-        }
-        return [...filteredToDo, { name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
-      });
-    }
-    else {
-      const toMove = toDo.filter(item => item.longitude === td_x && item.latitude === td_y);
-      const remaining = toDo.filter(item => !(item.longitude === td_x && item.latitude === td_y));
-      const newToDo = remaining.concat(toMove);
-      setToDo(newToDo);
-      toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
-      setTimeout(() => {
-        setToDo(prevToDo =>
-          prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
-        );
-      toast.dismiss(); // Ẩn thông báo trước
-      toast.success('Thao tác đã hoàn tất.');
-      }, 200);
-    }
-    console.log('data from todo to update point when click add postition ', toDo);
-    if (roadDrawerControl && mapLoaded) {
-      const points = toDo.map(task => [task.longitude, task.latitude]);
-      
-      console.log('pretoDo',toDo);
-      console.log('Updating points:', points);
-      setlistLngLat(points);
-      try {
-        if (points.length > 0 && points[0].length === 2) {
-          console.log('Setting points from toDo:', points);
-          roadDrawerControl.setPoints(points);
-        } else if (points.length===0) {
-          roadDrawerControl.setPoints([]);
-          console.error('Invalid points format:', points);
-        }
-      } catch (error) {
-        console.error('Error updating points:', error);
+    const handleClick = () => {
+      setIsAdd(prevState => !prevState);
+      if (isadd) {
+        if (td_x===null && td_y===null) {setIsAdd(prevState => !prevState);toast.error('Vui lòng thêm vị trí hiện tại ở nút trên bản đồ'); return;}
+        else toast.success('Đã thêm vị trí bạn vào chuyến đi'); 
       }
-    } 
-
-  };
+      else toast.warning('Đã xóa vị trí bạn khỏi chuyến đi');
+      
+      if (isadd) {
+        setToDo((prevToDo) => {
+          const filteredToDo = prevToDo.filter(item => item.name !== 'Vị trí của bạn');
+          if (filteredToDo.length > 0) {
+            const lastItem = filteredToDo.slice(-1)[0];
+            const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
+            return [updatedLastItem,...filteredToDo];
+          }
+          return [{ name: 'Vị trí của bạn', longitude: td_x, latitude: td_y },...filteredToDo];
+        });
+      }
+      else {
+        const toMove = toDo.filter(item => item.longitude === td_x && item.latitude === td_y);
+        const remaining = toDo.filter(item => !(item.longitude === td_x && item.latitude === td_y));
+        const newToDo = remaining.concat(toMove);
+        setToDo(newToDo);
+  
+    // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
+        toast.info('Thao tác của bạn đang chậm lại, vui lòng đợi...');
+  
+    // Tạo khoảng nghỉ 1 giây trước khi lọc dữ liệu
+        setTimeout(() => {
+          setToDo(prevToDo =>
+            prevToDo.filter(item => item.longitude !== td_x || item.latitude !== td_y)
+          );
+  
+          // Thông báo cho người dùng rằng thao tác đã hoàn tất
+          toast.dismiss(); // Ẩn thông báo trước
+          toast.success('Thao tác đã hoàn tất.');
+        }, 200);
+      }
+      if (roadDrawerControl && mapLoaded) {
+        const points = toDo.map(task => [task.longitude, task.latitude]);
+        console.log('pretoDo',toDo);
+        console.log('Updating points:', points);
+        setlistLngLat(points);
+        try {
+          if (typeMap===1) {
+            removeMarkers();
+            if (points.length > 0 && points[0].length === 2) {
+              console.log('Setting points from toDo:', points);
+              roadDrawerControl.setPoints(points);
+            } else if (points.length===0) {
+              roadDrawerControl.setPoints([]);
+              console.error('Invalid points format:', points);
+            }
+          }
+          else {
+            roadDrawerControl.setPoints([]);
+            addMarker();
+          }
+        } catch (error) {
+          console.error('Error updating points:', error);
+        }
+      }
+  
+    };
 
 
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -605,11 +598,18 @@ const Mapphone = () => {
       return "undefined";
     }
 
-    const [typeMap,setTypeMap]=useState(1);
+    
 
     const handleTypeMap=(e)=>{
       setTypeMap(e);
     }
+    const handleadvanced=()=>{
+      if (isLoggedIn) navigate(`/tieng-viet/map-advanced`);
+      else toast.info('Bạn phải đăng nhập để tiếp tục');
+    }
+    useEffect(() => {
+      initializeMap();
+    }, []);
 
   return (
     <div className="relative h-full w-full flex flex-col">
@@ -734,20 +734,30 @@ const Mapphone = () => {
             </ul>
           )}
         </div>
-        {/* <div className="button-container mb-4 w-full md:w-[30%]"> 
-          <button 
-            onClick={() => handleTypeMap(1)}
-            className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
-          >
-            Hành trình
-          </button>
-          <button 
-            onClick={() => handleTypeMap(2)}
-            className={`flex-1 px-4 py-2 my-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 2 ? 'bg-green-600 text-black hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-105 active:scale-95' : 'bg-green-400 text-gray-800 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300'}`}
-          >
-            Địa điểm
-          </button>
-        </div> */}
+        <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
+          {/* <div className="mb-4">
+            <button 
+              onClick={() => handleadvanced()}
+              className="w-auto px-4 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mx-auto block"
+            >
+              Trải nghiệm
+            </button>
+          </div> */}
+          <div className="flex gap-4">
+            <button 
+              onClick={() => handleTypeMap(1)} 
+              className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 font-bold text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
+            >
+              Hành trình
+            </button>
+            <button 
+              onClick={() => handleTypeMap(2)} 
+              className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 2 ? 'bg-green-600 font-bold text-black hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-105 active:scale-95' : 'bg-green-400 text-gray-800 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300'}`}
+            >
+              Địa điểm
+            </button>
+          </div>
+        </div>
 
 
 

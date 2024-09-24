@@ -1,157 +1,195 @@
 .flex {
-    display: flex;
-  }
-  
-  .items-stretch {
-    align-items: stretch;
-  }
-  
-  .space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-  }
-  
-  .md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0rem * var(--tw-space-x-reverse));
-    margin-left: calc(0rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
-  
-  .items-center {
-    align-items: center;
-  }
-  
-  .py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  
-  .w-full {
-    width: 100%;
-  }
-  
-  .max-w-4xl {
-    max-width: 56rem;
-  }
-  
-  .md\:flex-row {
-    flex-direction: row;
-  }
-  
-  .flex-col {
-    flex-direction: column;
-  }
-  
-  .list-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  
-  .card {
-    text-align: center;
-    padding-top: 1em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-  }
-  
-  .card.list-card-done {
-    background-color: rgb(202, 248, 202);
-  }
-  
-  ul .task {
-    display: block;
-    border: 1px solid red;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  ul .task {
-    display: flex;
-    align-items: center;
-    border: 1px solid red;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 5px;
-    position: relative;
-    font-size: 14px;
-    background-color: #b9b2b2;
-  }
-  
-  ul .task-1 {
-    display: block;
-    border: 1px solid red;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  ul .task-1 {
-    display: flex;
-    align-items: center;
-    border: 1px solid red;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 5px;
-    position: relative;
-    font-size: 14px;
-  }
-  
-  ul .task::before {
-    content: '';
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    background-color: #e3dfdf;
-    position: absolute;
-    left: -1.5em;
-    top: 50%;
-    transform: translateY(-35%);
-  }
-  
-  .task {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    list-style-type: disc;
-    list-style-position: inside;
-  }
-  
-  .task::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 10px;
-    width: 2px;
-    height: 100%;
-  }
-  
-  .task::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: -15px;
-    width: 2px;
-    height: 22px;
-    border-left: 2px dotted #9b8383;
-  }
-  
-  .task:last-child::after {
-    display: none;
-  }
-  
-  /* .indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom {
+  display: flex;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0rem * var(--tw-space-x-reverse));
+  margin-left: calc(0rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.location{
+  bottom: 421px;
+  position: absolute;
+  right: 1px;
+  height: 56px;
+  width: 56px;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.md\:flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.list-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card {
+  text-align: center;
+  padding-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.card.list-card-done {
+  background-color: rgb(202, 248, 202);
+}
+
+ul .task {
+  display: block;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+ul .task {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  position: relative;
+  font-size: 14px;
+  background-color: #b9b2b2;
+}
+
+ul .task-1 {
+  display: block;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+ul .task-1 {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  position: relative;
+  font-size: 14px;
+}
+
+ul .task::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #e3dfdf;
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  transform: translateY(-35%);
+}
+
+.task {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.task::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 2px;
+  height: 100%;
+}
+
+.task::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  width: 2px;
+  height: 22px;
+  border-left: 2px dotted #9b8383;
+}
+
+.task:last-child::after {
+  display: none;
+}
+
+#toggleAnimationBtn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #40babd;
+  border: 1px solid #40babd;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+#toggleAnimationBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Container chứa các nút */
+.button-container {
+  background-color: #f9fafb; /* Màu nền cho div */
+  border-radius: 0.5rem; /* Bo tròn góc của div */
+  padding: 1rem; /* Padding cho div */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng cho div */
+  display: flex; /* Hiển thị các nút theo hàng ngang */
+  gap: 1rem; /* Khoảng cách giữa các nút */
+}
+
+/* .indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom {
     display: none;
   } */
   
@@ -165,31 +203,52 @@
 
 
 
-  #toggleAnimationBtn {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background: #40babd;
-    border: 1px solid #40babd;
-    color: #fff !important;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.5;
-    cursor: pointer;
-  }
-  #toggleAnimationBtn:focus {
-      outline: none;
-      box-shadow: none;
-  }
+
   
-  /* Container chứa các nút */
-  .button-container {
-    background-color: #f9fafb; /* Màu nền cho div */
-    border-radius: 0.5rem; /* Bo tròn góc của div */
-    padding: 1rem; /* Padding cho div */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng cho div */
-    display: flex; /* Hiển thị các nút theo hàng ngang */
-    gap: 1rem; /* Khoảng cách giữa các nút */
-  }
-  
-  
+.match-parent {
+    width: 80%;
+    min-width: 850px !important;
+    min-height: 500px !important;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.controls {
+    width: 20%;
+    padding: 16px 0;
+    background: white;
+    box-shadow: 7px 0px 7px -2px rgba(0,0,0,0.31);
+}
+
+.options-area {
+padding: 8px;
+border-bottom: solid 1px lightgray;
+}
+
+.input-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.input-form input, .input-form select {
+    width: 200px;
+    height: 24px;
+    padding: 0 8px;
+margin-left: 8px;
+box-sizing: border-box;
+}
+
+.input-form button {
+width: 200px;
+margin-left: 8px;
+}
+
+#routing-panel {
+max-height: calc(100vh - 180px);
+overflow: auto;
+}

@@ -26,6 +26,14 @@
   align-items: center;
 }
 
+.location{
+  bottom: 421px;
+  position: absolute;
+  right: 1px;
+  height: 56px;
+  width: 56px;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -126,6 +134,9 @@ ul .task::before {
   margin-bottom: 10px;
   list-style-type: disc;
   list-style-position: inside;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: grab;
 }
 
 .task::before {

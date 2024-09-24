@@ -15,28 +15,7 @@ const containerStyle = {
 const VtMap = () => {
   const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
-
-    // useEffect(() => {
-    //   const token = localStorage.getItem('accessToken');
-    //   if (!token) {
-    //     setShowAlert(true);
-    //     navigate('/tieng-viet/account');
-    //   }
-    // }, [navigate]);
-  
-    // useEffect(() => {
-    //   if (showAlert) {
-    //     toast.warning('Bạn cần đăng nhập để truy cập trang này');
-    //     setShowAlert(false);
-    //   }
-    // }, [showAlert]);
-  
-    // Nếu không có token thì sẽ không render gì cả
-    
-    // if (!token) {
-    //   return null;
-    // }
-    const token = localStorage.getItem('accessToken');
+  const token = localStorage.getItem('accessToken');
   const [locations, setLocations] = useState([]);
   const [coordinates, setCoordinates] = useState([]);
   const [locationNames, setLocationNames] = useState([]);
@@ -58,7 +37,8 @@ const VtMap = () => {
   const [locationData,setLocationData]=useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
   const [mapLoaded, setMapLoaded] = useState(false);
-
+  const [marker,setMarker]=useState([]);
+  const [typeMap,setTypeMap]=useState(1);
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
@@ -77,6 +57,7 @@ const VtMap = () => {
     try {
       const userId  = localStorage.getItem('userId');
       const response = await axios.get(`https://historic-be.onrender.com/api/locations/direction/${userId}`);
+      console.log('starting...',isLoggedIn);
       return convertLocationsToPoints(response.data);
     } catch (error) {
       console.error('Error fetching coordinates:', error);
@@ -128,9 +109,6 @@ const VtMap = () => {
   }, [locations, coordinates]);
 
 
-  
-
-
   const replaceSvgWithImage = () => {
     const markers = document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom');
     markers.forEach(marker => {
@@ -165,24 +143,8 @@ const VtMap = () => {
     return () => observer.disconnect();
   }, []); 
  
-
+  
   useEffect(() => {
-    // const scripts = {
-    //   script: document.createElement('script'),
-    //   link: document.createElement('link'),
-    // };
-
-    // // Cấu hình thẻ script
-    // scripts.script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.js';
-    // scripts.script.defer = true;
-    // document.body.appendChild(scripts.script);
-
-    // // Cấu hình thẻ link
-    // scripts.link.href = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.css';
-    // scripts.link.rel = 'stylesheet';
-    // document.head.appendChild(scripts.link);
-
-
     const script = document.createElement('script');
     script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.js';
     script.onload = () => {
@@ -198,11 +160,11 @@ const VtMap = () => {
       document.head.removeChild(script);
     };
   }, []);
-
+  const [map, setMap] = useState(null);
   const initializeMap = async () => {
     console.log('Initializing map');
     vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
-    const map = new vtmapgl.Map({
+    var mapInstance = new vtmapgl.Map({
       container: 'map',
       style: vtmapgl.STYLES.VTRANS,
       center: [106.31371494579435, 9.92895623029051],
@@ -210,75 +172,59 @@ const VtMap = () => {
       preserveDrawingBuffer: true
     });
 
+    setMap(mapInstance); // Lưu map vào state
+
     const mapStyleControl = new vtmapgl.MapStyleControl();
-    map.addControl(mapStyleControl);
+    mapInstance.addControl(mapStyleControl);
 
-
-      const geolocateControl = new vtmapgl.GeolocateControl({
+    const geolocateControl = new vtmapgl.GeolocateControl({
       positionOptions: {
         enableHighAccuracy: true
       },
       trackUserLocation: true,
-      showUserLocation:true
+      showUserLocation: true,
+      showAccuracyCircle: false
     });
-    
-      map.addControl(geolocateControl);
-      map.on("load", function () {
-        geolocateControl.trigger(); // add this if you want to fire it by code instead of the button
-      });
-      geolocateControl.on("geolocate", locateUser);
-  
-      function locateUser(e) {
-          const longitude = e.coords.longitude;
-          const latitude = e.coords.latitude;
-          setTdX(longitude);
-          setTdY(latitude);
-          // geolocateControl.trigger(0);
-          map.removeControl(geolocateControl);
-      }
-    
-      const scale = new vtmapgl.ScaleControl({
-        maxWidth: 80,
-        unit: 'metric'
-      });
-      map.addControl(scale);
 
+    mapInstance.addControl(geolocateControl);
 
-      // const direction = new Directions({
-      //   accessToken: vtmapgl.accessToken,
-      //   interactive: false,
-      //   alternatives: false,
-      //   controls: {
-      //     profileSwitcher: false
-      //   },
-      //   profile: 'driving'
-      // });
-      
-      // map.addControl(direction, 'top-left');
-      // // direction.deactive();
-      // map.on('load', () => {
-      //   direction.setOrigin([106.02222,9.894042]);
-      //   direction.addWaypoint(0, [106.30402,9.91769]);
-      //   // direction.addWaypoint(1, [105.98233,9.894804]);
-      //   direction.setDestination([106.30402,9.91769]);
-      // })
+    geolocateControl.on("geolocate", locateUser);
 
-    const roadDrawerControl  = new vtmapgl.RoadDrawerControl({
+    function locateUser(e) {
+        const longitude = e.coords.longitude;
+        const latitude = e.coords.latitude;
+        setTdX(longitude);
+        setTdY(latitude);
+        // Di chuyển bản đồ đến vị trí người dùng
+        mapInstance.flyTo({
+            center: [longitude, latitude],
+            zoom: 15
+        });
+    }
+
+    const scale = new vtmapgl.ScaleControl({
+      maxWidth: 80,
+      unit: 'metric'
+    });
+    mapInstance.addControl(scale);
+
+    const roadDrawerControl = new vtmapgl.RoadDrawerControl({
       accessToken: vtmapgl.accessToken,
       mode: 'driving',
       activeState: false,
       addable: false,
     });
 
-    map.addControl(roadDrawerControl);
-    setRoadDrawerControl(roadDrawerControl);    
+    mapInstance.addControl(roadDrawerControl);
+    setRoadDrawerControl(roadDrawerControl);
     roadDrawerControl.deactive();
+    
     const points = await getListLocationUserForDirection();
     console.log('Points:', points);
 
     const locationsData = await getListLocation();
 
-    map.on('load', () => {
+    mapInstance.on('load', () => {
       console.log('Map loaded');
       setMapLoaded(true);
       if (points && points.length > 0) {
@@ -290,10 +236,7 @@ const VtMap = () => {
         }
       }
     });
-
-
   };
-
 
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -308,36 +251,38 @@ const VtMap = () => {
     const data = draggedItem;
     if (!data) return;
 
+    // Nếu không thả đúng vị trí, sẽ thả vào cuối danh sách
+    const targetIndex = index === -1 ? (destination === 'toDo' ? toDo.length : done.length) : index;
+
     if (data.source === destination) {
-      if (destination === 'toDo') {
-        const updated = [...toDo];
-        const [removed] = updated.splice(data.index, 1);
-        updated.splice(index, 0, removed);
-        setToDo(updated);
-      } else {
-        const updated = [...done];
-        const [removed] = updated.splice(data.index, 1);
-        updated.splice(index, 0, removed);
-        setDone(updated);
-      }
+        if (destination === 'toDo') {
+            const updated = [...toDo];
+            const [removed] = updated.splice(data.index, 1);
+            updated.splice(targetIndex, 0, removed);
+            setToDo(updated);
+        } else {
+            const updated = [...done];
+            const [removed] = updated.splice(data.index, 1);
+            updated.splice(targetIndex, 0, removed);
+            setDone(updated);
+        }
     } else {
-      if (destination === 'toDo') {
-        setDone((prev) => prev.filter((task) => task.name !== data.task.name));
-        setToDo((prev) => {
-          const updated = [...prev];
-          updated.splice(index, 0, data.task);
-          return updated;
-        });
-      } else {
-        setToDo((prev) => prev.filter((task) => task.name !== data.task.name));
-        setDone((prev) => {
-          const updated = [...prev];
-          updated.splice(index, 0, data.task);
-          return updated;
-        });
-      }
+        if (destination === 'toDo') {
+            setDone((prev) => prev.filter((task) => task.name !== data.task.name));
+            setToDo((prev) => {
+                const updated = [...prev];
+                updated.splice(targetIndex, 0, data.task);
+                return updated;
+            });
+        } else {
+            setToDo((prev) => prev.filter((task) => task.name !== data.task.name));
+            setDone((prev) => {
+                const updated = [...prev];
+                updated.splice(targetIndex, 0, data.task);
+                return updated;
+            });
+        }
     }
-    setDraggedItem(null);
   };
 
   const getDropIndex = (event, destinationList) => {
@@ -345,9 +290,11 @@ const VtMap = () => {
     const offset = event.clientY - rect.top;
     const height = rect.height;
     const totalItems = destinationList.length;
-    const ratio = offset / height;
+
+    const ratio = Math.min(Math.max(offset / height, 0), 1); // Đảm bảo giá trị trong khoảng [0, 1]
     const index = Math.floor(ratio * totalItems);
-    return index;
+    
+    return index;;
   };
 
   const handleSave = async () => {
@@ -370,23 +317,72 @@ const VtMap = () => {
     }
   };
 
+  const removeMarkers = () => {
+    marker.forEach(marker => marker.remove());
+    setMarker([]); // Xóa mảng `testing` sau khi đã remove tất cả các marker
+  };
+
+  const addMarker = () => {
+    if (!map) {
+      console.error('Map is not initialized');
+      return;
+    }
+    removeMarkers();
+    const points = toDo.map(task => [task.longitude, task.latitude]);
+
+    const newMarkers = points.map((lngLat, index) => {
+      const el = document.createElement('div');
+      // el.innerHTML = `<div class="custom-marker"><img src="/destination.png"><span>Marker ${index + 1}</span></div>`;
+      el.innerHTML = `<div class="custom-marker" style="position: relative; width: 55px; height: 55px;">
+        <span style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); z-index: 1; padding: 2px 5px; border-radius: 3px; background-color: white;">${index}</span>
+        <img src="/destination.png" style="width: 55px; height: 55px; border-radius: 50%;">
+      </div>`;
+
+      el.addEventListener('click', () => {
+        const spanContent = el.querySelector('span').innerText; // Lấy nội dung của thẻ span
+        const markerIndex = parseInt(spanContent, 10);
+        const matchedLocation = locationData.find(location => location.name === toDo[markerIndex].name);
+        if (matchedLocation) setSelectedLocation(matchedLocation);
+          if (matchedLocation === undefined) {
+            setSelectedLocation((prevLocation) => ({
+              ...prevLocation,
+              name: 'Đây là vị trí của bạn',
+            }));
+          }
+
+      });
+
+      return new vtmapgl.Marker(el)
+        .setLngLat(lngLat)
+        .addTo(map); 
+    });
+    setMarker(newMarkers);
+  };
+
   useEffect(() => {
     if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
       setlistLngLat(points);
       try {
-        if (points.length > 0 && points[0].length === 2) {
-          console.log('Setting points from toDo:', points);
-          roadDrawerControl.setPoints(points);
-        } else if (points.length===0){
+        if (typeMap===1) {
+          removeMarkers();
+          if (points.length > 0 && points[0].length === 2) {
+            console.log('Setting points from toDo:', points);
+            roadDrawerControl.setPoints(points);
+          } else if (points.length===0){
+            roadDrawerControl.setPoints([]);
+            console.error('Invalid points format:', points);
+          }
+        }
+        else {
           roadDrawerControl.setPoints([]);
-          console.error('Invalid points format:', points);
+          addMarker();
         }
       } catch (error) {
         console.error('Error updating points:', error);
       }
     }
-  }, [toDo, roadDrawerControl, mapLoaded]);
+  }, [toDo, roadDrawerControl, mapLoaded,typeMap]);
 
 
 
@@ -436,18 +432,22 @@ const VtMap = () => {
 
   const handleClick = () => {
     setIsAdd(prevState => !prevState);
-    if (isadd) toast.success('Đã thêm vị trí bạn vào chuyến đi'); else toast.warning('Đã xóa vị trí bạn khỏi chuyến đi');
+    if (isadd) {
+      if (td_x===null && td_y===null) {setIsAdd(prevState => !prevState);toast.error('Vui lòng thêm vị trí hiện tại ở nút trên bản đồ'); return;}
+      else toast.success('Đã thêm vị trí bạn vào chuyến đi'); 
+    }
+    else toast.warning('Đã xóa vị trí bạn khỏi chuyến đi');
     
     if (isadd) {
-      setToDo((prevToDo) => {
-        const filteredToDo = prevToDo.filter(item => item.name !== 'Vị trí của bạn');
-        if (filteredToDo.length > 0) {
-          const lastItem = filteredToDo.slice(-1)[0];
-          const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
-          return [...filteredToDo, updatedLastItem];
-        }
-        return [...filteredToDo, { name: 'Vị trí của bạn', longitude: td_x, latitude: td_y }];
-      });
+        setToDo((prevToDo) => {
+          const filteredToDo = prevToDo.filter(item => item.name !== 'Vị trí của bạn');
+          if (filteredToDo.length > 0) {
+            const lastItem = filteredToDo.slice(-1)[0];
+            const updatedLastItem = { ...lastItem, name: 'Vị trí của bạn', longitude: td_x, latitude: td_y };
+            return [updatedLastItem,...filteredToDo];
+          }
+          return [{ name: 'Vị trí của bạn', longitude: td_x, latitude: td_y },...filteredToDo];
+        });
     }
     else {
       const toMove = toDo.filter(item => item.longitude === td_x && item.latitude === td_y);
@@ -475,12 +475,19 @@ const VtMap = () => {
       console.log('Updating points:', points);
       setlistLngLat(points);
       try {
-        if (points.length > 0 && points[0].length === 2) {
-          console.log('Setting points from toDo:', points);
-          roadDrawerControl.setPoints(points);
-        } else if (points.length===0) {
+        if (typeMap===1) {
+          removeMarkers();
+          if (points.length > 0 && points[0].length === 2) {
+            console.log('Setting points from toDo:', points);
+            roadDrawerControl.setPoints(points);
+          } else if (points.length===0) {
+            roadDrawerControl.setPoints([]);
+            console.error('Invalid points format:', points);
+          }
+        }
+        else {
           roadDrawerControl.setPoints([]);
-          console.error('Invalid points format:', points);
+          addMarker();
         }
       } catch (error) {
         console.error('Error updating points:', error);
@@ -558,18 +565,16 @@ const VtMap = () => {
         return sortedPrepare;
       });
     };
-
-    const [typeMap,setTypeMap]=useState(1);
-
     const handleTypeMap=(e)=>{
       setTypeMap(e);
     }
-
     const handleadvanced=()=>{
       if (isLoggedIn) navigate(`/tieng-viet/map-advanced`);
       else toast.info('Bạn phải đăng nhập để tiếp tục');
     }
-
+    useEffect(() => {
+      initializeMap();
+    }, []);
   return (
     <div className="relative h-full w-full flex flex-col">
       <div className="relative h-full w-full flex flex-col items-center">
@@ -689,15 +694,15 @@ const VtMap = () => {
             </ul>
           )}
         </div>
-        {/* <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
-          <div className="mb-4">
+        <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
+          {/* <div className="mb-4">
             <button 
               onClick={() => handleadvanced()}
               className="w-auto px-4 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mx-auto block"
             >
               Trải nghiệm
             </button>
-          </div>
+          </div> */}
           <div className="flex gap-4">
             <button 
               onClick={() => handleTypeMap(1)} 
@@ -712,8 +717,7 @@ const VtMap = () => {
               Địa điểm
             </button>
           </div>
-        </div>  */}
-
+        </div> 
 
       </div>
       

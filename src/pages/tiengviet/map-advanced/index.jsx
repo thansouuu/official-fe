@@ -6,35 +6,63 @@ import productData from '@/data/product';
 import './style-map.css'
 import { toast } from 'react-toastify';
 import { useAuth } from '@/hooks/use-auth';
-
+import $ from 'jquery';
+import { Helmet } from 'react-helmet';
 const containerStyle = {
   width: '100%',
   height: 'calc(100vh - 200px)' 
 };
 
-const Mapadvanced = () => {
-    const navigate = useNavigate();
-    const [showAlert, setShowAlert] = useState(false);
-    const token = localStorage.getItem('accessToken');
-    const [locations, setLocations] = useState([]);
-    const [coordinates, setCoordinates] = useState([]);
-    const [locationNames, setLocationNames] = useState([]);
-    const [toDo, setToDo] = useState([]);
-    const [done, setDone] = useState([]);
-    const [prepare,setPrepare]= useState([]);
-    const [draggedItem, setDraggedItem] = useState(null);
-    const [roadDrawerControl, setRoadDrawerControl] = useState(null);
-    const [listLngLat, setlistLngLat] = useState([]);
-    const [userId, setUserId] = useState('');
-    const [td_x, setTdX] = useState(null);
-    const [td_y, setTdY] = useState(null);
-    const [isadd, setIsAdd] = useState(true);
-    const [selectedLocation, setSelectedLocation] = useState(null);
-    const [locationData,setLocationData]=useState([]);
-    const { isLoggedIn, mutate, data } = useAuth();
-    const [mapLoaded, setMapLoaded] = useState(false);
-    const [destination,setDestination]=useState([]);
+const VtMap = () => {
+  const navigate = useNavigate();
+  const [showAlert, setShowAlert] = useState(false);
 
+    // useEffect(() => {
+    //   const token = localStorage.getItem('accessToken');
+    //   if (!token) {
+    //     setShowAlert(true);
+    //     navigate('/tieng-viet/account');
+    //   }
+    // }, [navigate]);
+  
+    // useEffect(() => {
+    //   if (showAlert) {
+    //     toast.warning('Bạn cần đăng nhập để truy cập trang này');
+    //     setShowAlert(false);
+    //   }
+    // }, [showAlert]);
+  
+    // Nếu không có token thì sẽ không render gì cả
+    
+    // if (!token) {
+    //   return null;
+    // }
+    const token = localStorage.getItem('accessToken');
+  const [locations, setLocations] = useState([]);
+  const [coordinates, setCoordinates] = useState([]);
+  const [locationNames, setLocationNames] = useState([]);
+  const [toDo, setToDo] = useState([]);
+  const [done, setDone] = useState([]);
+  const [prepare,setPrepare]= useState([]);
+  const [draggedItem, setDraggedItem] = useState(null);
+  const [roadDrawerControl, setRoadDrawerControl] = useState(null);
+  const [listLngLat, setlistLngLat] = useState([
+    [-74.006, 40.7128],
+    [-73.935242, 40.730610],
+    // Thêm nhiều tọa độ nếu cần
+  ]);
+  const [userId, setUserId] = useState('');
+  const [td_x, setTdX] = useState(null);
+  const [td_y, setTdY] = useState(null);
+  const [isadd, setIsAdd] = useState(true);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [locationData,setLocationData]=useState([]);
+  const { isLoggedIn, mutate, data } = useAuth();
+  const [mapLoaded, setMapLoaded] = useState(false);
+  const [marker,setMarker]=useState([]);
+  const [typeMap,setTypeMap]=useState(1);
+  const [map, setMap] = useState(null);
+  const [destination,setDestination]=useState([]);
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
@@ -99,276 +127,48 @@ const Mapadvanced = () => {
     if (locations.length > 0 && coordinates.length > 0) {
       const names = findLocationNames(locations, coordinates);
       setLocationNames(names);
-     
       setToDo(names.map((name, index) => ({ name, id: index, latitude: coordinates[index].latitude, longitude: coordinates[index].longitude })));
-      console.log('data to draw hehe ',toDo)
     }
   }, [locations, coordinates]);
 
 
   const replaceSvgWithImage = () => {
-    // Chọn tất cả các marker với class mới
-    const markers = document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-center');
-    
+    const markers = document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom');
     markers.forEach(marker => {
-      // Tìm thẻ svg trong thẻ div marker
-      const svgElement = marker.querySelector('svg');
-      if (svgElement && !marker.querySelector('img')) {
-        // Tạo thẻ img và thay thế thẻ svg
-        const imgElement = document.createElement('img');
-        imgElement.src = '/destination.png';
-        imgElement.alt = 'Location Image';
-        imgElement.style.width = '55px'; // Đặt chiều rộng
-        imgElement.style.height = '55px'; // Đặt chiều cao
-        marker.replaceChild(imgElement, svgElement);
+      const spans = marker.querySelectorAll('span');
+      if (spans.length >= 2) {
+        const secondSpan = spans[1];
+        const svgElement = secondSpan.querySelector('svg');
+        if (svgElement && !secondSpan.querySelector('img')) {
+          const imgElement = document.createElement('img');
+          imgElement.src = '/destination.png';
+          imgElement.alt = 'Location Image';
+          imgElement.style.width = '55px'; // Đặt chiều rộng
+          imgElement.style.height = '55px'; // Đặt chiều cao
+          secondSpan.replaceChild(imgElement, svgElement);
+        }
       }
     });
   };
-  
-  
 
   useEffect(() => {
+    // Gọi hàm để thay thế SVG và điều chỉnh kích thước ảnh
     replaceSvgWithImage();
+
+    // Sử dụng MutationObserver để theo dõi các thay đổi động trong DOM
     const observer = new MutationObserver(() => replaceSvgWithImage());
     observer.observe(document.body, {
       childList: true,
       subtree: true
     });
+
+    // Dọn dẹp khi component unmount
     return () => observer.disconnect();
   }, []); 
- 
-
-  useEffect(() => {
-    const scripts = {
-      script: document.createElement('script'),
-      link: document.createElement('link'),
-    };
-
-    // Cấu hình thẻ script
-    scripts.script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.js';
-    scripts.script.defer = true;
-    document.body.appendChild(scripts.script);
-
-    // Cấu hình thẻ link
-    scripts.link.href = 'https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.css';
-    scripts.link.rel = 'stylesheet';
-    document.head.appendChild(scripts.link);
-
-
-    const script = document.createElement('script');
-    script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.js';
-    script.onload = () => {
-      console.log('Script loaded successfully');
-      initializeMap();
-    };
-    script.onerror = () => {
-      console.error('Failed to load the script');
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  const initializeMap = async () => {
-    console.log('Initializing map');
-    vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
-    const map = new vtmapgl.Map({
-      container: 'map',
-      style: vtmapgl.STYLES.VTRANS,
-      center: [106.31371494579435, 9.92895623029051],
-      zoom: 13,
-      preserveDrawingBuffer: true
-    });
-
-    const direction = new Directions({
-        accessToken: vtmapgl.accessToken,
-        interactive: false,
-        alternatives: false,
-        controls: {
-          profileSwitcher: false
-        },
-        profile: 'driving'
-    });
-      
-    map.addControl(direction, 'top-left');
-
-    const mapStyleControl = new vtmapgl.MapStyleControl();
-    map.addControl(mapStyleControl);
-    
-    const scale = new vtmapgl.ScaleControl({
-        maxWidth: 80,
-        unit: 'metric'
-    });
-    map.addControl(scale);
-
-    const coordinatesData = await getListLocationUserForDirection();
-    const locationsData = await getListLocation();
-    setLocationData(locationsData);
-    // Tạo một mảng des từ locationsData và coordinatesData
-    const des = coordinatesData.map(([long, lat]) => {
-        // Tìm phần tử trong locationsData có longitude và latitude khớp với long và lat hiện tại
-        const location = locationsData.find(loc => loc.longitude === long && loc.latitude === lat);
-      
-        // Nếu tìm thấy phần tử phù hợp, trả về đối tượng với tên từ locationsData và long, lat từ coordinatesData
-        // Nếu không tìm thấy, trả về đối tượng với tên 'vị trí của bạn'
-        return location ? { name: location.name, long, lat } : { name: 'Vị trí của bạn', long, lat };
-      });
-    setDestination(des);
-    
-  console.log('desssss ',des);
-
-  
-    des.forEach(data => {
-        // Tạo phần tử div cho marker
-        const el = document.createElement('div');
-        el.innerHTML = `
-      <div class="flex flex-col items-center text-center">
-        <span class="text-sm font-bold mb-1">${data.name}</span>
-        <img src="/destination.png" alt="Marker Image" class="w-[55px] h-[55px] object-cover">
-      </div>
-    `;
-
-        // Thêm sự kiện click vào marker
-        el.setAttribute('data-name', data.name);
-
-// Thêm sự kiện click vào marker
-        el.addEventListener('click', function() {
-          console.log('click ',locationData);
-        // Lấy giá trị từ thuộc tính data-name
-            const name = el.getAttribute('data-name');
-        // window.alert(name);
-            const location = locationData.find(loc => loc.name === name);
-    
-            if (location) {
-            setSelectedLocation(location);
-            } else {
-            setSelectedLocation((prevLocation) => ({
-                ...prevLocation,
-                name: 'Đây là vị trí của bạn',
-            }));
-            }
-        });
-
-        // Khởi tạo và thêm marker vào bản đồ
-        new vtmapgl.Marker(el)
-          .setLngLat([data.long, data.lat])
-          .addTo(map);
-      });
-
-      console.log('toDo prepare hành trình ',des);
-      map.on('load', () => {
-        if (des.length >= 2) { // Đảm bảo mảng có ít nhất 2 phần tử (điểm đầu và điểm cuối)
-          direction.setOrigin([des[0].long, des[0].lat]); // Điểm đầu
-          direction.setDestination([des[des.length - 1].long, des[des.length - 1].lat]); // Điểm cuối
-          des.slice(1, des.length - 1).forEach((point, index) => {
-            direction.addWaypoint(index, [point.long, point.lat]);
-          });
-        } else {
-          console.error('Mảng toDo không đủ phần tử để thiết lập hành trình.');
-        }
-      });
-      const getLatLngData = () => {
-        const firstOlElement = document.querySelector('ol.vtmap-directions-steps');
-
-        if (firstOlElement) {
-            const liElements = firstOlElement.querySelectorAll('li.vtmap-directions-step');
-            // Tạo mảng chứa dữ liệu từ các thẻ <li>
-            const latLngArray = Array.from(liElements).map(li => ({
-              lat: li.getAttribute('data-lat'),
-              lng: li.getAttribute('data-lng')
-            }));
-
-            // Cập nhật state với mảng latLngArray
-            setlistLngLat(latLngArray);
-        }
-        };
-    
-        getLatLngData();
-
-        console.log('veeeee ',listLngLat);
-
-        const animatePoints = new vtmapgl.AnimationPoints({
-          path: listLngLat,
-          iconUrl: 'https://img.icons8.com/office/2x/circled-up.png',
-          iconSize: 0.35,
-          strokeColor: '#007cbf',
-          strokeOpacity: 1,
-          strokeWeight: 2,
-          replay: true,
-          velocity: 1200
-      }).addTo(map);
-  
-      map.on('load', () => {
-          animatePoints.start();
-      })
-      
-
-
-      
-      
-  };
-
-
-  useEffect(() => {
-    const handleClick = (event) => {
-      const clickedDiv = event.currentTarget;
-  
-      // Tìm thẻ <div> con bên trong thẻ <div> chính
-      const childDiv = clickedDiv.querySelector('div');
-  
-      // Nếu có thẻ <div> con, tìm thẻ <span> trong thẻ <div> đó
-      if (childDiv) {
-        const firstSpan = childDiv.querySelector('span');
-  
-        if (firstSpan) {
-          const spanText = firstSpan.textContent.trim(); // Sử dụng trim() để loại bỏ khoảng trắng thừa
-  
-          const location = locationData.find(loc => loc.name === spanText);
-  
-          if (location) {
-            setSelectedLocation(location);
-          } else {
-            setSelectedLocation((prevLocation) => ({
-              ...prevLocation,
-              name: 'Đây là vị trí của bạn',
-            }));
-          }
-        }
-      }
-    };
-  
-    const addClickListener = () => {
-      const divElements = document.querySelectorAll('.vtmapgl-marker .vtmapgl-marker-anchor-center');
-      divElements.forEach((element) => {
-        if (!element.hasAttribute('data-listener-attached')) {
-          element.addEventListener('click', handleClick);
-          element.setAttribute('data-listener-attached', 'true');
-        }
-      });
-    };
-  
-    // Khởi tạo MutationObserver để theo dõi sự thay đổi trong DOM
-    const observer = new MutationObserver(() => {
-      addClickListener();
-    });
-  
-    observer.observe(document.body, { childList: true, subtree: true });
-  
-    // Cleanup function
-    return () => {
-      observer.disconnect();
-      document.querySelectorAll('.vtmapgl-marker .vtmapgl-marker-anchor-center').forEach((element) => {
-        element.removeEventListener('click', handleClick);
-      });
-    };
-  }, []);
-  
 
   useEffect(() => {
     // Chỉ thực hiện khi listLngLat rỗng
-    if (listLngLat.length === 0) {
+    // if (listLngLat.length === 0) {
         const getLatLngData = () => {
             const firstOlElement = document.querySelector('ol.vtmap-directions-steps');
 
@@ -396,10 +196,263 @@ const Mapadvanced = () => {
         return () => {
             observer.disconnect();
         };
-    }
-}, [listLngLat]); // Thêm listLngLat vào dependency array
+    // }
+}, [listLngLat]); 
+ 
 
+  useEffect(() => {
+    const script1 = document.createElement('script');
+    script1.src = "https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.js";
+    script1.async = false;
+    document.head.appendChild(script1);
+
+    // Thêm thẻ <link> cho CSS
+    const link1 = document.createElement('link');
+    link1.href = "https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.css";
+    link1.rel = "stylesheet";
+    document.head.appendChild(link1);
+
+    const link2 = document.createElement('link');
+    link2.href = "https://files-maps.viettel.vn/sdk/vtmap-gl-directions/v4.1.0/vtmap-gl-directions.css";
+    link2.rel = "stylesheet";
+    link2.type = "text/css";
+    document.head.appendChild(link2);
+
+    const script = document.createElement('script');
+    script.src = 'https://files-maps.viettel.vn/sdk/vtmap-gl-js/v1.13.1/vtmap-gl.js';
+    script.onload = () => {
+      console.log('Script loaded successfully');
+      initializeMap();
+    };
+    script.onerror = () => {
+      console.error('Failed to load the script');
+    };
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  const removeMarkers = () => {
+    marker.forEach(marker => marker.remove());
+    setMarker([]); // Xóa mảng `testing` sau khi đã remove tất cả các marker
+  };
+
+  const addMarker = () => {
+    if (!map) {
+      console.error('Map is not initialized');
+      return;
+    }
+    removeMarkers();
+    const points = toDo.map(task => [task.longitude, task.latitude]);
+
+    const newMarkers = points.map((lngLat, index) => {
+      const el = document.createElement('div');
+      // el.innerHTML = `<div class="custom-marker"><img src="/destination.png"><span>Marker ${index + 1}</span></div>`;
+      el.innerHTML = `<div class="custom-marker" style="position: relative; width: 55px; height: 55px;">
+        <span style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; padding: 2px 5px; border-radius: 3px;">Marker ${index}</span>
+        <img src="/destination.png" style="width: 55px; height: 55px; border-radius: 50%;">
+      </div>`;
+      el.addEventListener('click', () => {
+        const spanContent = el.querySelector('span').innerText;
+        const markerIndex = parseInt(spanContent.split(' ')[1], 10);
+        const matchedLocation = locationData.find(location => location.name === toDo[markerIndex].name);
+        if (matchedLocation) setSelectedLocation(matchedLocation);
+          if (matchedLocation === undefined) {
+            setSelectedLocation((prevLocation) => ({
+              ...prevLocation,
+              name: 'Đây là vị trí của bạn',
+            }));
+          }
+
+      });
+
+      return new vtmapgl.Marker(el)
+        .setLngLat(lngLat)
+        .addTo(map); 
+    });
+    setMarker(newMarkers);
+  };
+  const [direction,setTest]=useState(null);
+  const initializeMap = async () => {
+    console.log('Initializing map');
+    vtmapgl.accessToken = '272ee553681f6e55bfa579bda02ebdd4';
+    var mapInstance = new vtmapgl.Map({
+      container: 'map',
+      style: vtmapgl.STYLES.VTRANS,
+      center: [106.31371494579435, 9.92895623029051],
+      zoom: 13,
+      preserveDrawingBuffer: true
+    });
+
+    setMap(mapInstance); // Lưu map vào state
+    
+
+    const mapStyleControl = new vtmapgl.MapStyleControl();
+    mapInstance.addControl(mapStyleControl);
+
+    // const direction = new Directions({
+    //   accessToken: vtmapgl.accessToken,
+    //   interactive: false,
+    //   alternatives: false,
+    //   controls: {
+    //     profileSwitcher: false
+    //   },
+    //   profile: 'driving'
+    // });
+    // mapInstance.addControl(direction, 'top-left');
+
+    const geolocateControl = new vtmapgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true,
+      showUserLocation: true,
+      showAccuracyCircle: false
+    });
+
+    mapInstance.addControl(geolocateControl);
+
+    geolocateControl.on("geolocate", locateUser);
+
+    function locateUser(e) {
+        const longitude = e.coords.longitude;
+        const latitude = e.coords.latitude;
+        setTdX(longitude);
+        setTdY(latitude);
+        // Di chuyển bản đồ đến vị trí người dùng
+        mapInstance.flyTo({
+            center: [longitude, latitude],
+            zoom: 15
+        });
+    }
+
+    const scale = new vtmapgl.ScaleControl({
+      maxWidth: 80,
+      unit: 'metric'
+    });
+    mapInstance.addControl(scale);
+
+    var direction = new Directions({
+      accessToken: vtmapgl.accessToken,
+      profile: 'cycling',
+      interactive: true,
+      alternatives: true,
+      routingPanel: document.getElementById('routing-panel')
+    });
+    setTest(direction);
+    direction.onAdd(mapInstance);
+
+    const coordinatesData = await getListLocationUserForDirection();
+    const locationsData = await getListLocation();
+    setLocationData(locationsData);
+    const des = coordinatesData.map(([long, lat]) => {
+        const location = locationsData.find(loc => loc.longitude === long && loc.latitude === lat);
+        return location ? { name: location.name, long, lat } : { name: 'Vị trí của bạn', long, lat };
+      });
+    setDestination(des);
+    console.log('des ',des);
+
+    mapInstance.on('style.load', () => {
+      const waiting = () => {
+      if (!mapInstance.isStyleLoaded()) {
+        setTimeout(waiting, 200);
+      } else {
+        if (des.length >= 2) { // Đảm bảo mảng có ít nhất 2 phần tử (điểm đầu và điểm cuối)
+          direction.setOrigin([des[0].long, des[0].lat]); // Điểm đầu
+          direction.setDestination([des[des.length - 1].long, des[des.length - 1].lat]); // Điểm cuối
+          des.slice(1, des.length - 1).forEach((point, index) => {
+            direction.addWaypoint(index, [point.long, point.lat]);
+          });
+        } else {
+          console.error('Mảng toDo không đủ phần tử để thiết lập hành trình.');
+        }
+        // direction.setOrigin([106.68309, 10.784739]);
+        // direction.setDestination([106.68866802228689, 10.785274343222795]);
+      }
+      };
+      waiting();
+    });
+    
+    
+    
+    // mapInstance.on('load', () => {
+    //   if (des.length >= 2) { // Đảm bảo mảng có ít nhất 2 phần tử (điểm đầu và điểm cuối)
+    //     direction.setOrigin([des[0].long, des[0].lat]); // Điểm đầu
+    //     direction.setDestination([des[des.length - 1].long, des[des.length - 1].lat]); // Điểm cuối
+    //     des.slice(1, des.length - 1).forEach((point, index) => {
+    //       direction.addWaypoint(index, [point.long, point.lat]);
+    //     });
+    //   } else {
+    //     console.error('Mảng toDo không đủ phần tử để thiết lập hành trình.');
+    //   }
+    // });
+
+
+  };
+ 
+  useEffect(() => {
+    addMarker();
+  }, [toDo]);
+  
+
+  // useEffect(() => {
+  //   const animatePoints = new vtmapgl.AnimationPoints({
+  //     path: listLngLat,
+  //     iconUrl: 'https://img.icons8.com/office/2x/circled-up.png',
+  //     iconSize: 0.35,
+  //     strokeColor: '#007cbf',
+  //     strokeOpacity: 1,
+  //     strokeWeight: 2,
+  //     replay: true,
+  //     velocity: 1200
+  //   }).addTo(map);
+  //   map.on('load', () => {
+  //     animatePoints.start();
+  //   });
+  // }, [listLngLat]);
+
+    useEffect(() => {
+      const handleClick = (event) => {
+        const clickedDiv = event.currentTarget;
+        const firstSpan = clickedDiv.querySelector('span');
+        if (firstSpan) {
+          const a=toDo[firstSpan.textContent];
+          const location = locationData.find(loc => loc.name === a.name);
+          if (location) setSelectedLocation(location);
+          if (location === undefined) {
+            setSelectedLocation((prevLocation) => ({
+              ...prevLocation,
+              name: 'Đây là vị trí của bạn',
+            }));
+          }
+        }
+      };
+    
+      const addClickListener = () => {
+        const divElements = document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom');
+        divElements.forEach((element) => {
+          if (!element.hasAttribute('data-listener-attached')) {
+            element.addEventListener('click', handleClick);
+            element.setAttribute('data-listener-attached', 'true');
+          }
+        });
+      };
       
+      const observer = new MutationObserver(() => {
+        addClickListener();
+      });
+    
+      observer.observe(document.body, { childList: true, subtree: true });
+    
+      return () => {
+        observer.disconnect();
+        document.querySelectorAll('.indexed-marker.vtmapgl-marker.vtmapgl-marker-anchor-bottom').forEach((element) => {
+          element.removeEventListener('click', handleClick);
+        });
+      };
+    }, [toDo]);
 
 
   const getIdAddress = (title) => {
@@ -436,15 +489,19 @@ const Mapadvanced = () => {
     setSelectedLocation(null);
   };
 
-    const [typeMap,setTypeMap]=useState(1);
+  const handleTypeMap=(e)=>{
+    setTypeMap(e);
+  }
 
-    const handleTypeMap=(e)=>{
-      setTypeMap(e);
-    }
+  useEffect(() => {
+    initializeMap();
+  }, []);
+
+    
 
   return (
     <div className="relative h-full w-full flex flex-col">
-        {console.log('li ',listLngLat)}
+      {console.log('list ',listLngLat)}
       <div className="relative h-full w-full flex flex-col items-center">
         <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
           <div className="flex gap-4">
@@ -452,7 +509,7 @@ const Mapadvanced = () => {
               onClick={() => handleTypeMap(1)} 
               className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 font-bold text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
             >
-              Mô phỏng
+              Mô phỏng 
             </button>
             <button 
               onClick={() => handleTypeMap(2)} 
@@ -461,10 +518,9 @@ const Mapadvanced = () => {
               Thực tế
             </button>
           </div>
-        </div>
+        </div> 
+
       </div>
-      
-      {/* <div id="map" className="w-[80%] h-[810px]"></div> */}
       <div className="flex-1 relative">
         <div id="map" className="w-full h-[610px]"></div>
         <div
@@ -516,4 +572,4 @@ function convertLocationsToPoints(data) {
   return locations.map(location => location.split(',').map(Number));
 }
 
-export default Mapadvanced;
+export default VtMap;
