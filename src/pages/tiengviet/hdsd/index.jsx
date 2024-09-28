@@ -57,6 +57,12 @@ const Hdsd = () => {
                                 <b>Danh mục</b> là nơi lưu trữ bài viết có đính kèm video thuyết minh (có hổ trợ ngôn ngữ ký hiệu cho người khiếm thính), các bình luận từ người dùng khác và trò chơi học tập liên quan.
                                 {' '}
                                 <span className="inline-block align-middle">
+                                    <img src="https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/ch%E1%BB%A9c%20n%C4%83ng/hometown.png" className="w-4 h-4" />
+                                </span>
+                                {' '}
+                                <b>Giáo dục địa phương</b> là nơi lưu trữ thông tin được phân chia theo từng chủ đề theo chương trình Giáo dục địa phương của các cấp Tiểu học, Trung học cơ sở, Trung học phổ thông.  
+                                {' '}
+                                <span className="inline-block align-middle">
                                     <img src="https://raw.githubusercontent.com/thansouuu/data-image/main/ch%E1%BB%A9c%20n%C4%83ng/story.png" className="w-4 h-4" />
                                 </span>
                                 {' '}

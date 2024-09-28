@@ -15,7 +15,7 @@ export default [
                 title: 'Chị Út Tịch',
                 tour:'6',
                 game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
-                view: 100,
+                view: 300,
                 description: 'Tên thật là Nguyễn Thị Út, sinh ngày 19/4/1931 tại xã Tam Ngãi, quận Cầu Kè, tỉnh Cần Thơ. Dưới thời...',
                 contents: [
                     {
@@ -2595,7 +2595,7 @@ export default [
                 title: 'Nguyễn Thiện Thành',
                 description: 'Anh hùng Lao động, Thầy thuốc Nhân dân, Giáo sư bác sĩ Nguyễn Thiện Thành (bí danh Nguyễn Minh Nhân,...',
                 game: 'https://wordwall.net/vi/embed/2a2fba459afe49d68e44d76079b8e5ee?themeId=21&templateId=69&fontStackId=0',
-                view: 100,
+                view: 200,
                 contents: [
                     {
                         title: 'Tiểu sử',
