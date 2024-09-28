@@ -22,6 +22,7 @@ import List from '@/pages/tiengviet/list';
 import Story from '@/pages/tiengviet/story';
 import Mapphone from '@/pages/tiengviet/map-phone';
 import Mapadvanced from '@/pages/tiengviet/map-advanced';
+import Hometown from '@/pages/tiengviet/hometown';
 
 export const routes = [
     {
@@ -55,6 +56,10 @@ export const routes = [
             { 
                 path: 'figure', 
                 element: <Figure />, 
+            },
+            { 
+                path: 'hometown', 
+                element: <Hometown />, 
             },
             { 
                 path: 'figure/:id', 

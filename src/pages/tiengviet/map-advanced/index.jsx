@@ -166,38 +166,74 @@ const VtMap = () => {
     return () => observer.disconnect();
   }, []); 
 
-  useEffect(() => {
-    // Chỉ thực hiện khi listLngLat rỗng
-    // if (listLngLat.length === 0) {
-        const getLatLngData = () => {
-            const firstOlElement = document.querySelector('ol.vtmap-directions-steps');
+//   useEffect(() => {
+//     // Chỉ thực hiện khi listLngLat rỗng
+//     // if (listLngLat.length === 0) {
+//         const getLatLngData = () => {
+//             const firstOlElement = document.querySelector('ol.vtmap-directions-steps');
 
-            if (firstOlElement) {
-                const liElements = firstOlElement.querySelectorAll('li.vtmap-directions-step');
-                // Tạo mảng chứa dữ liệu từ các thẻ <li>
-                const latLngArray = Array.from(liElements).map(li => ({
-                    lat: li.getAttribute('data-lat'),
-                    lng: li.getAttribute('data-lng')
-                }));
+//             if (firstOlElement) {
+//                 const liElements = firstOlElement.querySelectorAll('li.vtmap-directions-step');
+//                 // Tạo mảng chứa dữ liệu từ các thẻ <li>
+//                 const latLngArray = Array.from(liElements).map(li => ({
+//                     lat: li.getAttribute('data-lat'),
+//                     lng: li.getAttribute('data-lng')
+//                 }));
 
-                // Cập nhật state với mảng latLngArray
-                setlistLngLat(latLngArray);
-            }
-        };
+//                 // Cập nhật state với mảng latLngArray
+//                 setlistLngLat(latLngArray);
+//             }
+//         };
 
-        getLatLngData();
+//         getLatLngData();
 
-        const observer = new MutationObserver(() => {
-            getLatLngData();
-        });
+//         const observer = new MutationObserver(() => {
+//             getLatLngData();
+//         });
 
-        observer.observe(document.body, { childList: true, subtree: true });
+//         observer.observe(document.body, { childList: true, subtree: true });
 
-        return () => {
-            observer.disconnect();
-        };
-    // }
-}, [listLngLat]); 
+//         return () => {
+//             observer.disconnect();
+//         };
+//     // }
+// }, [listLngLat]); 
+
+const getLatLngData = () => {
+  const firstOlElement = document.querySelector('ol.vtmap-directions-steps');
+
+  if (firstOlElement) {
+      const liElements = firstOlElement.querySelectorAll('li.vtmap-directions-step');
+      // Tạo mảng chứa dữ liệu từ các thẻ <li>
+      const latLngArray = Array.from(liElements).map(li => ({
+          lat: li.getAttribute('data-lat'),
+          lng: li.getAttribute('data-lng')
+      }));
+
+      // Cập nhật state với mảng latLngArray
+      setlistLngLat(latLngArray);
+  }
+};
+
+useEffect(() => {
+  // Chỉ thực hiện khi listLngLat rỗng
+  if (listLngLat.length === 0) {
+      
+
+      getLatLngData();
+
+      const observer = new MutationObserver(() => {
+          getLatLngData();
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      return () => {
+          observer.disconnect();
+      };
+  }
+}, []); // useEffect sẽ chỉ chạy 1 lần khi component mounted
+
  
 
   useEffect(() => {
@@ -334,15 +370,24 @@ const VtMap = () => {
     });
     mapInstance.addControl(scale);
 
-    var direction = new Directions({
+    // var direction = new Directions({
+    //   accessToken: vtmapgl.accessToken,
+    //   profile: 'cycling',
+    //   interactive: true,
+    //   alternatives: true,
+    //   routingPanel: document.getElementById('routing-panel')
+    // });
+    // setTest(direction);
+    // direction.onAdd(mapInstance);
+
+    const direction = new Directions({
       accessToken: vtmapgl.accessToken,
-      profile: 'cycling',
-      interactive: true,
-      alternatives: true,
-      routingPanel: document.getElementById('routing-panel')
+      controls: {
+        profileSwitcher: false
+      },
+      profile: 'driving'
     });
-    setTest(direction);
-    direction.onAdd(mapInstance);
+    mapInstance.addControl(direction, 'top-left');
 
     const coordinatesData = await getListLocationUserForDirection();
     const locationsData = await getListLocation();
@@ -359,12 +404,15 @@ const VtMap = () => {
       if (!mapInstance.isStyleLoaded()) {
         setTimeout(waiting, 200);
       } else {
+        console.log('yess');
         if (des.length >= 2) { // Đảm bảo mảng có ít nhất 2 phần tử (điểm đầu và điểm cuối)
           direction.setOrigin([des[0].long, des[0].lat]); // Điểm đầu
           direction.setDestination([des[des.length - 1].long, des[des.length - 1].lat]); // Điểm cuối
           des.slice(1, des.length - 1).forEach((point, index) => {
             direction.addWaypoint(index, [point.long, point.lat]);
           });
+          getLatLngData();
+          console.log('lol ',listLngLat);
         } else {
           console.error('Mảng toDo không đủ phần tử để thiết lập hành trình.');
         }

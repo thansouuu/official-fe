@@ -15,6 +15,7 @@ import Bot from '@/components/utils/Bot';
 import Manual from '@/components/utils/Manual';
 import Travel from '@/components/utils/Travel';
 import Story from '@/components/utils/Story';
+import Hometown from '@/components/utils/Hometown';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -213,6 +214,17 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
+                                to="/tieng-viet/hometown"
+                                className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
+                                aria-current="page"
+                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                            >
+                                <Hometown />
+                                <div>Giáo dục địa phương</div>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
                                 to="/tieng-viet/story"
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
@@ -255,17 +267,6 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 <div>Chatbot</div>
                             </Link>
                         </li>
-                        {/* <li>
-                            <Link
-                                to="/tieng-viet/vt-map"
-                                className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
-                                aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
-                            >
-                                <Travel />
-                                <div>Khám phá du lịch</div>
-                            </Link>
-                        </li> */}
                         <li>
                             <Link
                                 to="/tieng-viet/find"

@@ -19,6 +19,7 @@ import { useNavigate } from 'react-router-dom';
 import Dropdown from '@/components/dropdown';
 import Travel from '@/components/utils/Travel';
 import Story from '@/components/utils/Story';
+import Hometown from '@/components/utils/Hometown';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const navigate = useNavigate();
@@ -79,6 +80,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     >
                         <Category />
                         Danh mục
+                    </li>
+                </Link>
+                <Link
+                    to="/tieng-viet/hometown"
+                    onClick={() => {
+                        navigate(`/tieng-viet/hometown`);
+                        window.location.reload();
+                    }}
+                >
+                    <li
+                        className={`p-4 hover:bg-red-300 flex items-center gap-4 font-bold border-t border-black ${
+                            location.pathname.includes('categories') ? 'bg-gray-900' : ''
+                        }`}
+                    >
+                        <Hometown />
+                        Giáo dục địa phương
                     </li>
                 </Link>
                 <Link

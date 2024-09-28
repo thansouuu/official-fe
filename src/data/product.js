@@ -12036,5 +12036,778 @@ export default [
             },
         ],
     },
-   
+    {
+        figureId: 12,
+        type:1,
+        data: [
+        ],
+    },
+    {
+        figureId: 13,
+        type:1,
+        data: [
+        ],
+    },
+    {
+        figureId: 14,
+        type:1,
+        data: [
+            {
+                id: '27',
+                type:2,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-1.jpg',
+                video: '',
+                title: 'Người Hoa',
+                description: ' Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
+                game: 'https://wordwall.net/vi/embed/14dd1d6b4e8e428f846332b63ce9e526?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Dân cư và nhà ở',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Dân cư:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/I-1.png',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Dân tộc Hoa có 6 632 người, chiếm 0,66% dân số toàn tỉnh. Người Hoa sống tập trung nhiều nhất ở thành phố Trà Vinh và một số thị trấn. Hoạt động kinh tế chủ yếu của người Hoa là thương mại, dịch vụ và tiểu thủ công nghiệp.`,
+                                hightlightList: [
+                                ],
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Nhà ở:`,
+                            },
+                            {
+                                type: 'text',
+                                value: `- Kiến trúc nhà ở của người Hoa Trà Vinh hiện nay cũng rất đa dạng, đi theo sự phát triển của thời đại. Tuy nhiên đặc trưng cơ bản về nhà ở của người Hoa là nền gạch, cột cây, lợp ngói âm dương, ngôi nhà thường có 3 gian, gian giữa là để thờ cúng tổ tiên, 2 bên gian là dùng để sinh hoạt gia đình.`,
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Văn hóa, tín ngưỡng và lễ hội',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Chữ viết:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-chuviet-1.jpg',
+                                ],
+                            },
+                            {
+                                type : 'hightlight',
+                                value: `- Chữ Hán vẫn còn được dạy và học trong các trường .`,
+                                    hightlightList: [
+                                        {
+                                            hightlight: 'Chữ Hán',
+                                            valueModal: {
+                                                type: 'tooltip',
+                                                ref: false,
+                                                value: 'Chữ Hán, còn gọi là Hán tự, Hán văn, chữ nho, là loại văn tự ngữ tố - âm tiết ra đời ở Trung Quốc vào thiên niên kỷ thứ hai trước Công nguyên. Ngôn ngữ đầu tiên được viết bằng chữ Hán là tiếng Hán thượng cổ, một ngôn ngữ cổ đã tuyệt diệt.',
+                                            },
+                                        },
+                                    ],
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Ẩm thực:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-amthuc-1.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-amthuc-2.png',
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Ẩm thực của người Hoa rất đa dạng và phong phú, trong cuộc sống hằng ngày cũng như trong những ngày lễ Tết. Đặc trưng như bánh tổ, chè trôi nước, bánh ú, thịt khô.`,
+                            },
+                            {
+                                type : 'text',
+                                value: `- Về thức uống, người Hoa thường dùng trà xanh làm thức uống hằng ngày.`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Trang phục`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-2.jpg',
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Trong cuộc sống hằng ngày hay cũng như trong những ngày lễ, Tết, trang phục của người Hoa rất phong phú. Tuy nhiên, đặc trưng cơ bản về trang phục của người Hoa là:`,
+                            },
+                            {
+                                type : 'text',
+                                value: `- Phụ nữ mặc áo cổ viền cao, cài khuy một bên, xẻ tà cao hoặc một chiếc áo "sườn xám" may dài, ôm ngang hông, xẻ tà dưới phần đùi. Màu sắc phần lớn là màu hồng hoặc đỏ, cùng với các màu đậm.`,
+                            },
+                            {
+                                type : 'text',
+                                value: `- Ðàn ông mặc áo màu đen hay xanh đậm, cài khuy vải một bên, vai liền cổ đứng, xẻ tà hoặc kiểu áo tứ thân, xẻ giữa, cổ đứng, vai liền, có túi.`,
+                            },
+                            {
+                                type : 'text',
+                                value: `- Phụ nữ thích dùng đồ trang sức, đặc biệt là vòng tay (bằng đồng, vàng, đá, ngọc...), bông tai, dây chuyền...`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Thờ cúng:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-thocung-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-thocung-2.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Nổi bật trong các tín ngưỡng dân gian là thờ cúng tổ tiên, gia tộc, dòng họ, thờ cúng các vị thần phù hộ (thần bếp, thổ địa, thần tài...) và một số vị thánh, bồ tát (Quan Công, bà Thiên Hậu, ông Bổn, Nam Hải Quan Âm...)`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Quan Công',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/7/product/22',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Chùa miếu của người Hoa thường gắn liền với các hội quán, trường học. Ðó cũng là nơi sinh hoạt văn hóa cộng đồng, nơi diễn ra các hội lễ.`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Lễ hội:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-4.jpg',
+                                ],
+                            },
+                            {
+                                type : 'hightlight',
+                                value: `- Người Hoa ở Trà Vinh cũng giống như người Kinh và người Khmer. Trong năm có rất nhiều lễ hội và Tết. Bao gồm Tết Nguyên Đán, Tết Nguyên tiêu, Thanh minh, Tết Đoan Ngọ, lễ Vu Lan, tết Trùng Cửu, tết Đông chí.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Tết Nguyên Đán',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Hàng năm, Tết được tổ chức vào ngày mồng 1 (hay mùng 1) tháng Giêng âm lịch trên toàn nước Việt Nam và ở một vài nước khác có cộng đồng người Việt sinh sống.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Tết Nguyên tiêu',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ngày Tết Nguyên Tiêu diễn ra từ giữa đêm 14 (đêm trước trăng rằm) đến hết ngày 15 (ngày rằm) tháng giêng âm lịch.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Thanh minh',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Thời gian diễn ra Tết Thanh Minh không cố định ngày nào. Dịp lễ này bắt đầu kể từ 4-5/4 (sau khi tiết Xuân Phân kết thúc) và kéo dài tới khoảng ngày 20-21/4 Dương lịch (khi tới tiết Cốc Vũ).',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Tết Đoan Ngọ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5 âm lịch hằng năm.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'lễ Vu Lan',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Lễ Vu Lan, hay còn gọi là lễ Báo hiếu, là một ngày lễ quan trọng trong Phật giáo và văn hóa Việt Nam. Ngày lễ này diễn ra vào rằm tháng 7 âm lịch hàng năm, nhằm tưởng nhớ công ơn sinh thành, dưỡng dục của cha mẹ.',
+                                        },
+                                    },
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Sinh hoạt văn hóa truyền thống của người Hoa có nhiều thể loại như hát, múa, hài kịch... với nhiều loại nhạc cụ: tiêu, sáo, các loại đàn (tỳ bà, nhị, nguyệt...), chập chõa Hát "sơn ca" (sán cố) là hình thức được nhiều người ưa chuộng, nhất là tầng lớp thanh niên.`,
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Điều kiện kinh tế',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-2.jpg',
+                                ],
+                            },
+                            {
+                                type: 'text',
+                                value: `- Người Hoa ở vùng nông thôn chủ yếu sống bằng nghề nông, coi lúa nước là đối tượng canh tác chính, ở các thành phố, thị xã, thị trấn họ làm nghề dịch vụ, buôn bán…`,
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        title: 'Dân tộc',
+                        link: '/tieng-viet/figure/8',
+                    },
+                    {
+                        title: 'Quan Công',
+                        link: '/tieng-viet/figure/7/product/22',
+                    },
+                ],
+            },
+            {
+                id: '26',
+                type:2,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-2.jpg',
+                video: '',
+                title: 'Người Khmer',
+                description: 'Dân cư: Dân tộc Khmer có 318 231 người, chiếm hơn 31,5% dân số toàn tỉnh. Người Khmer sống tập ...',
+                game: 'https://wordwall.net/vi/embed/0f83bf07d00445ccb7fdd00d22ceeff2?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Dân cư và nhà ở',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Dân cư:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/I-dancu-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/I-dancu-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/I-dancu-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/I-dancu-4.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Dân tộc Khmer có 318 231 người, chiếm hơn 31,5% dân số toàn tỉnh. Người Khmer sống tập trung tại các phum, sóc trên các giồng cao, ven các sông rạch hoặc ven các đường giao thông, xen kẽ với các làng xóm của người Kinh. Địa bàn tập trung nhiều người Khmer nhất là ở các huyện Trà Cú, Châu Thành, Cầu Kè, Tiểu Cần, Cầu Ngang.`,
+                                hightlightList: [
+                                ],
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Giáo dục:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/I-giaoduc-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/I-giaoduc-2.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Tiếng Khmer được dạy ở nhiều trường cho học sinh.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Tiếng Khmer',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tiếng Khmer cũng gọi là tiếng Campuchia là ngôn ngữ của người Khmer và là ngôn ngữ chính thức của Campuchia.',
+                                        },
+                                    },
+                                ],
+
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Nhà ở:`,
+                            },
+                            {
+                                type: 'text',
+                                value: `- Người Khmer chủ yếu làm kinh tế nông nghiệp nên nhà ở của người Khmer có quan hệ chặt chẽ với cảnh quan nông thôn. Ngày xưa, người Khmer sống chủ yếu tập trung ở trên đất giồng cao, mặt bằng nền nhà được chọn trên mặt giồng với lớp cát pha. Trước đây, nhà của người Khmer làm đơn giản, mái lợp bằng lá dừa nước, ít nhà lợp ngói. Nhà thường làm theo kiểu mái dài về phía sau. Người Khmer thường dùng con số lẻ để định chiều cao 5 m, 7 m và cửa thường quay về hướng đông, nhưng ngày nay thì thường quay ra trục giao thông. Cách bố trí trên mặt bằng sinh hoạt của người Khmer khá đơn giản. Phần lớn cư dân làm nhà đất giống như người Kinh, người Hoa. Cách sắp đặt, tổ chức nhà ở nhìn bên ngoài có cảm giác không khác gì nhà người Kinh. Nhưng nghiên cứu, tìm hiểu kĩ thì sự bố trí có nhiều điểm riêng, mang đậm tập quán sinh hoạt của người Khmer. Bộ khung nhà khá chắc chắn, trong nhà được bài trí như sau: Nhà chia làm hai phần theo chiều ngang, một phần làm nơi ở, phần dành cho bếp núc. Phần dành để ở lại chia thành hai phần theo chiều dọc: phần phía trước, ở giữa kê bàn ghế tiếp khách, bên cạnh thường có tủ kính đựng những chiếc gối thêu vừa để trang trí vừa tiện dùng khi có khách đến chơi. Sau bộ bàn ghế tiếp khách là bàn thờ Phật. Nửa sau, bên phải là buồng của vợ chồng chủ nhà, bên trái là phòng của con chủ nhà. Sự bố trí tuy đơn giản như vậy nhưng không được phép tuỳ ý thay đổi. Ngôi nhà của người Khmer được phân loại dựa vào cấu trúc, quy mô và theo số lượng gian của ngôi nhà mà người ta phân loại thành nhà một gian, nhà hai gian, nhà ba gian.`,
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Văn hóa, tín ngưỡng và lễ hội',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Ẩm thực:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-amthuc-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-amthuc-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-amthuc-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-amthuc-4.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Hàng ngày, người Khmer ở Trà Vinh thường dùng các món ăn được chế biến từ các nguyên liệu như rau, đậu, bầu, bí, tôm, cá, thịt,… cùng một số loại gia vị và nước cốt dừa để nấu, luộc, xào, kho, làm mắm,… Các món ăn mang hương vị đặc trưng và thường được người Khmer sử dụng là mắm bò hóc (prahok), canh bồi, mắm chua, bún nước lèo,…`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'bún nước lèo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/3/product/9',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Vào các dịp lễ, Tết, người Khmer thường làm bánh tét, bánh tét cốm dẹp, bánh gừng, bánh chuối, bánh in,… bún nước lèo để dâng cúng ở chùa, ở nhà và tiếp khách. Về thức uống, hàng ngày người Khmer thường dùng các loại thức uống được nấu từ lá cây, nước thốt nốt,… hoặc nước đun sôi để nguội.`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Trang phục`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-4.jpg',
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `-  Trước đây, trong lao động hoặc sinh hoạt hằng ngày, đàn ông Khmer thường mặc quần áo bà ba đen hoặc trắng, quấn khăn rằn quanh đầu hoặc ở trần và vận xà rông kẻ sọc hay dệt hoa văn ô vuông. Phụ nữ thường mặc váy kín, quấn quanh thân từ hông và vắt về một phía, gấu váy cao trên cổ chân hoặc mặc quần áo bà ba nhuộm đen cùng chiếc khăn rằn đội đầu. Trong những ngày lễ lớn người Khmer thường mặc xăm pốt (tấm vải rộng quấn quanh thân từ hông xuống ngang đùi, phần vải phía sau kéo luồn giữa hai chân vắt ra phía trước rồi giắt lại ở hông thành một loại như chiếc quần ngắn, rộng lùng thùng); phụ nữ lớn tuổi thường mặc áo dài may bít tà, thùng áo rộng và dài ngang dưới gối, cổ áo xẻ trước, hai tay áo chặt, hai bên sườn ghép thêm bốn miếng vải từ nách đến gấu áo và quần đen(1). Ngày nay, người Khmer ở Trà Vinh thường mặc y phục như người Kinh. Trong lễ cưới, trước đây chú rể mặc xà rông và áo màu đỏ, cổ cứng, cài cúc trước ngực; cô dâu mặc xăm pốt màu tím hồng, áo dài thắm tăm pông màu đỏ thẫm, quàng khăn trắng, đội mũ cổ truyền hay loại mũ có hình dáng tháp nhọn như chiếc vương miện nhỏ. Ngày nay, chỉ có một số đám cưới, cô dâu, chú rể mặc trang phục truyền thống của dân tộc mình, còn lại mặc váy áo cưới như người Kinh.`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Tôn giáo, tín ngưỡng:`,
+                            },
+                            {
+                                type : 'hightlight',
+                                value: `- Hầu hết người Khơ-me ở Việt Nam là tín đồ Phật giáo Nam Tông. Đạo Phật có vai trò đặc biệt quan trọng trong đời sống tinh thần của người Khơ-me. Các giáo lý và những điều răn của đạo Phật đã trở thành chuẩn mực trong quan hệ giữa những người Khơ-me trong sóc.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Phật giáo Nam Tông',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phật giáo Nam truyền hay Phật giáo Nam tông, Truyền thống Phật giáo Nguyên thủy, là một thuật ngữ học thuật được dùng để chỉ một trong ba trường phái truyền thống Phật giáo lớn trên thế giới phân loại theo địa lý.',
+                                        },
+                                    },
+                                ],
+                            },
+                            {
+                                type : 'hightlight',
+                                value: `- Ngoài ra, người Khơ-me còn có tín ngưỡng và lễ hội dân gian chứa đựng nhiều yếu tố Ấn Độ giáo nhưng được lồng ghép vào Phật giáo.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Ấn Độ giáo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Ấn Độ giáo là tôn giáo lớn thứ ba thế giới.',
+                                        },
+                                    },
+                                ],
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Lễ hội:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-lehoi-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-lehoi-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-lehoi-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-lehoi-4.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-lehoi-5.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-lehoi-6.jpg',
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Người Khmer có nhiều loại hình lễ hội được tổ chức hằng năm như: lễ hội gắn với sản xuất và tôn giáo, lễ nghi nông nghiệp, nghi lễ vòng đời.`,
+                            },
+                            {
+                                type : 'hightlight',
+                                value: `- Lễ hội gắn với sản xuất và tôn giáo của người Khmer gồm có các lễ hội chủ yếu như Tết Chôl-Chnăm-Thmây (lễ mừng năm mới), lễ Sêne Đôlta (lễ cúng ông bà, tổ tiên), lễ Kathina (lễ dâng y), lễ Ok-Om-Bok (lễ cúng Trăng).`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Ok-Om-Bok',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/4/product/39',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+
+                            },
+                            {
+                                type : 'text',
+                                value: `- Lễ nghi nông nghiệp: lễ cúng lúa mới, lễ xuống đồng,…`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Nghi lễ vòng đời: Lễ mở mắt, tục cột chỉ tay con, tục đi tu ở nam giới, hôn lễ, tang lễ. Mỗi lễ hội được tổ chức long trọng, có lễ kéo dài nhiều ngày, quy mô tổ chức ngày càng lớn, thu hút du khách trong và ngoài tỉnh đến tham dự.`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'tục đi tu',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/7/product/24',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Điều kiện kinh tế',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/III-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/III-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/III-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/III-4.jpg',
+                                ],
+                            },
+                            {
+                                type: 'text',
+                                value: `- Người Khơ-me là chủ yếu sống bằng trồng lúa nước. Ngoài ra, họ có nghề đánh cá, dệt, chiếu, đan lát, dệt vải, làm đường thốt nốt và làm gốm. Kĩ thuật gốm đơn giản, sản phẩm gốm chủ yếu là đồ gia cụ, tiêu biểu nhất là bếp (Cà ràng) và nồi (Cà om).`,
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        title: 'Dân tộc',
+                        link: '/tieng-viet/figure/8',
+                    },
+                    {
+                        title: 'Bún nước lèo',
+                        link: '/tieng-viet/figure/3/product/9',
+                    },
+                    {
+                        title: 'Tục đi tu',
+                        link: '/tieng-viet/figure/7/product/24',
+                    },
+                    {
+                        title: 'Ok-Om-Bok',
+                        link: '/tieng-viet/figure/4/product/39',
+                    },
+                ],
+            },
+            {
+                id: '25',
+                type:2,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-dan%20toc-1.jpg',
+                video: '',
+                title: 'Người Kinh',
+                description: 'Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
+                game: 'https://wordwall.net/vi/embed/5a9cf02a255e4df684fc4a471508545d?themeId=21&templateId=69&fontStackId=0',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Dân cư và nhà ở',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Dân cư:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-dan%20toc-1.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung nhiều nhất tại thành phố Trà Vinh, các thị trấn và vùng đất ven các sông rạch.`,
+                                hightlightList: [
+                                ],
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Nhà ở:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-nhao-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-nhao-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-nhao-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-nha%20o-4.jpg',
+                                ],
+                            },
+                            {
+                                type: 'text',
+                                value: `- Tuỳ vào hoàn cảnh mỗi gia đình mà nhà ở của người Kinh tại tỉnh Trà Vinh có diện tích, cấu trúc và vật liệu xây dựng khác nhau. Tiêu biểu cho lối kiến trúc nhà truyền thống của người Kinh là loại nhà ba gian hai chái, nhà chữ Nhị (二) hoặc chữ Công (工), có kết cấu khung nhà bằng gỗ, nền lót gạch, mái lợp ngói hoặc lá. Cấu trúc nhà chia làm hai phần: phần trước để thờ cúng tổ tiên (thường bố trí ở gian giữa) và tiếp khách, phần sau dùng để sinh hoạt. Ngày nay, ở khu vực thành thị và nông thôn, do diện tích hạn chế nên kiểu nhà phổ biến nhất là nhà ống với vật liệu là gạch và bê tông.`,
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Văn hóa, tín ngưỡng và lễ hội',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Ẩm thực:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-amthuc-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-amthuc-2.jpg',
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Ẩm thực của người Kinh ở Trà Vinh có sự dung hoà trong cách chế biến của các miền.`,
+                            },
+                            {
+                                type : 'text',
+                                value: `- Món ăn được chế biến để giảm vị cay của người miền Trung, bớt vị mặn của người miền Bắc và mang vị ngọt ngọt của người miền Nam.`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Trong các dịp lễ, tết, giỗ chạp người Kinh thường chuẩn bị các món ăn sử dụng nguyên liệu  địa phương như: canh khổ qua dồn, gà hoặc vịt nấu cà ri, các món gỏi trộn như: ngó sen, bắp cải, củ cải trắng, củ cà rốt,… Đặc biệt, trong mâm cơm ngày tết của người Kinh thường có các món bánh tét, bánh ít, gà kho gừng, các món kiệu, đu đủ ngâm chua ngọt,…`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'bánh tét',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/3/product/11',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Về thức uống, người Kinh thường dùng trà xanh, các loại nước nấu từ các lá thuốc nam, đậu rang, râu bắp,…`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Trang phục`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-trangphuc-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-trangphuc-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-trangphuc-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-trangphuc-4.jpg',
+                                ],
+                            },
+                            {
+                                type : 'text',
+                                value: `- Trong ngày lễ, tết hoặc một số ngày lễ quan trọng của gia đình, trước đây người Kinh ở Trà Vinh thường mặc trang phục truyền thống như áo dài, khăn đóng đối với nam giới,áo dài đối với nữ giới. Ngày nay, cùng với sự du nhập của thời trang phương Tây và các nước khác cũng như phục vụ cho những hoàn cảnh lao động, sinh hoạt và các công việc khác nhau mà thường phục, trang phục của người Kinh cũng được thay từ những bộ đồ truyền thống như đồ bà ba thành áo thun, áo sơ-mi trắng, váy dài, chân váy, quần dài, quần tây... Áo dài cũng đã được cách tân ít nhiều để phù hợp nhu cầu thời trang hiện đại nhưng vẫn giữ được nét truyền thống và tôn lên được vóc dáng cũng như vẻ đẹp dịu dàng của người phụ nữ.`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Tôn giáo, tín ngưỡng:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-tongiao-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-tongiao-2.jpg',
+                                ],
+                            },
+                            {
+                                type : 'hightlight',
+                                value: `- Thờ cúng tổ tiên là tín ngưỡng quan trọng nhất. Tục thờ thổ công, táo quân, ông địa phổ biến ở nhiều nơi; nhiều gia đình thờ Thành hoàng, chùa thờ Phật,… Một bộ phận cư dân ở nông thôn hay thành thị còn theo đạo Thiên chúa, Tin lành và các tôn giáo khác như Cao Đài, Hòa Hảo....`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Cao Đài',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Đạo Cao Đài hay Cao Đài Giáo là một tôn giáo thờ Thượng đế dưới dạng một biểu tượng "Tả Nhãn" tức là con mắt bên trái được thành lập ở miền Nam Việt Nam vào năm 1926.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Hòa Hảo',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Phật giáo Hòa Hảo là một tông phái Phật giáo do Huỳnh Phú Sổ khai lập năm Kỷ Mão 1939, lấy pháp môn "Học Phật – Tu Nhân" làm căn bản và chủ trương tu hành tại gia (Tại gia cư sĩ).',
+                                        },
+                                    },
+                                ],
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Lễ hội:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-lehoi-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-lehoi-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-lehoi-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/II-lehoi-4.jpg',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Trong một năm, người Kinh ở Trà Vinh có nhiều lễ, Tết như: Tết Nguyên đán, Tết Đoan ngọ, lễ Vu lan, Tết Trung thu,… trong đó, tết Nguyên đán có quy mô lớn và thời gian kéo dài nhất. Ngoài ra, cộng đồng người Kinh ở Trà Vinh hàng năm còn tổ chức nhiều lễ hội liên quan đến tín ngưỡng của nhân dân như lễ hội Nghinh Ông, lễ Hạ Điền, lễ Thượng Điền, lễ giỗ Bác Hồ,… để tưởng nhớ công ơn của các bậc tiền nhân và cầu mong cho mọi người một năm mưa thuận, gió hoà, mùa màng bội thu, gia đình hoà thuận, yên ấm, hạnh phúc,…`,
+                                hightlightList: [
+                                    {
+                                        hightlight: 'Tết Nguyên đán',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Hàng năm, Tết được tổ chức vào ngày mồng 1 (hay mùng 1) tháng Giêng âm lịch trên toàn nước Việt Nam và ở một vài nước khác có cộng đồng người Việt sinh sống.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Tết Đoan Ngọ',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5  m lịch hằng năm.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'lễ Vu Lan',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: ' Lễ Vu Lan, hay còn gọi là lễ Báo hiếu, là một ngày lễ quan trọng trong Phật giáo và văn hóa Việt Nam. Ngày lễ này diễn ra vào rằm tháng 7 âm lịch hàng năm, nhằm tưởng nhớ công ơn sinh thành, dưỡng dục của cha mẹ.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'lễ Thượng Điền',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: false,
+                                            value: 'Lễ Thượng điền là một trong những lễ hội nông nghiệp truyền thống một số nước nông nghiệp Châu Á, được tổ chức vào thời điểm mà người dân đã hoàn thành vụ mùa và chuẩn bị cho vụ mùa mới.',
+                                        },
+                                    },
+                                    {
+                                        hightlight: 'Nghinh Ông',
+                                        valueModal: {
+                                            type: 'tooltip',
+                                            ref: true,
+                                            link: '/tieng-viet/figure/4/product/12',
+                                            value: 'Tìm hiểu thêm',
+                                        }
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Kinh tế và xã hội',
+                        data: [
+                            {
+                                type: 'bold',
+                                value: `* Hôn nhân:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/III-honnhan-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/III-honnhan-2.jpg',
+                                ],
+                            },
+                            {
+                                type: 'text',
+                                value: `- Người Việt rất coi trọng tình yêu trong trắng chung thủy. Dưới thời phong kiến thường là "cha mẹ đặt đâu còn ngồi đấy", ngày nay nam nữ tự tìm hiểu. Nghi lễ cưới xin truyền thống ở người Việt phải trải qua 4 bước cơ bản: Dạm, hỏi, cưới và lại mặt.`,
+                            },
+
+                            {
+                                type: 'bold',
+                                value: `* Điều kiện kinh tế:`,
+                            },
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/III-kinhte-1.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/III-kinhte-2.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/III-kinhte-3.jpg',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/III-kinhte-4.jpg',
+                                ],
+                            },
+                            {
+                                type: 'text',
+                                value: `- Đại đa số cư dân sống dựa vào nông nghiệp là chủ đạo, trong đó trồng trọt lúa nước là chính, kết hợp chăn nuôi, mở mang các nghề thủ công và trao đổi, buôn bán. Nông nghiệp lúa nước đã được hình thành và phát triển ở người Việt từ rất sớm. Chăn nuôi lợn, gia súc, gia cầm, thả cá... cũng rất phát triển. Người Việt nổi tiếng "có hoa tay" về nghề thủ công nghiệp, phát triển bách nghệ - trăm nghề mà nghề nào dường như cũng đạt đến đỉnh cao của sự khéo léo tài hoa. Không ít làng thủ công đã tách khỏi nông nghiệp. Chợ làng, chợ phiên, chợ huyện... rất sầm uất. Hiện nay, trong tiến trình công nghiệp hóa và hiện đại hóa đất nước các đô thị và các khu công nghiệp đang ngày càng phát triển, đời sống nhân dân ngày một khấm khá.`,
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        title: 'Dân tộc',
+                        link: '/tieng-viet/figure/8',
+                    },
+                    {
+                        title: 'Bánh tét',
+                        link: '/tieng-viet/figure/3/product/11',
+                    },
+                    {
+                        title: 'Nghinh Ông',
+                        link: '/tieng-viet/figure/4/product/12',
+                    },
+                ],
+            },
+        ],
+    },
 ]

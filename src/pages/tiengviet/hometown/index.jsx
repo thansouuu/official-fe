@@ -1,13 +1,11 @@
 import React from 'react';
-import products from '@/data/figure';
+import products from '@/data/hometown';
 import { Link } from 'react-router-dom';
 import CardContentHightlight from '@/components/card-content/card-content-hightlight';
 import Tippy from '@tippyjs/react';
 
 
-
-
-const Figure = () => {
+const Hometown = () => {
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
         {products.map((product, index) => (
@@ -37,4 +35,4 @@ const Figure = () => {
     );
 };
 
-export default Figure;
+export default Hometown;

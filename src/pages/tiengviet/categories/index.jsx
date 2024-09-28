@@ -29,9 +29,13 @@ const Categories = memo(() => {
 
     const filteredProducts = products?.filter(product => product.type === tmp);
     const sortedProducts = filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
+
+    
+
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
-            {types===1 &&
+            {console.log('param', param)}
+            {types===1 && param.id!=='12' && param.id!=='13'&& param.id!=='14'&&
                 <>
                     <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6">
                         <button 
@@ -62,7 +66,7 @@ const Categories = memo(() => {
 
                 </>
             }
-            {types===1 && 1<=tmp && tmp<=4 &&
+            {types===1 && 1<=tmp && tmp<=4 && param.id!=='12' && param.id!=='13'&& param.id!=='14'&&
                 <>
                     <div className="col-span-full p-4 bg-gray-200 rounded-lg shadow-md">
                         <div className="text-[22px] font-bold text-gray-800 text-center">
@@ -71,6 +75,97 @@ const Categories = memo(() => {
                         <div className="mt-1 text-lg text-gray-700 leading-relaxed text-justify">
                             {decrip[tmp-1].value}
                         </div>
+                    </div>
+                </>
+            }
+            { param.id==='12' &&
+                <>
+                    <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6 text-[20px]">
+                        <button 
+                            onClick={() => handleButtonClick(1)}
+                            className="px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 1
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(2)}
+                            className="px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 2
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(3)}
+                            className="px-4 py-2 my-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 3
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(4)}
+                            className="px-4 py-2 my-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 4
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(5)}
+                            className="px-4 py-2 my-2 bg-purple-500 text-white rounded hover:bg-purple-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 5
+                        </button>
+
+                    </div>
+                </>
+            }
+            { param.id==='13' &&
+                <>
+                    <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6 text-[20px]">
+                        <button 
+                            onClick={() => handleButtonClick(1)}
+                            className="px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 6
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(2)}
+                            className="px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 7
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(3)}
+                            className="px-4 py-2 my-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 8
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(4)}
+                            className="px-4 py-2 my-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 9
+                        </button>
+                    </div>
+                </>
+            }
+            { param.id==='14' &&
+                <>
+                    <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6 text-[20px]">
+                        <button 
+                            onClick={() => handleButtonClick(1)}
+                            className="px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 10
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(2)}
+                            className="px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 11
+                        </button>
+                        <button 
+                            onClick={() => handleButtonClick(3)}
+                            className="px-4 py-2 my-2 bg-red-500 text-white rounded hover:bg-red-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
+                        >
+                            Lớp 12
+                        </button>
                     </div>
                 </>
             }

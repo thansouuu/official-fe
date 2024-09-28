@@ -65,7 +65,7 @@ export default [
     {
         id: 8,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/dai-dien.jpg',
-        name: 'Dân tộc',
+        name: 'Sự kiện lịch sử',
         description:[
             {
                 value: `Khái quát các dân tộc sinh sống và làm việc tại Trà Vinh, bao gồm người Kinh, Khmer và Hoa. ...`,
