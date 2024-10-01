@@ -54,7 +54,7 @@ export default [
             },
             {
                 title: 'Người Khmer',
-                link: '/tieng-viet/figure/8/product/26',
+                link: '/tieng-viet/figure/14/product/26',
             },
         ],
     },
@@ -212,7 +212,7 @@ export default [
             },
             {
                 title: 'Người Khmer',
-                link: '/tieng-viet/figure/8/product/26',
+                link: '/tieng-viet/figure/14/product/26',
             },
         ],
     },

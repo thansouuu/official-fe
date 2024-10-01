@@ -68,15 +68,15 @@ export default [
         name: 'Sự kiện lịch sử',
         description:[
             {
-                value: `Khái quát các dân tộc sinh sống và làm việc tại Trà Vinh, bao gồm người Kinh, Khmer và Hoa. ...`,
+                value: `Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị...`,
                 hightlightList: [
                     {
                         type: 'out',
-                        hightlight: `Khái quát các dân tộc sinh sống và làm việc tại Trà Vinh, bao gồm người Kinh, Khmer và Hoa. ...`,
+                        hightlight: `Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị...`,
                         valueModal: {
                             type: 'tooltip',
                             ref: false,
-                            value: 'Khái quát các dân tộc sinh sống và làm việc tại Trà Vinh, bao gồm người Kinh, Khmer và Hoa. Khám phá sự đa dạng văn hóa, phong tục tập quán và đời sống của các cộng đồng dân tộc, làm nổi bật sự hòa hợp và đặc trưng văn hóa của tỉnh.',
+                            value: 'Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị. Những sự kiện này có thể thay đổi cục diện thế giới, như chiến tranh, cách mạng, hoặc các phát minh mang tính đột phá.',
                         },
                     },
                 ],
