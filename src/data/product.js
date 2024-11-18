@@ -11302,7 +11302,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-1.jpg',
                 video: '',
-                title: 'Người Hoa',
+                title: 'Chủ đề: dân tộc',
                 description: ' Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
                 game: 'https://wordwall.net/vi/embed/14dd1d6b4e8e428f846332b63ce9e526?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -11538,9 +11538,251 @@ export default [
                     },
                 ],
             },
+            // {
+            //     id: '27',
+            //     type:2,
+            //     tour:'0',
+            //     imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-1.jpg',
+            //     video: '',
+            //     title: 'Người Hoa',
+            //     description: ' Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
+            //     game: 'https://wordwall.net/vi/embed/14dd1d6b4e8e428f846332b63ce9e526?themeId=21&templateId=69&fontStackId=0',
+            //     view: 100,
+            //     contents: [
+            //         {
+            //             title: 'Dân cư và nhà ở',
+            //             data: [
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Dân cư:`,
+            //                 },
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/I-1.png',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type: 'hightlight',
+            //                     value: `- Dân tộc Hoa có 6 632 người, chiếm 0,66% dân số toàn tỉnh. Người Hoa sống tập trung nhiều nhất ở thành phố Trà Vinh và một số thị trấn. Hoạt động kinh tế chủ yếu của người Hoa là thương mại, dịch vụ và tiểu thủ công nghiệp.`,
+            //                     hightlightList: [
+            //                     ],
+            //                 },
+
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Nhà ở:`,
+            //                 },
+            //                 {
+            //                     type: 'text',
+            //                     value: `- Kiến trúc nhà ở của người Hoa Trà Vinh hiện nay cũng rất đa dạng, đi theo sự phát triển của thời đại. Tuy nhiên đặc trưng cơ bản về nhà ở của người Hoa là nền gạch, cột cây, lợp ngói âm dương, ngôi nhà thường có 3 gian, gian giữa là để thờ cúng tổ tiên, 2 bên gian là dùng để sinh hoạt gia đình.`,
+            //                 },
+            //             ],
+            //         },
+            //         {
+            //             title: 'Văn hóa, tín ngưỡng và lễ hội',
+            //             data: [
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Chữ viết:`,
+            //                 },
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-chuviet-1.jpg',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type : 'hightlight',
+            //                     value: `- Chữ Hán vẫn còn được dạy và học trong các trường .`,
+            //                         hightlightList: [
+            //                             {
+            //                                 hightlight: 'Chữ Hán',
+            //                                 valueModal: {
+            //                                     type: 'tooltip',
+            //                                     ref: false,
+            //                                     value: 'Chữ Hán, còn gọi là Hán tự, Hán văn, chữ nho, là loại văn tự ngữ tố - âm tiết ra đời ở Trung Quốc vào thiên niên kỷ thứ hai trước Công nguyên. Ngôn ngữ đầu tiên được viết bằng chữ Hán là tiếng Hán thượng cổ, một ngôn ngữ cổ đã tuyệt diệt.',
+            //                                 },
+            //                             },
+            //                         ],
+            //                 },
+
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Ẩm thực:`,
+            //                 },
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-amthuc-1.png',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-amthuc-2.png',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Ẩm thực của người Hoa rất đa dạng và phong phú, trong cuộc sống hằng ngày cũng như trong những ngày lễ Tết. Đặc trưng như bánh tổ, chè trôi nước, bánh ú, thịt khô.`,
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Về thức uống, người Hoa thường dùng trà xanh làm thức uống hằng ngày.`,
+            //                 },
+
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Trang phục`,
+            //                 },
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-1.jpg',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-2.jpg',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Trong cuộc sống hằng ngày hay cũng như trong những ngày lễ, Tết, trang phục của người Hoa rất phong phú. Tuy nhiên, đặc trưng cơ bản về trang phục của người Hoa là:`,
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Phụ nữ mặc áo cổ viền cao, cài khuy một bên, xẻ tà cao hoặc một chiếc áo "sườn xám" may dài, ôm ngang hông, xẻ tà dưới phần đùi. Màu sắc phần lớn là màu hồng hoặc đỏ, cùng với các màu đậm.`,
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Ðàn ông mặc áo màu đen hay xanh đậm, cài khuy vải một bên, vai liền cổ đứng, xẻ tà hoặc kiểu áo tứ thân, xẻ giữa, cổ đứng, vai liền, có túi.`,
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Phụ nữ thích dùng đồ trang sức, đặc biệt là vòng tay (bằng đồng, vàng, đá, ngọc...), bông tai, dây chuyền...`,
+            //                 },
+
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Thờ cúng:`,
+            //                 },
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-thocung-1.jpg',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-thocung-2.jpg',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type: 'hightlight',
+            //                     value: `- Nổi bật trong các tín ngưỡng dân gian là thờ cúng tổ tiên, gia tộc, dòng họ, thờ cúng các vị thần phù hộ (thần bếp, thổ địa, thần tài...) và một số vị thánh, bồ tát (Quan Công, bà Thiên Hậu, ông Bổn, Nam Hải Quan Âm...)`,
+            //                     hightlightList: [
+            //                         {
+            //                             hightlight: 'Quan Công',
+            //                             valueModal: {
+            //                                 type: 'tooltip',
+            //                                 ref: true,
+            //                                 link: '/tieng-viet/figure/7/product/22',
+            //                                 value: 'Tìm hiểu thêm',
+            //                             }
+            //                         },
+            //                     ],
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Chùa miếu của người Hoa thường gắn liền với các hội quán, trường học. Ðó cũng là nơi sinh hoạt văn hóa cộng đồng, nơi diễn ra các hội lễ.`,
+            //                 },
+
+            //                 {
+            //                     type: 'bold',
+            //                     value: `* Lễ hội:`,
+            //                 },
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-1.jpg',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-2.jpg',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-3.jpg',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-lehoi-4.jpg',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type : 'hightlight',
+            //                     value: `- Người Hoa ở Trà Vinh cũng giống như người Kinh và người Khmer. Trong năm có rất nhiều lễ hội và Tết. Bao gồm Tết Nguyên Đán, Tết Nguyên tiêu, Thanh minh, Tết Đoan Ngọ, lễ Vu Lan, tết Trùng Cửu, tết Đông chí.`,
+            //                     hightlightList: [
+            //                         {
+            //                             hightlight: 'Tết Nguyên Đán',
+            //                             valueModal: {
+            //                                 type: 'tooltip',
+            //                                 ref: false,
+            //                                 value: 'Hàng năm, Tết được tổ chức vào ngày mồng 1 (hay mùng 1) tháng Giêng âm lịch trên toàn nước Việt Nam và ở một vài nước khác có cộng đồng người Việt sinh sống.',
+            //                             },
+            //                         },
+            //                         {
+            //                             hightlight: 'Tết Nguyên tiêu',
+            //                             valueModal: {
+            //                                 type: 'tooltip',
+            //                                 ref: false,
+            //                                 value: 'Ngày Tết Nguyên Tiêu diễn ra từ giữa đêm 14 (đêm trước trăng rằm) đến hết ngày 15 (ngày rằm) tháng giêng âm lịch.',
+            //                             },
+            //                         },
+            //                         {
+            //                             hightlight: 'Thanh minh',
+            //                             valueModal: {
+            //                                 type: 'tooltip',
+            //                                 ref: false,
+            //                                 value: 'Thời gian diễn ra Tết Thanh Minh không cố định ngày nào. Dịp lễ này bắt đầu kể từ 4-5/4 (sau khi tiết Xuân Phân kết thúc) và kéo dài tới khoảng ngày 20-21/4 Dương lịch (khi tới tiết Cốc Vũ).',
+            //                             },
+            //                         },
+            //                         {
+            //                             hightlight: 'Tết Đoan Ngọ',
+            //                             valueModal: {
+            //                                 type: 'tooltip',
+            //                                 ref: false,
+            //                                 value: 'Tết Đoan Ngọ hay còn được gọi là tết Đoan Dương, được tổ chức vào giờ Ngọ, ngày mùng 5 tháng 5 âm lịch hằng năm.',
+            //                             },
+            //                         },
+            //                         {
+            //                             hightlight: 'lễ Vu Lan',
+            //                             valueModal: {
+            //                                 type: 'tooltip',
+            //                                 ref: false,
+            //                                 value: 'Lễ Vu Lan, hay còn gọi là lễ Báo hiếu, là một ngày lễ quan trọng trong Phật giáo và văn hóa Việt Nam. Ngày lễ này diễn ra vào rằm tháng 7 âm lịch hàng năm, nhằm tưởng nhớ công ơn sinh thành, dưỡng dục của cha mẹ.',
+            //                             },
+            //                         },
+            //                     ],
+            //                 },
+            //                 {
+            //                     type : 'text',
+            //                     value: `- Sinh hoạt văn hóa truyền thống của người Hoa có nhiều thể loại như hát, múa, hài kịch... với nhiều loại nhạc cụ: tiêu, sáo, các loại đàn (tỳ bà, nhị, nguyệt...), chập chõa Hát "sơn ca" (sán cố) là hình thức được nhiều người ưa chuộng, nhất là tầng lớp thanh niên.`,
+            //                 },
+            //             ],
+            //         },
+            //         {
+            //             title: 'Điều kiện kinh tế',
+            //             data: [
+            //                 {
+            //                     type: 'grid-image',
+            //                     value: [
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-1.jpg',
+            //                         'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/III-2.jpg',
+            //                     ],
+            //                 },
+            //                 {
+            //                     type: 'text',
+            //                     value: `- Người Hoa ở vùng nông thôn chủ yếu sống bằng nghề nông, coi lúa nước là đối tượng canh tác chính, ở các thành phố, thị xã, thị trấn họ làm nghề dịch vụ, buôn bán…`,
+            //                 },
+            //             ],
+            //         },
+            //     ],
+        
+            //     tags: [
+            //         {
+            //             title: 'Dân tộc',
+            //             link: '/tieng-viet/figure/8',
+            //         },
+            //         {
+            //             title: 'Quan Công',
+            //             link: '/tieng-viet/figure/7/product/22',
+            //         },
+            //     ],
+            // },
             {
                 id: '26',
-                type:2,
+                type:-1,
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-2.jpg',
                 video: '',
@@ -11793,7 +12035,7 @@ export default [
             },
             {
                 id: '25',
-                type:2,
+                type:-1,
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/I-dan%20toc-1.jpg',
                 video: '',

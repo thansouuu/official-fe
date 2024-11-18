@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState,useRef } from 'react';
+import React, { memo, useEffect, useState,useRef,useLayoutEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 
 import { Link, useParams } from 'react-router-dom';
@@ -50,6 +50,7 @@ const Product = memo(() => {
 
     // const { isLoggedIn } = useAuth();
     const [product, setProduct] = useState(null);
+    const [product_nonmain, setProductnonmain] = useState(null);
     const [isComent, setIsComemt] = useState(false);
     const [isBonus, setIsBonus] = useState(false);
     const [feedbacks, setFeedbacks] = useState([]);
@@ -208,6 +209,7 @@ const Product = memo(() => {
         const productList = productData.find((item) => item.figureId == params.figureId);
         const product = productList?.data.find((item) => item.id == params.id);
         setProduct(product);
+        
         getListFeedBack();
     }, [params]);
 
@@ -505,6 +507,60 @@ const Product = memo(() => {
         }
     }, [product]);
 
+    const contentRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+    const handleShowSource = () => {
+        setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
+      };
+
+      const typing = {
+        27: [
+            { label: "Người Kinh", value: '25' },
+            { label: "Người Hoa", value: '27' },
+            { label: "Người Khmer", value: '26' },
+        ],
+        26: [
+            { label: "Nút 1", value: '20' },
+            { label: "Nút 2", value: '25' },
+            { label: "Nút 3", value: '30' },
+            { label: "Nút 4", value: '35' },
+        ],
+    };
+
+    const [res, setRes] = useState({ label: '', value: '0' });
+    // Biến res để lưu kết quả nút bấm
+
+    const handleButtonClick = (buttonValue) => {
+        setIsVisible(prevState => !prevState);
+        // console.log('res before ',res, ' ',buttonValue);
+        
+        if (res.value===buttonValue.value) setRes({label:'',value:'0'});
+        else setRes(buttonValue); // Cập nhật giá trị res
+        
+        console.log('params ',params.figureId);
+        console.log(product);
+        // console.log('res after ',res);
+    };
+    const [maxHeight, setMaxHeight] = useState('0px');
+    useEffect(() => {
+        const productList = productData.find((item) => item.figureId == params.figureId);
+    const product = productList?.data.find((item) => item.id == res.value);
+    setProductnonmain(product);
+
+    // Sau khi setProductnonmain xong, đợi 700ms rồi tính lại chiều cao
+    setTimeout(() => {
+        if (contentRef.current) {
+            setMaxHeight(contentRef.current.scrollHeight + 'px');
+        }
+    }, 700); 
+        
+        
+    }, [res]);
+
+    // useLayoutEffect(() => {
+        
+    // }, [res]);
+
     return (
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
@@ -530,6 +586,8 @@ const Product = memo(() => {
                     </button>
                 </div>
             }
+
+            
             <h2 className="text-3xl text-center pb-4 border-b border-slate-800 flex justify-center items-center gap-2">
                 <div
                     ref={titleRef}
@@ -574,7 +632,170 @@ const Product = memo(() => {
                 )}
             </div>
 
+            {params.figureId==="14"&&<>
+                <div className="flex flex-col items-center justify-center mb-2">
+                    {typing[params.id]?.map((button, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handleButtonClick(button)}
+                            className=" w-[70%] px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 m-2"
+                        >
+                            {button.label}
+                        </button>
+                    ))}
+                </div>
+
+                <div
+                    ref={contentRef}
+                    className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
+                    style={{
+                        maxHeight:maxHeight,
+                    }}
+
+                    // style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
+                >
+                    {console.log('ditme ',product_nonmain)}
+                    {product_nonmain?.contents?.map((content, index) => (
+                        <>
+                        <FoodContent title={content.title} key={index}>
+                            {content.data?.map((item, key) => (
+                                <div key={key}>
+                                    {item.type === 'text' && <CardContentText value={item.value} />}
+                                    {item.type === 'bold' && (
+                                        <>
+                                            <p className="my-2 text-[18px]">
+                                                <i><b>{item.value}</b></i>
+                                            </p>
+                                        </>
+                                    )}
+                                    {item.type === 'hightlight' && (
+                                        <CardContentHightlight value={item.value} hightlightList={item.hightlightList} />
+                                    )}
+                                    {item.type === 'grid-image' &&
+                                        (item.value.length > 0 ? (
+                                            <div className="my-2">
+                                                <Carousel style={{ width: '100%', height: '300px' }}>
+                                                    {item.value.map((image, idx) => (
+                                                        <Carousel.Item key={idx} style={{ height: '300px' }}>
+                                                            <img
+                                                                className="d-block w-full h-full object-contain"
+                                                                onClick={() => handleModalImageCarousel(image)}
+                                                                src={image}
+                                                                alt={`Slide ${idx}`}
+                                                            />
+                                                        </Carousel.Item>
+                                                    ))}
+                                                </Carousel>
+                                            </div>
+                                        ) : (
+                                            <div className="grid grid-cols-2 gap-2">
+                                                {item.value.map((image, idx) => (
+                                                    <div className="border border-gray-200 rounded-md" key={idx}>
+                                                        <img
+                                                            alt="content-item"
+                                                            className="w-full h-[200px] object-contain rounded-md"
+                                                            src={image}
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ))}
+                                </div>
+                            ))}
+                        </FoodContent>
+                        
+                    </>
+                ))}
+                    {res.value!=='0'&&<>
+                        <FoodContent title="Trò chơi thử thách">
+                        <button
+                            className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2', {
+                                'bg-gray-300 hover:bg-gray-400': !showInfos,
+                                'bg-gray-400 hover:bg-gray-500': showInfos,
+                            })}
+                            onClick={toggleInfos}
+                        >
+                            {showInfos ? 'Ẩn thông tin thêm' : 'Hiển thị thông tin thêm'}
+                        </button>
+                        {showInfos && (
+                            <div className="mt-4">
+                                <ul>
+                                    <li>
+                                        Đặt tên trong trò chơi là gmail mà bạn dùng trong tài khoản này :{' '}
+                                        <b>{data?.data?.email}</b>
+                                    </li>
+                                    <li>
+                                        Bạn sẽ nhận được bộ ảnh đặc quyền tùy theo mức hạng mà bạn đạt được:
+                                        <div className="flex flex-col gap-4">
+                                            <div className="flex  flex-col gap-4 md:border-none border-t pt-4">
+                                                <span className="">Đối với những hạng từ 4-10, sẽ nhận được bộ ảnh:</span>
+                                                <ul className="list-none flex-wrap flex items-center gap-4">
+                                                    {imageIconDefault['good']?.map((item, index) => {
+                                                        return (
+                                                            <li key={index}>
+                                                                <img
+                                                                    src={item}
+                                                                    alt="image-icon"
+                                                                    className="w-10 h-10 rounded-full border border-gray-700"
+                                                                />
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                            <div className="flex  flex-col gap-4 md:border-none border-t pt-4">
+                                                <span className="">Đối với những hạng từ 1-3, sẽ nhận được bộ ảnh:</span>
+    
+                                                <ul className="list-none flex-wrap flex items-center gap-4">
+                                                    {imageIconDefault['top-good']?.map((item, index) => {
+                                                        return (
+                                                            <li key={index}>
+                                                                <img
+                                                                    src={item}
+                                                                    alt="image-icon"
+                                                                    className="w-10 h-10 rounded-full border border-gray-700"
+                                                                />
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="mt-4">Cuối cùng, chúc bạn chơi trò chơi vui vẻ và may mắn !</li>
+                                </ul>
+    
+                                {/* <p>asacdcdds</p>
+    
+                                {
+                                    data?.data?.fullname
+                                } */}
+                            </div>
+                        )}
+                        {isLoggedIn && product?.game!='' &&  (
+                            <>
+                                <div className="mt-4">
+                                    <div className="flex justify-center mb-4">
+                                        <iframe
+                                            className="w-full h-auto aspect-video border-4 border-gray-600 rounded-xl overflow-hidden"
+                                            src={product_nonmain?.game}
+                                            title="game"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </FoodContent>
+                    </>}
+                    
+                </div>
+            </>}
+
             <div className="flex flex-col gap-4">
+                {params.figureId!=="14"&&<>
                 {product?.contents?.map((content, index) => (
                     <FoodContent title={content.title} key={index}>
                         {content.data?.map((item, key) => (
@@ -623,15 +844,18 @@ const Product = memo(() => {
                         ))}
                     </FoodContent>
                 ))}
-                <FoodContent title="Liên quan">
-                    <div className="flex items-center gap-2 flex-wrap">
-                        {product?.tags?.map((tag, index) => (
-                            <button key={index} className="py-2 px-4 bg-slate-200 hover:bg-slate-300">
-                                <Link to={tag.link}>{tag.title}</Link>
-                            </button>
-                        ))}
-                    </div>
-                </FoodContent>
+                
+                    <FoodContent title="Liên quan">
+                        <div className="flex items-center gap-2 flex-wrap">
+                            {product?.tags?.map((tag, index) => (
+                                <button key={index} className="py-2 px-4 bg-slate-200 hover:bg-slate-300">
+                                    <Link to={tag.link}>{tag.title}</Link>
+                                </button>
+                            ))}
+                        </div>
+                    </FoodContent>
+                </>}
+                
                 <FoodContent title="Đánh giá và nhận xét">
                     <div >
                         <button
@@ -856,6 +1080,9 @@ const Product = memo(() => {
                         </button>
                     </div>
                 </FoodContent>
+                {params.figureId!=='14'&&<>
+                
+                
                 <FoodContent title="Trò chơi thử thách">
                     <button
                         className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2', {
@@ -938,6 +1165,7 @@ const Product = memo(() => {
                         </>
                     )}
                 </FoodContent>
+                </>}
             </div>
             {isModal && (
                 <div className="fixed inset-0 bg-black/40 z-20 flex items-center justify-center overflow-y-auto">
