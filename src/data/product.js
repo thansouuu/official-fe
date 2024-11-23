@@ -8775,7 +8775,7 @@ export default [
                 id: '50',
                 type:0,
                 tour:'0',
-                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/Tr%C3%B2%20ch%C6%A1i%20d%C3%A2n%20gian/%C4%90%E1%BA%A9y%20g%E1%BA%ADy/1-1.jpg',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD%20real/Chi%E1%BA%BFn%20d%E1%BB%8Bch%20c%E1%BA%A7u%20k%C3%A8/tieudoan307.png',
                 video: '',
                 title: 'Chiến dịch Cầu Kè',
                 description: 'Chiến dịch Cầu Kè (từ ngày 7 đến ngày 26/12/1949) là chiến dịch lớn do quân đội Việt Minh tổ chức...',
