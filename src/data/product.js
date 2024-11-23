@@ -8777,6 +8777,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD%20real/Chi%E1%BA%BFn%20d%E1%BB%8Bch%20c%E1%BA%A7u%20k%C3%A8/tieudoan307.png',
                 video: '',
+                city: 2,
                 title: 'Chiến dịch Cầu Kè',
                 description: 'Chiến dịch Cầu Kè (từ ngày 7 đến ngày 26/12/1949) là chiến dịch lớn do quân đội Việt Minh tổ chức...',
                 game: '',
@@ -8886,16 +8887,12 @@ export default [
         
                 tags: [
                     {
-                        title: 'Trò chơi dân gian',
-                        link: '/tieng-viet/figure/9',
+                        title: 'Sự kiện lịch sử',
+                        link: '/tieng-viet/figure/8',
                     },
                     {
-                        title: 'Ao Bà Om',
-                        link: '/tieng-viet/figure/2/product/8',
-                    },
-                    {
-                        title: 'Ok Om Bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        title: 'Huyện Cầu Kè',
+                        link: '/tieng-viet/city/2',
                     },
                 ],
             },
