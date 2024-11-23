@@ -62,27 +62,27 @@ export default [
             },
         ],
     },
-    // {
-    //     id: 8,
-    //     image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Kinh/dai-dien.jpg',
-    //     name: 'Sự kiện lịch sử',
-    //     description:[
-    //         {
-    //             value: `Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị...`,
-    //             hightlightList: [
-    //                 {
-    //                     type: 'out',
-    //                     hightlight: `Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị...`,
-    //                     valueModal: {
-    //                         type: 'tooltip',
-    //                         ref: false,
-    //                         value: 'Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị. Những sự kiện này có thể thay đổi cục diện thế giới, như chiến tranh, cách mạng, hoặc các phát minh mang tính đột phá.',
-    //                     },
-    //                 },
-    //             ],
-    //         },
-    //     ],
-    // },
+    {
+        id: 8,
+        image: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD%20real/Chi%E1%BA%BFn%20d%E1%BB%8Bch%20c%E1%BA%A7u%20k%C3%A8/tieudoan307.png',
+        name: 'Sự kiện lịch sử',
+        description:[
+            {
+                value: `Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị...`,
+                hightlightList: [
+                    {
+                        type: 'out',
+                        hightlight: `Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị...`,
+                        valueModal: {
+                            type: 'tooltip',
+                            ref: false,
+                            value: 'Sự kiện lịch sử là những biến cố quan trọng trong quá khứ, ảnh hưởng lớn đến sự phát triển của xã hội, văn hóa và chính trị. Những sự kiện này có thể thay đổi cục diện thế giới, như chiến tranh, cách mạng, hoặc các phát minh mang tính đột phá.',
+                        },
+                    },
+                ],
+            },
+        ],
+    },
     {
         id: 7,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/Phong%20t%E1%BB%A5c/T%E1%BB%A5c%20th%E1%BB%9D%20Quan%20th%C3%A1nh%20%C4%91%E1%BA%BF/I-1-1.jpg',

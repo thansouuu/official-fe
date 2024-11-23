@@ -2595,7 +2595,7 @@ export default [
                 title: 'Nguyễn Thiện Thành',
                 description: 'Anh hùng Lao động, Thầy thuốc Nhân dân, Giáo sư bác sĩ Nguyễn Thiện Thành (bí danh Nguyễn Minh Nhân,...',
                 game: 'https://wordwall.net/vi/embed/2a2fba459afe49d68e44d76079b8e5ee?themeId=21&templateId=69&fontStackId=0',
-                view: 200,
+                view: 900,
                 contents: [
                     {
                         title: 'Tiểu sử',
@@ -8771,6 +8771,134 @@ export default [
         figureId: 8,
         type:0,
         data: [ 
+            {
+                id: '50',
+                type:0,
+                tour:'0',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/Tr%C3%B2%20ch%C6%A1i%20d%C3%A2n%20gian/%C4%90%E1%BA%A9y%20g%E1%BA%ADy/1-1.jpg',
+                video: '',
+                title: 'Chiến dịch Cầu Kè',
+                description: 'Chiến dịch Cầu Kè (từ ngày 7 đến ngày 26/12/1949) là chiến dịch lớn do quân đội Việt Minh tổ chức...',
+                game: '',
+                view: 100,
+                contents: [
+                    {
+                        title: 'Diễn biến',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD%20real/Chi%E1%BA%BFn%20d%E1%BB%8Bch%20c%E1%BA%A7u%20k%C3%A8/tran-dien-3.png',
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD%20real/Chi%E1%BA%BFn%20d%E1%BB%8Bch%20c%E1%BA%A7u%20k%C3%A8/tieudoan.png',
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Chiến dịch Cầu Kè (từ ngày 7 đến ngày 26/12/1949) là chiến dịch lớn do quân đội Việt Minh tổ chức nhằm tấn công quân Pháp tại Nam Bộ, đặc biệt ở khu vực huyện Cầu Kè, tỉnh Trà Vinh.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Lực lượng tham gia chiến dịch gồm 2 tiểu đoàn chủ lực (307, 308), 4 đại đội độc lập (995, 997, 999, 889), 4 trung đội độc lập và dân quân du kích địa phương. Bộ chỉ huy Khu 8 trực tiếp tổ chức, chỉ đạo chiến dịch.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Chiến dịch được chia thành ba đợt chính:`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'bold',
+                                value: `* Đợt 1 (07/12 - 09/12/1949):`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Tiểu đoàn 307 tiến công và chiếm giữ sóc Bắc Sa Ma, bao vây đồn Bắc Sa Ma và các lô cốt dọc tuyến đường Cầu Kè - Tiểu Cần. Tiểu đoàn 308 chiếm sóc Chông Nô, diệt hai cứ điểm, tiêu diệt và bắt nhiều địch, thu vũ khí, giải tán hơn 100 bảo an.. Quân Pháp tổ chức tiếp tế bằng đường thủy và bị quân ta phục kích, đánh chìm một sà lan.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'bold',
+                                value: `* Đợt 2 (10/12 - 12/12/1949):`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Bộ phận liên quân Miên - Việt tiếp tục hoạt động tại Bắc Sa Ma. Tiểu đoàn 307 đánh viện tại Phong Phú. 10 giờ ngày 10/12, địch cho máy bay ném bom vào trận địa ta.  Sau đợt pháo kích, dọn đường, địch ở Bắc Sa Ma vận động lọt vào trận địa Tiểu đoàn 307 phục kích và Quân Pháp bị bao vây và diệt 90 tên, bắt sống 62 tên tại Bắc Sa Ma, thu toàn bộ vũ khí.. Tuy nhiên, cánh quân của ta tại Cầu Kè không thành công do thiếu kỷ luật, bị địch chiếm lại một số vị trí.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'bold',
+                                value: `* Đợt 3 (13/12 - 26/12/1949):`,
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Quân ta tiếp tục bao vây thị trấn Cầu Kè, cắt đường giao thông và đánh viện từ Trà Vinh. Quân ta phá hủy các phương tiện vận tải của địch, diệt và làm bị thương 18 tên và đánh chiếm các cứ điểm.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Ngày 25/12, Tiểu đoàn 308 đánh chiếm Lò Ngò và đánh lui các đợt phản kích của địch, diệt và bắt nhiều quân dù Pháp. Cùng ngày, Tiểu đoàn 307 diệt lô cốt Tân Đại. Một lực lượng của Đại đội 975 và 991 Tiểu đoàn 307 chiếm lô cốt Cầu Tre bằng mật giao. Ta tước 40 súng trường và tập trung bảo an của các sóc giải thích và thả ngay tại chỗ.`,
+                                hightlightList: [
+                                ],
+                            },
+                            {
+                                type: 'hightlight',
+                                value: `- Chiến dịch kết thúc sáng 26/12/1949.`,
+                                hightlightList: [
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Kết quả',
+                        data: [
+                            {
+                                type: 'text',
+                                value: `- Sau 20 ngày chiến đấu, quân ta tiêu diệt các lực lượng Pháp, bao gồm Tiểu đoàn Ma-rốc, Trung đoàn 1 ngụy Gò Công, cùng nhiều đơn vị khác.`,
+                            },
+                            {
+                                type: 'text',
+                                value: `- Giải phóng nhiều khu vực, phá hủy hệ thống phòng ngự của địch, thu được nhiều vũ khí và trang bị.`,
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Ý nghĩa',
+                        data: [
+                            {
+                                type: 'grid-image',
+                                value: [
+                                    'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD%20real/Chi%E1%BA%BFn%20d%E1%BB%8Bch%20c%E1%BA%A7u%20k%C3%A8/tieudoan307.png',
+                                ],
+                            },
+                            {
+                                type: 'text',
+                                value: `- Chiến dịch Cầu Kè là một trong những chiến dịch thành công đầu tiên ở Nam Bộ, với việc vận dụng chiến thuật linh hoạt và sáng tạo, tiêu biểu cho cách đánh “đánh điểm - diệt viện” của quân đội Việt Minh.`,
+                            },
+                        ],
+                    },
+                ],
+        
+                tags: [
+                    {
+                        title: 'Trò chơi dân gian',
+                        link: '/tieng-viet/figure/9',
+                    },
+                    {
+                        title: 'Ao Bà Om',
+                        link: '/tieng-viet/figure/2/product/8',
+                    },
+                    {
+                        title: 'Ok Om Bok',
+                        link: '/tieng-viet/figure/4/product/39',
+                    },
+                ],
+            },
         ]
     },
     {
@@ -11298,12 +11426,13 @@ export default [
         data: [
             {
                 id: '27',
-                type:2,
+                type:1,
                 tour:'0',
-                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Hoa/II-trangphuc-1.jpg',
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-1.jpg',
+                image_mindmap: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/D%C3%A2n%20t%E1%BB%99c/D%C3%A2n%20t%E1%BB%99cMINDMAP.png',
                 video: '',
-                title: 'Chủ đề: dân tộc',
-                description: ' Dân cư: Dân tộc Kinh có 683 803 người, chiếm 67,76% dân số toàn tỉnh. Người Kinh sống tập trung...',
+                title: 'Chủ đề: Dân tộc',
+                description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
                 game: 'https://wordwall.net/vi/embed/14dd1d6b4e8e428f846332b63ce9e526?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [

@@ -73,7 +73,7 @@ const Product = memo(() => {
     const params = useParams();
     const [isModal, setIsModal] = useState(false);
     const [imageModal, setImageModal] = useState('');
-    // const [image, setImage] = useState('')
+    const [image, setImage] = useState('')
     // const [isModal, setIsModal] = useState(false);
     // const [valueModal, setValueModal] = useState(null);
     const [timeType, setTimeType] = useState('desc');
@@ -205,11 +205,13 @@ const Product = memo(() => {
         setCloudinaryFilesBonus(files);
     };
 
+
+
     useEffect(() => {
         const productList = productData.find((item) => item.figureId == params.figureId);
         const product = productList?.data.find((item) => item.id == params.id);
         setProduct(product);
-        
+        if (12<=params.figureId&&params.figureId<=14) setImage(product.image_mindmap);
         getListFeedBack();
     }, [params]);
 
@@ -544,15 +546,15 @@ const Product = memo(() => {
     const [maxHeight, setMaxHeight] = useState('0px');
     useEffect(() => {
         const productList = productData.find((item) => item.figureId == params.figureId);
-    const product = productList?.data.find((item) => item.id == res.value);
-    setProductnonmain(product);
+        const product = productList?.data.find((item) => item.id == res.value);
+        setProductnonmain(product);
 
-    // Sau khi setProductnonmain xong, đợi 700ms rồi tính lại chiều cao
-    setTimeout(() => {
-        if (contentRef.current) {
-            setMaxHeight(contentRef.current.scrollHeight + 'px');
-        }
-    }, 700); 
+        // Sau khi setProductnonmain xong, đợi 700ms rồi tính lại chiều cao
+        setTimeout(() => {
+            if (contentRef.current) {
+                setMaxHeight(contentRef.current.scrollHeight + 'px');
+            }
+        }, 700); 
         
         
     }, [res]);
@@ -633,6 +635,14 @@ const Product = memo(() => {
             </div>
 
             {params.figureId==="14"&&<>
+                <>
+                {image!==''&&
+                    <div className="flex justify-center items-center ">
+                        <img className="w-[60%] h-[60%] rounded-lg" src={image} alt="" />
+                    </div>
+                }
+                </>
+
                 <div className="flex flex-col items-center justify-center mb-2">
                     {typing[params.id]?.map((button, index) => (
                         <button
@@ -651,10 +661,8 @@ const Product = memo(() => {
                     style={{
                         maxHeight:maxHeight,
                     }}
-
-                    // style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
                 >
-                    {console.log('ditme ',product_nonmain)}
+
                     {product_nonmain?.contents?.map((content, index) => (
                         <>
                         <FoodContent title={content.title} key={index}>
