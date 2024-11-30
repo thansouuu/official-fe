@@ -637,9 +637,20 @@ const Product = memo(() => {
             {params.figureId==="14"&&<>
                 <>
                 {image!==''&&
-                    <div className="flex justify-center items-center ">
-                        <img className="w-[60%] h-[60%] rounded-lg" src={image} alt="" />
-                    </div>
+                    // <div className="flex justify-center items-center ">
+                    //     <img className="w-[60%] h-[60%] rounded-lg" src={image} alt="" />
+                    // </div>
+                    <Carousel style={{ width: '100%', height: '300px' }}>
+                                                    
+                        <Carousel.Item  style={{ height: '300px' }}>
+                            <img
+                                className="d-block w-full h-full object-contain"
+                                onClick={() => handleModalImageCarousel(image)}
+                                src={image}
+                                // alt={`Slide ${idx}`}
+                            />
+                        </Carousel.Item>                         
+                    </Carousel>
                 }
                 </>
 
