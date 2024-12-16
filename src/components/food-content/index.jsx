@@ -27,22 +27,33 @@ const FoodContent = ({ title, children }) => {
         return value === '' || value === null || value === undefined;
     }
 
-    // Determine text color based on title
-    const titleColorClass = ['TOP 3 BÀI VIẾT NỔI BẬT', 'NHỮNG MỤC NỔI BẬT'].includes(title) ? 'text-red-800' : 'text-gray-800';
+    const [fontSize, setFontSize] = useState(16); // State để lưu kích cỡ chữ
 
-    const fontWeightClass = ['TOP 3 BÀI VIẾT NỔI BẬT', 'NHỮNG MỤC NỔI BẬT'].includes(title) ? 'font-bold' : 'font-semibold';
+    const handleFontSizeChange = (e) => {
+        setFontSize(e.target.value); // Cập nhật kích cỡ chữ khi người dùng kéo thanh trượt
+    };
 
     return (
         <>
             <div className="bg-opacity-40 p-4 bg-white/80 rounded-2xl shadow flex flex-col gap-4 mb-4">
-
-                <div className="flex gap-x-5 flex-wrap">
-                    {/* {role && role !== 'normal' && <img src={checkEmpty(data?.data?.imageIcon) ? 'https://static.thenounproject.com/png/4974686-200.png': data?.data?.imageIcon} className="w-10 h-10" alt="" />} */}
-                    {role && role !== 'normal' && <img src={data?.data?.imageIcon} className="w-10 h-10" alt="" />}
-                    <h3 className={`text-2xl ${titleColorClass} ${fontWeightClass}`}>{title} :</h3>
+                <div className="flex gap-x-5 flex-wrap items-center">
+                    <h3 className="text-2xl">{title} :</h3>
+                    {/* Thanh trượt điều chỉnh kích cỡ chữ */}
+                    <input
+                        type="range"
+                        min="12"
+                        max="30"
+                        step="1"
+                        value={fontSize}
+                        onChange={handleFontSizeChange}
+                        className="w-48" // Chiều rộng của thanh trượt
+                    />
                 </div>
 
-                <div className="text-justify break-words whitespace-pre-wrap">
+                <div
+                    className="text-justify break-words whitespace-pre-wrap"
+                    style={{ fontSize: `${fontSize}px` }} // Áp dụng kích cỡ chữ
+                >
                     {children}
                 </div>
             </div>

@@ -559,9 +559,11 @@ const Product = memo(() => {
         
     }, [res]);
 
-    // useLayoutEffect(() => {
-        
-    // }, [res]);
+    const [ismindmap, setIsmindmap] = useState(false);
+
+    const handlemindmap = () => {
+        setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
+    };
 
     return (
         
@@ -640,17 +642,32 @@ const Product = memo(() => {
                     // <div className="flex justify-center items-center ">
                     //     <img className="w-[60%] h-[60%] rounded-lg" src={image} alt="" />
                     // </div>
-                    <Carousel style={{ width: '100%', height: '300px' }}>
-                                                    
-                        <Carousel.Item  style={{ height: '300px' }}>
-                            <img
-                                className="d-block w-full h-full object-contain"
-                                onClick={() => handleModalImageCarousel(image)}
-                                src={image}
-                                // alt={`Slide ${idx}`}
-                            />
-                        </Carousel.Item>                         
-                    </Carousel>
+                    <>
+                        <button 
+                            onClick={handlemindmap}
+                            className="px-4 py-2 bg-orange-400 text-white rounded hover:bg-orange-500 w-[80%] mx-auto"
+                        >
+                            {!ismindmap ? 'Xem sơ đồ tư duy' : 'Đóng sơ đồ tư duy'}
+                        </button>
+                        <div
+                            ref={contentRef}
+                            className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
+                            style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
+                        >
+                            <Carousel style={{ width: '100%', height: '300px' }}>
+                                <Carousel.Item style={{ height: '300px' }}>
+                                    <img
+                                        className="d-block w-full h-full object-contain"
+                                        onClick={() => handleModalImageCarousel(image)}
+                                        src={image}
+                                        // alt={`Slide ${idx}`}
+                                    />
+                                </Carousel.Item>                         
+                            </Carousel>
+                        </div>
+
+
+                    </>
                 }
                 </>
 
@@ -726,7 +743,7 @@ const Product = memo(() => {
                     </>
                 ))}
                     {res.value!=='0'&&<>
-                        <FoodContent title="Trò chơi thử thách">
+                        <FoodContent title="Câu hỏi kiểm tra">
                         <button
                             className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2', {
                                 'bg-gray-300 hover:bg-gray-400': !showInfos,
@@ -1102,7 +1119,7 @@ const Product = memo(() => {
                 {params.figureId!=='14'&&<>
                 
                 
-                <FoodContent title="Trò chơi thử thách">
+                <FoodContent title="Câu hỏi kiểm tra">
                     <button
                         className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2', {
                             'bg-gray-300 hover:bg-gray-400': !showInfos,
