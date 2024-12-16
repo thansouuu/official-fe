@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import FoodContent from '@/components/food-content';
-
+import Bot from '@/pages/tiengviet/chatbot';
 
 
 
@@ -77,6 +77,8 @@ const Main = () => {
 
 
     return (
+        <>
+        <Bot/>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
             
             <div className="col-span-full flex flex-col items-center">
@@ -190,6 +192,7 @@ const Main = () => {
             
             
         </div>
+        </>
     );
 };
 

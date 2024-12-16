@@ -43,7 +43,7 @@ import best_icon3 from '@/assets/best/best3.png'
 import best_icon4 from '@/assets/best/best4.png'
 import best_icon5 from '@/assets/best/best5.png'
 import best_icon6 from '@/assets/best/best6.png'
-
+import Bot from '@/pages/tiengviet/chatbot';
 
 const Product = memo(() => {
     const { isLoggedIn, mutate, data } = useAuth();
@@ -566,7 +566,8 @@ const Product = memo(() => {
     };
 
     return (
-        
+        <>
+        <Bot/>
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
             {console.log(data?.data?._id)}
             {product?.video!='' && 
@@ -1276,6 +1277,7 @@ const Product = memo(() => {
                 </div>
             )}
         </div>
+        </>
     );
 });
 

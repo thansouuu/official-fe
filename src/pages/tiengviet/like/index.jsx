@@ -16,7 +16,7 @@ import {
 import productData from '@/data/product';
 import storyData from '@/data/story'
 import { Link} from 'react-router-dom';
-
+import Bot from '@/pages/tiengviet/chatbot';
 
 const LikedPosts = () => {
     const { isLoggedIn } = useAuth();
@@ -185,6 +185,9 @@ const LikedPosts = () => {
       console.log(post);
 
     return (
+        <>
+            <Bot/>
+        
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
             <h2 className="text-3xl text-center pb-4 border-b border-slate-800">Yêu thích</h2>
             <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6">
@@ -337,12 +340,7 @@ const LikedPosts = () => {
                 {list.length === 0 && <div className="text-center">Không có nội dung yêu thích</div>}
             </div>
         </div>
-        // <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-            
-        //     <button onClick={() => handleButtonClick(1)}>Button 1</button>
-        //     <button onClick={() => handleButtonClick(2)}>Button 2</button>
-
-        // </div>
+        </>
     );
 };
 

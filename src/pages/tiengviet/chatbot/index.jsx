@@ -119,7 +119,7 @@
 import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Bot = ({ isVisible }) => {
+const Bot = () => {
   useEffect(() => {
     // Configs
     const liveChatBaseUrl = `${document.location.protocol}//livechat.fpt.ai/v36/src`;
@@ -184,9 +184,6 @@ const Bot = ({ isVisible }) => {
     };
   }, []);
 
-  if (!isVisible) {
-    return null;
-  }
 
   return (
     <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">

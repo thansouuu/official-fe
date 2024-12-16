@@ -4,7 +4,6 @@ import productData from '@/data/product';
 import cn from '@/helper/cn';
 import { useNavigate } from 'react-router-dom';
 import Bot from '@/pages/tiengviet/chatbot';
-import '/src/layouts/chatbot.css';
 
 const Find = () => {
     const [user, setUser] = useState(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null);
@@ -105,18 +104,11 @@ const Find = () => {
     const handleClick = (idx) => {
         navigate(`/tieng-viet/city/${idx}`);
     };
-    const [isBotVisible, setIsBotVisible] = useState(true);
-
-    const toggleBot = () => {
-        setIsBotVisible(prevState => !prevState);
-    };
 
 
     return (
         <>
-      
-
-            <Bot isVisible={isBotVisible} />
+            <Bot/>
             <div>
                 <button
                     className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2 my-2', {
