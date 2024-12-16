@@ -26,6 +26,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     const location = useLocation();
 
     return (
+        <>
         <div
             className={`hidden md:block z-20 fixed top-0 left-0 h-full w-[18%] bg-white text-red-800 transform ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -213,6 +214,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <div className='h-[100px]'></div>
             </ul>
         </div>
+    </>
     );
 };
 

@@ -190,7 +190,7 @@ const Bot = ({ isVisible }) => {
 
   return (
     <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-      <h2 className="text-3xl text-center pb-4 border-b border-slate-800">CHATBOT HỖ TRỢ TRA CỨU LỊCH SỬ</h2>
+      {/* <h2 className="text-3xl text-center pb-4 border-b border-slate-800">CHATBOT HỖ TRỢ TRA CỨU LỊCH SỬ</h2> */}
       <div id="fpt_ai_livechat_display_container" style={{ display: 'block' }} className="fullscreen">
         <div id="fpt_ai_livechat_container_header" style={{ background: 'linear-gradient(86.7deg, #3353a2ff 0.85%, #31b7b7ff 98.94%)', color: '#ffffffff' }}>
           <div className="fpt_ai_livechat_header_name">TRA CỨU LỊCH SỬ TỈNH TRÀ VINH</div>
