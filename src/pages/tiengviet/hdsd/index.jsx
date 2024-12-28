@@ -22,7 +22,7 @@ const Hdsd = () => {
 
     return (
         <>
-        <Bot/>
+        {/* <Bot/> */}
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto flex-grow">
                 <h2 className="text-3xl text-center pb-4 border-b border-slate-800 flex justify-center items-center gap-2">
                     Hướng dẫn sử dụng

@@ -567,7 +567,7 @@ const Product = memo(() => {
 
     return (
         <>
-        <Bot/>
+        {/* <Bot/> */}
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
             {console.log(data?.data?._id)}
             {product?.video!='' && 
