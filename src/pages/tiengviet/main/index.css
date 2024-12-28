@@ -1,0 +1,7 @@
+.carousel-item {
+    transition: transform 1s ease-in-out; /* Mượt mà hơn với thời gian chuyển đổi 1s */
+  }
+.carousel-inner {
+   overflow: hidden; /* Đảm bảo ảnh không bị tràn */
+}
+  

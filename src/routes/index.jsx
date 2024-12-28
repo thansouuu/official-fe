@@ -30,7 +30,7 @@ export const routes = [
         element: <Download />,
     },
     {
-        path: '/tieng-viet',
+        path: '/language/:language_id',
         element: <RootLayout />,
         children: [
             {

@@ -22,6 +22,10 @@ export default [
                         title: 'Tiểu sử',
                         data: [
                             {
+                                type: 'audio',
+                                src: '/audio/chi_ut_tich/1.mp3',
+                            },
+                            {
                                 type: 'grid-image',
                                 value: [
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
@@ -59,6 +63,7 @@ export default [
                                     },
                                 ],
                             },
+                            
                             {
                                 type: 'hightlight',
                                 value: `- Năm 1944, cha chị qua đời, khi ấy chị chỉ mới 13 tuổi. Sau đó, chị em út tịch được gia đình đồng chí Nguyễn Hòa Luông - cán bộ Việt Minh xã Tam Ngãi, theo yêu cầu của chi bộ Đảng địa phương, đã đem tiền chuộc lại tự do. Từ đây, cuộc đời ở đợ của bà đã chấm dứt. Đầu năm 1950, Nguyễn Thị Út xây dựng gia đình với Lâm Văn Tịch, ông là người Việt gốc Khmer, cũng là chiến sĩ trong lực lượng vũ trang địa phương và sau đó chị sinh được 9 người con kể cả trong thời gian chị hoạt động cách mạng. Người con đầu mất sớm chưa kịp đặt tên. Đứa con thứ hai của chị là Lâm Thị Bé sinh năm 1953, còn gọi là Bé Ba. Đứa con thứ ba là Lâm Thị Thanh, hay còn gọi là Lâm Thị Mỹ Thanh. Đứa con thứ tư là Lâm Thị Thơ.  Người con thứ năm là Lâm Thị Kim Anh (1959). Người con thứ sáu là Lâm Văn Hiển sinh năm 1961, còn gọi là Bảy Hiển. Người con thứ bảy là Lâm Văn Hùng sinh năm 1964, còn gọi là Lâm Thanh Hùng. Tiếp đó là bà Lâm Thị Đồng Xuân sinh năm 1965. Người con cuối cùng là Lâm Thị Hồng, sinh năm 1968, còn gọi là Lâm Thị Xuân Hồng, ra đời trước khi mẹ mất chỉ 14 ngày.`,
@@ -130,11 +135,16 @@ export default [
                                     },
                                 ],
                             },
+                           
                         ],
                     },
                     {
                         title: 'Sự nghiệp kháng chiến',
                         data: [
+                            {
+                                type: 'audio',
+                                src: '/audio/chi_ut_tich/2.mp3',
+                            },
                             {
                                 type: 'grid-image',
                                 value: [
@@ -431,6 +441,10 @@ export default [
                         title: 'Nguồn cảm hứng cho nghệ thuật',
                         data: [
                             {
+                                type: 'audio',
+                                src: '/audio/chi_ut_tich/3.mp3',
+                            },
+                            {
                                 type: 'grid-image',
                                 value: [
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/3-2.jpg',
@@ -467,6 +481,10 @@ export default [
                     {
                         title: 'Những mẫu chuyện về Chị',
                         data: [
+                            {
+                                type: 'audio',
+                                src: '/audio/chi_ut_tich/4.mp3',
+                            },
                             {
                                 type: 'grid-image',
                                 value: [
@@ -505,6 +523,10 @@ export default [
                     {
                         title: 'Tưởng nhớ',
                         data: [
+                            {
+                                type: 'audio',
+                                src: '/audio/chi_ut_tich/5.mp3',
+                            },
                             {
                                 type: 'grid-image',
                                 value: [
@@ -11415,6 +11437,7 @@ export default [
         figureId: 13,
         type:1,
         data: [
+            
         ],
     },
     {
@@ -11428,8 +11451,8 @@ export default [
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/D%C3%A2n%20t%E1%BB%99c/Ng%C6%B0%E1%BB%9Di%20Khmer/II-trangphuc-1.jpg',
                 image_mindmap: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/D%C3%A2n%20t%E1%BB%99c/D%C3%A2n%20t%E1%BB%99cMINDMAP.png',
                 video: '',
-                title: 'Chủ đề: Dân tộc',
-                description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+                title: 'Chủ đề 3: Cộng đồng các dân tộc ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
                 game: 'https://wordwall.net/vi/embed/14dd1d6b4e8e428f846332b63ce9e526?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
                 contents: [
@@ -11663,6 +11686,54 @@ export default [
                         link: '/tieng-viet/figure/7/product/22',
                     },
                 ],
+            },
+            {
+                type:1,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd1_10.jpg',
+                title: 'Chủ đề 1: Biến đổi khí hậu ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:1,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd2_10.jpg',
+                title: 'Chủ đề 2: Hoạt động sản xuất nông nghiệp, lâm nghiệp, thuỷ sản; tiểu thủ công nghiệp và công nghiệp ở Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:1,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd4_10.jpg',
+                title: 'Chủ đề 4: Các nhạc sĩ tiêu biểu ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:1,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd5_10.jpg',
+                title: 'Chủ đề 5: Tổng quan văn học dân gian Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:1,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd6_10.jpg',
+                title: 'Chủ đề 6: Nhà ở truyền thống ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:1,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd7_10.png',
+                title: 'Chủ đề 7 Lao động và việc làm ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:2,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd1_11.webp',
+                title: 'Chủ đề 1: Thiên tai và thời tiết cực đoan thường xảy ra ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
+            },
+            {
+                type:3,
+                imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/cd5_12.png',
+                title: 'Chủ đề 5 Tìm hiểu một tác phẩm mĩ thuật ở tỉnh Trà Vinh',
+                // description: 'Trà Vinh là tỉnh thuộc đồng bằng sông Cửu Long, nổi bật với sự đa dạng văn hóa của ba dân tộc chính: Kinh, Khmer và Hoa...',
             },
             // {
             //     id: '27',

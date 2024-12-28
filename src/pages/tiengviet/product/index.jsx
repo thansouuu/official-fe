@@ -19,6 +19,7 @@ import {
 } from 'react-share';
 import { useAuth } from '@/hooks/use-auth';
 import productData from '@/data/product';
+import productData_english from '@/data/product_english';
 import { uploadToCloudinary } from '@/hooks/use-upload-cloudinary';
 import CardContentHightlight from '@/components/card-content/card-content-hightlight';
 import CardContentText from '@/components/card-content/card-content-text';
@@ -208,7 +209,9 @@ const Product = memo(() => {
 
 
     useEffect(() => {
-        const productList = productData.find((item) => item.figureId == params.figureId);
+        let productList
+        if (params.language_id==='vi') productList = productData.find((item) => item.figureId == params.figureId);
+        else  productList=productData_english.find((item) => item.figureId == params.figureId);
         const product = productList?.data.find((item) => item.id == params.id);
         setProduct(product);
         if (12<=params.figureId&&params.figureId<=14) setImage(product.image_mindmap);
@@ -515,7 +518,7 @@ const Product = memo(() => {
         setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
       };
 
-      const typing = {
+    const typing = {
         27: [
             { label: "Người Kinh", value: '25' },
             { label: "Người Hoa", value: '27' },
@@ -564,6 +567,9 @@ const Product = memo(() => {
     const handlemindmap = () => {
         setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
     };
+
+   
+    
 
     return (
         <>
@@ -802,11 +808,7 @@ const Product = memo(() => {
                                     <li className="mt-4">Cuối cùng, chúc bạn chơi trò chơi vui vẻ và may mắn !</li>
                                 </ul>
     
-                                {/* <p>asacdcdds</p>
-    
-                                {
-                                    data?.data?.fullname
-                                } */}
+
                             </div>
                         )}
                         {isLoggedIn && product?.game!='' &&  (
@@ -837,6 +839,13 @@ const Product = memo(() => {
                     <FoodContent title={content.title} key={index}>
                         {content.data?.map((item, key) => (
                             <div key={key}>
+                                {item.type === 'audio' && (
+                                    <audio key={index} controls>
+                                    <source src={item.src} type="audio/mpeg" />
+                                    Trình duyệt của bạn không hỗ trợ phần tử audio.
+                                  </audio>
+                                )}
+
                                 {item.type === 'text' && <CardContentText value={item.value} />}
                                 {item.type === 'bold' && (
                                     <>

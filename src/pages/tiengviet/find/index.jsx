@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import productData from '@/data/product';
 import cn from '@/helper/cn';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams } from 'react-router-dom';
 import Bot from '@/pages/tiengviet/chatbot';
 
 const Find = () => {
@@ -100,9 +100,9 @@ const Find = () => {
         }
     }
     `;
-
+       const param = useParams();
     const handleClick = (idx) => {
-        navigate(`/tieng-viet/city/${idx}`);
+        navigate(`/language/${param.language_id}/city/${idx}`);
     };
 
 
@@ -203,7 +203,7 @@ const Find = () => {
                                 onClick={handleSearchClose}
                             >
                                 <Link
-                                    to={`/tieng-viet/figure/${product.figureId}/product/${product.id}`}
+                                    to={`/language/${param.language_id}/figure/${product.figureId}/product/${product.id}`}
                                     className="block"
                                     onClick={() => setSearchResult([])}
                                 >

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Link} from 'react-router-dom';
 import productData from '@/data/product';
 import './style-map.css'
@@ -39,6 +39,7 @@ const VtMap = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
   const [marker,setMarker]=useState([]);
   const [typeMap,setTypeMap]=useState(1);
+  const param=useParams();
   // Fetching the list of locations
   const getListLocation = async () => {
     try {
@@ -514,7 +515,7 @@ const VtMap = () => {
   
   const handleProduct=()=>{
     if (selectedLocation) {
-      navigate(`/tieng-viet/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
+      navigate(`/language/${param.language_id}/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
     }
   };
 
@@ -523,7 +524,7 @@ const VtMap = () => {
       window.location.assign(selectedLocation.tourUrl)
     }
     else if (getIdAddress(selectedLocation.name).tour_id!='0'){
-    navigate(`/tieng-viet/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
+    navigate(`/language/${param.language_id}/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
     }
   }
   const handleClose = () => {
@@ -569,7 +570,7 @@ const VtMap = () => {
       setTypeMap(e);
     }
     const handleadvanced=()=>{
-      if (isLoggedIn) navigate(`/tieng-viet/map-advanced`);
+      if (isLoggedIn) navigate(`/language/${param.language_id}/map-advanced`);
       else toast.info('Bạn phải đăng nhập để tiếp tục');
     }
     useEffect(() => {

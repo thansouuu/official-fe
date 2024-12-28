@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import cn from '@/helper/cn';
 import { useAuth } from '@/hooks/use-auth';
@@ -113,7 +113,24 @@ const HeaderRoot = ({ toggleSidebar }) => {
         setSearchResult([]);
     };
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const param=useParams();
+     const [value, setValue] = useState(1);
+    const images = ['/public/flag/vietnam.png', '/public/flag/english.webp']; 
+  
+
+  // Hàm xử lý thay đổi giá trị khi nút được bấm
+    const handleClick = () => {
+        if (value === 1) {
+            const newPathname = location.pathname.replace('/vi/', '/en/');
+            navigate(newPathname);
+            setValue(2);  // Nếu giá trị hiện tại là 1, chuyển sang 2 (giữa)
+        } else if (value === 2) {
+            const newPathname = location.pathname.replace('/en/', '/vi/');
+            navigate(newPathname);
+            setValue(1);  // Nếu giá trị hiện tại là 2, chuyển sang 3 (phải)
+        } 
+    };
 
     return (
         <nav style={{
@@ -178,7 +195,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                             
                         >
                             <Link
-                                to="/tieng-viet/main"
+                                to={`/language/${param.language_id}/main`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -191,7 +208,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/account"
+                                to={`/language/${param.language_id}/account`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -203,7 +220,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/figure"
+                                to={`/language/${param.language_id}/figure`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -214,7 +231,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/hometown"
+                                to={`/language/${param.language_id}/hometown`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -225,7 +242,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/story"
+                                to={`/language/${param.language_id}/story`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -236,7 +253,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/like"
+                                to={`/language/${param.language_id}/like`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -247,7 +264,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/map-phone"
+                                to={`/language/${param.language_id}/map-phone`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -256,7 +273,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 <div>Khám phá du lịch</div>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 to="/tieng-viet/chatbot"
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
@@ -266,10 +283,10 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 <Bot />
                                 <div>Chatbot</div>
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link
-                                to="/tieng-viet/find"
+                                to={`/language/${param.language_id}/find`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -280,7 +297,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         <li>
                             <Link
-                                to="/tieng-viet/hdsd"
+                                to={`/language/${param.language_id}/hdsd`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
@@ -289,11 +306,24 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 <div>Hướng dẫn sử dụng</div>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <div
                                 id="google_translate_element"
                                 // className="flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 cursor-pointer"
                             ></div>  
+                        </li> */}
+                        <li>
+                            <button 
+                                onClick={handleClick} 
+                                className="px-4 py-2 rounded flex items-center gap-2">
+                                {/* Hiển thị "Ngôn ngữ" và hình ảnh trên cùng một dòng */}
+                                <p className="text-lg font-semibold">Ngôn ngữ </p>
+                                <img 
+                                    src={images[value - 1]} // Lấy hình ảnh dựa trên giá trị của value
+                                    alt={`Hình ảnh ${value}`}
+                                    className="w-12 h-7 object-cover" // Điều chỉnh kích thước hình ảnh
+                                />
+                            </button>
                         </li>
                         <li>
                             <button

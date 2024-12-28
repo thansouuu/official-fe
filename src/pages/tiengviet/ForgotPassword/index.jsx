@@ -3,10 +3,11 @@ import { useAuth } from '@/hooks/use-auth';
 import { useForgotPassword } from '@/hooks/use-forgot-password';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,useParams} from 'react-router-dom';
 
 const index = () => {
     const navigate = useNavigate();
+    
     const { handleSubmit, control } = useForm({
         defaultValues: {
             id: '',
@@ -19,6 +20,9 @@ const index = () => {
     const onSubmit = (values) => {
         forgotPassword(values);
     };
+
+    const param=useParams();
+     
     return (
         <div className="w-[50%] mt-[100px] mx-auto">
             {' '}
@@ -41,7 +45,7 @@ const index = () => {
                 </button>
                 <button
                     onClick={() => {
-                        navigate('/tieng-viet/account');
+                        navigate(`/language/${param.language_id}/account`);
                     }}
                     className="outline-none w-full py-2.5 rounded-xl text-white bg-red-700 transition-colors hover:bg-red-800"
                     type="submit"

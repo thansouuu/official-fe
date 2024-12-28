@@ -1,14 +1,16 @@
 import React, { useEffect, useState,useRef } from 'react';
 import productData from '@/data/product';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import FoodContent from '@/components/food-content';
-import Bot from '@/pages/tiengviet/chatbot';
+import './index.css'
+import Slider from 'react-slick';
 
 
 
 const Main = () => {
+    const param=useParams();
     const [topViewedProducts, setTopViewedProducts] = useState([]);
     const navigate = useNavigate()
     const images = [
@@ -19,10 +21,10 @@ const Main = () => {
     ];
 
     const paths=[
-        `/tieng-viet/figure/1`,
-        `/tieng-viet/figure/2`,
-        `/tieng-viet/figure/10`,
-        `/tieng-viet/figure/3`,
+        `/language/${param.language_id}/figure/1`,
+        `/language/${param.language_id}/figure/2`,
+        `/language/${param.language_id}/figure/10`,
+        `/language/${param.language_id}/figure/3`,
     ]
     const decrip=[
         'Nhân vật lịch sử',
@@ -74,11 +76,45 @@ const Main = () => {
         padding: '1rem', // Padding để hình ảnh không bị che khuất
         borderRadius: '0.5rem' // Tùy chọn: Bo tròn góc
       };
-
-
+      const settings = {
+        infinite: true,
+        speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 500, // 2 giây
+        cssEase: "linear",
+      };
+      
+    
     return (
         <>
         {/* <Bot/> */}
+        <div className="bg-gray-800 -mx-6 -mb-[200px] p-6 text-white">
+  <div className="grid grid-cols-1 gap-4">
+    <div className="col-span-full w-full">
+      <Carousel style={{ width: '100%', height: '300px' }} interval={1000} fade>
+        {images.map((image, idx) => (
+          <Carousel.Item key={idx} style={{ height: '300px' }}>
+            <div className="flex flex-col justify-between items-center w-full h-full p-4">
+              <img
+                className="d-block w-full h-[95%] object-contain"
+                onClick={() => handleClick(idx)}
+                src={image}
+                alt={`Slide ${idx}`}
+                style={{ maxHeight: '300px' }}
+              />
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  </div>
+</div>
+
+
+        <div className="h-[200px]">
+
+        </div>
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
             
             <div className="col-span-full flex flex-col items-center">
@@ -132,11 +168,11 @@ const Main = () => {
                 
             </div>
 
-            <div className="col-span-full">
+            {/* <div className="col-span-full">
                 <FoodContent className="shadow-md flex justify-center items-center flex-wrap mb-6 flex-1 p-4 transition-margin duration-300" 
                     title="NHỮNG MỤC NỔI BẬT" >
                     <div className="w-full">
-                        <Carousel style={{ width: '100%', height: '300px' }}>
+                        <Carousel style={{ width: '100%', height: '300px' }} interval={100}>
                             {images.map((image, idx) => (
                                 <Carousel.Item key={idx} style={{ height: '300px' }}>
                                     <div className="flex flex-col justify-between items-center w-full h-full p-4">
@@ -158,7 +194,7 @@ const Main = () => {
                         </Carousel>
                     </div>
                 </FoodContent>
-            </div>
+            </div> */}
 
             <div className=" col-span-full"> 
             <FoodContent className="flex flex-col p-4" title="TOP 3 BÀI VIẾT NỔI BẬT" >
@@ -167,7 +203,7 @@ const Main = () => {
                         {topViewedProducts.map((product, index) => (
                             <div key={index} className="w-full lg:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex-shrink-0">
                                 <Link
-                                    to={`/tieng-viet/figure/${product.figureId}/product/${product.id}`}>
+                                    to={`/language/${param.language_id}/figure/${product.figureId}/product/${product.id}`}>
                                     <img
                                         className="rounded-t-lg"
                                         src={product.imageCover}
@@ -176,7 +212,7 @@ const Main = () => {
                                 </Link>
                                 <div className="p-5">
                                     <Link
-                                        to={`/tieng-viet/figure/${product.figureId}/product/${product.id}`}>
+                                        to={`/language/${param.language_id}/figure/${product.figureId}/product/${product.id}`}>
                                         <p className="text-[24px] font-semibold mb-2">{product.title}</p>
                                         {/* <p className="text-gray-600">Số lượt xem: {product.view}</p> */}
                                         <p className="text-gray-600">{product.description}</p>

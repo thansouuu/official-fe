@@ -15,7 +15,7 @@ import {
 
 import productData from '@/data/product';
 import storyData from '@/data/story'
-import { Link} from 'react-router-dom';
+import { Link,useParams} from 'react-router-dom';
 import Bot from '@/pages/tiengviet/chatbot';
 
 const LikedPosts = () => {
@@ -183,7 +183,7 @@ const LikedPosts = () => {
       }, [types, post, story]);
       console.log(story);
       console.log(post);
-
+    const param=useParams();
     return (
         <>
             {/* <Bot/> */}
@@ -214,7 +214,7 @@ const LikedPosts = () => {
                             <div key={index}>
                             <FoodContent title={item.title_id} key={index} >
 
-                                <Link to={`/tieng-viet/figure/${item.figure_id}/product/${item.product_id}`}>
+                                <Link to={`/language/${param.language_id}/figure/${item.figure_id}/product/${item.product_id}`}>
 
                                     <div className='text-[15px]'>
                                         <img
@@ -227,7 +227,7 @@ const LikedPosts = () => {
                                 </Link>
                                 <div className="flex gap-4 my-3 text-[15px]">
                                     <FacebookShareButton hashtag={'Phần mềm Lịch sử địa phương Trà Vinh cung cấp cho tôi những thông tin rất hữu ích'} 
-                                    url={`https://lichsudiaphuong-travinh.netlify.app/tieng-viet/figure/${item.figure_id}/product/${item.product_id}`} quote={item.title_id}>
+                                    url={`https://lichsudiaphuong-travinh.netlify.app/language/${param.language_id}/figure/${item.figure_id}/product/${item.product_id}`} quote={item.title_id}>
                                         <FacebookIcon size={32} round />
                                     </FacebookShareButton>
 
@@ -248,7 +248,7 @@ const LikedPosts = () => {
                                         />
                                     </TwitterShareButton>
                                     <button
-                                        onClick={() => copyToClipboard(`https://lichsudiaphuong-travinh.netlify.app/tieng-viet/figure/${item.figure_id}/product/${item.product_id}`)}
+                                        onClick={() => copyToClipboard(`https://lichsudiaphuong-travinh.netlify.app/language/${param.language_id}/figure/${item.figure_id}/product/${item.product_id}`)}
                                         className="flex items-center gap-2"
                                         >
                                         <img
@@ -279,7 +279,7 @@ const LikedPosts = () => {
                             <div key={index}>
                             <FoodContent title={item.title_id} key={index} >
 
-                                <Link to={`/tieng-viet/story/${item.product_id}`}>
+                                <Link to={`/language/${param.language_id}/story/${item.product_id}`}>
 
                                     <div className='text-[15px]'>
                                         <img
@@ -292,7 +292,7 @@ const LikedPosts = () => {
                                 </Link>
                                 <div className="flex gap-4 my-3 text-[15px]">
                                     <FacebookShareButton hashtag={'Phần mềm Lịch sử địa phương Trà Vinh cung cấp cho tôi những thông tin rất hữu ích'} 
-                                    url={`https://lichsudiaphuong-travinh.netlify.app/tieng-viet/story/${item.product_id}`} quote={item.title_id}>
+                                    url={`https://lichsudiaphuong-travinh.netlify.app/language/${param.language_id}/story/${item.product_id}`} quote={item.title_id}>
                                         <FacebookIcon size={32} round />
                                     </FacebookShareButton>
 
@@ -309,7 +309,7 @@ const LikedPosts = () => {
                                         <TwitterIcon size={32} round />
                                     </TwitterShareButton>
                                     <button
-                                        onClick={() => copyToClipboard(`https://lichsudiaphuong-travinh.netlify.app/tieng-viet/story/${item.product_id}`)}
+                                        onClick={() => copyToClipboard(`https://lichsudiaphuong-travinh.netlify.app/language/${param.language_id}/story/${item.product_id}`)}
                                         className="flex items-center gap-2"
                                         >
                                         <img

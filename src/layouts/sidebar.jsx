@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import classNames from 'classnames';
 import cn from '@/helper/cn';
@@ -15,20 +15,39 @@ import Like from '@/components/utils/Like';
 import Home from '@/components/utils/Home';
 import Bot from '@/components/utils/Bot';
 import Manual from '@/components/utils/Manual';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import Dropdown from '@/components/dropdown';
 import Travel from '@/components/utils/Travel';
 import Story from '@/components/utils/Story';
 import Hometown from '@/components/utils/Hometown';
 import Chat_Bot from '@/pages/tiengviet/chatbot';
+import { useNavigate, useParams ,useLocation} from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const navigate = useNavigate();
     const location = useLocation();
+    const [value, setValue] = useState(1);
+    const { language_id, id, productId } = useParams();
+    
+    const images = ['/public/flag/vietnam.png', '/public/flag/english.webp']; 
+  
+
+  // Hàm xử lý thay đổi giá trị khi nút được bấm
+    const handleClick = () => {
+        if (value === 1) {
+            const newPathname = location.pathname.replace('/vi/', '/en/');
+            navigate(newPathname);
+            setValue(2);  // Nếu giá trị hiện tại là 1, chuyển sang 2 (giữa)
+        } else if (value === 2) {
+            const newPathname = location.pathname.replace('/en/', '/vi/');
+            navigate(newPathname);
+            setValue(1);  // Nếu giá trị hiện tại là 2, chuyển sang 3 (phải)
+        } 
+    };
 
     return (
         <>
-        <Chat_Bot/>
+        {/* <Chat_Bot/> */}
         <div
             className={`hidden md:block z-20 fixed top-0 left-0 h-full w-[18%] bg-white text-red-800 transform ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -40,10 +59,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </svg>
             </div>
             <ul className="mt-3">
-                <Link
-                    to="/tieng-viet/main"
+                <span
+                    // to="/tieng-viet/main"
                     onClick={() => {
-                        // navigate(`/tieng-viet/main`);
+                        navigate(`/language/${language_id}/main`);
                         // window.location.reload();
                     }}
                 >
@@ -55,12 +74,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Home />
                         Trang chủ
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/account"
+                </span>
+                <span
+                    // to="/tieng-viet/account"
                     className={location.pathname.includes('account') ? 'bg-gray-700' : ''}
                     onClick={() => {
-                        // navigate(`/tieng-viet/account`);
+                        navigate(`/language/${language_id}/account`);
                         // window.location.reload();
                     }}
                 >
@@ -68,11 +87,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Login />
                         Đăng ký / Đăng nhập
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/figure"
+                </span>
+                <span
+                    // to="/tieng-viet/figure"
                     onClick={() => {
-                        // navigate(`/tieng-viet/figure`);
+                        navigate(`/language/${language_id}/figure`);
                         // window.location.reload();
                     }}
                 >
@@ -84,11 +103,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Category />
                         Danh mục
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/hometown"
+                </span>
+                <span
+                    // to="/tieng-viet/hometown"
                     onClick={() => {
-                        // navigate(`/tieng-viet/hometown`);
+                        navigate(`/language/${language_id}/hometown`);
                         // window.location.reload();
                     }}
                 >
@@ -100,11 +119,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Hometown />
                         Giáo dục địa phương
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/story"
+                </span>
+                <span
+                    // to="/tieng-viet/story"
                     onClick={() => {
-                        // navigate(`/tieng-viet/story`);
+                        navigate(`/language/${language_id}/story`);
                         // window.location.reload();
                     }}
                 >
@@ -116,11 +135,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Story />
                         Câu chuyện
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/like"
+                </span>
+                <span
+                    // to="/tieng-viet/like"
                     onClick={() => {
-                        // navigate(`/tieng-viet/like`);
+                        navigate(`/language/${language_id}/like`);
                         // window.location.reload();
                     }}
                 >
@@ -132,11 +151,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Like />
                         Yêu thích
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/vt-map"
+                </span>
+                <span
+                    // to="/tieng-viet/vt-map"
                     onClick={() => {
-                        // navigate(`/tieng-viet/vt-map`);
+                        navigate(`/language/${language_id}/vt-map`);
                         // window.location.reload();
                     }}
                 >
@@ -148,8 +167,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Map />
                         Khám phá du lịch
                     </li>
-                </Link>
-                <Link
+                </span>
+                {/* <Link
                     to="/tieng-viet/chatbot"
                     onClick={() => {
                         // navigate(`/tieng-viet/chatbot`);
@@ -164,7 +183,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Bot />
                         Chatbot
                     </li>
-                </Link>
+                </Link> */}
                 {/* <Link
                     to="/tieng-viet/vt-map"
                     onClick={() => {
@@ -181,10 +200,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         Khám phá du lịch
                     </li>
                 </Link> */}
-                <Link
-                    to="/tieng-viet/find"
+                <span
+                    // to="/tieng-viet/find"
                     onClick={() => {
-                        // navigate(`/tieng-viet/find`);
+                        navigate(`/language/${language_id}/find`);
                         // window.location.reload();
                     }}
                 >
@@ -196,11 +215,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Magnify />
                         Tìm kiếm
                     </li>
-                </Link>
-                <Link
-                    to="/tieng-viet/hdsd"
+                </span>
+                <span
+                    // to="/tieng-viet/hdsd"
                     onClick={() => {
-                        // navigate(`/tieng-viet/hdsd`);
+                        navigate(`/language/${language_id}/hdsd`);
                         // window.location.reload();
                     }}
                 >
@@ -212,9 +231,28 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         <Manual />
                         Hướng dẫn sử dụng
                     </li>
-                </Link>
+                </span>
+                <span>
+                    <li className={`p-4 hover:bg-red-300 flex items-center gap-4 font-bold  border-b border-black ${
+                            location.pathname.includes('categories') ? 'bg-gray-900' : ''
+                        }`}
+                    >
+                        <button 
+                            onClick={handleClick} 
+                            className="px-4 py-2 rounded flex items-center gap-2">
+                            {/* Hiển thị "Ngôn ngữ" và hình ảnh trên cùng một dòng */}
+                            <p className="text-lg font-semibold">Ngôn ngữ </p>
+                            <img 
+                                src={images[value - 1]} // Lấy hình ảnh dựa trên giá trị của value
+                                alt={`Hình ảnh ${value}`}
+                                className="w-12 h-7 object-cover" // Điều chỉnh kích thước hình ảnh
+                            />
+                        </button>
+                    </li>
+                </span>
                 <div className='h-[100px]'></div>
             </ul>
+            
         </div>
     </>
     );

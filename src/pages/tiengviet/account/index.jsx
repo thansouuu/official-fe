@@ -7,7 +7,7 @@ import { useRegister } from '@/hooks/use-register';
 import { useUpdate } from '@/hooks/use-update';
 import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,useParams} from 'react-router-dom';
 
 const LoginPage = () => {
     const { isLoggedIn, mutate } = useAuth();
@@ -15,6 +15,7 @@ const LoginPage = () => {
     const { trigger: update } = useUpdate();
     const { trigger: register } = useRegister();
     const navigate = useNavigate();
+    const { language_id, id, productId } = useParams();
     const accountInit = [
         {
             label: 'Đăng nhập',
@@ -88,7 +89,7 @@ const LoginPage = () => {
                             </Tab.Panels>
                         </Tab.Group>
                         <p
-                            onClick={() => navigate('/tieng-viet/forgot-password')}
+                            onClick={() => navigate(`/language/${language_id}/forgot-password`)}
                             className="text-right mt-[20px] font-bold cursor-pointer"
                         >
                             Quên mật khẩu?
