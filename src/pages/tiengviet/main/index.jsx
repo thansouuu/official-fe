@@ -78,7 +78,7 @@ const Main = () => {
 
     return (
         <>
-        <Bot/>
+        {/* <Bot/> */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
             
             <div className="col-span-full flex flex-col items-center">

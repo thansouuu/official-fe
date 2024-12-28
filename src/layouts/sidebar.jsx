@@ -20,6 +20,7 @@ import Dropdown from '@/components/dropdown';
 import Travel from '@/components/utils/Travel';
 import Story from '@/components/utils/Story';
 import Hometown from '@/components/utils/Hometown';
+import Chat_Bot from '@/pages/tiengviet/chatbot';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const navigate = useNavigate();
@@ -27,6 +28,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     return (
         <>
+        <Chat_Bot/>
         <div
             className={`hidden md:block z-20 fixed top-0 left-0 h-full w-[18%] bg-white text-red-800 transform ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
