@@ -108,7 +108,7 @@ const Find = () => {
 
     return (
         <>
-            <Bot/>
+            {/* <Bot/> */}
             <div>
                 <button
                     className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2 my-2', {

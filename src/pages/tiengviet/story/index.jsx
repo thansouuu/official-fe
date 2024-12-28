@@ -465,7 +465,7 @@ const Story = memo(() => {
 
     return (
         <>
-        <Bot/>
+        {/* <Bot/> */}
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
             <div className='flex flex-col items-center'>
                 <iframe

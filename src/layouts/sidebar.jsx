@@ -41,8 +41,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/main"
                     onClick={() => {
-                        navigate(`/tieng-viet/main`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/main`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -58,8 +58,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     to="/tieng-viet/account"
                     className={location.pathname.includes('account') ? 'bg-gray-700' : ''}
                     onClick={() => {
-                        navigate(`/tieng-viet/account`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/account`);
+                        // window.location.reload();
                     }}
                 >
                     <li className="p-4 hover:bg-red-300 flex items-center gap-4 font-bold border-t border-black">
@@ -70,8 +70,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/figure"
                     onClick={() => {
-                        navigate(`/tieng-viet/figure`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/figure`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -86,8 +86,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/hometown"
                     onClick={() => {
-                        navigate(`/tieng-viet/hometown`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/hometown`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -102,8 +102,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/story"
                     onClick={() => {
-                        navigate(`/tieng-viet/story`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/story`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -118,8 +118,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/like"
                     onClick={() => {
-                        navigate(`/tieng-viet/like`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/like`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -134,8 +134,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/vt-map"
                     onClick={() => {
-                        navigate(`/tieng-viet/vt-map`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/vt-map`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -150,8 +150,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/chatbot"
                     onClick={() => {
-                        navigate(`/tieng-viet/chatbot`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/chatbot`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -182,8 +182,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/find"
                     onClick={() => {
-                        navigate(`/tieng-viet/find`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/find`);
+                        // window.location.reload();
                     }}
                 >
                     <li
@@ -198,8 +198,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link
                     to="/tieng-viet/hdsd"
                     onClick={() => {
-                        navigate(`/tieng-viet/hdsd`);
-                        window.location.reload();
+                        // navigate(`/tieng-viet/hdsd`);
+                        // window.location.reload();
                     }}
                 >
                     <li
