@@ -18,11 +18,11 @@ const LoginPage = () => {
     const { language_id, id, productId } = useParams();
     const accountInit = [
         {
-            label: 'Đăng nhập',
+            label: language_id==='vi'?"Đăng nhập":"Login",
             component: <Login onLogin={loginHandler} />,
         },
         {
-            label: 'Đăng kí',
+            label: language_id==='vi'?"Đăng nhập":"Register",
             component: <Register onRegister={registerHandler} />,
         },
     ];
@@ -92,7 +92,7 @@ const LoginPage = () => {
                             onClick={() => navigate(`/language/${language_id}/forgot-password`)}
                             className="text-right mt-[20px] font-bold cursor-pointer"
                         >
-                            Quên mật khẩu?
+                            {language_id==='vi'?"Quên mật khẩu?":"Forgot password?"}
                         </p>
                     </>
                 ) : (

@@ -6,7 +6,9 @@ export default [
         video: 'https://www.thinglink.com/view/scene/1876710852787176292',
         video2: 'https://www.thinglink.com/view/scene/1880953072440574820',
         title: 'Sự tích Ao Bà Om',
+        title_english: 'The Legend of Ao Ba Om',
         description: 'Ngày xưa, vùng đất Trà Vinh là nơi sinh sống chủ yếu của người Khmer, có một hoàng tử tên là Pa-tu-ma-vông nổi tiếng với tính cách độc đoán và chuyên quyền...',
+        description_english: 'In the past, Tra Vinh land was mainly inhabited by Khmer people. There was a prince named Pa-tu-ma-vong who was famous for his autocratic and authoritarian personality....',
         contents: [
             {
                 title: 'Diễn biến',
@@ -63,7 +65,9 @@ export default [
         imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/Mi%E1%BB%85u%20C%E1%BB%8Dp%20C%C3%A1i%20Gi%C3%A0.jpg',
         video: 'https://www.thinglink.com/view/scene/1877420709420991332',
         title: 'Sự tích miễu cọp cái già',
+        title_english: 'The Legend of the Old Tigress Temple',
         description: 'Ngày xưa, dải đất ven biển Cầu Ngang, Duyên Hải vẫn còn là những cánh rừng hoang ngập mặn bạt ngàn, hiểm trở. Trong rừng, mãnh thú dọc ngang đi lại...',
+        description_english: 'In the past, the coastal strip of Cau Ngang and Duyen Hai was still a vast, rugged wild mangrove forest. In the forest, ferocious animals roamed freely....',
         contents: [
             {
                 title: 'Diễn biến',
@@ -112,7 +116,9 @@ export default [
         imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/C%C3%A2u%20chuy%E1%BB%87n/S%E1%BB%B1%20t%C3%ADch%20l%E1%BB%85%20Chol%20Thnam%20Thmay.jpg',
         video: 'https://www.thinglink.com/view/scene/1878119511886922596',
         title: 'Sự tích lễ Chol Chnam Thmay',
+        title_english: 'The story of Chol Chnam Thmay festival',
         description: 'Chôl Chnăm Thmây tức là "Vào năm mới" của dân tộc Khmer, lễ được diễn ra vào ngày 13, 14 và 15 tháng tư hàng năm...',
+        description_english: 'Chol Chnam Thmay means "New Year" of the Khmer people, the festival takes place on April 13, 14 and 15 every year...',
         contents: [
             {
                 title: 'Diễn biến',

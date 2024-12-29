@@ -115,9 +115,9 @@ const HeaderRoot = ({ toggleSidebar }) => {
 
     const navigate = useNavigate();
     const param=useParams();
-     const [value, setValue] = useState(1);
-    const images = ['/public/flag/vietnam.png', '/public/flag/english.webp']; 
-  
+    const [value, setValue] = useState(1);
+    const images = ['/flag/vietnam.png', '/flag/english.webp']; 
+    const language_id=param.language_id;
 
   // Hàm xử lý thay đổi giá trị khi nút được bấm
     const handleClick = () => {
@@ -201,9 +201,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Home/>
-                                <div 
-                                // style={{opacity: 0}}
-                                >Trang chủ</div>
+                                {language_id === 'vi' ? 'Trang chủ' : 'Home'}
                             </Link>
                         </li>
                         <li>
@@ -215,7 +213,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
 
                             >
                                 <Login />
-                                <div>Đăng ký / Đăng nhập</div>
+                                {language_id==='vi'?"Đăng ký / Đăng nhập": "Register / Login"}
                             </Link>
                         </li>
                         <li>
@@ -226,7 +224,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Category />
-                                <div>Danh mục</div>
+                                {language_id==='vi'? "Danh mục": "Categories"}
                             </Link>
                         </li>
                         <li>
@@ -237,7 +235,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Hometown />
-                                <div>Giáo dục địa phương</div>
+                                {language_id==='vi'? "Giáo dục địa phương": "Local Education"}
                             </Link>
                         </li>
                         <li>
@@ -248,7 +246,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Story />
-                                <div>Câu chuyện</div>
+                                {language_id==='vi'? "Câu chuyện": "Stories"}
                             </Link>
                         </li>
                         <li>
@@ -259,7 +257,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Like />
-                                <div>Yêu thích</div>
+                                {language_id==='vi'? "Yêu thích": "Favorites"}
                             </Link>
                         </li>
                         <li>
@@ -270,7 +268,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Map />
-                                <div>Khám phá du lịch</div>
+                                {language_id==='vi'? "Khám phá du lịch": "Tourism"}
                             </Link>
                         </li>
                         {/* <li>
@@ -292,7 +290,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Magnify />
-                                <div>Tìm kiếm</div>
+                                {language_id==='vi'? "Tìm kiếm": "Search"}
                             </Link>
                         </li>
                         <li>
@@ -303,7 +301,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}
                             >
                                 <Manual />
-                                <div>Hướng dẫn sử dụng</div>
+                                {language_id==='vi'? "Hướng dẫn sử dụng": "User Guide"}
                             </Link>
                         </li>
                         {/* <li>
@@ -317,7 +315,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 onClick={handleClick} 
                                 className="px-4 py-2 rounded flex items-center gap-2">
                                 {/* Hiển thị "Ngôn ngữ" và hình ảnh trên cùng một dòng */}
-                                <p className="text-lg font-semibold">Ngôn ngữ </p>
+                                <p className="text-lg font-semibold">{language_id==='vi'? "Ngôn ngữ": "Language"} </p>
                                 <img 
                                     src={images[value - 1]} // Lấy hình ảnh dựa trên giá trị của value
                                     alt={`Hình ảnh ${value}`}
@@ -325,7 +323,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 />
                             </button>
                         </li>
-                        <li>
+                        {/* <li>
                             <button
                                 onClick={handleZoomToggle}
                                 className="flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
@@ -333,7 +331,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 {zoomEnabled ? 'Tắt thu phóng' : 'Bật thu phóng'}
                             </button>
                             
-                        </li>                    
+                        </li>                     */}
                         
                     </ul>
                 </div>

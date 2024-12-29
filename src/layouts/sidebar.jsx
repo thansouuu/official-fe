@@ -29,7 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     const [value, setValue] = useState(1);
     const { language_id, id, productId } = useParams();
     
-    const images = ['/public/flag/vietnam.png', '/public/flag/english.webp']; 
+    const images = ['/flag/vietnam.png', '/flag/english.webp']; 
   
 
   // Hàm xử lý thay đổi giá trị khi nút được bấm
@@ -72,7 +72,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Home />
-                        Trang chủ
+                        {language_id === 'vi' ? 'Trang chủ' : 'Home'}
                     </li>
                 </span>
                 <span
@@ -85,7 +85,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 >
                     <li className="p-4 hover:bg-red-300 flex items-center gap-4 font-bold border-t border-black">
                         <Login />
-                        Đăng ký / Đăng nhập
+                        {language_id==='vi'?"Đăng ký / Đăng nhập": "Register / Login"}
+
                     </li>
                 </span>
                 <span
@@ -101,7 +102,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Category />
-                        Danh mục
+                        {language_id==='vi'? "Danh mục": "Categories"}
                     </li>
                 </span>
                 <span
@@ -117,7 +118,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Hometown />
-                        Giáo dục địa phương
+                        {language_id==='vi'? "Giáo dục địa phương": "Local Education"}
                     </li>
                 </span>
                 <span
@@ -133,7 +134,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Story />
-                        Câu chuyện
+                        {language_id==='vi'? "Câu chuyện": "Stories"}
                     </li>
                 </span>
                 <span
@@ -149,7 +150,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Like />
-                        Yêu thích
+                        {language_id==='vi'? "Yêu thích": "Favorites"}
                     </li>
                 </span>
                 <span
@@ -165,7 +166,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Map />
-                        Khám phá du lịch
+                        {language_id==='vi'? "Khám phá du lịch": "Tourism"}
                     </li>
                 </span>
                 {/* <Link
@@ -184,22 +185,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         Chatbot
                     </li>
                 </Link> */}
-                {/* <Link
-                    to="/tieng-viet/vt-map"
-                    onClick={() => {
-                        navigate(`/tieng-viet/vt-map`);
-                        window.location.reload();
-                    }}
-                >
-                    <li
-                        className={`p-4 hover:bg-red-300 flex items-center gap-4 font-bold border-t border-black ${
-                            location.pathname.includes('categories') ? 'bg-gray-900' : ''
-                        }`}
-                    >
-                        <Travel />
-                        Khám phá du lịch
-                    </li>
-                </Link> */}
                 <span
                     // to="/tieng-viet/find"
                     onClick={() => {
@@ -213,7 +198,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Magnify />
-                        Tìm kiếm
+                        {language_id==='vi'? "Tìm kiếm": "Search"}
                     </li>
                 </span>
                 <span
@@ -229,7 +214,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                         }`}
                     >
                         <Manual />
-                        Hướng dẫn sử dụng
+                        {language_id==='vi'? "Hướng dẫn sử dụng": "User Guide"}
                     </li>
                 </span>
                 <span>
@@ -241,7 +226,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                             onClick={handleClick} 
                             className="px-4 py-2 rounded flex items-center gap-2">
                             {/* Hiển thị "Ngôn ngữ" và hình ảnh trên cùng một dòng */}
-                            <p className="text-lg font-semibold">Ngôn ngữ </p>
+                            <p className="text-lg font-semibold">{language_id==='vi'? "Ngôn ngữ": "Language"} </p>
                             <img 
                                 src={images[value - 1]} // Lấy hình ảnh dựa trên giá trị của value
                                 alt={`Hình ảnh ${value}`}

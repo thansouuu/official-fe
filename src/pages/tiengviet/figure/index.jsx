@@ -1,5 +1,6 @@
-import React from 'react';
-import products from '@/data/figure';
+import React, { useEffect, useState,useRef } from 'react';
+import productData from '@/data/figure';
+import productData_english from '@/data/figure_english';
 import { Link,useParams } from 'react-router-dom';
 import CardContentHightlight from '@/components/card-content/card-content-hightlight';
 import Tippy from '@tippyjs/react';
@@ -9,6 +10,10 @@ import Tippy from '@tippyjs/react';
 
 const Figure = () => {
     const param = useParams();
+    const [products,setProduct]=useState(productData);
+    useEffect(() => {
+        if (param.language_id==='vi') setProduct(productData); else setProduct(productData_english);
+    }, [param]);
     return (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:max-w-[900px] mx-auto">
         {products.map((product, index) => (
@@ -26,7 +31,7 @@ const Figure = () => {
                         </div>
                     ))}
                     <Link to={`/language/${param.language_id}/figure/${product.id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Xem thêm
+                        {param.language_id==='vi'?"Xem thêm":"Read more"}
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>

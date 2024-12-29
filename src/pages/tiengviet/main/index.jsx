@@ -1,5 +1,6 @@
 import React, { useEffect, useState,useRef } from 'react';
 import productData from '@/data/product';
+import productData_english from '@/data/product_english';
 import { Link } from 'react-router-dom';
 import { useNavigate,useParams } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
@@ -34,13 +35,25 @@ const Main = () => {
     ]
 
     useEffect(() => {
-        const products = Object.values(productData).flatMap((figure) => {
-            const figureId = figure.figureId;
-            return figure.data.map((product) => ({
-                ...product,
-                figureId: figureId
-            }));
-        });
+        let products ;
+        if (param.language_id==='vi') {
+            products= Object.values(productData).flatMap((figure) => {
+                const figureId = figure.figureId;
+                return figure.data.map((product) => ({
+                    ...product,
+                    figureId: figureId
+                }));
+            });
+        }
+        else {
+            products= Object.values(productData_english).flatMap((figure) => {
+                const figureId = figure.figureId;
+                return figure.data.map((product) => ({
+                    ...product,
+                    figureId: figureId
+                }));
+            });
+        }
         // Lọc các sản phẩm có số lượt xem (view) lớn hơn 0 (hoặc giá trị mình cần)
         const filteredProducts = products.filter((product) => product.view > 0);
 
@@ -54,7 +67,7 @@ const Main = () => {
         setTopViewedProducts(topProducts);
 
         
-    }, []);
+    }, [param]);
 
 
     const  handleClick=(index)=>{
@@ -136,8 +149,13 @@ const Main = () => {
                         onClick={handleShowIntro}
                         className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"
                     >
+                         {/* {!isVisible ? 'Xem giới thiệu' : 'Đóng giới thiệu'} */}
+                        {param.language_id==='vi' ?
+                            !isVisible ? 'Xem giới thiệu' : 'Đóng giới thiệu'
+                            :
+                            !isVisible ? 'View introduction' : 'Close introduction'
+                        }
                         
-                        {!isVisible ? 'Xem giới thiệu' : 'Đóng giới thiệu'}
                     </button>
                 </div>
                 <div
@@ -197,7 +215,10 @@ const Main = () => {
             </div> */}
 
             <div className=" col-span-full"> 
-            <FoodContent className="flex flex-col p-4" title="TOP 3 BÀI VIẾT NỔI BẬT" >
+            <FoodContent
+                className="flex flex-col p-4"
+                title={param.language_id === 'vi' ? "TOP 3 BÀI VIẾT NỔI BẬT" : "TOP 3 FEATURED POSTS"}
+            >
                 <div className="overflow-x-auto">
                     <div className="flex space-x-4">
                         {topViewedProducts.map((product, index) => (
