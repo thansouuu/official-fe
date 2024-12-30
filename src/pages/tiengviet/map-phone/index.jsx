@@ -138,49 +138,49 @@ const Mapphone = () => {
     setArray3(tempArray3);
     setArray4(tempArray4);
   }, [prepare]);
-  // useEffect(() => {
-  //   const coordinatesData=locationUser;
-  //   const updatedSelectedOptions1 = array1
-  //     .filter((option) =>
-  //       coordinatesData.some(
-  //         ([lon, lat]) => lat === option.latitude && lon === option.longitude
-  //       )
-  //     )
-  //     .map((option) => option.name);
+  useEffect(() => {
+    const coordinatesData=locationUser;
+    const updatedSelectedOptions1 = array1
+      .filter((option) =>
+        coordinatesData.some(
+          ([lon, lat]) => lat === option.latitude && lon === option.longitude
+        )
+      )
+      .map((option) => option.name);
 
-  //   const updatedSelectedOptions2 = array2
-  //     .filter((option) =>
-  //       coordinatesData.some(
-  //         ([lat, lon]) => lat === option.latitude && lon === option.longitude
-  //       )
-  //     )
-  //     .map((option) => option.name);
+    const updatedSelectedOptions2 = array2
+      .filter((option) =>
+        coordinatesData.some(
+          ([lat, lon]) => lat === option.latitude && lon === option.longitude
+        )
+      )
+      .map((option) => option.name);
 
-  //   const updatedSelectedOptions3 = array3
-  //     .filter((option) =>
-  //       coordinatesData.some(
-  //         ([lat, lon]) => lat === option.latitude && lon === option.longitude
-  //       )
-  //     )
-  //     .map((option) => option.name);
+    const updatedSelectedOptions3 = array3
+      .filter((option) =>
+        coordinatesData.some(
+          ([lat, lon]) => lat === option.latitude && lon === option.longitude
+        )
+      )
+      .map((option) => option.name);
 
-  //   const updatedSelectedOptions4 = array4
-  //     .filter((option) =>
-  //       coordinatesData.some(
-  //         ([lat, lon]) => lat === option.latitude && lon === option.longitude
-  //       )
-  //     )
-  //     .map((option) => option.name);
+    const updatedSelectedOptions4 = array4
+      .filter((option) =>
+        coordinatesData.some(
+          ([lat, lon]) => lat === option.latitude && lon === option.longitude
+        )
+      )
+      .map((option) => option.name);
 
-  //   // Cập nhật trạng thái của từng selectedOptions
-  //   setSelectedOptions1(updatedSelectedOptions1);
-  //   setSelectedOptions2(updatedSelectedOptions2);
-  //   setSelectedOptions3(updatedSelectedOptions3);
-  //   setSelectedOptions4(updatedSelectedOptions4);
-  //   console.log('bunha ',updatedSelectedOptions1);
+    // Cập nhật trạng thái của từng selectedOptions
+    setSelectedOptions1(updatedSelectedOptions1);
+    setSelectedOptions2(updatedSelectedOptions2);
+    setSelectedOptions3(updatedSelectedOptions3);
+    setSelectedOptions4(updatedSelectedOptions4);
+    console.log('bunha ',updatedSelectedOptions1);
       
     
-  // }, [array1,array2,array3,array4]);
+  }, [array1,array2,array3,array4]);
 
   useEffect(() => {
     const findLocationNames = (locations, coordinates) => {
@@ -391,49 +391,49 @@ const Mapphone = () => {
     setMarker(newMarkers);
   };
 
-  useEffect(() => {
-    console.log('to now ',toDo);
-    const updatedOptions1 = selectedOptions1.filter((option) =>
-      toDo.some((item) => item.name === option)
-    );
-    const updatedOptions2 = selectedOptions2.filter((option) =>
-      toDo.some((item) => item.name === option)
-    );
-    const updatedOptions3 = selectedOptions3.filter((option) =>
-      toDo.some((item) => item.name === option)
-    );
-    const updatedOptions4 = selectedOptions4.filter((option) =>
-      toDo.some((item) => item.name === option)
-    );
+  // useEffect(() => {
+  //   console.log('to now ',toDo);
+  //   const updatedOptions1 = selectedOptions1.filter((option) =>
+  //     toDo.some((item) => item.name === option)
+  //   );
+  //   const updatedOptions2 = selectedOptions2.filter((option) =>
+  //     toDo.some((item) => item.name === option)
+  //   );
+  //   const updatedOptions3 = selectedOptions3.filter((option) =>
+  //     toDo.some((item) => item.name === option)
+  //   );
+  //   const updatedOptions4 = selectedOptions4.filter((option) =>
+  //     toDo.some((item) => item.name === option)
+  //   );
   
-    // Cập nhật lại state cho các selectedOptions
-    setSelectedOptions1(updatedOptions1);
-    setSelectedOptions2(updatedOptions2);
-    setSelectedOptions3(updatedOptions3);
-    setSelectedOptions4(updatedOptions4);
-    if (roadDrawerControl && mapLoaded) {
-      const points = toDo.map(task => [task.longitude, task.latitude]);
-      setlistLngLat(points);
-      try {
-        if (typeMap===1) {
-          removeMarkers();
-          if (points.length > 0 && points[0].length === 2) {
-            console.log('Setting points from toDo:', points);
-            roadDrawerControl.setPoints(points);
-          } else if (points.length===0){
-            roadDrawerControl.setPoints([]);
-            console.error('Invalid points format:', points);
-          }
-        }
-        else {
-          roadDrawerControl.setPoints([]);
-          addMarker();
-        }
-      } catch (error) {
-        console.error('Error updating points:', error);
-      }
-    }
-  }, [toDo, roadDrawerControl, mapLoaded,typeMap]);
+  //   // Cập nhật lại state cho các selectedOptions
+  //   setSelectedOptions1(updatedOptions1);
+  //   setSelectedOptions2(updatedOptions2);
+  //   setSelectedOptions3(updatedOptions3);
+  //   setSelectedOptions4(updatedOptions4);
+  //   if (roadDrawerControl && mapLoaded) {
+  //     const points = toDo.map(task => [task.longitude, task.latitude]);
+  //     setlistLngLat(points);
+  //     try {
+  //       if (typeMap===1) {
+  //         removeMarkers();
+  //         if (points.length > 0 && points[0].length === 2) {
+  //           console.log('Setting points from toDo:', points);
+  //           roadDrawerControl.setPoints(points);
+  //         } else if (points.length===0){
+  //           roadDrawerControl.setPoints([]);
+  //           console.error('Invalid points format:', points);
+  //         }
+  //       }
+  //       else {
+  //         roadDrawerControl.setPoints([]);
+  //         addMarker();
+  //       }
+  //     } catch (error) {
+  //       console.error('Error updating points:', error);
+  //     }
+  //   }
+  // }, [toDo, roadDrawerControl, mapLoaded,typeMap]);
 
 
 
@@ -706,27 +706,35 @@ const Mapphone = () => {
     }
   };
   useEffect(() => {
+    let newToDo = [];
+
+    // Thêm "Vị trí của bạn" vào mảng mới nếu tồn tại
     const viTriCuaBan = toDo.find((item) => item.name === "Vị trí của bạn");
-
-  // Clear mảng toDo
-  toDo.length = 0;
-
-  // Thêm lại "Vị trí của bạn" nếu tồn tại
-  if (viTriCuaBan) {
-    toDo.push(viTriCuaBan);
-  }
-   
+    if (viTriCuaBan) {
+      newToDo.push(viTriCuaBan);
+    }
+  
+    // Thêm các location vào mảng mới nếu chúng có trong selectedOptions
     locationData.forEach((location) => {
       if (
         selectedOptions1.includes(location.name) ||
         selectedOptions2.includes(location.name) ||
         selectedOptions3.includes(location.name) ||
         selectedOptions4.includes(location.name)
-      ) toDo.push(location);
+      ) {
+        newToDo.push(location);
+      }
     });
-    if (roadDrawerControl && mapLoaded) {
+  
+    // Cập nhật mảng mới vào state
+    setToDo(newToDo);
+  }, [selectedOptions1, selectedOptions2, selectedOptions3, selectedOptions4]);
+  
+  useEffect(() => {
+    {
       const points = toDo.map(task => [task.longitude, task.latitude]);
-      console.log('update when change select ',toDo);
+      console.log('pretoDo',toDo);
+      console.log('Updating points:', points);
       setlistLngLat(points);
       try {
         if (typeMap===1) {
@@ -734,7 +742,7 @@ const Mapphone = () => {
           if (points.length > 0 && points[0].length === 2) {
             console.log('Setting points from toDo:', points);
             roadDrawerControl.setPoints(points);
-          } else if (points.length===0){
+          } else if (points.length===0) {
             roadDrawerControl.setPoints([]);
             console.error('Invalid points format:', points);
           }
@@ -747,9 +755,7 @@ const Mapphone = () => {
         console.error('Error updating points:', error);
       }
     }
-
-  }, [selectedOptions1, selectedOptions2, selectedOptions3, selectedOptions4]);
-  
+  }, [toDo]);
   
 
 
@@ -890,6 +896,7 @@ const Mapphone = () => {
               <h1 className="text-lg font-bold text-center">{param.language_id==='vi'?"Danh sách hành trình":"Itinerary list"}</h1>
               <div className=" task-list flex-grow">
               <ul className="list-disc pl-5">
+                {console.log('cac ',toDo)}
                 {toDo.map((location, index) => (
                   <li
                     className=" task mt-2 flex items-center px-4 py-2 border border-gray-300 cursor-pointer rounded-lg transition-all duration-300 hover:border-green-500"
@@ -903,12 +910,12 @@ const Mapphone = () => {
                       >
                         <svg className='w-5'xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path></svg>
                       </button>
-                      <button
+                      {/* <button
                         onClick={() => handleremoveToDo(location)}
                         className="bg-red-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300"
                       >
                         <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg>
-                      </button>
+                      </button> */}
                     </div>
                   </li>
                 ))}
