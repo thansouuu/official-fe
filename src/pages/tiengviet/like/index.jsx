@@ -189,19 +189,19 @@ const LikedPosts = () => {
             {/* <Bot/> */}
         
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-            <h2 className="text-3xl text-center pb-4 border-b border-slate-800">Yêu thích</h2>
+            <h2 className="text-3xl text-center pb-4 border-b border-slate-800">{param.language_id==='vi'?"Yêu thích":"Favourites"}</h2>
             <div className="col-span-full bg-white p-6 rounded shadow-md flex justify-center items-center flex-wrap mb-6">
                 <button 
                     onClick={() => handleButtonClick(1)}
                     className="w-40 px-4 py-2 my-2 bg-blue-500 text-white rounded hover:bg-blue-600 hover:shadow-lg focus:outline-none focus:ring-focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                 >
-                    Bài viết
+                    {param.language_id==='vi'?"Bài viết":"Article"}
                 </button>
                 <button 
                     onClick={() => handleButtonClick(2)}
                     className="w-40 px-4 py-2 my-2 bg-green-500 text-white rounded hover:bg-green-600 hover:shadow-lg focus:outline-none focus:ring-focus:ring-green-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mr-4"
                 >
-                    Câu chuyện
+                    {param.language_id==='vi'?"Câu chuyện":"Story"}
                 </button>
             </div>
 

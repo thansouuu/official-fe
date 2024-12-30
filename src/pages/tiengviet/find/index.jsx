@@ -118,7 +118,12 @@ const Find = () => {
                     })}
                     onClick={toggleFinds}
                 >
-                    {showFind ? 'Ẩn tìm kiếm' : 'Tìm kiếm bằng thành phố'}
+                    {
+                        param.language_id==='vi' ?
+                            showFind ? 'Ẩn tìm kiếm' : 'Tìm kiếm bằng thành phố'
+                        :
+                            showFind ? 'Hide search' : 'Search by city'
+                    }
                 </button>
                 {showFind && (
                     <div className="mt-4 my-4" style={{ position: 'relative', textAlign: 'center', width: '310px', margin: '0 auto' }}>
@@ -179,12 +184,12 @@ const Find = () => {
                     <input
                         type="text"
                         className="w-full px-4 py-2 text-black rounded-md"
-                        placeholder="Tìm kiếm..."
+                        placeholder="......"
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />
                     <button type="submit" className="px-4 py-2 text-white bg-blue-500 rounded-md">
-                        Tìm
+                        {param.language_id==='vi'?"Tìm":"Search"}
                     </button>
                     <button
                         type="button"

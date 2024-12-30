@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams} from 'react-router-dom';
 import { Link} from 'react-router-dom';
 import productData from '@/data/product';
 import './style-map.css'
@@ -14,6 +14,7 @@ const containerStyle = {
 
 const Mapphone = () => {
   const navigate = useNavigate();
+  const param=useParams();
   const [showAlert, setShowAlert] = useState(false);
 
     // useEffect(() => {
@@ -57,6 +58,7 @@ const Mapphone = () => {
   const [isadd, setIsAdd] = useState(true);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [locationData,setLocationData]=useState([]);
+  const [locationUser,setLocationUser]=useState([]);
   const { isLoggedIn, mutate, data } = useAuth();
   const [typeMap,setTypeMap]=useState(1);
   const [marker,setMarker]=useState([]);
@@ -88,6 +90,7 @@ const Mapphone = () => {
       const coordinatesData = await getListLocationUserForDirection();
       const locationsData = await getListLocation();
       setLocationData(locationsData);
+      setLocationUser(coordinatesData);
       const coordinates = coordinatesData.map(coord => {
         const [longitude, latitude] = coord;
         return { latitude, longitude };
@@ -98,20 +101,86 @@ const Mapphone = () => {
           coord.latitude === location.latitude && coord.longitude === location.longitude
         );
       });
-      const sortedLocations = [...filteredLocations].sort((a, b) => {
+      const sortedLocations = [...locationsData].sort((a, b) => {
         return a.name.localeCompare(b.name);
       });      
       setLocations(locationsData);
       // setDone(sortedLocations);
       setPrepare(sortedLocations)
       setCoordinates(coordinates);
-      console.log('type data od done ',done);
-      console.log('all des ',locationsData);
-
     };
 
     fetchData();
   }, []);
+  const [array1, setArray1] = useState([]);
+  const [array2, setArray2] = useState([]);
+  const [array3, setArray3] = useState([]);
+  const [array4, setArray4] = useState([]);
+
+  useEffect(() => {
+    const tempArray1 = [];
+    const tempArray2 = [];
+    const tempArray3 = [];
+    const tempArray4 = [];
+    prepare.forEach((tour) => {
+      if (tour.tourUrl === '1') {
+        tempArray1.push(tour);
+      } else if (tour.tourUrl === '2') {
+        tempArray2.push(tour);
+      } else if (tour.tourUrl === '3') {
+        tempArray3.push(tour);
+      } else if (tour.tourUrl === '4') {
+        tempArray4.push(tour);
+      }
+    });
+    setArray1(tempArray1);
+    setArray2(tempArray2);
+    setArray3(tempArray3);
+    setArray4(tempArray4);
+  }, [prepare]);
+  // useEffect(() => {
+  //   const coordinatesData=locationUser;
+  //   const updatedSelectedOptions1 = array1
+  //     .filter((option) =>
+  //       coordinatesData.some(
+  //         ([lon, lat]) => lat === option.latitude && lon === option.longitude
+  //       )
+  //     )
+  //     .map((option) => option.name);
+
+  //   const updatedSelectedOptions2 = array2
+  //     .filter((option) =>
+  //       coordinatesData.some(
+  //         ([lat, lon]) => lat === option.latitude && lon === option.longitude
+  //       )
+  //     )
+  //     .map((option) => option.name);
+
+  //   const updatedSelectedOptions3 = array3
+  //     .filter((option) =>
+  //       coordinatesData.some(
+  //         ([lat, lon]) => lat === option.latitude && lon === option.longitude
+  //       )
+  //     )
+  //     .map((option) => option.name);
+
+  //   const updatedSelectedOptions4 = array4
+  //     .filter((option) =>
+  //       coordinatesData.some(
+  //         ([lat, lon]) => lat === option.latitude && lon === option.longitude
+  //       )
+  //     )
+  //     .map((option) => option.name);
+
+  //   // Cập nhật trạng thái của từng selectedOptions
+  //   setSelectedOptions1(updatedSelectedOptions1);
+  //   setSelectedOptions2(updatedSelectedOptions2);
+  //   setSelectedOptions3(updatedSelectedOptions3);
+  //   setSelectedOptions4(updatedSelectedOptions4);
+  //   console.log('bunha ',updatedSelectedOptions1);
+      
+    
+  // }, [array1,array2,array3,array4]);
 
   useEffect(() => {
     const findLocationNames = (locations, coordinates) => {
@@ -266,10 +335,7 @@ const Mapphone = () => {
   const handleSave = async () => {
     const userId=data?.data?._id;
     console.log(userId);
-    // const points = toDo
-    //   .filter(task => task.name !== 'Vị trí của bạn') // Lọc các task có tên khác 'Vị trí của bạn'
-    //   .map(task => [task.longitude, task.latitude]); // Trích xuất kinh độ và vĩ độ
-      const points = toDo.map(task => [task.longitude, task.latitude]);
+    const points = toDo.map(task => [task.longitude, task.latitude]);
     if (!isLoggedIn) {
       toast.error('Vui lòng đăng nhập để lưu hành trình!');
       return;
@@ -326,6 +392,25 @@ const Mapphone = () => {
   };
 
   useEffect(() => {
+    console.log('to now ',toDo);
+    const updatedOptions1 = selectedOptions1.filter((option) =>
+      toDo.some((item) => item.name === option)
+    );
+    const updatedOptions2 = selectedOptions2.filter((option) =>
+      toDo.some((item) => item.name === option)
+    );
+    const updatedOptions3 = selectedOptions3.filter((option) =>
+      toDo.some((item) => item.name === option)
+    );
+    const updatedOptions4 = selectedOptions4.filter((option) =>
+      toDo.some((item) => item.name === option)
+    );
+  
+    // Cập nhật lại state cho các selectedOptions
+    setSelectedOptions1(updatedOptions1);
+    setSelectedOptions2(updatedOptions2);
+    setSelectedOptions3(updatedOptions3);
+    setSelectedOptions4(updatedOptions4);
     if (roadDrawerControl && mapLoaded) {
       const points = toDo.map(task => [task.longitude, task.latitude]);
       setlistLngLat(points);
@@ -353,8 +438,6 @@ const Mapphone = () => {
 
 
     useEffect(() => {
-      console.log('Giá trị toDo trong useEffect:', toDo);
-    
       const handleClick = (event) => {
         const clickedDiv = event.currentTarget;
         const firstSpan = clickedDiv.querySelector('span');
@@ -472,33 +555,7 @@ const Mapphone = () => {
     };
 
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
 
-  // Danh sách các tùy chọn với giá trị thực và văn bản hiển thị
-  const options = [
-    { value: 'lua-chon-1', label: 'Lựa chọn 1' },
-    { value: 'lua-chon-2', label: 'Lựa chọn 2' },
-    { value: 'lua-chon-3', label: 'Lựa chọn 3' },
-    { value: 'lua-chon-4', label: 'Lựa chọn 4' },
-    { value: 'lua-chon-5', label: 'Lựa chọn 5' }
-  ];
-
-  // Hàm xử lý khi người dùng chọn hoặc bỏ chọn một checkbox
-  const handleCheckboxChange = (event) => {
-    const value = event.target.value;
-    setSelectedOptions(prevOptions =>
-      prevOptions.includes(value)
-        ? prevOptions.filter(option => option !== value)
-        : [...prevOptions, value]
-    );
-  };
-
-  // Hàm xử lý khi người dùng bấm nút gửi
-  const handleSubmit = () => {
-    // Hiển thị giá trị thực đã chọn
-    alert(`Các giá trị đã chọn: ${selectedOptions.join(', ')}`);
-    // Bạn có thể thực hiện hành động gửi dữ liệu ở đây
-  };
   
 
   const getIdAddress = (title) => {
@@ -519,7 +576,7 @@ const Mapphone = () => {
   
   const handleProduct=()=>{
     if (selectedLocation) {
-      navigate(`/tieng-viet/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
+      navigate(`/language/${param.language_id}/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
     }
   };
 
@@ -528,7 +585,7 @@ const Mapphone = () => {
       window.location.assign(selectedLocation.tourUrl)
     }
     else if (getIdAddress(selectedLocation.name).tour_id!='0'){
-    navigate(`/tieng-viet/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
+    navigate(`/language/${param.language_id}/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
     }
   }
   const handleClose = () => {
@@ -603,23 +660,234 @@ const Mapphone = () => {
     const handleTypeMap=(e)=>{
       setTypeMap(e);
     }
-    const handleadvanced=()=>{
-      if (isLoggedIn) navigate(`/tieng-viet/map-advanced`);
-      else toast.info('Bạn phải đăng nhập để tiếp tục');
-    }
     useEffect(() => {
       initializeMap();
     }, []);
 
+    const [isOpen1, setIsOpen1] = useState(false);
+  const [selectedOptions1, setSelectedOptions1] = useState([]);
+  
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [selectedOptions2, setSelectedOptions2] = useState([]);
+  
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [selectedOptions3, setSelectedOptions3] = useState([]);
+  
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [selectedOptions4, setSelectedOptions4] = useState([]);
+
+  const toggleDropdowned = (dropdown) => {
+    if (dropdown === 1) setIsOpen1((prev) => !prev);
+    if (dropdown === 2) setIsOpen2((prev) => !prev);
+    if (dropdown === 3) setIsOpen3((prev) => !prev);
+    if (dropdown === 4) setIsOpen4((prev) => !prev);
+  };
+
+  const handleCheckboxChange = (dropdown, id) => {
+    if (dropdown === 1) {
+      setSelectedOptions1((prev) =>
+        prev.includes(id) ? prev.filter((option) => option !== id) : [...prev, id]
+      );
+    }
+    if (dropdown === 2) {
+      setSelectedOptions2((prev) =>
+        prev.includes(id) ? prev.filter((option) => option !== id) : [...prev, id]
+      );
+    }
+    if (dropdown === 3) {
+      setSelectedOptions3((prev) =>
+        prev.includes(id) ? prev.filter((option) => option !== id) : [...prev, id]
+      );
+    }
+    if (dropdown === 4) {
+      setSelectedOptions4((prev) =>
+        prev.includes(id) ? prev.filter((option) => option !== id) : [...prev, id]
+      );
+    }
+  };
+  useEffect(() => {
+    const viTriCuaBan = toDo.find((item) => item.name === "Vị trí của bạn");
+
+  // Clear mảng toDo
+  toDo.length = 0;
+
+  // Thêm lại "Vị trí của bạn" nếu tồn tại
+  if (viTriCuaBan) {
+    toDo.push(viTriCuaBan);
+  }
+   
+    locationData.forEach((location) => {
+      if (
+        selectedOptions1.includes(location.name) ||
+        selectedOptions2.includes(location.name) ||
+        selectedOptions3.includes(location.name) ||
+        selectedOptions4.includes(location.name)
+      ) toDo.push(location);
+    });
+    if (roadDrawerControl && mapLoaded) {
+      const points = toDo.map(task => [task.longitude, task.latitude]);
+      console.log('update when change select ',toDo);
+      setlistLngLat(points);
+      try {
+        if (typeMap===1) {
+          removeMarkers();
+          if (points.length > 0 && points[0].length === 2) {
+            console.log('Setting points from toDo:', points);
+            roadDrawerControl.setPoints(points);
+          } else if (points.length===0){
+            roadDrawerControl.setPoints([]);
+            console.error('Invalid points format:', points);
+          }
+        }
+        else {
+          roadDrawerControl.setPoints([]);
+          addMarker();
+        }
+      } catch (error) {
+        console.error('Error updating points:', error);
+      }
+    }
+
+  }, [selectedOptions1, selectedOptions2, selectedOptions3, selectedOptions4]);
+  
+  
+
+
   return (
     <div className="relative h-full w-full flex flex-col">
       <div className="relative h-full w-full flex flex-col items-center">
-        <div className="flex flex-col md:flex-row justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
-          <div className="list-card w-full md:w-1/2 p-4">
+        <div className="flex flex-col  justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
+          {/* <div className="list-card w-full p-4">
+      
             <div
               className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
             >
-              <h1 className="text-lg font-bold text-center">Danh sách hành trình</h1>
+              <h1 className="text-lg font-bold text-center"> {param.language_id==='vi'?"Địa điểm hứng thú":"Interesting location"}</h1>
+              
+            </div>
+            
+          </div> */}
+          <div className="card list-card-done bg-white shadow rounded p-4 flex flex-col relative">
+            <h1 className="mb-2 text-lg font-bold text-center">
+              {param.language_id === 'vi' ? "Địa điểm hứng thú" : "Interesting location"}
+            </h1>
+
+        <div className="flex justify-between  space-x-4 relative">
+          {/* Dropdown 1 */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdowned(1)}
+              className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
+            >
+              {param.language_id==='vi'?"Nhân vật":"abc"}
+            </button>
+            {isOpen1 && (
+              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                {array1.map((option,key) => (
+                  <>
+                   <label key={key} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={
+                          selectedOptions1.includes(option.name) || toDo.some((item) => item.name === option.name)
+                        }
+                        onChange={() => handleCheckboxChange(1, option.name)}
+                      />
+                      <span>{option.name}</span>
+                  </label>
+                  </>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Dropdown 2 */}
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdowned(2)}
+              className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
+            >
+              {param.language_id==='vi'?"Địa điểm":"abc"}
+            </button>
+            {isOpen2 && (
+              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                {array2.map((option,key) => (
+                  <>
+                  <label key={key} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      checked={
+                        selectedOptions2.includes(option.name) || toDo.some((item) => item.name === option.name)
+                      }
+                      onChange={() => handleCheckboxChange(2, option.name)}
+                    />
+                    <span>{option.name}</span>
+                  </label>
+                  </>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdowned(3)}
+              className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
+            >
+              {param.language_id==='vi'?"Chùa":"abc"}
+            </button>
+            {isOpen3 && (
+              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                {array3.map((option,key) => (
+                  <>
+                  <label key={key} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      checked={
+                        selectedOptions3.includes(option.name) || toDo.some((item) => item.name === option.name)
+                      }
+                      onChange={() => handleCheckboxChange(3, option.name)}
+                    />
+                    <span>{option.name}</span>
+                  </label>
+                  </>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="relative">
+            <button
+              onClick={() => toggleDropdowned(4)}
+              className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
+            >
+              {param.language_id==='vi'?"Lễ hội":"abc"}
+            </button>
+            {isOpen4 && (
+              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                {array4.map((option,key) => (
+                  <>
+                  <label key={key} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      checked={
+                        selectedOptions4.includes(option.name) || toDo.some((item) => item.name === option.name)
+                      }
+                      onChange={() => handleCheckboxChange(4, option.name)}
+                    />
+                    <span>{option.name}</span>
+                  </label>
+                  </>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="h-[250px]"></div>
+        </div>
+      </div>
+          <div className="list-card w-full  p-4">
+            <div
+              className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
+            >
+              <h1 className="text-lg font-bold text-center">{param.language_id==='vi'?"Danh sách hành trình":"Itinerary list"}</h1>
               <div className=" task-list flex-grow">
               <ul className="list-disc pl-5">
                 {toDo.map((location, index) => (
@@ -651,7 +919,7 @@ const Mapphone = () => {
                   className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 transition duration-300"
                   onClick={handleSave}
                 >
-                  Lưu điểm hành trình
+                  {param.language_id==='vi'?"Lưu điểm hành trình":"Save travel points"}
                 </button>
                 <button
                   onClick={handleClick}
@@ -661,45 +929,17 @@ const Mapphone = () => {
                       : 'bg-red-500 hover:bg-red-600 active:bg-red-700'
                   }`}
                 >
-                  {isadd ? 'Thêm vị trí' : 'Xóa vị trí'}
+                  {
+                    param.language_id==='vi'?
+                      isadd ? 'Thêm vị trí' : 'Xóa vị trí'
+                    :
+                      isadd ? 'Add location' : 'Delete location'
+                  }
                 </button>
               </div>
             </div>
           </div>
-          <div className="list-card  w-full md:w-1/2 p-4">
-            <div
-              className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
-            >
-              <h1 className="text-lg font-bold text-center">Địa điểm hứng thú</h1>
-              <div className="flex-grow">
-                <ul className="pl-5">
-                  {done.map((location, index) => (
-                    <li 
-                      className="mt-1 flex items-center justify-between px-4 py-2 border border-gray-300 cursor-pointer rounded-lg transition-all duration-300 hover:border-green-500"
-                      key={index}
-                    > 
-                      <span className="text-base font-semibold">{location.name}</span>
-                      <div className="flex space-x-2 ml-auto">  
-                        <button
-                          onClick={() => handleaddToDo(location)}
-                          className="bg-green-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
-                        >
-                          <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg>
-                        </button>
-                        <button
-                          onClick={() => handleremoveDone(location)}
-                          className="bg-red-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300"
-                        >
-                          <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 6H22V8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8H2V6H7V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"></path></svg>
-                        </button>
-                      </div>
-                    </li>
-
-                  ))}
-                </ul>            
-              </div>
-            </div>
-          </div>
+          
         </div>
         <div className="relative flex flex-col items-center mb-4">
           <button
@@ -748,13 +988,13 @@ const Mapphone = () => {
               onClick={() => handleTypeMap(1)} 
               className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 1 ? 'bg-blue-600 font-bold text-black hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:scale-105 active:scale-95' : 'bg-blue-400 text-gray-800 hover:bg-blue-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300'}`}
             >
-              Hành trình
+              {param.language_id==='vi'?"Hành trình":"Trip"}
             </button>
             <button 
               onClick={() => handleTypeMap(2)} 
               className={`flex-1 px-4 py-2 rounded transform transition-transform duration-300 ease-in-out ${typeMap === 2 ? 'bg-green-600 font-bold text-black hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-105 active:scale-95' : 'bg-green-400 text-gray-800 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-300'}`}
             >
-              Địa điểm
+              {param.language_id==='vi'?"Địa điểm":"Location"}
             </button>
           </div>
         </div>
@@ -782,7 +1022,7 @@ const Mapphone = () => {
             <h2 className="text-2xl font-bold ">{selectedLocation.name}</h2>
             {selectedLocation.name!=='Đây là vị trí của bạn' && (
             <>
-              <p>{selectedLocation.decription}</p>
+              <p>{param.language_id==='vi'?selectedLocation.decription:selectedLocation.presentationUrl}</p>
               <div className="flex items-center space-x-2 mt-2">
                 {/* <button
                   className="bg-white text-black px-4 py-2 rounded"
@@ -794,13 +1034,13 @@ const Mapphone = () => {
                   className="bg-blue-500 text-white px-4 py-2 rounded"
                   onClick={handleProduct}
                 >
-                  Thuyết minh
+                  {param.language_id==='vi'?"Thuyết minh":"Explanation"}
                 </button>
                 <button
                   className="bg-blue-500 text-white px-4 py-2 rounded"
                   onClick={handleTour}
                 >
-                  3D - VR Tour
+                  {param.language_id==='vi'?"3D - VR Tour":"3D - VR Tour"}
                 </button>
               </div>
             </>

@@ -206,7 +206,12 @@ const FeedbackCard = ({ item }) => {
                     )}
                     onClick={() => setIsShow(!isShow)}
                 >
-                    {!isShow ? 'Xem bình luận' : 'Ẩn bình luận'}
+                    {
+                                params.language_id==='vi' ?
+                                    !isShow ? 'Xem bình luận' : 'Ẩn bình luận'
+                                :
+                                    !isShow ? 'See comments' : 'Hide comments'
+                    }
                 </button>
             </div>
             {isModal && (

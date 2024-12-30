@@ -156,7 +156,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <span
                     // to="/tieng-viet/vt-map"
                     onClick={() => {
-                        navigate(`/language/${language_id}/vt-map`);
+                        navigate(`/language/${language_id}/map-phone`);
                         // window.location.reload();
                     }}
                 >

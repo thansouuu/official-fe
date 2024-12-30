@@ -592,8 +592,13 @@ const Product = memo(() => {
                                 'bg-green-400 hover:bg-green-500': !isvideo,
                                 'bg-red-400 hover:bg-red-500': isvideo,
                             })}
-                        >
-                            {!isvideo ? 'Thêm thủ ngữ' : 'Bỏ thủ ngữ'}
+                        >   
+                            {params.language_id==='vi'?
+                                !isvideo ? 'Thêm thủ ngữ' : 'Bỏ thủ ngữ'
+                                :
+                                !isvideo ? 'Add sign language' : 'Remove sign language'
+                            }
+
                     </button>
                 </div>
             }
@@ -700,7 +705,10 @@ const Product = memo(() => {
 
                     {product_nonmain?.contents?.map((content, index) => (
                         <>
-                        <FoodContent title={content.title} key={index}>
+                        <FoodContent 
+                            title={content.title} 
+                            key={index}
+                        >
                             {content.data?.map((item, key) => (
                                 <div key={key}>
                                     {item.type === 'text' && <CardContentText value={item.value} />}
@@ -750,7 +758,9 @@ const Product = memo(() => {
                     </>
                 ))}
                     {res.value!=='0'&&<>
-                        <FoodContent title="Câu hỏi kiểm tra">
+                        <FoodContent 
+                            title={params.language_id === 'vi' ? "Câu hỏi kiểm tra" : "Test questions"}
+                        >
                         <button
                             className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2', {
                                 'bg-gray-300 hover:bg-gray-400': !showInfos,
@@ -758,7 +768,12 @@ const Product = memo(() => {
                             })}
                             onClick={toggleInfos}
                         >
-                            {showInfos ? 'Ẩn thông tin thêm' : 'Hiển thị thông tin thêm'}
+                            {
+                                params.language_id==='vi' ?
+                                    showInfos ? 'Ẩn thông tin thêm' : 'Hiển thị thông tin thêm'
+                                :
+                                    showInfos ? 'Hide additional information' : 'Show more information'
+                            }
                         </button>
                         {showInfos && (
                             <div className="mt-4">
@@ -891,7 +906,9 @@ const Product = memo(() => {
                     </FoodContent>
                 ))}
                 
-                    <FoodContent title="Liên quan">
+                    <FoodContent 
+                        title={params.language_id === 'vi' ? "Liên quan" : "Relate to"}
+                    >
                         <div className="flex items-center gap-2 flex-wrap">
                             {product?.tags?.map((tag, index) => (
                                 <button key={index} className="py-2 px-4 bg-slate-200 hover:bg-slate-300">
@@ -902,7 +919,9 @@ const Product = memo(() => {
                     </FoodContent>
                 </>}
                 
-                <FoodContent title="Đánh giá và nhận xét">
+                <FoodContent 
+                    title={params.language_id === 'vi' ? "Đánh giá và nhận xét" : "Ratings and comments"}
+                >
                     <div >
                         <button
                             className={cn('text-white w-fit m-auto px-4 rounded py-2', {
@@ -911,7 +930,12 @@ const Product = memo(() => {
                             })}
                             onClick={handleOpenComment}
                         >
-                            {isComent ? 'Hủy đánh giá' : 'Viết đánh giá'}
+                            {
+                                params.language_id==='vi'?
+                                    isComent ? 'Hủy đánh giá' : 'Viết đánh giá'
+                                :
+                                    isComent ? 'Cancel review' : 'Write a review'
+                            }
                         </button>
                         {isComent && (
                             <form onSubmit={handleComemt} className="flex flex-col gap-4 mt-4">
@@ -988,7 +1012,12 @@ const Product = memo(() => {
                             })}
                             onClick={handleOpenBonus}
                         >
-                            {isBonus ? 'Hủy bổ sung thêm' : 'Viết bổ sung thêm'}
+                            {
+                                params.language_id==='vi'?
+                                    isBonus ? 'Hủy bổ sung' : 'Viết bổ sung'
+                                :
+                                    isBonus ? 'Cancel additional' : 'Additional writing'
+                            }
                         </button>
                         {/* <div
                             ref={contentRef}
@@ -1046,7 +1075,9 @@ const Product = memo(() => {
                             {/* // </div> */}
                     </div>
                 </FoodContent>
-                <FoodContent title="Danh sách đánh giá">
+                <FoodContent 
+                    title={params.language_id === 'vi' ? "Danh sách đánh giá" : "Review list"}
+                >
                     <div className="mt-4">
                        <div className="flex flex-wrap justify-center mb-4 gap-4">
                             <select
@@ -1056,8 +1087,8 @@ const Product = memo(() => {
                                 className="min-w-[150px]"
                             >
                                 
-                                <option value="desc">Mới nhất</option>
-                                <option value="asc">Cũ nhất</option>
+                                <option value="desc">{params.language_id==='vi'?"Mới nhất":"Latest"}</option>
+                                <option value="asc">{params.language_id==='vi'?"Cũ nhất":"Oldest"}</option>
                                 <option value=""> </option>
                             </select>
                             <select
@@ -1066,8 +1097,8 @@ const Product = memo(() => {
                                 onChange={(e) => { setLikesType(e.target.value); handleSort(); }}
                                 className="min-w-[150px]" 
                             >
-                                <option value="most">Nhiều lượt thích nhất</option>
-                                <option value="least">Ít lượt thích nhất</option>
+                                <option value="most">{params.language_id==='vi'?"Nhiều lượt thích nhất":"Most likes"}</option>
+                                <option value="least">{params.language_id==='vi'?"Ít lượt thích nhất":"Fewest likes"}</option>
                                 <option value=""> </option>
                             </select>
                         </div>
@@ -1085,7 +1116,9 @@ const Product = memo(() => {
                         </div>
                     </div>
                 </FoodContent>
-                <FoodContent title="Chia sẻ bài viết">
+                <FoodContent 
+                    title={params.language_id === 'vi' ? "Chia sẽ bài viết" : "Share the article"}
+                >
                     <div className="flex gap-4">
                         <FacebookShareButton hashtag={'Phần mềm Lịch sử địa phương Trà Vinh cung cấp cho tôi những thông tin rất hữu ích'} url={window.location.href} quote={product?.title}>
                             <FacebookIcon size={32} round />
@@ -1129,7 +1162,9 @@ const Product = memo(() => {
                 {params.figureId!=='14'&&<>
                 
                 
-                <FoodContent title="Câu hỏi kiểm tra">
+                <FoodContent 
+                    title={params.language_id === 'vi' ? "Câu hỏi kiểm tra" : "Test questions"}
+                >
                     <button
                         className={cn('text-white w-fit m-auto px-4 rounded-2xl py-2', {
                             'bg-gray-300 hover:bg-gray-400': !showInfos,
@@ -1137,7 +1172,12 @@ const Product = memo(() => {
                         })}
                         onClick={toggleInfos}
                     >
-                        {showInfos ? 'Ẩn thông tin thêm' : 'Hiển thị thông tin thêm'}
+                        {
+                                params.language_id==='vi' ?
+                                    showInfos ? 'Ẩn thông tin thêm' : 'Hiển thị thông tin thêm'
+                                :
+                                    showInfos ? 'Hide additional information' : 'Show more information'
+                        }
                     </button>
                     {showInfos && (
                         <div className="mt-4">
