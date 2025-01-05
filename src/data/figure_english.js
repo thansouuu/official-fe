@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
-        name: 'Historical figure',
+        name: 'Historical Figures',
         description:[
             {
                 value: `Great individuals have left a deep mark in the history of the struggle for national independence....`,
@@ -23,7 +23,7 @@ export default [
     {
         id: 2,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%91%E1%BA%A1i%20di%E1%BB%87n.jpg',
-        name: 'Location',
+        name: 'Destinations',
         description:[
             {
                 value: `From historical sites to spiritual sites or destinations...`,
@@ -44,7 +44,7 @@ export default [
     {
         id: 10,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/S%E1%BB%B1%20ki%E1%BB%87n%20l%E1%BB%8Bch%20s%E1%BB%AD/%20%C4%90%E1%BA%A5u%20tranh%20ch%E1%BB%91ng%20ch%C3%ADnh%20quy%E1%BB%81n%20M%E1%BB%B9-Di%E1%BB%87m/II-2.jpg',
-        name: 'Historical period',
+        name: 'Historical periods',
         description:[
             {
                 value: `From heroic resistance wars to revolutionary events, every historical story reflects...`,
@@ -149,7 +149,7 @@ export default [
     {
         id: 6,
         image: 'https://raw.githubusercontent.com/thansouuu/data-image/main/ch%C3%B9a/Ch%C3%B9a%20%C3%82ng/1-1.jpg',
-        name: 'Pagoda',
+        name: 'Pagodas',
         description:[
             {
                 value: `The temples with their elaborate carvings and serene atmosphere offer a...`,

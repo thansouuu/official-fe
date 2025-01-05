@@ -763,29 +763,17 @@ const Mapphone = () => {
     <div className="relative h-full w-full flex flex-col">
       <div className="relative h-full w-full flex flex-col items-center">
         <div className="flex flex-col  justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
-          {/* <div className="list-card w-full p-4">
-      
-            <div
-              className="card list-card-done bg-white shadow rounded p-4 flex flex-col"
-            >
-              <h1 className="text-lg font-bold text-center"> {param.language_id==='vi'?"Địa điểm hứng thú":"Interesting location"}</h1>
-              
-            </div>
-            
-          </div> */}
           <div className="card list-card-done bg-white shadow rounded p-4 flex flex-col relative">
             <h1 className="mb-2 text-lg font-bold text-center">
-              {param.language_id === 'vi' ? "Địa điểm hứng thú" : "Interesting location"}
+              {param.language_id === 'vi' ? "Địa điểm hứng thú" : "Point of Interest"}
             </h1>
-
         <div className="flex justify-between  space-x-4 relative">
-          {/* Dropdown 1 */}
           <div className="relative">
             <button
               onClick={() => toggleDropdowned(1)}
               className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
             >
-              {param.language_id==='vi'?"Nhân vật":"abc"}
+            {param.language_id==='vi'?"Nhân vật":"Characters"}
             </button>
             {isOpen1 && (
               <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
@@ -799,7 +787,7 @@ const Mapphone = () => {
                         }
                         onChange={() => handleCheckboxChange(1, option.name)}
                       />
-                      <span>{option.name}</span>
+                      <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
                   </label>
                   </>
                 ))}
@@ -813,7 +801,7 @@ const Mapphone = () => {
               onClick={() => toggleDropdowned(2)}
               className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
             >
-              {param.language_id==='vi'?"Địa điểm":"abc"}
+              {param.language_id==='vi'?"Địa điểm":"Destinations"}
             </button>
             {isOpen2 && (
               <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
@@ -827,7 +815,7 @@ const Mapphone = () => {
                       }
                       onChange={() => handleCheckboxChange(2, option.name)}
                     />
-                    <span>{option.name}</span>
+                    <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
                   </label>
                   </>
                 ))}
@@ -839,7 +827,7 @@ const Mapphone = () => {
               onClick={() => toggleDropdowned(3)}
               className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
             >
-              {param.language_id==='vi'?"Chùa":"abc"}
+              {param.language_id==='vi'?"Chùa":"Pagodas"}
             </button>
             {isOpen3 && (
               <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
@@ -853,7 +841,7 @@ const Mapphone = () => {
                       }
                       onChange={() => handleCheckboxChange(3, option.name)}
                     />
-                    <span>{option.name}</span>
+                    <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
                   </label>
                   </>
                 ))}
@@ -865,7 +853,7 @@ const Mapphone = () => {
               onClick={() => toggleDropdowned(4)}
               className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
             >
-              {param.language_id==='vi'?"Lễ hội":"abc"}
+              {param.language_id==='vi'?"Lễ hội":"Festivals"}
             </button>
             {isOpen4 && (
               <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
@@ -879,7 +867,7 @@ const Mapphone = () => {
                       }
                       onChange={() => handleCheckboxChange(4, option.name)}
                     />
-                    <span>{option.name}</span>
+                    <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
                   </label>
                   </>
                 ))}
@@ -902,7 +890,7 @@ const Mapphone = () => {
                     className=" task mt-2 flex items-center px-4 py-2 border border-gray-300 cursor-pointer rounded-lg transition-all duration-300 hover:border-green-500"
                     key={index}
                   >
-                    <span className="text-base font-semibold">{index}. {location.name}</span>
+                    <span className="text-base font-semibold">{index}. {param.language_id==='vi' ? location.name:location.name_english}</span>
                     <div className="flex space-x-2 ml-auto">
                       <button
                         onClick={() => handleIncrease(index)}
@@ -948,8 +936,8 @@ const Mapphone = () => {
           </div>
           
         </div>
-        <div className="relative flex flex-col items-center mb-4">
-          <button
+        {/* <div className="relative flex flex-col items-center mb-4"> */}
+          {/* <button
             type="button"
             onClick={toggleDropdown}
             className="bg-blue-500 text-white py-2 px-4 rounded mb-1"
@@ -979,8 +967,8 @@ const Mapphone = () => {
                 </li>
               ))}
             </ul>
-          )}
-        </div>
+          )} */}
+        {/* </div> */}
         <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
           {/* <div className="mb-4">
             <button 
@@ -1026,7 +1014,7 @@ const Mapphone = () => {
             >
             X
             </button>
-            <h2 className="text-2xl font-bold ">{selectedLocation.name}</h2>
+            <h2 className="text-2xl font-bold ">{param.language_id==='vi'?selectedLocation.name:selectedLocation.name_english}</h2>
             {selectedLocation.name!=='Đây là vị trí của bạn' && (
             <>
               <p>{param.language_id==='vi'?selectedLocation.decription:selectedLocation.presentationUrl}</p>

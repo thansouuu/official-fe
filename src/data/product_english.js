@@ -12,7 +12,7 @@ export default [
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
                 video: 'https://www.youtube.com/embed/iXwNNGyF4CQ?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
                 video2: 'https://www.youtube.com/embed/y2zp6QFr6Ys?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
-                title: 'Chị Út Tịch',
+                title: 'Ut Tich',
                 tour:'6',
                 game: 'https://wordwall.net/vi/embed/05cb288e989d438b8cbdda0ce7db09e0?themeId=21&templateId=69&fontStackId=0',
                 view: 300,
@@ -23,7 +23,7 @@ export default [
                         data: [
                             {
                                 type: 'audio',
-                                src: '/audio/chi_ut_tich/1.mp3',
+                                src: '/audio/ut_tich_english/1.mp3',
                             },
                             {
                                 type: 'grid-image',
@@ -31,8 +31,8 @@ export default [
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-1.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-2.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-5.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-6.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-8.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-6.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-8.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-9.jpg',
                                 ],
                             },
@@ -66,10 +66,10 @@ export default [
                             
                             {
                                 type: 'hightlight',
-                                value: `- Năm 1944, cha chị qua đời, khi ấy chị chỉ mới 13 tuổi. Sau đó, chị em út tịch được gia đình đồng chí Nguyễn Hòa Luông - cán bộ Việt Minh xã Tam Ngãi, theo yêu cầu của chi bộ Đảng địa phương, đã đem tiền chuộc lại tự do. Từ đây, cuộc đời ở đợ của bà đã chấm dứt. Đầu năm 1950, Nguyễn Thị Út xây dựng gia đình với Lâm Văn Tịch, ông là người Việt gốc Khmer, cũng là chiến sĩ trong lực lượng vũ trang địa phương và sau đó chị sinh được 9 người con kể cả trong thời gian chị hoạt động cách mạng. Người con đầu mất sớm chưa kịp đặt tên. Đứa con thứ hai của chị là Lâm Thị Bé sinh năm 1953, còn gọi là Bé Ba. Đứa con thứ ba là Lâm Thị Thanh, hay còn gọi là Lâm Thị Mỹ Thanh. Đứa con thứ tư là Lâm Thị Thơ.  Người con thứ năm là Lâm Thị Kim Anh (1959). Người con thứ sáu là Lâm Văn Hiển sinh năm 1961, còn gọi là Bảy Hiển. Người con thứ bảy là Lâm Văn Hùng sinh năm 1964, còn gọi là Lâm Thanh Hùng. Tiếp đó là bà Lâm Thị Đồng Xuân sinh năm 1965. Người con cuối cùng là Lâm Thị Hồng, sinh năm 1968, còn gọi là Lâm Thị Xuân Hồng, ra đời trước khi mẹ mất chỉ 14 ngày.`,
+                                value: `-  In 1944, her father passed away, leaving Ut and her siblings orphaned. They were later freed from servitude by Nguyen Hoa Luong, a Viet Minh cadre, on behalf of the local Party cell. From then on, her life as a servant ended. In early 1950, she married Lam Van Tich, a Khmer-origin local armed forces fighter. Together, they had nine children, including Lam Thi Be (Be Ba), Lam Thi Thanh (My Thanh), Lam Thi Tho, and Lam Van Hien (Bay Hien), among others. Her youngest child, Lam Thi Hong (Xuan Hong), was born just 14 days before her mother’s passing.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'gốc Khmer',
+                                        hightlight: 'Khmer-origin',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
@@ -78,56 +78,35 @@ export default [
                                         }
                                     },
                                     {
-                                        hightlight: 'Lâm Văn Tịch',
+                                        hightlight: 'Lam Van Tich',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-10.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'người con đầu',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-11.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'Lâm Thị Bé',
+                                        hightlight: 'Lam Thi Be',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-12.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'Lâm Thị Thanh',
+                                        hightlight: 'Lam Thi Thanh',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-13.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'Lâm Thị Kim Anh',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-14.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'Lâm Văn Hiển',
+                                        hightlight: 'Lam Van Hien',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-15.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'Lâm Văn Hùng',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-16.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'Lâm Văn Hồng',
+                                        hightlight: 'Lam Thi Hong',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/1-17.jpg',
@@ -139,33 +118,33 @@ export default [
                         ],
                     },
                     {
-                        title: 'Sự nghiệp kháng chiến',
+                        title: 'Revolutionary Career',
                         data: [
                             {
                                 type: 'audio',
-                                src: '/audio/chi_ut_tich/2.mp3',
+                                src: '/audio/ut_tich_english/2.mp3',
                             },
                             {
                                 type: 'grid-image',
                                 value: [
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-3.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-3.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-10.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-14.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-22.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-22.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-27.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-28.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-30.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-30.jpg',
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-31.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-35.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-35.jpg',
                                     
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tháng 9 năm 1945, sau Cách mạng tháng Tám thành công, thực dân Pháp xâm lược nước ta lần thứ hai. Nguyễn Thị Út đã đến với cách mạng, với kháng chiến thật đơn giản, như câu nói của bà “Còn cái lai quần cũng đánh”. Nguyễn Thị Út tham gia công tác trinh sát, liên lạc cho đơn vị công an xung phong Cầu Kè, do đồng chí Nguyễn Hòa Luông làm Chỉ huy trưởng. Chị theo dõi, nắm vững tình hình địch, báo tin kịp thời với lực lượng quân sự địa phương và bộ đội chủ lực để phối hợp tác chiến đó là trận Rạch Cách, trận bót Bến Cát, gây nhiều tổn thất cho địch. Chị hoàn thành nhiệm vụ trao kế hoạch của chú Chín Luông cho cơ sở bí mật để tổ chức cứu một đồng chí lãnh đạo Ban binh vận tỉnh bị bắt, bí mật đưa vũ khí qua Cầu Kè cho anh em giết tên quận Hùm khét tiếng ác ôn lúc bấy giờ. `,
+                                value:`- In September 1945, after the August Revolution and the subsequent French reoccupation of Vietnam, Ut Tich joined the revolution with the simple motto, “Even with just the hem of a skirt, I’ll fight.” She became a scout and liaison officer for the Cau Ke Security Unit led by Nguyen Hoa Luong, aiding in reconnaissance and intelligence. Her contributions led to significant victories, including the battles of Rach Cach and Ben Cat. She also played a critical role in rescuing a captured provincial leader and delivering weapons to eliminate notorious oppressors.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Cách mạng tháng Tám',
+                                        hightlight: 'August Revolution',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
@@ -174,35 +153,21 @@ export default [
                                         }
                                     },
                                     {
-                                        hightlight: 'xâm lược',
+                                        hightlight: 'reoccupation',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-1.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'đến với cách mạng',
+                                        hightlight: 'joined the revolution',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-2.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'nhiệm vụ',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-4.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'theo dõi',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-5.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'quận Hùm',
+                                        hightlight: 'notorious oppressors',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-6.jpg',
@@ -212,24 +177,24 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tình hình chiến trường Cầu Kè lúc này quá căng thẳng, chú Chín Luông và một số anh em khác hy sinh. Bị giặc lùng ráo riết, chị phải bồng con qua Sa Đéc lánh mặt. Tại đây, chị bắt liên lạc với cơ sở nội tuyến, cùng đồng đội đi phá cầu, lấy bót Cây Châu.Tình hình bớt căng thẳng, chị lại bồng con về Tam Ngãi.`,
+                                value:`- The battlefield situation in Cầu Kè was extremely tense at the time, with Chin Luong and several comrades sacrificing their lives. Under relentless enemy pursuit, Ms. Ut Tich had to carry her child and seek refuge in Sa Dec. There, she re-established contact with underground operatives and, along with her comrades, carried out missions to destroy bridges and capture the Cây Châu outpost. When the situation eased, she returned with her child to Tam Ngai.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'một số anh em',
+                                        hightlight: 'several comrades',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-7.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'bồng con',
+                                        hightlight: 'carry her child',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-8.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'đi phá cầu',
+                                        hightlight: 'destroy bridges',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-9.jpg',
@@ -239,10 +204,10 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Sau Hiệp định Giơ-ne-vơ năm 1954, lực lượng vũ trang cách mạng miền Nam tập kết ra miền Bắc, quân Mỹ tổ chức các chiến dịch "Tố cộng", "Diệt cộng" nhằm khủng bố, đàn áp cán bộ đảng viên được phân công ở lại miền Nam và cả những người có liên quan đến cuộc kháng chiến chống Pháp. Gia đình chị Út Tịch phải tạm lánh sang Kế Sách (Sóc Trăng).`,
+                                value:`- After the Geneva Accords of 1954, the revolutionary armed forces of Southern Vietnam regrouped to the North, while the U.S. launched campaigns such as "Denounce Communists" and "Exterminate Communists," aimed at terrorizing and suppressing party cadres who were assigned to remain in the South, as well as those associated with the resistance against the French. Ut Tich’s family had to temporarily relocate to Ke Sach (Soc Trang).`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'các chiến dịch "Tố cộng", "Diệt cộng"',
+                                        hightlight: '"Denounce Communists" and "Exterminate Communists,"',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
@@ -251,14 +216,14 @@ export default [
                                     },
                 
                                     {
-                                        hightlight: 'Hiệp định Giơ-ne-vơ',
+                                        hightlight: 'the Geneva Accords',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-11.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'khủng bố, đàn áp',
+                                        hightlight: 'terrorizing and suppressing',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-12.jpg',
@@ -268,10 +233,10 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Năm 1959 đến năm 1960, gia đình chị Út Tịch quay về Tam Ngãi, tiếp tục công tác ở địa phương. Sau phong trào Đồng Khởi, vợ chồng Út Tịch đều tham gia vào lực lượng du kích xã. Bà nuôi 4 đứa con lần lượt ra đời, vừa làm công tác trinh sát, theo dõi tình hình hoạt động của địch.`,
+                                value:`- From 1959 to 1960, Ut Tich’s family returned to Tam Ngãi and resumed their activities in the local revolutionary efforts. Following the Đồng Khởi movement, both Út Tịch and her husband joined the commune’s guerrilla forces. While raising her four children, she engaged in reconnaissance missions to monitor enemy activities.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'nuôi 4 đứa con',
+                                        hightlight: 'her four children',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-15.jpg',
@@ -281,51 +246,30 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Cũng năm 1960, bằng phương pháp binh vận, chị tham gia lấy đồn Tám Thế mà không tốn một viên đạn. Chị Út Tịch trực tiếp họp bàn tác chiến và tham gia các trận đánh nổi tiếng như; trận lấy đồn Tám Thế, trận phục kích trên lộ Chông Nô 3, trận phá ấp chiến lược Chông Nô 2, vân vân, Chị còn tham gia công tác binh vận, kêu gọi binh lính địch đào ngũ, tham gia cách mạng. Ở Xã đội Tam Ngãi, trung đội du kích nam do anh Lâm Văn Tịch chỉ huy, tiểu đội du kích nữ do chị Nguyễn Thị Út chỉ huy, vừa thi đua, vừa hỗ trợ nhau trong chiến đấu.`,
+                                value:`- In 1960, using revolutionary agitation tactics, she led the successful seizure of Tam The outpost without firing a single shot. Ut Tich personally participated in tactical meetings and became involved in notable battles such as the seizure of Tám Thế outpost, the ambush on Chong No 3 road, and the destruction of the Chong No 2 strategic hamlet, among others. She also conducted psychological warfare operations, persuading enemy soldiers to defect and join the revolution. At the Tam Ngai Commune Military Unit, the male guerrilla platoon was commanded by Lam Van Tich, while Ut led the female guerrilla squad. The two groups competed and supported each other in combat.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'phương pháp binh vận',
+                                        hightlight: 'revolutionary agitation tactics',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-16.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'họp bàn chiến lược',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-17.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'tham gia cách mạng',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-18.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'đội du kích nam',
+                                        hightlight: 'the male guerrilla platoon',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-19.jpg',
-                                        }
-                                    },
-                                    {
-                                        hightlight: 'vừa thi đua, vừa hỗ trợ',
-                                        valueModal: {
-                                            type: 'image',
-                                            value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-20.jpg',
                                         }
                                     },
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tháng 5/1964, chị Út Tịch được Mặt trận Dân tộc Giải phóng tỉnh Trà Vinh tuyên dương thành tích và giữ chức vụ là xã đội phó xã Tam Ngãi được tặng 1 cây cạc bin và 15m vải. Vợ chồng chị được nhân dân trong vùng gọi thân thương “anh bá đỏ chị cạc bin”. `,
+                                value:`- In May 1964, Ut Tich was recognized by the National Liberation Front of Tra Vinh Province for her accomplishments and was appointed deputy commander of Tam Ngai Commune. She was awarded a carbine rifle and 15 meters of fabric. Local people affectionately called the couple “anh bá đỏ, chị cạc bin” (red scarf brother and carbine sister).`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'tuyên dương thành tích',
+                                        hightlight: 'her accomplishments',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-21.jpg',
@@ -335,17 +279,17 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Cùng năm, chị tham gia chặn đánh một trung đoàn giặc đổ bộ vào ấp Tân Dinh. Quân ta thắng lớn. Thế là Tam Ngãi được giải phóng. Với thành tích chiến đấu dũng cảm và quên mình, chị được kết nạp vào Đảng.`,
+                                value:`- That same year, she participated in repelling a regiment of enemy troops landing in Tan Dinh hamlet. The operation was a major success, leading to the liberation of Tam Ngãi. For her brave and selfless contributions in combat, chị was admitted into the Party.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'ấp Tân Dinh',
+                                        hightlight: 'Tan Dinh hamlet',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-23.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'Đảng',
+                                        hightlight: 'the Party',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-24.jpg',
@@ -355,16 +299,16 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tháng 7/1964, lực lượng du kích xã Tam Ngãi đánh bót Bà Mi, Thạnh Phú, trong khi chị đang có thai lần thứ sáu.`,
+                                value:`- In July 1964, the Tam Ngai guerrilla forces attacked the Bà Mi outpost in Thanh Phu while Ut Tich was pregnant with her sixth child.`,
                                 hightlightList: [
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Năm 1965, Tỉnh đội Trà Vinh về phối hợp cùng địa phương quân Cầu Kè và lực lượng du kích Tam Ngãi tiến công căn cứ quân sự địch tại Bà Mi. Dù mới sinh con được ba ngày nhưng chị Út vẫn cương quyết ra trận, rồi lâm vào trận sốt mê man phải đưa về quân y điều trị. Khi lành bệnh, khi đứa con tròn tháng tuổi, chị đã có mặt góp sức tiêu diệt căn cứ Bà Mi. Trận này, ta đánh thiệt hại nặng một tiểu đoàn chủ lực địch, diệt tại trận 01 tên và bắt sống 01 tên cố vấn Mỹ.`,
+                                value:`- In 1965, the Tra Vinh Provincial Military coordinated with Cau Ke district’s local forces and the Tam Ngai guerrilla unit to launch an assault on the enemy’s Bà Mi military base. Despite having given birth just three days prior, chị Út insisted on joining the battle but soon fell into a feverish state and had to be taken to a military hospital for treatment. Upon recovery, and when her infant turned one month old, she returned to support the operation that successfully inflicted severe losses on an enemy battalion, killing one American advisor and capturing another.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'tiến công căn cứ',
+                                        hightlight: 'launch an assault',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-26.jpg',
@@ -374,16 +318,16 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Tháng 4/1965, Mỹ dùng trực thăng đưa quân và 4 cố vấn xuống thị trấn Cầu Kè, liên tục bắn phá Tam Ngãi. Chị Nguyễn Thị Út cải trang ra thị trấn, tổ chức anh Năm người Khmer tiếp cận và điều tra. Nhờ đó, đạn cối của ta đã tiêu diệt được 2 khẩu pháo của địch.`,
+                                value:`- In April 1965, the U.S. deployed helicopters to transport troops and four advisors to Cau Ke town, continuously shelling Tam Ngai. Nguyen Thi Ut disguised herself and infiltrated the town, organizing reconnaissance with Anh Nam, a Khmer local. This led to the destruction of two enemy artillery units by revolutionary mortar fire.`,
                                 hightlightList: [
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Năm 1965, chị được cử đi dự Đại hội anh hùng Chiến sĩ thi đua lực lượng vũ trang toàn miền Nam và được bầu là nữ Anh hùng Lực lượng vũ trang giải phóng miền Nam, được Ủy ban Trung ương Mặt trận Dân tộc Giải phóng miền Nam Việt Nam tặng thưởng Huân chương giải phóng hạng Nhì với thành tích: “Đã tham gia 23 trận lớn nhỏ góp phần quan trọng cùng đơn vị diệt và làm tan rã trên 200 giặc, thu 70 súng. Đồng chí là một chiến sĩ trinh sát dũng cảm và mưu trí, một chiến đấu viên ngoan cường, một chiến sĩ binh vận tài tình đã vận động phá vỡ nhiều binh sĩ địch, nhiều lần đưa bộ đội vào diệt bót lấy súng không tốn một viên đạn”.`,
+                                value:`- In 1965, she was selected to attend the Congress of Heroes and Emulation Soldiers of the Southern Liberation Armed Forces and was honored as a Hero of the Southern Liberation Armed Forces. The Central Committee of the National Liberation Front of Southern Vietnam awarded her the Liberation Medal, Second Class, for her achievements: “Participated in 23 battles, significantly contributing to the elimination or disbandment of over 200 enemy soldiers and the capture of 70 weapons. A courageous and resourceful reconnaissance soldier, a steadfast combatant, and an exceptional psychological warfare operative who persuaded numerous enemy soldiers to defect, she repeatedly led units to seize outposts and capture weapons without firing a shot.”`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'Mặt trận Dân tộc Giải phóng miền Nam Việt Nam',
+                                        hightlight: 'The Central Committee of the National Liberation Front of Southern Vietnam',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
@@ -392,21 +336,21 @@ export default [
                                     },
 
                                     {
-                                        hightlight: 'được bầu',
+                                        hightlight: 'was selected',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-32.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'Huân chương giải phóng hạng Nhì',
+                                        hightlight: 'the Liberation Medal, Second Class',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-33.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'Đồng chí',
+                                        hightlight: 'A courageous and resourceful reconnaissance soldier',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/2-34.jpg',
@@ -416,16 +360,16 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Năm 1966, chị Nguyễn Thị Út được chuyển công tác về Ban Dân quân Quân khu 9.`,
+                                value:`- In 1966, Nguyen Thi Ut was reassigned to the Militia Department of Military Zone 9.`,
                                 hightlightList: [
                                 ],
                             },
                             {
                                 type: 'hightlight',
-                                value:`- Ngày 27/11/1968, trong một trận công kích bằng máy bay B52 của Mỹ xuống vùng Vĩnh Thuận, tỉnh Kiên Giang nơi chị Nguyễn Thị Út đi công tác cùng với người con là Lâm Thị Thoa và chị đã hy sinh cùng người con.`,
+                                value:`- On November 27, 1968, during a B-52 air raid by U.S. forces on Vinh Thuan, Kien Giang Province, Nguyen Thi Ut was killed in action alongside her daughter, Lam Thi Thoa, while on a mission.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'máy bay B52',
+                                        hightlight: 'a B-52 air',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
@@ -438,11 +382,11 @@ export default [
                         ],
                     },
                     {
-                        title: 'Nguồn cảm hứng cho nghệ thuật',
+                        title: 'Artistic Inspiration',
                         data: [
                             {
                                 type: 'audio',
-                                src: '/audio/chi_ut_tich/3.mp3',
+                                src: '/audio/ut_tich_english/3.mp3',
                             },
                             {
                                 type: 'grid-image',
@@ -456,10 +400,10 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Cuộc đời vừa nuôi con vừa đánh giặc của nữ anh hùng Nguyễn Thị Út được nhà văn Nguyễn Đình Thi tái hiện trung thực và sáng tạo. Chị là nguyên mẫu cho nhân vật chính trong tác phẩm “Người mẹ cầm súng”.`,
+                                value: `- The life of the heroic mother Nguyen Thi Ut, who balanced raising her children while fighting in the resistance, was vividly and creatively portrayed by writer Nguyen Dinh Thi. She served as the inspiration for the main character in the literary work "Người mẹ cầm súng" (The Mother Who Held a Gun).`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'nhà văn Nguyễn Đình Thi',
+                                        hightlight: 'writer Nguyen Dinh Thi',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
@@ -470,62 +414,45 @@ export default [
                             },
                             {
                                 type: 'text',
-                                value: `- "Mẹ vắng nhà" là bộ phim nhựa sản xuất năm 1979, dựa trên truyện ngắn "Người mẹ cầm súng" và "Mẹ vắng nhà" của nhà văn Nguyễn Thi. Phim lấy cảm hứng từ cuộc đời của nữ anh hùng lực lượng Vũ trang Nhân dân Việt Nam Út Tịch và năm người con của chị.`,
+                                value: `- "Mẹ vắng nhà" (When Mother is Absent) is a 1979 feature film based on the short stories "Người mẹ cầm súng" and "Mẹ vắng nhà" by writer Nguyen Thi. The film drew inspiration from the life of Hero of the People's Armed Forces, Ut Tich, and her five children.`,
                             },
                             {
                                 type: 'text',
-                                value: `- Bà được nhạc sĩ Phan Nhân sử dụng để sáng tác bài hát thiếu nhi "Em là con gái má Út Tịch"`,
+                                value: `- Composer Phan Nhân immortalized her story through the children’s song "Em là con gái má Út Tịch" (I Am the Daughter of Mother Ut Tich).`,
                             },
                         ],
                     },
                     {
-                        title: 'Những mẫu chuyện về Chị',
+                        title: 'Anecdotes and Legacy',
                         data: [
                             {
                                 type: 'audio',
-                                src: '/audio/chi_ut_tich/4.mp3',
+                                src: '/audio/ut_tich_english/4.mp3',
                             },
                             {
                                 type: 'grid-image',
                                 value: [
                                     'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/4-b-1.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/4-b-2.jpg',
-                                    'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/4-b-3.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/4-b-2.jpg',
+                                    // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/4-b-3.jpg',
                                 ],
                             },
                             {
                                 type: 'bold',
-                                value: `* Chị Út Tịch qua lời kể anh Thanh Hiển - người con thứ 5 của chị:`,
+                                value: `* Ut Tich was not only a fearless fighter but also a source of inspiration with her iconic declarations:`,
                             },
                             {
                                 type: 'text',
-                                value: `- Anh Hiển - con của má Út Tịch kể lại : Má tui thường để cho con ngủ say vùi nửa đêm, mới lén xuống vỏ lãi chạy đi đánh giặc.`,
-                            },
-                            {
-                                type: 'text',
-                                value: `- “Kỷ niệm sâu sắc nhất về má trong đời tôi cũng là kỷ niệm cuối cùng mà không bao giờ tôi quên được: Lần đó, hai má con ngủ chung đến nửa đêm, má lén dậy hun tui một cái rồi nhẹ nhàng lấy đai thắt lưng, cắp súng nhảy xuống vỏ lãi. Tôi tỉnh dậy, chạy băng băng theo bờ kinh đón đầu. Đến cây cầu khỉ, tui nắm hai tay vào thanh cầu, thả người thòng xuống kinh, thế nào má tui thấy cũng dừng lại. `,
-                            },
-                            {
-                                type: 'text',
-                                value: `- Quả nhiên khi vỏ lãi băng qua, nghe tiếng khóc kêu của con trai, Út Tịch dừng lại, bế con chạy quay trở lại nhà. Hai mẹ con ôm nhau khóc suốt, rồi  dỗ dành, năn nỉ con ngủ để mẹ đi đánh giặc, mấy hôm lại về. Ai ngờ đó cũng là lần cuối cùng, mẹ ra đi vĩnh viễn không bao giờ về nữa…” kể đến đây, đôi mắt của Hiển đỏ hoe.`,
-                            },
-
-                            {
-                                type: 'bold',
-                                value: `* Những câu nói nổi tiếng của chị:`,
-                            },
-                            {
-                                type: 'text',
-                                value: `-Không những quả cảm, anh dũng trong chiến đấu, những câu nói của chị còn truyền cảm hứng yêu nước, thể hiện ý chí hào hùng, bất khuất như: “Còn cái lai quần cũng đánh”, “Nó đánh mình, mình đánh nó”, “Có ai đánh giặc mà chờ sinh xong mới đánh, con gà mái là con gà giò. Cứ đánh!”, “Đánh giặc sướng bằng tiên chứ cực gì”. Chủ tịch Hồ Chí Minh cũng từng rất tự hào khi nói: “...Miền Nam anh hùng có đội quân đấu tranh chính trị gồm hàng vạn chiến sĩ toàn là phụ nữ. Họ rất mưu trí làm cho địch phải khiếp sợ vì gọi họ là “Đội quân tóc dài…”. Chị Út Tịch - một tấm gương tiêu biểu của người phụ nữ Việt Nam giỏi việc nước, đảm việc nhà thật xứng đáng với tám chữ vàng: “Anh hùng - Bất khuất - Trung hậu - Đảm đang”.`,
+                                value: `- “Even with just the hem of a skirt, I’ll fight.”, “They attack us; we fight back.”, “Who waits to give birth before fighting? Chickens lay eggs, yet they still go to battle!”, “Fighting the enemy is pure joy, not hardship!”, "She epitomized the spirit of Vietnamese women as “Heroic, Indomitable, Loyal, and Compassionate.”`,
                             },
                         ],
                     },
                     {
-                        title: 'Tưởng nhớ',
+                        title: 'Commemoration',
                         data: [
                             {
                                 type: 'audio',
-                                src: '/audio/chi_ut_tich/5.mp3',
+                                src: '/audio/ut_tich_english/5.mp3',
                             },
                             {
                                 type: 'grid-image',
@@ -536,37 +463,31 @@ export default [
                             },
                             {
                                 type: 'hightlight',
-                                value: `- Hiện nay có con đường mang tên đường Út Tịch nằm ở quận Tân Bình thuộc Thành phố Hồ Chí Minh và con đường mang tên Nguyễn Thị Út thuộc phường Tân Đông Hiệp, thành phố Dĩ An, tỉnh Bình Dương.`,
+                                value: `- Today, several landmarks bear her name, including Ut Tich Street in Tan Binh District, Ho Chi Minh City, and Nguyen Thi Ut Street in Di An City, Binh Duong Province. The Memorial for Heroic Martyr Nguyen Thi Ut, located in Tam Ngai Commune, Cau Ke District, Tra Vinh Province, features a central statue titled “The Mother Who Wielded a Gun,” honoring her enduring legacy.`,
                                 hightlightList: [
                                     {
-                                        hightlight: 'quận Tân Bình',
+                                        hightlight: 'Tan Binh District',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/5-1.jpg',
                                         }
                                     },
                                     {
-                                        hightlight: 'phường Tân Đông Hiệp',
+                                        hightlight: 'Di An City',
                                         valueModal: {
                                             type: 'image',
                                             value:   'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/5-2.jpg',
                                         }
                                     },
-                                ],
-                            },
-                            {
-                                type: 'hightlight',
-                                value: `-  Khu tưởng niệm nữ Anh hùng liệt sĩ Nguyễn Thị Út hay còn gọi là Út Tịch được xây dựng tại xã Tam Ngãi, huyện Cầu Kè, tỉnh Trà Vinh. Biểu tượng “Người mẹ cầm súng” được đặt ở vị trí trung tâm của Khu tưởng niệm, tái hiện lại hình ảnh chị Út căn dặn hai người con ở nhà chăm sóc đàn em để chị yên tâm lên đường chiến đấu.`,
-                                hightlightList: [
                                     {
-                                        hightlight: 'Biểu tượng “Người mẹ cầm súng',
+                                        hightlight: 'The Mother Who Wielded a Gun',
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
                                             value: 'Tượng Người mẹ cầm súng cao 6m (chất liệu bằng đồng), đặt trên bệ đá granit cao 1,5m được phác thảo qua “Bức chân dung Người mẹ cầm súng”',
                                         },
                                     },
-                                ]
+                                ],
                             },
                         ],
                     },
@@ -595,7 +516,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/D%C6%B0%C6%A1ng%20Quang%20%C4%90%C3%B4ng/1%20-%2024.jpg',
                 video: 'https://www.youtube.com/embed/FS2v2N5_JXU?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
-                title: 'Dương Quang Đông',
+                title: 'Duong Quang Dong',
                 game: 'https://wordwall.net/vi/embed/04f0939042fd4160b5209afb7e70dc6a?themeId=21&templateId=69&fontStackId=0',
                 view: 0,
                 description: 'Nhà cách mạng Dương Quang Đông sinh năm 1902, mất năm 2003. Ông còn có tên Dung Văn...',
@@ -1138,7 +1059,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/Ph%E1%BA%A1m%20Th%C3%A1i%20B%C6%B0%E1%BB%9Dng/1.jpg',
                 video: 'https://www.youtube.com/embed/ZXIHwNXfNsU?list=PL7JhOAXjuOP0vuvue88MGWjKEpQYHjlvw',
-                title: 'Phạm Thái Bường',
+                title: 'Pham Thai Buong',
                 description: 'Nhà cách mạng Phạm Thái Bường sinh năm 1915, mất năm 1974, bí danh Lê Thành Nhân. Ông...',
                 game: 'https://wordwall.net/vi/embed/c264860c68ee4fb9962eecb2e9373baa?themeId=21&templateId=69&fontStackId=0',
                 view: 60,
@@ -2966,7 +2887,7 @@ export default [
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Ao%20B%C3%A0%20Om/1.jpg',
                 video: 'https://www.youtube.com/embed/DXN6x4l9Zgg?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 video2: 'https://www.youtube.com/embed/17x2VkBSZs0?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
-                title: 'Ao Bà Om',
+                title: 'Ba Om Pond',
                 description: 'Ao Bà Om là một danh lam thắng cảnh nổi tiếng của tỉnh Trà Vinh cũng như cả khu vực Đồng...',
                 game: 'https://wordwall.net/vi/embed/c8b06f0bd3774d93a53cb070cb89ad9a?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -3237,7 +3158,7 @@ export default [
                 link:2,
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/C%C3%B9%20lao%20T%C3%A2n%20Quy/1-TQ%20start.jpg',
                 video: 'https://www.youtube.com/embed/MUbvjYCdtZk?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
-                title: 'Cù lao Tân Quy',
+                title: 'Tan Quy Islet',
                 description: 'Được bao bọc và bồi đắp bởi dòng sông Hậu hiền hòa, cù lao Tân Quy là dải đất màu mỡ thuộc xã...',
                 game: 'https://wordwall.net/vi/embed/f98e7f8adce9418eaa968955d8807fac?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -3471,7 +3392,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/L%C6%B0u%20C%E1%BB%AB%20II/1.jpg',
                 video: 'https://www.youtube.com/embed/7q8KMpMr16A?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
-                title: 'Di tích khảo cổ Lưu Cừ II',
+                title: 'Luu Cu II Archaeological Site',
                 description: 'Di tích khảo cổ Lưu Cừ II ở ấp Lưu Cừ II, xã Lưu Nghiệp Anh, huyện Trà Cú, tỉnh Trà Vinh...',
                 game: 'https://wordwall.net/vi/embed/1e9c6b2522e94aefa6b5fc5e1f8ac459?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -3731,7 +3652,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/C%E1%BB%93n%20T%C3%A0u/1.jpg',
                 video: 'https://www.youtube.com/embed/Ox16nUDzirc?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
-                title: 'Khu Di tích Bến tiếp nhận vũ khí Cồn Tàu',
+                title: 'Con Tau Weapon Reception Wharf Historical Site',
                 description: 'Khu di tích Bến tiếp nhận vũ khí Cồn Tàu thuộc ấp Cồn Trứng, xã Trường Long Hòa, huyện Duyên Hải, tỉnh Trà Vinh,...',
                 game: 'https://wordwall.net/vi/embed/a9672c64f3e54145acf5901d10b7b6a0?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -3993,7 +3914,7 @@ export default [
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Bi%E1%BB%83n%20Ba%20%C4%90%E1%BB%99ng/1-1.jpg',
                 video: 'https://www.youtube.com/embed/4RTHZqVdwdg?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 video2: 'https://www.youtube.com/embed/pjysq4eBQsg?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
-                title: 'Biển ba động',
+                title: 'Ba Dong Beach',
                 description: 'Biển Ba Động là danh thắng và khu du lịch nổi tiếng thuộc xã Trường Long Hoà, thị xã Duyên Hải, tỉnh Trà Vinh...',
                 game: 'https://wordwall.net/vi/embed/693988acf7cf4ec39e919ada8c74fd67?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -4313,7 +4234,7 @@ export default [
                 tour:'2',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/Thi%E1%BB%81n%20vi%E1%BB%87n%20Tr%C3%BAc%20L%C3%A2m/1-1.jpg',
                 video: 'https://www.youtube.com/embed/jPufJRk5AYI?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
-                title: 'Thiền viện Trúc Lâm',
+                title: 'Truc Lam Zen Monastery',
                 description: 'Thiền viện Trúc Lâm Trà Vinh tọa lạc tại ấp Khoán Tiều, xã Trường Long Hòa, thị xã Duyên Hải...',
                 game: 'https://wordwall.net/vi/embed/5240bbd701c84fe98c1947c0dd0fd82c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -4573,7 +4494,7 @@ export default [
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/%C4%91%E1%BB%8Ba%20%C4%91i%E1%BB%83m/%C4%90%E1%BB%81n%20th%E1%BB%9D%20b%C3%A1c/1-3.jpg',
                 video: 'https://www.youtube.com/embed/z_SLtiM1wOQ?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
                 video2: 'https://www.youtube.com/embed/vwKdsZEay5E?list=PL7JhOAXjuOP2updOJl4dYlnPbe-ecUs8j',
-                title: 'Đền thờ Bác',
+                title: 'President Ho Chi Minh Memorial Temple',
                 description: ' Đền thờ Chủ tịch Hồ Chí Minh, biểu tượng “Công trình của trái tim” của nhân dân các dân tộc Trà Vinh...',
                 game: 'https://wordwall.net/vi/embed/2c8d3096af314dde9fd3fd9c119e236a?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -5749,7 +5670,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/l%E1%BB%85%20h%E1%BB%99i/L%E1%BB%85%20h%E1%BB%99i%20c%C3%BAng%20bi%E1%BB%83n%20M%E1%BB%B9%20Long/I-1.jpg',
                 video: '',
-                title: 'Lễ hội cúng biển Mỹ Long',
+                title: 'My Long Sea Worship Festival',
                 description: 'Lễ hội cúng biển Mỹ Long (hay còn gọi là lễ hội Nghinh Ông) là một nét văn hoá đặc trưng của ngư dân...',
                 game: 'https://wordwall.net/vi/embed/9e88ec8cd40d4ff89ad5f0f6253047a9?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -5964,7 +5885,7 @@ export default [
                 tour:'0',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/l%E1%BB%85%20h%E1%BB%99i/L%E1%BB%85%20h%E1%BB%99i%20c%C3%BAng%20%C3%94ng%20B%E1%BB%95n%20huy%E1%BB%87n%20C%E1%BA%A7u%20K%C3%A8/I-1.jpg',
                 video: '',
-                title: 'Lễ hội cúng Ông Bổn huyện Cầu Kè',
+                title: 'Ong Bon Worship Festival in Cau Ke District',
                 description: 'Lễ hội cúng Ông Bổn huyện Cầu Kè diễn ra từ ngày 25-28/7 âm lịch, tại thị trấn Cầu Kè, địa điểm chính ...',
                 game: 'https://wordwall.net/vi/embed/dd4e34df0860410b9fc42fc7cbd7bd05?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -6946,7 +6867,7 @@ export default [
                 tour:'4',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/ch%C3%B9a/Ch%C3%B9a%20%C3%82ng/1-1.jpg',
                 video: 'https://www.youtube.com/embed/FhdvhrUxWLQ?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
-                title: 'CHÙA ANG KOR RAIG BOREI (CHÙA ÂNG)',
+                title: 'Angkor Raig Borei Pagoda (Ang Pagoda)',
                 description: 'Địa chỉ: Chùa  ng cách trung tâm thành phố Trà Vinh hơn 5km về hướng tây nam, thuộc khóm 4,...',
                 game: 'https://wordwall.net/vi/embed/b54a03ad53ca4060a971267035c1fb7c?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
@@ -7587,7 +7508,7 @@ export default [
                 tour:'3',
                 imageCover: 'https://raw.githubusercontent.com/thansouuu/data-image/main/ch%C3%B9a/Ch%C3%B9a%20Hang/DC-1.jpg',
                 video: 'https://www.youtube.com/embed/wGJDv9Uy3Vo?list=PL7JhOAXjuOP0OAe85eGjvVPBLflVI9wMt',
-                title: 'CHÙA KAMPONYNIXRDLE (CHÙA HANG)',
+                title: 'Kamponynixrdle Pagoda (Hang Pagoda)',
                 description: ' Địa chỉ: Chùa Hang tọa lạc tại khóm 3, thị trấn Châu Thành, cách trung tâm thành phố Trà Vinh...',
                 game: 'https://wordwall.net/vi/embed/be6cc6fd2ebc4632b420c0a4ec2b63c3?themeId=21&templateId=69&fontStackId=0',
                 view: 100,
