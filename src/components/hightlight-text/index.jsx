@@ -12,13 +12,16 @@ import {
     TwitterIcon,
     WhatsappIcon,
 } from 'react-share';
-import { Link } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 
 import clsx from 'clsx';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
 
+
+
 const HighlightText = ({ text, highlights }) => {
+    const param=useParams();
     const [isModal, setIsModal] = useState(false);
     const [valueModal, setValueModal] = useState(null);
 
@@ -58,7 +61,9 @@ const HighlightText = ({ text, highlights }) => {
                                     interactive={true} interactiveBorder={20}
                                     content={
                                         <div className='min-w-[95px]'>
-                                            <Link to={highlight?.valueModal?.link}>
+                                           <Link
+                                                to={`/language/${param.language_id}${highlight?.valueModal?.link}`}
+                                            >
                                                 {highlight?.valueModal?.value}
                                             </Link>
                                         </div>
@@ -100,6 +105,7 @@ const HighlightText = ({ text, highlights }) => {
         link.download = filename;
         link.click();
     };
+    
 
     return (
         <>

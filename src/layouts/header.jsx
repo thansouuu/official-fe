@@ -273,7 +273,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                         </li>
                         {/* <li>
                             <Link
-                                to="/tieng-viet/chatbot"
+                                to="/chatbot"
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
                                 onClick={() => {setNavbarOpen(false), window.Location.reload()}}

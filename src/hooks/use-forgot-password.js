@@ -13,7 +13,7 @@ export const useForgotPassword = (id) => {
         {
             onSuccess: () => {
                 toast.success('Cập nhật thành công!');
-                // navigate(`/tieng-viet/account`);
+                // navigate(`/account`);
             },
 
             onError: () => {

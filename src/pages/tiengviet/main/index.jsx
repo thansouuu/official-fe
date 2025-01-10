@@ -7,7 +7,7 @@ import { Carousel } from 'react-bootstrap';
 import FoodContent from '@/components/food-content';
 import './index.css'
 import Slider from 'react-slick';
-import Chat_Bot from '@/pages/tiengviet/chatbot';
+
 
 
 const Main = () => {
@@ -100,9 +100,17 @@ const Main = () => {
     
     return (
         <>
-        <Chat_Bot/>
-    <div className="bg-[#d78060] -mx-6 -mb-[200px] p-6 text-white">
-    <div className="grid grid-cols-1 gap-4">
+        
+        <div
+  className="bg-[#d78060] -mx-6 -mb-[200px] p-6 text-white"
+  style={{
+    backgroundImage: `url('/public/main.jpg')`,
+    backgroundRepeat: 'repeat',
+    backgroundPosition: 'top 5px center',
+    backgroundSize: '800px 300px'
+  }}
+>
+  <div className="grid grid-cols-1 gap-4">
     <div className="col-span-full w-full">
       <Carousel style={{ width: '100%', height: '300px' }} interval={1000} fade>
         {images.map((image, idx) => (
@@ -122,6 +130,7 @@ const Main = () => {
     </div>
   </div>
 </div>
+
 
 
         <div className="h-[200px]">

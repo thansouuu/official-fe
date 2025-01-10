@@ -48,15 +48,15 @@ export default [
         tags: [
             {
                 title: 'Mẫu chuyện',
-                link: '/tieng-viet/story',
+                link: '/story',
             },
             {
                 title: 'Ao Bà Om',
-                link: '/tieng-viet/figure/2/product/8',
+                link: '/figure/2/product/8',
             },
             {
                 title: 'Người Khmer',
-                link: '/tieng-viet/figure/14/product/26',
+                link: '/figure/14/product/26',
             },
         ],
     },
@@ -107,7 +107,7 @@ export default [
         tags: [
             {
                 title: 'Mẫu chuyện',
-                link: '/tieng-viet/story',
+                link: '/story',
             },
         ],
     },
@@ -214,11 +214,11 @@ export default [
         tags: [
             {
                 title: 'Mẫu chuyện',
-                link: '/tieng-viet/story',
+                link: '/story',
             },
             {
                 title: 'Người Khmer',
-                link: '/tieng-viet/figure/14/product/26',
+                link: '/figure/14/product/26',
             },
         ],
     },

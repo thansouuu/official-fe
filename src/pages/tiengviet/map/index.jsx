@@ -85,7 +85,7 @@ const Map = () => {
 
   const handleProduct=()=>{
     if (selectedLocation) {
-      navigate(`/tieng-viet/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
+      navigate(`/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
     }
   };
 
@@ -94,7 +94,7 @@ const Map = () => {
       window.location.assign(selectedLocation.tourUrl)
     }
     else if (getIdAddress(selectedLocation.name).tour_id!='0'){
-    navigate(`/tieng-viet/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
+    navigate(`/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
     }
   }
 

@@ -62,6 +62,7 @@ const Categories = memo(() => {
                         >
                             Giai đoạn 4
                         </button>
+                        <img src="/public/LSVN.jpg"></img>
                     </div>
 
                 </>

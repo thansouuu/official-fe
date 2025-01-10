@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState,useRef,useLayoutEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
 import cn from '@/helper/cn';
 import FoodContent from '@/components/food-content';
@@ -48,7 +48,7 @@ import Bot from '@/pages/tiengviet/chatbot';
 
 const Product = memo(() => {
     const { isLoggedIn, mutate, data } = useAuth();
-
+    const navigate = useNavigate();
     // const { isLoggedIn } = useAuth();
     const [product, setProduct] = useState(null);
     const [product_nonmain, setProductnonmain] = useState(null);
@@ -536,46 +536,33 @@ const Product = memo(() => {
     // Biến res để lưu kết quả nút bấm
 
     const handleButtonClick = (buttonValue) => {
-        setIsVisible(prevState => !prevState);
-        // console.log('res before ',res, ' ',buttonValue);
-        
         if (res.value===buttonValue.value) setRes({label:'',value:'0'});
         else setRes(buttonValue); // Cập nhật giá trị res
-        
-        console.log('params ',params.figureId);
-        console.log(product);
-        // console.log('res after ',res);
     };
     const [maxHeight, setMaxHeight] = useState('0px');
     useEffect(() => {
         const productList = productData.find((item) => item.figureId == params.figureId);
         const product = productList?.data.find((item) => item.id == res.value);
         setProductnonmain(product);
-
-        // Sau khi setProductnonmain xong, đợi 700ms rồi tính lại chiều cao
+    }, [res]);
+    useEffect(() => {
         setTimeout(() => {
+            setIsVisible(prevState => !prevState);
             if (contentRef.current) {
                 setMaxHeight(contentRef.current.scrollHeight + 'px');
             }
-        }, 700); 
-        
-        
-    }, [res]);
+        }, 2000); 
+    }, [product_nonmain]);
 
     const [ismindmap, setIsmindmap] = useState(false);
 
     const handlemindmap = () => {
-        setIsVisible(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
+        setIsmindmap(prevState => !prevState); // Chuyển đổi giá trị của `isVisible`
     };
-
-   
-    
 
     return (
         <>
-        {/* <Bot/> */}
         <div className="flex flex-col gap-4 pb-4 max-w-[992px] mx-auto">
-            {console.log(data?.data?._id)}
             {product?.video!='' && 
                 <div className='flex flex-col items-center'>
                     <iframe
@@ -647,9 +634,23 @@ const Product = memo(() => {
                     </div>
                 )}
             </div>
+            {product && product?.trich && (
+                <div className="text-[20px] text-right italic underline text-blue-800">
+                    Trích:{' '}  
+                        <Link 
+                            to={`https://travinh.gov.vn/con-nguoi-tra-vinh/nguyen-thi-ut-1931-1968-599383`} 
+                        >
+                            {product.title}
+                        </Link>
+                </div>
+            )}
+
+
+
 
             {params.figureId==="14"&&<>
                 <>
+                {console.log('cac ',params.id)}
                 {image!==''&&
                     // <div className="flex justify-center items-center ">
                     //     <img className="w-[60%] h-[60%] rounded-lg" src={image} alt="" />
@@ -664,7 +665,7 @@ const Product = memo(() => {
                         <div
                             ref={contentRef}
                             className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
-                            style={{ maxHeight: isVisible ? contentRef.current.scrollHeight + 'px' : '0px' }}
+                            style={{ maxHeight: ismindmap ? contentRef.current.scrollHeight + 'px' : '0px' }}
                         >
                             <Carousel style={{ width: '100%', height: '300px' }}>
                                 <Carousel.Item style={{ height: '300px' }}>
@@ -682,25 +683,28 @@ const Product = memo(() => {
                     </>
                 }
                 </>
-
-                <div className="flex flex-col items-center justify-center mb-2">
-                    {typing[params.id]?.map((button, index) => (
-                        <button
-                            key={index}
-                            onClick={() => handleButtonClick(button)}
-                            className=" w-[70%] px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 m-2"
-                        >
-                            {button.label}
-                        </button>
-                    ))}
-                </div>
-
+                
+                {/* {params.id==='27' && */}
+                    <div className="flex flex-col items-center justify-center mb-2">
+                        {typing[params.id]?.map((button, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleButtonClick(button)}
+                                className=" w-[70%] px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 m-2"
+                            >
+                                {button.label}
+                            </button>
+                        ))}
+                    </div>
+                {/* } */}
+               
                 <div
-                    ref={contentRef}
-                    className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
-                    style={{
-                        maxHeight:maxHeight,
-                    }}
+                    // ref={contentRef}
+                    // className={`overflow-hidden transition-max-height duration-700 ease-in-out`}
+                    // // style={{
+                    // //     maxHeight:maxHeight,
+                    // // }}
+                    // style={{ maxHeight: isVisible ? maxHeight: '0px' }}
                 >
 
                     {product_nonmain?.contents?.map((content, index) => (
@@ -912,7 +916,7 @@ const Product = memo(() => {
                         <div className="flex items-center gap-2 flex-wrap">
                             {product?.tags?.map((tag, index) => (
                                 <button key={index} className="py-2 px-4 bg-slate-200 hover:bg-slate-300">
-                                    <Link to={tag.link}>{tag.title}</Link>
+                                    <Link to={`/language/${params.language_id}${tag.link}`}>{tag.title}</Link>
                                 </button>
                             ))}
                         </div>

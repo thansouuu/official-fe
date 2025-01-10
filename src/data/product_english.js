@@ -73,7 +73,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -148,7 +148,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/10/product/37',
+                                            link: '/figure/10/product/37',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -496,15 +496,15 @@ export default [
                 tags: [
                     {
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Cách mạng Tháng Tám',
-                        link: '/tieng-viet/figure/10/product/35',
+                        link: '/figure/10/product/35',
                     },
                 ],
             },
@@ -752,7 +752,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/10/product/37',
+                                            link: '/figure/10/product/37',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -853,7 +853,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/1/product/3',
+                                            link: '/figure/1/product/3',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -1039,15 +1039,15 @@ export default [
                 tags: [
                     {
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         title: 'Cách mạng tháng Tám',
-                        link: '/tieng-viet/figure/10/product/35',
+                        link: '/figure/10/product/35',
                     },
                     {
                         title: 'Phạm Thái Bường',
-                        link: '/tieng-viet/figure/1/product/3',
+                        link: '/figure/1/product/3',
                     },
                 ],
             },
@@ -1344,12 +1344,12 @@ export default [
                     {
                         id: 1,
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         id: 1,
                         title: 'Dương Quang Đông',
-                        link: '/tieng-viet/figure/1/product/2',
+                        link: '/figure/1/product/2',
                     },
                 ],
             },
@@ -1397,7 +1397,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -1739,12 +1739,12 @@ export default [
                     {
                         id: 1,
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         id: 3,
                         title: 'Dân tộc Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                 ],
             },
@@ -1789,7 +1789,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             id:'id2',
                                             value: 'Tìm hiểu thêm',
                                         }
@@ -1831,7 +1831,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -2095,17 +2095,17 @@ export default [
                     {
                         id: '1',
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         id: '3',
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         id: '4',
                         title: 'Người Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                 ],
             },
@@ -2148,7 +2148,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/map',
+                                            link: '/map',
                                             id:'id1',
                                             value: 'Tìm hiểu thêm',
                                         }
@@ -2513,17 +2513,17 @@ export default [
                     {
                         id: '1',
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         id: '3',
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         id: '4',
                         title: 'Người Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                 ],
             },
@@ -2853,22 +2853,22 @@ export default [
                     {
                         id: '1',
                         title: 'Nhân vật',
-                        link: '/tieng-viet/figure/1',
+                        link: '/figure/1',
                     },
                     {
                         id: '2',
                         title: 'Huyện Càng Long',
-                        link: '/tieng-viet/map',
+                        link: '/map',
                     },
                     {
                         id: '3',
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         id: '4',
                         title: 'Người Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                 ],
             },
@@ -2952,7 +2952,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/38',
+                                            link: '/figure/2/product/38',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -2994,7 +2994,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -3046,7 +3046,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -3136,17 +3136,17 @@ export default [
                     {
                         id: 1,
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                     {
                         id: 2,
                         title: 'Biển Ba Động',
-                        link: '/tieng-viet/figure/2/product/38',
+                        link: '/figure/2/product/38',
                     },
                     {
                         id: 3,
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                 ],
             },
@@ -3354,7 +3354,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/3',
+                                            link: '/figure/3',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -3375,12 +3375,12 @@ export default [
                     {
                         id: 1,
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                     {
                         id: 3,
                         title: 'Ẩm thực',
-                        link: '/tieng-viet/figure/3',
+                        link: '/figure/3',
                     },
                 ],
             }, 
@@ -3640,7 +3640,7 @@ export default [
                     {
                         id:1,
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                 ],
             },
@@ -3676,7 +3676,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/38',
+                                            link: '/figure/2/product/38',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -3785,7 +3785,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/1/product/3',
+                                            link: '/figure/1/product/3',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -3891,17 +3891,17 @@ export default [
                     {
                         id:1,
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                     {
                         id:2,
                         title: 'Phạm Thái Bường',
-                        link: '/tieng-viet/figure/1/product/3',
+                        link: '/figure/1/product/3',
                     },
                     {
                         id:3,
                         title:'Ba Động',
-                        link: '/tieng-viet/figure/2/product/38',
+                        link: '/figure/2/product/38',
                     },
                 ],
             }, 
@@ -4184,7 +4184,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/33',
+                                            link: '/figure/2/product/33',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -4218,11 +4218,11 @@ export default [
                 tags: [
                     {
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                     {
                         title:'Cồn Tàu',
-                        link: '/tieng-viet/figure/2/product/33',
+                        link: '/figure/2/product/33',
                     },
                 ],
             },
@@ -4481,7 +4481,7 @@ export default [
                 tags: [
                     {
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                 ],
             },
@@ -4699,7 +4699,7 @@ export default [
                 tags: [
                     {
                         title: 'Địa điểm',
-                        link: '/tieng-viet/figure/2',
+                        link: '/figure/2',
                     },
                 ],
             },
@@ -4877,7 +4877,7 @@ export default [
                 tags: [
                     {
                         title: 'Ẩm thực',
-                        link: '/tieng-viet/figure/3',
+                        link: '/figure/3',
                     },
                 ],
             },
@@ -4958,7 +4958,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: false,
-                                            link: '/tieng-viet/figure/3/product/10',
+                                            link: '/figure/3/product/10',
                                             value: 'Rắn chắc đến mức như được dồn nén chặt',
                                         }
                                     },
@@ -5302,7 +5302,7 @@ export default [
                 tags: [
                     {
                         title: 'Ẩm thực',
-                        link: '/tieng-viet/figure/3',
+                        link: '/figure/3',
                     },
                 ],
             },
@@ -5349,7 +5349,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -5648,11 +5648,11 @@ export default [
                 tags: [
                     {
                         title: 'Ẩm thực',
-                        link: '/tieng-viet/figure/3',
+                        link: '/figure/3',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                 ],
             },
@@ -5873,7 +5873,7 @@ export default [
                 tags: [
                     {
                         title: 'Lễ hội',
-                        link: '/tieng-viet/figure/4',
+                        link: '/figure/4',
                     },
                 ],
             },
@@ -5910,7 +5910,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6029,7 +6029,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6038,7 +6038,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6047,7 +6047,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6096,11 +6096,11 @@ export default [
                 tags: [
                     {
                         title: 'Lễ hội',
-                        link: '/tieng-viet/figure/4',
+                        link: '/figure/4',
                     },
                     {
                         title: 'Người Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                 ],
             },
@@ -6144,7 +6144,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6196,7 +6196,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/8',
+                                            link: '/figure/2/product/8',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6301,15 +6301,15 @@ export default [
                 tags: [
                     {
                         title: 'Lễ hội',
-                        link: '/tieng-viet/figure/4',
+                        link: '/figure/4',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Ao Bà Om',
-                        link: '/tieng-viet/figure/2/product/8',
+                        link: '/figure/2/product/8',
                     },
                     
                 ],
@@ -6488,7 +6488,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -6559,11 +6559,11 @@ export default [
                 tags: [
                     {
                         title: 'Làng nghề',
-                        link: '/tieng-viet/figure/5',
+                        link: '/figure/5',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                 ],
             },
@@ -6734,7 +6734,7 @@ export default [
                 tags: [
                     {
                         title: 'Làng nghề',
-                        link: '/tieng-viet/figure/5',
+                        link: '/figure/5',
                     },
                 ],
             },
@@ -6849,7 +6849,7 @@ export default [
                 tags: [
                     {
                         title: 'Làng nghề',
-                        link: '/tieng-viet/figure/5',
+                        link: '/figure/5',
                     },
                 ],
             },
@@ -6915,7 +6915,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -7034,7 +7034,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/map',
+                                            link: '/map',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -7127,7 +7127,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -7136,7 +7136,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/8',
+                                            link: '/figure/2/product/8',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -7155,19 +7155,19 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Ok om bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        link: '/figure/4/product/39',
                     },
                     {
                         title: 'Ao Bà Om',
-                        link: '/tieng-viet/figure/2/product/8',
+                        link: '/figure/2/product/8',
                     },
                 ],
             },
@@ -7231,7 +7231,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/10/product/37',
+                                            link: '/figure/10/product/37',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -7492,11 +7492,11 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                     {
                         title: 'Cách mạng tháng 8',
-                        link: '/tieng-viet/figure/10/product/37',
+                        link: '/figure/10/product/37',
                     },
                 ],
             },
@@ -7751,11 +7751,11 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                 ],
             },
@@ -7851,7 +7851,7 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                 ],
             },
@@ -7940,7 +7940,7 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                 ],
             },
@@ -8244,7 +8244,7 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                 ],
             },
@@ -8305,7 +8305,7 @@ export default [
                 tags: [
                     {
                         title: 'Chùa',
-                        link: '/tieng-viet/figure/6',
+                        link: '/figure/6',
                     },
                 ],
             },
@@ -8436,7 +8436,7 @@ export default [
                     {
                         id:1,
                         title: 'Phong tục tập quán',
-                        link: '/tieng-viet/figure/7',
+                        link: '/figure/7',
                     },
                 ],
             },
@@ -8476,7 +8476,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -8530,7 +8530,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/3/product/9',
+                                            link: '/figure/3/product/9',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -8559,15 +8559,15 @@ export default [
                 tags: [
                     {
                         title: 'Phong tục tập quán',
-                        link: '/tieng-viet/figure/7',
+                        link: '/figure/7',
                     },
                     {
                         title: 'Người Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                     {
                         title: 'Bún nước lèo',
-                        link: '/tieng-viet/figure/3/product/9',
+                        link: '/figure/3/product/9',
                     },
                 ],
             },
@@ -8607,7 +8607,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -8699,11 +8699,11 @@ export default [
                 tags: [
                     {
                         title: 'Phong tục tập quán',
-                        link: '/tieng-viet/figure/7',
+                        link: '/figure/7',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     
                 ],
@@ -8831,11 +8831,11 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/8',
+                        link: '/figure/8',
                     },
                     {
                         title: 'Huyện Cầu Kè',
-                        link: '/tieng-viet/city/2',
+                        link: '/city/2',
                     },
                 ],
             },
@@ -8875,7 +8875,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -8884,7 +8884,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/8',
+                                            link: '/figure/2/product/8',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -8925,15 +8925,15 @@ export default [
                 tags: [
                     {
                         title: 'Trò chơi dân gian',
-                        link: '/tieng-viet/figure/9',
+                        link: '/figure/9',
                     },
                     {
                         title: 'Ao Bà Om',
-                        link: '/tieng-viet/figure/2/product/8',
+                        link: '/figure/2/product/8',
                     },
                     {
                         title: 'Ok Om Bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        link: '/figure/4/product/39',
                     },
                 ],
             },
@@ -8967,7 +8967,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -8976,7 +8976,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/8',
+                                            link: '/figure/2/product/8',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9008,15 +9008,15 @@ export default [
                 tags: [
                     {
                         title: 'Trò chơi dân gian',
-                        link: '/tieng-viet/figure/9',
+                        link: '/figure/9',
                     },
                     {
                         title: 'Ao bà om',
-                        link: '/tieng-viet/figure/2/product/8',
+                        link: '/figure/2/product/8',
                     },
                     {
                         title: 'Ok Om Bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        link: '/figure/4/product/39',
                     },
                     
                 ],
@@ -9051,7 +9051,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9060,7 +9060,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/8',
+                                            link: '/figure/2/product/8',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9104,15 +9104,15 @@ export default [
                 tags: [
                     {
                         title: 'Trò chơi dân gian',
-                        link: '/tieng-viet/figure/9',
+                        link: '/figure/9',
                     },
                     {
                         title: 'Ao Bà Om',
-                        link: '/tieng-viet/figure/2/product/8',
+                        link: '/figure/2/product/8',
                     },
                     {
                         title: 'Ok Om Bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        link: '/figure/4/product/39',
                     },
                     
                 ],
@@ -9147,7 +9147,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9156,7 +9156,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/2/product/8',
+                                            link: '/figure/2/product/8',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9201,15 +9201,15 @@ export default [
                 tags: [
                     {
                         title: 'Trò chơi dân gian',
-                        link: '/tieng-viet/figure/9',
+                        link: '/figure/9',
                     },
                     {
                         title: 'Ao Bà Om',
-                        link: '/tieng-viet/figure/2/product/8',
+                        link: '/figure/2/product/8',
                     },
                     {
                         title: 'Ok Om Bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        link: '/figure/4/product/39',
                     },
                 ],
             },
@@ -9378,7 +9378,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9387,7 +9387,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9396,7 +9396,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9436,19 +9436,19 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                     {
                         title: 'Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                     {
                         title: 'Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                 ],
             },
@@ -9519,7 +9519,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9528,7 +9528,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9537,7 +9537,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9630,7 +9630,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/1/product/2',
+                                            link: '/figure/1/product/2',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9643,23 +9643,23 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                     {
                         title: 'Dương Quang Đông',
-                        link: '/tieng-viet/figure/1/product/2',
+                        link: '/figure/1/product/2',
                     },
                     {
                         title: 'Người Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Người Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                 ],
             },
@@ -9840,7 +9840,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/1/product/2',
+                                            link: '/figure/1/product/2',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9873,7 +9873,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9882,7 +9882,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9891,7 +9891,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -9991,23 +9991,23 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                     {
                         title: 'Dương Quang Đông',
-                        link: '/tieng-viet/figure/1/product/2',
+                        link: '/figure/1/product/2',
                     },
                     {
                         title: 'Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                     {
                         title: 'Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                 ],
             },
@@ -10194,7 +10194,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/6/product/20',
+                                            link: '/figure/6/product/20',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10267,11 +10267,11 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                     {
                         title: 'Chùa Hang',
-                        link: '/tieng-viet/figure/6/product/20',
+                        link: '/figure/6/product/20',
                     },
                 ],
             },
@@ -10345,7 +10345,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10354,7 +10354,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10363,7 +10363,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10479,19 +10479,19 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                     {
                         title: 'Người Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Người Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                 ],
             },
@@ -10548,7 +10548,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/25',
+                                            link: '/figure/14/product/25',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10557,7 +10557,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/26',
+                                            link: '/figure/14/product/26',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10566,7 +10566,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/14/product/27',
+                                            link: '/figure/14/product/27',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -10751,19 +10751,19 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                     {
                         title: 'Người Kinh',
-                        link: '/tieng-viet/figure/14/product/25',
+                        link: '/figure/14/product/25',
                     },
                     {
                         title: 'Người Khmer',
-                        link: '/tieng-viet/figure/14/product/26',
+                        link: '/figure/14/product/26',
                     },
                     {
                         title: 'Người Hoa',
-                        link: '/tieng-viet/figure/14/product/27',
+                        link: '/figure/14/product/27',
                     },
                 ],
             },
@@ -11005,7 +11005,7 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                 ],
             },
@@ -11199,7 +11199,7 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                 ],
             },
@@ -11342,7 +11342,7 @@ export default [
                 tags: [
                     {
                         title: 'Sự kiện lịch sử',
-                        link: '/tieng-viet/figure/10',
+                        link: '/figure/10',
                     },
                 ],
             },
@@ -11502,7 +11502,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/7/product/22',
+                                            link: '/figure/7/product/22',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -11599,11 +11599,11 @@ export default [
                 tags: [
                     {
                         title: 'Dân tộc',
-                        link: '/tieng-viet/figure/8',
+                        link: '/figure/8',
                     },
                     {
                         title: 'Quan Công',
-                        link: '/tieng-viet/figure/7/product/22',
+                        link: '/figure/7/product/22',
                     },
                 ],
             },
@@ -11744,7 +11744,7 @@ export default [
             //                             valueModal: {
             //                                 type: 'tooltip',
             //                                 ref: true,
-            //                                 link: '/tieng-viet/figure/7/product/22',
+            //                                 link: '/figure/7/product/22',
             //                                 value: 'Tìm hiểu thêm',
             //                             }
             //                         },
@@ -11841,11 +11841,11 @@ export default [
             //     tags: [
             //         {
             //             title: 'Dân tộc',
-            //             link: '/tieng-viet/figure/8',
+            //             link: '/figure/8',
             //         },
             //         {
             //             title: 'Quan Công',
-            //             link: '/tieng-viet/figure/7/product/22',
+            //             link: '/figure/7/product/22',
             //         },
             //     ],
             // },
@@ -11945,7 +11945,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/3/product/9',
+                                            link: '/figure/3/product/9',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -12035,7 +12035,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/39',
+                                            link: '/figure/4/product/39',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -12055,7 +12055,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/7/product/24',
+                                            link: '/figure/7/product/24',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -12086,19 +12086,19 @@ export default [
                 tags: [
                     {
                         title: 'Dân tộc',
-                        link: '/tieng-viet/figure/8',
+                        link: '/figure/8',
                     },
                     {
                         title: 'Bún nước lèo',
-                        link: '/tieng-viet/figure/3/product/9',
+                        link: '/figure/3/product/9',
                     },
                     {
                         title: 'Tục đi tu',
-                        link: '/tieng-viet/figure/7/product/24',
+                        link: '/figure/7/product/24',
                     },
                     {
                         title: 'Ok-Om-Bok',
-                        link: '/tieng-viet/figure/4/product/39',
+                        link: '/figure/4/product/39',
                     },
                 ],
             },
@@ -12183,7 +12183,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/3/product/11',
+                                            link: '/figure/3/product/11',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -12300,7 +12300,7 @@ export default [
                                         valueModal: {
                                             type: 'tooltip',
                                             ref: true,
-                                            link: '/tieng-viet/figure/4/product/12',
+                                            link: '/figure/4/product/12',
                                             value: 'Tìm hiểu thêm',
                                         }
                                     },
@@ -12351,15 +12351,15 @@ export default [
                 tags: [
                     {
                         title: 'Dân tộc',
-                        link: '/tieng-viet/figure/8',
+                        link: '/figure/8',
                     },
                     {
                         title: 'Bánh tét',
-                        link: '/tieng-viet/figure/3/product/11',
+                        link: '/figure/3/product/11',
                     },
                     {
                         title: 'Nghinh Ông',
-                        link: '/tieng-viet/figure/4/product/12',
+                        link: '/figure/4/product/12',
                     },
                 ],
             },

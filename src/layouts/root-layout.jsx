@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './header';
 import Sidebar from './sidebar';
-
+import Chat_Bot from '@/pages/tiengviet/chatbot';
 const RootLayout = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
     const location = useLocation();
@@ -22,6 +22,7 @@ const RootLayout = () => {
     
     return (
         <>
+            <Chat_Bot/>
             <div className="h-screen flex flex-col">
                 
                 <Header toggleSidebar={toggleSidebar} />

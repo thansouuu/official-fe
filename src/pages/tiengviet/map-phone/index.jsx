@@ -21,7 +21,7 @@ const Mapphone = () => {
     //   const token = localStorage.getItem('accessToken');
     //   if (!token) {
     //     setShowAlert(true);
-    //     navigate('/tieng-viet/account');
+    //     navigate('/account');
     //   }
     // }, [navigate]);
   
@@ -767,115 +767,126 @@ const Mapphone = () => {
             <h1 className="mb-2 text-lg font-bold text-center">
               {param.language_id === 'vi' ? "Địa điểm hứng thú" : "Point of Interest"}
             </h1>
-        <div className="flex justify-between  space-x-4 relative">
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdowned(1)}
-              className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
-            >
-            {param.language_id==='vi'?"Nhân vật":"Characters"}
-            </button>
-            {isOpen1 && (
-              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-                {array1.map((option,key) => (
-                  <>
-                   <label key={key} className="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        checked={
-                          selectedOptions1.includes(option.name) || toDo.some((item) => item.name === option.name)
-                        }
-                        onChange={() => handleCheckboxChange(1, option.name)}
-                      />
-                      <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
-                  </label>
-                  </>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Dropdown 2 */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdowned(2)}
-              className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
-            >
-              {param.language_id==='vi'?"Địa điểm":"Destinations"}
-            </button>
-            {isOpen2 && (
-              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-                {array2.map((option,key) => (
-                  <>
-                  <label key={key} className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={
-                        selectedOptions2.includes(option.name) || toDo.some((item) => item.name === option.name)
-                      }
-                      onChange={() => handleCheckboxChange(2, option.name)}
-                    />
-                    <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
-                  </label>
-                  </>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdowned(3)}
-              className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
-            >
-              {param.language_id==='vi'?"Chùa":"Pagodas"}
-            </button>
-            {isOpen3 && (
-              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-                {array3.map((option,key) => (
-                  <>
-                  <label key={key} className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={
-                        selectedOptions3.includes(option.name) || toDo.some((item) => item.name === option.name)
-                      }
-                      onChange={() => handleCheckboxChange(3, option.name)}
-                    />
-                    <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
-                  </label>
-                  </>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdowned(4)}
-              className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
-            >
-              {param.language_id==='vi'?"Lễ hội":"Festivals"}
-            </button>
-            {isOpen4 && (
-              <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-                {array4.map((option,key) => (
-                  <>
-                  <label key={key} className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={
-                        selectedOptions4.includes(option.name) || toDo.some((item) => item.name === option.name)
-                      }
-                      onChange={() => handleCheckboxChange(4, option.name)}
-                    />
-                    <span>{param.language_id==='vi' ? option.name:option.name_english}</span>
-                  </label>
-                  </>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="h-[250px]"></div>
+            <div className="grid grid-cols-4 gap-4 relative">
+  {/* Dropdown 1 */}
+  <div className="flex justify-center items-center relative">
+    <div>
+      <button
+        onClick={() => toggleDropdowned(1)}
+        className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
+      >
+        {param.language_id === 'vi' ? 'Nhân vật' : 'Characters'}
+      </button>
+      {isOpen1 && (
+        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+          {array1.map((option, key) => (
+            <label key={key} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={
+                  selectedOptions1.includes(option.name) ||
+                  toDo.some((item) => item.name === option.name)
+                }
+                onChange={() => handleCheckboxChange(1, option.name)}
+              />
+              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+            </label>
+          ))}
         </div>
+      )}
+    </div>
+  </div>
+
+  {/* Dropdown 2 */}
+  <div className="flex justify-center items-center relative">
+    <div>
+      <button
+        onClick={() => toggleDropdowned(2)}
+        className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
+      >
+        {param.language_id === 'vi' ? 'Địa điểm' : 'Destinations'}
+      </button>
+      {isOpen2 && (
+        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+          {array2.map((option, key) => (
+            <label key={key} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={
+                  selectedOptions2.includes(option.name) ||
+                  toDo.some((item) => item.name === option.name)
+                }
+                onChange={() => handleCheckboxChange(2, option.name)}
+              />
+              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+
+  {/* Dropdown 3 */}
+  <div className="flex justify-center items-center relative">
+    <div>
+      <button
+        onClick={() => toggleDropdowned(3)}
+        className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
+      >
+        {param.language_id === 'vi' ? 'Chùa' : 'Pagodas'}
+      </button>
+      {isOpen3 && (
+        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+          {array3.map((option, key) => (
+            <label key={key} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={
+                  selectedOptions3.includes(option.name) ||
+                  toDo.some((item) => item.name === option.name)
+                }
+                onChange={() => handleCheckboxChange(3, option.name)}
+              />
+              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+
+  {/* Dropdown 4 */}
+  <div className="flex justify-center items-center relative">
+    <div>
+      <button
+        onClick={() => toggleDropdowned(4)}
+        className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
+      >
+        {param.language_id === 'vi' ? 'Lễ hội' : 'Festivals'}
+      </button>
+      {isOpen4 && (
+        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+          {array4.map((option, key) => (
+            <label key={key} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={
+                  selectedOptions4.includes(option.name) ||
+                  toDo.some((item) => item.name === option.name)
+                }
+                onChange={() => handleCheckboxChange(4, option.name)}
+              />
+              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+    
+  </div>
+  <div className="h-[200px]"></div>
+</div>
+
       </div>
           <div className="list-card w-full  p-4">
             <div

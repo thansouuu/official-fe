@@ -43,7 +43,7 @@ export default [
     },
     {
         id: 14,
-        image: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/thpt.jpg',
+        image: 'https://raw.githubusercontent.com/thansouuu/data-image/refs/heads/main/Gi%C3%A1o%20d%E1%BB%A5c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng/L%E1%BB%9AP%2012/C%C4%901/430878152_911289267451858_1891781799963629931_n.jpg',
         name: 'TRUNG HỌC PHỔ THÔNG',
         description:[
             {

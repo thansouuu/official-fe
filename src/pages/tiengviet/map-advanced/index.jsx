@@ -21,7 +21,7 @@ const VtMap = () => {
     //   const token = localStorage.getItem('accessToken');
     //   if (!token) {
     //     setShowAlert(true);
-    //     navigate('/tieng-viet/account');
+    //     navigate('/account');
     //   }
     // }, [navigate]);
   
@@ -521,7 +521,7 @@ useEffect(() => {
   
   const handleProduct=()=>{
     if (selectedLocation) {
-      navigate(`/tieng-viet/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
+      navigate(`/figure/${getIdAddress(selectedLocation.name).figue_id}/product/${getIdAddress(selectedLocation.name).product_id}`)
     }
   };
 
@@ -530,7 +530,7 @@ useEffect(() => {
       window.location.assign(selectedLocation.tourUrl)
     }
     else if (getIdAddress(selectedLocation.name).tour_id!='0'){
-    navigate(`/tieng-viet/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
+    navigate(`/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
     }
   }
   const handleClose = () => {

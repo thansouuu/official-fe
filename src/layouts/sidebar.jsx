@@ -60,7 +60,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </div>
             <ul className="mt-3">
                 <span
-                    // to="/tieng-viet/main"
+                    // to="/main"
                     onClick={() => {
                         navigate(`/language/${language_id}/main`);
                         // window.location.reload();
@@ -76,7 +76,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/account"
+                    // to="/account"
                     className={location.pathname.includes('account') ? 'bg-gray-700' : ''}
                     onClick={() => {
                         navigate(`/language/${language_id}/account`);
@@ -90,7 +90,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/figure"
+                    // to="/figure"
                     onClick={() => {
                         navigate(`/language/${language_id}/figure`);
                         // window.location.reload();
@@ -106,7 +106,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/hometown"
+                    // to="/hometown"
                     onClick={() => {
                         navigate(`/language/${language_id}/hometown`);
                         // window.location.reload();
@@ -122,7 +122,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/story"
+                    // to="/story"
                     onClick={() => {
                         navigate(`/language/${language_id}/story`);
                         // window.location.reload();
@@ -138,7 +138,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/like"
+                    // to="/like"
                     onClick={() => {
                         navigate(`/language/${language_id}/like`);
                         // window.location.reload();
@@ -154,7 +154,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/vt-map"
+                    // to="/vt-map"
                     onClick={() => {
                         navigate(`/language/${language_id}/map-phone`);
                         // window.location.reload();
@@ -170,9 +170,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 {/* <Link
-                    to="/tieng-viet/chatbot"
+                    to="/chatbot"
                     onClick={() => {
-                        // navigate(`/tieng-viet/chatbot`);
+                        // navigate(`/chatbot`);
                         // window.location.reload();
                     }}
                 >
@@ -186,7 +186,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </Link> */}
                 <span
-                    // to="/tieng-viet/find"
+                    // to="/find"
                     onClick={() => {
                         navigate(`/language/${language_id}/find`);
                         // window.location.reload();
@@ -202,7 +202,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                     </li>
                 </span>
                 <span
-                    // to="/tieng-viet/hdsd"
+                    // to="/hdsd"
                     onClick={() => {
                         navigate(`/language/${language_id}/hdsd`);
                         // window.location.reload();
