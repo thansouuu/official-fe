@@ -634,16 +634,16 @@ const Product = memo(() => {
                     </div>
                 )}
             </div>
-            {product && product?.trich && (
+            
                 <div className="text-[20px] text-right italic underline text-blue-800">
                     Trích:{' '}  
                         <Link 
                             to={`https://travinh.gov.vn/con-nguoi-tra-vinh/nguyen-thi-ut-1931-1968-599383`} 
                         >
-                            {product.title}
+                            Cổng thông tin Điện tử Tỉnh Trà Vinh
                         </Link>
                 </div>
-            )}
+            
 
 
 

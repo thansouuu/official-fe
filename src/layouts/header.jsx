@@ -198,7 +198,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/main`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Home/>
                                 {language_id === 'vi' ? 'Trang chủ' : 'Home'}
@@ -209,7 +209,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/account`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
 
                             >
                                 <Login />
@@ -221,7 +221,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/figure`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Category />
                                 {language_id==='vi'? "Danh mục": "Categories"}
@@ -232,7 +232,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/hometown`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Hometown />
                                 {language_id==='vi'? "Giáo dục địa phương": "Local Education"}
@@ -243,7 +243,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/story`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Story />
                                 {language_id==='vi'? "Câu chuyện": "Stories"}
@@ -254,7 +254,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/like`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Like />
                                 {language_id==='vi'? "Yêu thích": "Favorites"}
@@ -265,7 +265,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/map-phone`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Map />
                                 {language_id==='vi'? "Khám phá du lịch": "Tourism"}
@@ -287,7 +287,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/find`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Magnify />
                                 {language_id==='vi'? "Tìm kiếm": "Search"}
@@ -298,7 +298,7 @@ const HeaderRoot = ({ toggleSidebar }) => {
                                 to={`/language/${param.language_id}/hdsd`}
                                 className={cn('flex items-center gap-2 py-2 px-3 rounded hover:bg-slate-200 md:hidden')}
                                 aria-current="page"
-                                onClick={() => {setNavbarOpen(false), window.Location.reload()}}
+                                onClick={() => {setNavbarOpen(false)}}
                             >
                                 <Manual />
                                 {language_id==='vi'? "Hướng dẫn sử dụng": "User Guide"}
