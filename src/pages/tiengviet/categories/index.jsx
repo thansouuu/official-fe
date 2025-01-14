@@ -69,14 +69,15 @@ const Categories = memo(() => {
             }
             {types===1 && 1<=tmp && tmp<=4 && param.id!=='12' && param.id!=='13'&& param.id!=='14'&&
                 <>
-                    <div className="col-span-full p-4 bg-gray-200 rounded-lg shadow-md">
-                        <div className="text-[22px] font-bold text-gray-800 text-center">
-                            {decrip[tmp-1].name}
+                    <div className="col-span-full p-4 bg-gray-100 rounded-lg shadow-lg">
+                        <div className="text-[26px] font-bold text-orange-600 text-center">
+                            {decrip[tmp - 1].name}
                         </div>
-                        <div className="mt-1 text-lg text-gray-700 leading-relaxed text-justify">
-                            {decrip[tmp-1].value}
+                        <div className="mt-2 text-xl text-yellow-600 leading-relaxed text-justify">
+                            {decrip[tmp - 1].value}
                         </div>
                     </div>
+
                 </>
             }
             { param.id==='12' &&

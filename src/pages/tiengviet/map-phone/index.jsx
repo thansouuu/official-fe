@@ -177,9 +177,6 @@ const Mapphone = () => {
     setSelectedOptions2(updatedSelectedOptions2);
     setSelectedOptions3(updatedSelectedOptions3);
     setSelectedOptions4(updatedSelectedOptions4);
-    console.log('bunha ',updatedSelectedOptions1);
-      
-    
   }, [array1,array2,array3,array4]);
 
   useEffect(() => {
@@ -390,52 +387,6 @@ const Mapphone = () => {
     });
     setMarker(newMarkers);
   };
-
-  // useEffect(() => {
-  //   console.log('to now ',toDo);
-  //   const updatedOptions1 = selectedOptions1.filter((option) =>
-  //     toDo.some((item) => item.name === option)
-  //   );
-  //   const updatedOptions2 = selectedOptions2.filter((option) =>
-  //     toDo.some((item) => item.name === option)
-  //   );
-  //   const updatedOptions3 = selectedOptions3.filter((option) =>
-  //     toDo.some((item) => item.name === option)
-  //   );
-  //   const updatedOptions4 = selectedOptions4.filter((option) =>
-  //     toDo.some((item) => item.name === option)
-  //   );
-  
-  //   // Cập nhật lại state cho các selectedOptions
-  //   setSelectedOptions1(updatedOptions1);
-  //   setSelectedOptions2(updatedOptions2);
-  //   setSelectedOptions3(updatedOptions3);
-  //   setSelectedOptions4(updatedOptions4);
-  //   if (roadDrawerControl && mapLoaded) {
-  //     const points = toDo.map(task => [task.longitude, task.latitude]);
-  //     setlistLngLat(points);
-  //     try {
-  //       if (typeMap===1) {
-  //         removeMarkers();
-  //         if (points.length > 0 && points[0].length === 2) {
-  //           console.log('Setting points from toDo:', points);
-  //           roadDrawerControl.setPoints(points);
-  //         } else if (points.length===0){
-  //           roadDrawerControl.setPoints([]);
-  //           console.error('Invalid points format:', points);
-  //         }
-  //       }
-  //       else {
-  //         roadDrawerControl.setPoints([]);
-  //         addMarker();
-  //       }
-  //     } catch (error) {
-  //       console.error('Error updating points:', error);
-  //     }
-  //   }
-  // }, [toDo, roadDrawerControl, mapLoaded,typeMap]);
-
-
 
     useEffect(() => {
       const handleClick = (event) => {
@@ -655,8 +606,6 @@ const Mapphone = () => {
       return "undefined";
     }
 
-    
-
     const handleTypeMap=(e)=>{
       setTypeMap(e);
     }
@@ -664,7 +613,7 @@ const Mapphone = () => {
       initializeMap();
     }, []);
 
-    const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen1, setIsOpen1] = useState(false);
   const [selectedOptions1, setSelectedOptions1] = useState([]);
   
   const [isOpen2, setIsOpen2] = useState(false);
@@ -727,8 +676,8 @@ const Mapphone = () => {
     });
   
     // Cập nhật mảng mới vào state
-    setToDo(newToDo);
-  }, [selectedOptions1, selectedOptions2, selectedOptions3, selectedOptions4]);
+      setToDo(newToDo);
+    }, [selectedOptions1, selectedOptions2, selectedOptions3, selectedOptions4]);
   
   useEffect(() => {
     {
@@ -764,129 +713,128 @@ const Mapphone = () => {
       <div className="relative h-full w-full flex flex-col items-center">
         <div className="flex flex-col  justify-center items-stretch md:space-x-0 space-y-4 md:space-y-0 py-4 w-full max-w-4xl">
           <div className="card list-card-done bg-white shadow rounded p-4 flex flex-col relative">
-            <h1 className="mb-2 text-lg font-bold text-center">
-              {param.language_id === 'vi' ? "Địa điểm hứng thú" : "Point of Interest"}
-            </h1>
-            <div className="grid grid-cols-4 gap-4 relative">
-  {/* Dropdown 1 */}
-  <div className="flex justify-center items-center relative">
-    <div>
-      <button
-        onClick={() => toggleDropdowned(1)}
-        className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
-      >
-        {param.language_id === 'vi' ? 'Nhân vật' : 'Characters'}
-      </button>
-      {isOpen1 && (
-        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-          {array1.map((option, key) => (
-            <label key={key} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={
-                  selectedOptions1.includes(option.name) ||
-                  toDo.some((item) => item.name === option.name)
-                }
-                onChange={() => handleCheckboxChange(1, option.name)}
-              />
-              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
-            </label>
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
+        <h1 className="mb-2 text-lg font-bold text-center">
+          {param.language_id === 'vi' ? "Địa điểm hứng thú" : "Point of Interest"}
+        </h1>
+        <div className="grid grid-cols-4 gap-4 relative">
+          {/* Dropdown 1 */}
+          <div className="flex justify-center items-center relative">
+            <div>
+              <button
+                onClick={() => toggleDropdowned(1)}
+                className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
+              >
+                {param.language_id === 'vi' ? 'Nhân vật' : 'Characters'}
+              </button>
+              {isOpen1 && (
+                <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                  {array1.map((option, key) => (
+                    <label key={key} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={
+                          selectedOptions1.includes(option.name) ||
+                          toDo.some((item) => item.name === option.name)
+                        }
+                        onChange={() => handleCheckboxChange(1, option.name)}
+                      />
+                      <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-  {/* Dropdown 2 */}
-  <div className="flex justify-center items-center relative">
-    <div>
-      <button
-        onClick={() => toggleDropdowned(2)}
-        className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
-      >
-        {param.language_id === 'vi' ? 'Địa điểm' : 'Destinations'}
-      </button>
-      {isOpen2 && (
-        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-          {array2.map((option, key) => (
-            <label key={key} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={
-                  selectedOptions2.includes(option.name) ||
-                  toDo.some((item) => item.name === option.name)
-                }
-                onChange={() => handleCheckboxChange(2, option.name)}
-              />
-              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
-            </label>
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
+          {/* Dropdown 2 */}
+          <div className="flex justify-center items-center relative">
+            <div>
+              <button
+                onClick={() => toggleDropdowned(2)}
+                className="items-center px-4 py-2 bg-orange-400 text-gray-100 rounded"
+              >
+                {param.language_id === 'vi' ? 'Địa điểm' : 'Destinations'}
+              </button>
+              {isOpen2 && (
+                <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                  {array2.map((option, key) => (
+                    <label key={key} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={
+                          selectedOptions2.includes(option.name) ||
+                          toDo.some((item) => item.name === option.name)
+                        }
+                        onChange={() => handleCheckboxChange(2, option.name)}
+                      />
+                      <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-  {/* Dropdown 3 */}
-  <div className="flex justify-center items-center relative">
-    <div>
-      <button
-        onClick={() => toggleDropdowned(3)}
-        className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
-      >
-        {param.language_id === 'vi' ? 'Chùa' : 'Pagodas'}
-      </button>
-      {isOpen3 && (
-        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-          {array3.map((option, key) => (
-            <label key={key} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={
-                  selectedOptions3.includes(option.name) ||
-                  toDo.some((item) => item.name === option.name)
-                }
-                onChange={() => handleCheckboxChange(3, option.name)}
-              />
-              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
-            </label>
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
+          {/* Dropdown 3 */}
+          <div className="flex justify-center items-center relative">
+            <div>
+              <button
+                onClick={() => toggleDropdowned(3)}
+                className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
+              >
+                {param.language_id === 'vi' ? 'Chùa' : 'Pagodas'}
+              </button>
+              {isOpen3 && (
+                <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                  {array3.map((option, key) => (
+                    <label key={key} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={
+                          selectedOptions3.includes(option.name) ||
+                          toDo.some((item) => item.name === option.name)
+                        }
+                        onChange={() => handleCheckboxChange(3, option.name)}
+                      />
+                      <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-  {/* Dropdown 4 */}
-  <div className="flex justify-center items-center relative">
-    <div>
-      <button
-        onClick={() => toggleDropdowned(4)}
-        className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
-      >
-        {param.language_id === 'vi' ? 'Lễ hội' : 'Festivals'}
-      </button>
-      {isOpen4 && (
-        <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
-          {array4.map((option, key) => (
-            <label key={key} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={
-                  selectedOptions4.includes(option.name) ||
-                  toDo.some((item) => item.name === option.name)
-                }
-                onChange={() => handleCheckboxChange(4, option.name)}
-              />
-              <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
-            </label>
-          ))}
+          {/* Dropdown 4 */}
+          <div className="flex justify-center items-center relative">
+            <div>
+              <button
+                onClick={() => toggleDropdowned(4)}
+                className="px-4 py-2 bg-orange-400 text-gray-100 rounded"
+              >
+                {param.language_id === 'vi' ? 'Lễ hội' : 'Festivals'}
+              </button>
+              {isOpen4 && (
+                <div className="absolute mt-2 bg-white shadow rounded w-64 p-4 z-10 max-h-96 overflow-auto">
+                  {array4.map((option, key) => (
+                    <label key={key} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={
+                          selectedOptions4.includes(option.name) ||
+                          toDo.some((item) => item.name === option.name)
+                        }
+                        onChange={() => handleCheckboxChange(4, option.name)}
+                      />
+                      <span>{param.language_id === 'vi' ? option.name : option.name_english}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div> 
+          </div>
+          <div className="h-[240px]"></div>
         </div>
-      )}
-    </div>
-    
-  </div>
-  <div className="h-[200px]"></div>
-</div>
-
+        {/* <div className="h-[200px] bg-white"></div> */}
       </div>
           <div className="list-card w-full  p-4">
             <div
@@ -947,48 +895,7 @@ const Mapphone = () => {
           </div>
           
         </div>
-        {/* <div className="relative flex flex-col items-center mb-4"> */}
-          {/* <button
-            type="button"
-            onClick={toggleDropdown}
-            className="bg-blue-500 text-white py-2 px-4 rounded mb-1"
-          >
-            {!isOpen ? 'Mở kho địa điểm' : 'Đóng kho địa điểm'}
-            
-          </button>
-          {isOpen && (
-            <ul className="w-[100%] bg-white border border-gray-200 rounded shadow-lg max-h-60 overflow-y-auto">
-              {prepare.map((location, index) => (
-                <li 
-                  className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  key={index}
-                > 
-                  <div>
-                    <span className="text-base font-semibold">{location.name}</span>
-                    <div className="text-sm text-gray-500 italic ">
-                      Thuộc:{' '}{hometown(location.country)}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleOptionClick(location)}
-                    className="bg-green-500 text-white py-1 px-2 rounded transition-colors duration-300 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
-                  >
-                    <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )} */}
-        {/* </div> */}
         <div className="mb-4 w-full md:w-[30%] bg-gray-100 rounded-lg p-4 shadow-md">
-          {/* <div className="mb-4">
-            <button 
-              onClick={() => handleadvanced()}
-              className="w-auto px-4 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-300 transform transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 mx-auto block"
-            >
-              Trải nghiệm
-            </button>
-          </div> */}
           <div className="flex gap-4">
             <button 
               onClick={() => handleTypeMap(1)} 
@@ -1004,10 +911,27 @@ const Mapphone = () => {
             </button>
           </div>
         </div>
-
-
-
+        
       </div>
+      <div className="bg-gray-800 grid grid-cols-10 mb-14">
+        <div className="col-span-3 text-white">
+        <video
+        width="100%"
+        height="auto"
+        controls
+        className="m-4 rounded-lg"
+        style={{ transform: 'scale(0.8)' }}
+      >
+        <source src="/intro_voice.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+        </div>
+        <div className="col-span-7 text-white ml-16 mr-5 mt-5 text-[20px]">
+        Xin chào, tôi đến từ Website Lịch sử Tỉnh Trà Vinh. Tôi sẽ giúp bạn có một trải nghiệm tuyệt vời với khám phá du lịch nhé !
+      </div>
+
+    </div>
+      
       
       {/* <div id="map" className="w-[80%] h-[810px]"></div> */}
       <div className="flex-1 relative">

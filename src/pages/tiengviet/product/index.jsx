@@ -45,6 +45,7 @@ import best_icon4 from '@/assets/best/best4.png'
 import best_icon5 from '@/assets/best/best5.png'
 import best_icon6 from '@/assets/best/best6.png'
 import Bot from '@/pages/tiengviet/chatbot';
+import { param } from 'jquery';
 
 const Product = memo(() => {
     const { isLoggedIn, mutate, data } = useAuth();
@@ -634,16 +635,30 @@ const Product = memo(() => {
                     </div>
                 )}
             </div>
-            
-                <div className="text-[20px] text-right italic underline text-blue-800">
-                    Trích:{' '}  
-                        <Link 
-                            to={`https://travinh.gov.vn/con-nguoi-tra-vinh/nguyen-thi-ut-1931-1968-599383`} 
-                        >
-                            Cổng thông tin Điện tử Tỉnh Trà Vinh
-                        </Link>
-                </div>
-            
+            {console.log('params ',params)}
+            <>
+  {params.figureId !== '14' ? (
+    <div className="text-[20px] text-right italic underline text-blue-800">
+      Trích:{' '}  
+      <Link 
+        to={`https://travinh.gov.vn/con-nguoi-tra-vinh/nguyen-thi-ut-1931-1968-599383`} 
+      >
+        Cổng thông tin Điện tử Tỉnh Trà Vinh
+      </Link>
+    </div>
+  ) : (
+    <div className="text-[20px] text-right italic underline text-blue-800">
+      {/* Nội dung khác (nếu có) */}
+      Trích:{' '}  
+      <Link 
+        to={`https://travinh.gov.vn/con-nguoi-tra-vinh/nguyen-thi-ut-1931-1968-599383`} 
+      >
+        Sách Giáo dục địa phương tỉnh Trà Vinh
+      </Link>
+    </div>
+  )}
+</>
+
 
 
 

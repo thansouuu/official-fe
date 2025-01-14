@@ -104,20 +104,20 @@ const Main = () => {
         <div
   className="bg-[#d78060] -mx-6 -mb-[200px] p-6 text-white"
   style={{
-    backgroundImage: `url('/public/main.jpg')`,
-    backgroundRepeat: 'repeat',
-    backgroundPosition: 'top 5px center',
-    backgroundSize: '800px 300px'
+    backgroundImage: `url('/public/banner.png')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'top center',
+    backgroundSize: '100% 100%'
   }}
 >
   <div className="grid grid-cols-1 gap-4">
-    <div className="col-span-full w-full">
+    <div className="col-span-full w-full ">
       <Carousel style={{ width: '100%', height: '300px' }} interval={1000} fade>
         {images.map((image, idx) => (
           <Carousel.Item key={idx} style={{ height: '300px' }}>
-            <div className="flex flex-col justify-between items-center w-full h-full p-4">
+            <div className="flex flex-col justify-between items-center w-full h-full p-4 ">
               <img
-                className="d-block w-full h-[95%] object-contain"
+                className="d-block w-full h-[95%] object-contain "
                 onClick={() => handleClick(idx)}
                 src={image}
                 alt={`Slide ${idx}`}
