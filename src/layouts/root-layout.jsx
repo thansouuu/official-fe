@@ -22,7 +22,7 @@ const RootLayout = () => {
     
     return (
         <>
-            {/* <Chat_Bot/> */}
+            <Chat_Bot/>
             <div className="h-screen flex flex-col">
                 
                 <Header toggleSidebar={toggleSidebar} />
