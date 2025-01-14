@@ -104,7 +104,7 @@ const Main = () => {
         <div
   className="bg-[#d78060] -mx-6 -mb-[200px] p-6 text-white"
   style={{
-    backgroundImage: `url('/public/banner.png')`,
+    backgroundImage: `url('/banner.png')`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'top center',
     backgroundSize: '100% 100%'
