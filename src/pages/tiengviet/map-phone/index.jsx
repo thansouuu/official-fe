@@ -532,11 +532,14 @@ const Mapphone = () => {
   };
 
   const handleTour=()=>{
-    if (selectedLocation.tourUrl!=''){
-      window.location.assign(selectedLocation.tourUrl)
-    }
-    else if (getIdAddress(selectedLocation.name).tour_id!='0'){
-    navigate(`/language/${param.language_id}/thinglink/${getIdAddress(selectedLocation.name).tour_id}`)
+    const res=getIdAddress(selectedLocation.name).tour_id
+    // if (selectedLocation.tourUrl!=''){
+    //   window.location.assign(selectedLocation.tourUrl)
+    // }
+    // else 
+    if (res!=0){
+      // {console.log('abc ',res)}
+      navigate(`/language/${param.language_id}/thinglink/${res}`);
     }
   }
   const handleClose = () => {

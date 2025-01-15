@@ -494,23 +494,7 @@ export default [
                                     // 'https://raw.githubusercontent.com/thansouuu/data-image/main/nh%C3%A2n%20v%E1%BA%ADt/%C3%9At%20T%E1%BB%8Bch/4-b-3.jpg',
                                 ],
                             },
-                            {
-                                type: 'bold',
-                                value: `* Chị Út Tịch qua lời kể anh Thanh Hiển - người con thứ 5 của chị:`,
-                            },
-                            {
-                                type: 'text',
-                                value: `- Anh Hiển - con của má Út Tịch kể lại : Má tui thường để cho con ngủ say vùi nửa đêm, mới lén xuống vỏ lãi chạy đi đánh giặc.`,
-                            },
-                            {
-                                type: 'text',
-                                value: `- “Kỷ niệm sâu sắc nhất về má trong đời tôi cũng là kỷ niệm cuối cùng mà không bao giờ tôi quên được: Lần đó, hai má con ngủ chung đến nửa đêm, má lén dậy hun tui một cái rồi nhẹ nhàng lấy đai thắt lưng, cắp súng nhảy xuống vỏ lãi. Tôi tỉnh dậy, chạy băng băng theo bờ kinh đón đầu. Đến cây cầu khỉ, tui nắm hai tay vào thanh cầu, thả người thòng xuống kinh, thế nào má tui thấy cũng dừng lại. `,
-                            },
-                            {
-                                type: 'text',
-                                value: `- Quả nhiên khi vỏ lãi băng qua, nghe tiếng khóc kêu của con trai, Út Tịch dừng lại, bế con chạy quay trở lại nhà. Hai mẹ con ôm nhau khóc suốt, rồi  dỗ dành, năn nỉ con ngủ để mẹ đi đánh giặc, mấy hôm lại về. Ai ngờ đó cũng là lần cuối cùng, mẹ ra đi vĩnh viễn không bao giờ về nữa…” kể đến đây, đôi mắt của Hiển đỏ hoe.`,
-                            },
-
+                            
                             {
                                 type: 'bold',
                                 value: `* Những câu nói nổi tiếng của chị:`,

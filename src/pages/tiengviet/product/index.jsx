@@ -1136,7 +1136,7 @@ const Product = memo(() => {
                     </div>
                 </FoodContent>
                 <FoodContent 
-                    title={params.language_id === 'vi' ? "Chia sẽ bài viết" : "Share the article"}
+                    title={params.language_id === 'vi' ? "Chia sẻ bài viết" : "Share the article"}
                 >
                     <div className="flex gap-4">
                         <FacebookShareButton hashtag={'Phần mềm Lịch sử địa phương Trà Vinh cung cấp cho tôi những thông tin rất hữu ích'} url={window.location.href} quote={product?.title}>
